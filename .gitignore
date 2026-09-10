@@ -1,0 +1,55 @@
+# Dependencias
+node_modules/
+vendor/
+bower_components/
+
+# Entornos y secretos
+.env
+.env.local
+.env.*.local
+*.pem
+*.key
+*.p12
+
+# Build / compilados
+/dist/
+/build/
+/out/
+target/
+*.class
+*.jar
+__pycache__/
+*.pyc
+
+# Laravel / PHP
+/bootstrap/cache/
+/public/hot
+/public/storage
+
+# Node / Vue / React
+.nuxt/
+.next/
+.cache/
+
+# BD locales
+*.sqlite
+*.db
+
+# IDEs
+.idea/
+.vscode/
+*.sw?
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Logs
+*.log
+npm-debug.log*
+
+# Binarios grandes
+*.mp4
+*.mp3
+*.exe
+*.zip
+*.rar
