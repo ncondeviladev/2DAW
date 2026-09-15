@@ -233,7 +233,7 @@ Como `empresa1.daw` no existe en Internet, hay que engañar al DNS local de Wind
 
 ---
 
-## 7. PEC1 — Resumen de lo realizado (Ejercicios 1 y 2)
+## 7. PEC1 — Resumen de lo realizado (Ejercicios 1 a 5)
 
 ### Ejercicio 1: Páginas de error 404 personalizadas
 - **Apache (`ApacheMV`):**
@@ -320,5 +320,90 @@ Objetivo: Alojamiento de dos sitios web independientes (`sitio1.daw` y `sitio2.d
        192.168.0.23    sitio2.daw
        ```
      - Acceso simultáneo en el navegador: `http://sitio1.daw` y `http://sitio2.daw`.
+
+### Ejercicio 4: Coexistencia Apache + Nginx Multisitio (4 sitios simultáneos en 1 MV)
+Objetivo: Instalar Apache en la máquina donde ya corre Nginx (`NginxMV`), configurando puertos diferentes para evitar conflictos (Nginx en puerto 80, Apache en puertos 8181 y 8282), alcanzando 4 sitios activos simultáneamente.
+
+1. **Instalar Apache en la misma MV:**
+   ```bash
+   sudo apt install -y apache2
+   ```
+2. **Evitar conflicto de puertos (Apache a 8181 y 8282):**
+   - En `/etc/apache2/ports.conf`:
+     ```apache
+     Listen 8181
+     Listen 8282
+     ```
+     *(Eliminar o comentar `Listen 80` para que Nginx conserve el puerto 80).*
+3. **Crear directorios y webs para Apache:**
+   ```bash
+   sudo mkdir -p /var/www/apache1 /var/www/apache2
+   sudo chown -R www-data:www-data /var/www/apache1 /var/www/apache2
+   sudo nano /var/www/apache1/index.html
+   sudo nano /var/www/apache2/index.html
+   ```
+4. **Configurar VirtualHosts en `/etc/apache2/sites-available/`:**
+   - `/etc/apache2/sites-available/apache1.conf`:
+     ```apache
+     <VirtualHost *:8181>
+         ServerName apache1.daw
+         DocumentRoot /var/www/apache1
+     </VirtualHost>
+     ```
+   - `/etc/apache2/sites-available/apache2.conf`:
+     ```apache
+     <VirtualHost *:8282>
+         ServerName apache2.daw
+         DocumentRoot /var/www/apache2
+     </VirtualHost>
+     ```
+5. **Activar sitios y recargar servicios:**
+   ```bash
+   sudo a2ensite apache1.conf apache2.conf
+   sudo apachectl configtest
+   sudo systemctl restart apache2
+   ```
+6. **Comprobación simultánea de los 4 sitios:**
+   - `sitio1.daw` (Nginx, puerto 80)
+   - `sitio2.daw` (Nginx, puerto 80)
+   - `http://IP_MV:8181` (Apache)
+   - `http://IP_MV:8282` (Apache)
+   - Con `curl`:
+     ```bash
+     curl -H "Host: sitio1.daw" http://localhost
+     curl -H "Host: sitio2.daw" http://localhost
+     curl http://localhost:8181
+     curl http://localhost:8282
+     ```
+
+### Ejercicio 5: Acceso Remoto — SSH y SFTP/FTP en NginxMV
+Objetivo: Administrar el servidor mediante consola remota segura (SSH) y transferir ficheros gráficamente (SFTP/FTP).
+
+#### A. Conexión por SSH
+1. **Instalar y verificar el servidor OpenSSH en la MV:**
+   ```bash
+   sudo apt install -y openssh-server
+   sudo systemctl status ssh
+   ```
+2. **Conectar desde Windows (PowerShell / CMD):**
+   ```powershell
+   ssh usuario@192.168.0.23
+   ```
+   *(Aceptar la huella con `yes` si es la primera vez e introducir la contraseña).*
+
+#### B. Transferencia de ficheros por SFTP / FTP (FileZilla)
+1. Abrir **FileZilla** en Windows.
+2. Ir a `Archivo → Gestor de sitios → Nuevo sitio`:
+   - **Protocolo:** `SFTP - SSH File Transfer Protocol` (aprovecha el puerto seguro 22 de SSH sin necesidad de configurar vsftpd).
+   - **Servidor (Host):** `192.168.0.23`
+   - **Puerto:** `22`
+   - **Modo de acceso:** `Normal`
+   - **Usuario y Contraseña:** credenciales del usuario de la máquina virtual.
+3. Conectar y arrastrar ficheros (ej. `archivo.txt`) desde el panel local al panel remoto (directorio de usuario `/home/usuario`).
+4. **Verificación en la consola de la MV:**
+   ```bash
+   ls -la ~
+   ```
+
 
 
