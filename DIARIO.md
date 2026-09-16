@@ -1,0 +1,94 @@
+# 📘 DIARI DE SEGUIMENT — 2n DAW (Semipresencial)
+> **Alumne:** Noé Conde Vila  
+> **Centre:** IES Maria Enríquez (Gandia) — Curs 2026/2027  
+> **Última actualització:** 16 de setembre de 2026  
+
+---
+
+## 🎯 Tauler General de Tasques (Les 4 Assignatures Principals)
+
+| Assignatura | Tasca / Activitat | Estat | Data límit / Notes |
+| :--- | :--- | :---: | :--- |
+| **DWES** | `U1_P1 Docker` (Preparació entorn Apache + MySQL + phpMyAdmin) | ✅ **Fet** | Contenidors operatius i fitxers creats |
+| **DWES** | `U2_P1 Exercicis PHP` (Exercicis 1.1 al 5.3 + Bloc 6) | ⏳ **En curs** | Fets de l'1.1 al 5.3; **pendents els del Bloc 6** |
+| **DaW** | `PEC1` (Apache i Nginx, Error 404, Port 8989, Multilloc, SSH/SFTP) | ✅ **Fet** | Completat al 100% i compilat a PDF |
+| **DWEC** | `UD1 Activitat` (Anàlisi d'arquitectura web simple) | 🔴 **Pendent** | Document 1-2 pàg. + Diagrama de components |
+| **DWEC** | `UD1 Qüestionari` | 🔴 **Pendent** | Test a la plataforma Aules |
+| **DWEC** | `UD2 Activitat` | 🔴 **Pendent** | Segona unitat |
+| **DWEC** | `UD2 Qüestionari` | 🔴 **Pendent** | Test a la plataforma Aules |
+| **DIW** | `S01_PR1` (Pràctica Setmana 1) | 🔴 **Pendent** | Primera pràctica de disseny web |
+| **DIW** | `S02_PR1` (Pràctica Setmana 2) | 🔴 **Pendent** | Segona pràctica de disseny web |
+| **DIW** | `Autoavaluació` | 🔴 **Pendent** | Qüestionari d'autoavaluació |
+
+---
+
+## 📚 Detall per Assignatura
+
+### 1. DWES — Desenvolupament Web en Entorn Servidor
+* **Professor:** Eloy Gutiérrez Paredes (`e.gutierrezparedes@edu.gva.es`)  
+* **Tutoría col·lectiva:** Dimecres vesprada (setmanes parells sessió doble, imparells sessió simple) / Dijous matí.
+* **Progrés actual:**
+  - [x] **U1_P1 Docker:** Stack muntat amb `docker-compose.yml` (`php_app` a :8080, `mysql_db` a :3306, `phpmyadmin` a :8081). Pàgines d'inici i test creades.
+  - [x] **U2_PHP Exercicis 1.1 a 5.3:** Sintaxi, tipus, estructures de control (`match`/`switch`), bucles, arrays indexats i associatius, funcions i `require_once`.
+  - [ ] **U2_PHP Bloc 6 (Pendent):** Formularis GET vs POST, superglobals (`$_GET`, `$_POST`), validació al servidor.
+
+---
+
+### 2. DaW — Desplegament d'Aplicacions Web
+* **Professor:** Juan Ramón Collado Esteve (`jr.colladoesteve@edu.gva.es`)  
+* **Tutoría col·lectiva:** Dimecres vesprada (setmanes imparells) / Dijous matí (setmanes parells).
+* **Progrés actual:**
+  - [x] **PEC1 Completada:** 
+    - Exercici 1: Pàgines d'error 404 personalitzades en Apache i Nginx.
+    - Exercici 2: Canvi de port a 8989.
+    - Exercici 3: Nginx multisitio (Server Blocks).
+    - Exercici 4: Coexistència simultània Apache + Nginx (mínim 4 llocs).
+    - Exercici 5: Accés remot SSH i transferència de fitxers SFTP amb FileZilla.
+    - PDF oficial generat: `PEC1_U1_NoeConde.pdf`.
+
+---
+
+### 3. DWEC — Desenvolupament Web en Entorn Client
+* **Professor:** José Ramón Migueles Hernández (`jr.migueleshernand@edu.gva.es`)  
+* **Tutoría col·lectiva:** Dimecres vesprada / Dijous matí.
+* **Progrés actual:**
+  - [ ] **UD1 Activitat puntuable:** Anàlisi d'una aplicació web senzilla (arquitectura client-servidor en 3 capes, flux de renderitzat HTML/CSS/JS DOM+CSSOM, peticions fetch/JSON, política Same-Origin i CORS + diagrama PNG).
+  - [ ] **UD1 Qüestionari:** Test teòric a Aules.
+  - [ ] **UD2 Activitat puntuable:** Segona pràctica d'entorn client.
+  - [ ] **UD2 Qüestionari:** Test teòric d'UD2.
+
+---
+
+### 4. DIW — Disseny d'Interfícies Web
+* **Professor:** Quique Savall Seguí (`e.savallsegui@edu.gva.es`)  
+* **Tutoría col·lectiva:** Dimecres vesprada (15:15–16:10) / Dijous matí (14:20–15:15).
+* **Progrés actual:**
+  - [ ] **S01_PR1:** Pràctica de la Setmana 1.
+  - [ ] **S02_PR1:** Pràctica de la Setmana 2.
+  - [ ] **Autoavaluació:** Qüestionari d'autoavaluació de la unitat.
+
+---
+
+## 📝 Normes Generals d'Entrega (Checklist de Qualitat)
+*Per a recordar sempre abans d'entregar qualsevol PDF o projecte a Aules:*
+- [ ] **Portada/Títol:** Títol de la pràctica visible en gran.
+- [ ] **Identificació:** Nom de l'alumne (**Noé Conde Vila**) i curs (**2n DAW**) clarament indicats.
+- [ ] **Format dels enunciats:** Enunciat de cada activitat sempre en **negreta**.
+- [ ] **Format de respostes:** Text en estil diferent i en color **blau**.
+- [ ] **Imatges/Captures:** Sempre dins d'una carpeta dedicada `capturas/` (mai soltes a l'arrel).
+- [ ] **Nomenclatura d'arxius:** Tot en minúscules, sense accents, sense 'ñ' i sense espais en blanc.
+
+---
+
+## 📅 Registre Cronològic / Diari de Treball
+
+### 2026-09-16 (Dimecres)
+- **DWES:** Finalitzada la configuració de Docker (`U1_P1_CondeNoe`) amb Apache PHP 8.2, MySQL i phpMyAdmin. Interfícies millorades de prova i test.
+- **DWES:** Aprovat el qüestionari d'avaluació de la Unitat 1 (conceptes client-servidor, HTTP, Apache, SPA, 3 capes).
+- **Consolidació:** Creat aquest document unificat `DIARIO.md` per a centralitzar el control de les 4 matèries.
+
+### 2026-09-15 (Dimarts)
+- **DWES:** Resolució dels exercicis bàsics de PHP des de l'1.1 fins al 5.3 (variables, operadors, `match`, bucles, arrays indexats i associatius, funcions i modularització amb `require_once`).
+
+### 2026-09-14 (Dilluns)
+- **DaW:** Finalització completa de la PEC1 (5 exercicis d'Apache i Nginx, multisitio, coexistència i accés remot amb SSH/SFTP). Generat el document Markdown i exportat a PDF.
