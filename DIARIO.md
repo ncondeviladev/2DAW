@@ -1,7 +1,7 @@
 # 📘 DIARI DE SEGUIMENT — 2n DAW (Semipresencial)
 > **Alumne:** Noé Conde Vila  
 > **Centre:** IES Maria Enríquez (Gandia) — Curs 2026/2027  
-> **Última actualització:** 16 de setembre de 2026  
+> **Última actualització:** 18 de setembre de 2026  
 
 ---
 
@@ -12,8 +12,8 @@
 | **DWES** | `U1_P1 Docker` (Preparació entorn Apache + MySQL + phpMyAdmin) | ✅ **Fet** | Contenidors operatius i fitxers creats |
 | **DWES** | `U2_P1 Exercicis PHP` (Exercicis 1.1 al 5.3 + Bloc 6) | ⏳ **En curs** | Fets de l'1.1 al 5.3; **pendents els del Bloc 6** |
 | **DaW** | `PEC1` (Apache i Nginx, Error 404, Port 8989, Multilloc, SSH/SFTP) | ✅ **Fet** | Completat al 100% i compilat a PDF |
-| **DWEC** | `UD1 Activitat` (Anàlisi d'arquitectura web simple) | 🔴 **Pendent** | Document 1-2 pàg. + Diagrama de components |
-| **DWEC** | `UD1 Qüestionari` | 🔴 **Pendent** | Test a la plataforma Aules |
+| **DWEC** | `UD1 Activitat` (Anàlisi d'arquitectura web simple) | ✅ **Fet** | Document completat i exportat a PDF (`ud1_activitat_noeconde.pdf`) |
+| **DWEC** | `UD1 Qüestionari` | ✅ **Fet** | Test superat a la plataforma Aules |
 | **DWEC** | `UD2 Activitat` | 🔴 **Pendent** | Segona unitat |
 | **DWEC** | `UD2 Qüestionari` | 🔴 **Pendent** | Test a la plataforma Aules |
 | **DIW** | `S01_PR1` (Pràctica Setmana 1) | 🔴 **Pendent** | Primera pràctica de disseny web |
@@ -52,8 +52,8 @@
 * **Professor:** José Ramón Migueles Hernández (`jr.migueleshernand@edu.gva.es`)  
 * **Tutoría col·lectiva:** Dimecres vesprada / Dijous matí.
 * **Progrés actual:**
-  - [ ] **UD1 Activitat puntuable:** Anàlisi d'una aplicació web senzilla (arquitectura client-servidor en 3 capes, flux de renderitzat HTML/CSS/JS DOM+CSSOM, peticions fetch/JSON, política Same-Origin i CORS + diagrama PNG).
-  - [ ] **UD1 Qüestionari:** Test teòric a Aules.
+  - [x] **UD1 Activitat puntuable:** Anàlisi d'una aplicació web senzilla (arquitectura client-servidor en 3 capes, flux de renderitzat HTML/CSS/JS DOM+CSSOM, peticions fetch/JSON, política Same-Origin i CORS + diagrama PNG). Document Markdown exportat a PDF: `ud1_activitat_noeconde.pdf`.
+  - [x] **UD1 Qüestionari:** Test teòric superat a Aules.
   - [ ] **UD2 Activitat puntuable:** Segona pràctica d'entorn client.
   - [ ] **UD2 Qüestionari:** Test teòric d'UD2.
 
@@ -81,6 +81,11 @@
 ---
 
 ## 📅 Registre Cronològic / Diari de Treball
+
+### 2026-09-18 (Dijous)
+- **DWEC:** Completada la **UD1 Activitat Puntuable** — document Markdown amb les 8 seccions (introducció, arquitectura 3 capes, diagrama de components, flux de renderitzat DOM/CSSOM/JIT, comunicació HTTP/JSON, escalabilitat, seguretat SOP+CORS+XSS i conclusions). Exportat a PDF: `ud1_activitat_noeconde.pdf`.
+- **DWEC:** Superat el **UD1 Qüestionari** a Aules.
+- **Convalidacions:** Revisat i verificat el formulari `Sol·licitud convalidacions LOE (complimentat).pdf` — tot correcte. Termini d'entrega a secretaria: **a partir del 21 de setembre**.
 
 ### 2026-09-16 (Dimecres)
 - **DWES:** Finalitzada la configuració de Docker (`U1_P1_CondeNoe`) amb Apache PHP 8.2, MySQL i phpMyAdmin. Interfícies millorades de prova i test.
