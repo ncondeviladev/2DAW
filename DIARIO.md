@@ -16,7 +16,7 @@
 | **DWEC** | `UD1 Qüestionari` | ✅ **Fet** | Test superat a la plataforma Aules |
 | **DWEC** | `UD2 Activitat` | 🔴 **Pendent** | Segona unitat |
 | **DWEC** | `UD2 Qüestionari` | 🔴 **Pendent** | Test a la plataforma Aules |
-| **DIW** | `S01_PR1` (Pràctica Setmana 1) | 🔴 **Pendent** | Primera pràctica de disseny web |
+| **DIW** | `S01_PR1` (HCI, Interfícies i Elements Web) | ✅ **Fet** | Completada, exportada a PDF i entregada |
 | **DIW** | `S02_PR1` (Pràctica Setmana 2) | 🔴 **Pendent** | Segona pràctica de disseny web |
 | **DIW** | `Autoavaluació` | 🔴 **Pendent** | Qüestionari d'autoavaluació |
 
@@ -63,7 +63,7 @@
 * **Professor:** Quique Savall Seguí (`e.savallsegui@edu.gva.es`)  
 * **Tutoría col·lectiva:** Dimecres vesprada (15:15–16:10) / Dijous matí (14:20–15:15).
 * **Progrés actual:**
-  - [ ] **S01_PR1:** Pràctica de la Setmana 1.
+  - [x] **S01_PR1 (Completada i Entregada):** Pràctica d'HCI i interfícies: Mites del disseny, taula de 18 elements web en anglès, captures d'El Corte Inglés identificant components, comparatives de disseny visual/navegació (Yale/Chichilo, Enterprise/Lingscars, Arngren/MediaMarkt) i conceptes d'accessibilitat per a diverses discapacitats. Document exportat a PDF (`S01_PR1_CondeNoe.pdf`) seguint tots els criteris de format (enunciats en negreta, respostes en blau).
   - [ ] **S02_PR1:** Pràctica de la Setmana 2.
   - [ ] **Autoavaluació:** Qüestionari d'autoavaluació de la unitat.
 
@@ -83,6 +83,7 @@
 ## 📅 Registre Cronològic / Diari de Treball
 
 ### 2026-09-18 (Dijous)
+- **DIW:** Completada i entregada la pràctica **S01_PR1 (HCI. Interfaces. Elementos de las Int. Web)**. Resolució de les 4 activitats (mites del disseny, terminologia d'elements web en anglès, anàlisi de captures d'El Corte Inglés, anàlisi d'impacte visual, colors/tipografia i navegació de llocs web reals, i accessibilitat web per a diferents discapacitats). Formatat amb respostes en blau i exportat a PDF (`S01_PR1_CondeNoe.pdf`).
 - **DWEC:** Completada la **UD1 Activitat Puntuable** — document Markdown amb les 8 seccions (introducció, arquitectura 3 capes, diagrama de components, flux de renderitzat DOM/CSSOM/JIT, comunicació HTTP/JSON, escalabilitat, seguretat SOP+CORS+XSS i conclusions). Exportat a PDF: `ud1_activitat_noeconde.pdf`.
 - **DWEC:** Superat el **UD1 Qüestionari** a Aules.
 - **Convalidacions:** Revisat i verificat el formulari `Sol·licitud convalidacions LOE (complimentat).pdf` — tot correcte. Termini d'entrega a secretaria: **a partir del 21 de setembre**.
