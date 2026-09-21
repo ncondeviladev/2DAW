@@ -1,7 +1,7 @@
 # 📘 DIARI DE SEGUIMENT — 2n DAW (Semipresencial)
 > **Alumne:** Noé Conde Vila  
 > **Centre:** IES Maria Enríquez (Gandia) — Curs 2026/2027  
-> **Última actualització:** 18 de setembre de 2026  
+> **Última actualització:** 21 de setembre de 2026  
 
 ---
 
@@ -10,7 +10,8 @@
 | Assignatura | Tasca / Activitat | Estat | Data límit / Notes |
 | :--- | :--- | :---: | :--- |
 | **DWES** | `U1_P1 Docker` (Preparació entorn Apache + MySQL + phpMyAdmin) | ✅ **Fet** | Contenidors operatius i fitxers creats |
-| **DWES** | `U2_P1 Exercicis PHP` (Exercicis 1.1 al 5.3 + Bloc 6) | ⏳ **En curs** | Fets de l'1.1 al 5.3; **pendents els del Bloc 6** |
+| **DWES** | `U2_P1 Exercicis PHP` (Exercicis 1.1 al 6.3) | ✅ **Fet** | Tots els exercicis resolts i provats en servidor local |
+| **DWES** | `U2 Qüestionari` (Test d'avaluació PHP bàsic) | ✅ **Fet** | Test superat a la plataforma Aules |
 | **DaW** | `PEC1` (Apache i Nginx, Error 404, Port 8989, Multilloc, SSH/SFTP) | ✅ **Fet** | Completat al 100% i compilat a PDF |
 | **DWEC** | `UD1 Activitat` (Anàlisi d'arquitectura web simple) | ✅ **Fet** | Document completat i exportat a PDF (`ud1_activitat_noeconde.pdf`) |
 | **DWEC** | `UD1 Qüestionari` | ✅ **Fet** | Test superat a la plataforma Aules |
@@ -30,7 +31,8 @@
 * **Progrés actual:**
   - [x] **U1_P1 Docker:** Stack muntat amb `docker-compose.yml` (`php_app` a :8080, `mysql_db` a :3306, `phpmyadmin` a :8081). Pàgines d'inici i test creades.
   - [x] **U2_PHP Exercicis 1.1 a 5.3:** Sintaxi, tipus, estructures de control (`match`/`switch`), bucles, arrays indexats i associatius, funcions i `require_once`.
-  - [ ] **U2_PHP Bloc 6 (Pendent):** Formularis GET vs POST, superglobals (`$_GET`, `$_POST`), validació al servidor.
+  - [x] **U2_PHP Bloc 6 (Formularis):** Formularis GET vs POST, superglobals (`$_GET`, `$_POST`), operador de fusió null `??`, neteja amb `trim()` i gestió d'errors de validació amb `strlen()` i `filter_var()`.
+  - [x] **U2 Qüestionari d'avaluació:** Test teòric de PHP bàsic superat a Aules.
 
 ---
 
@@ -81,6 +83,11 @@
 ---
 
 ## 📅 Registre Cronològic / Diari de Treball
+
+### 2026-09-21 (Dilluns)
+- **DWES:** Finalitzats tots els exercicis del **Bloc 6 de PHP** (`exercici6.1.php`, `exercici6.2.php`, `exercici6.3.php`) sobre formularis GET i POST, operador de fusió null `??`, sanitització amb `trim()` i estructura de validació amb array associatiu d'errors `$errors`. Provats amb el servidor local `php -S localhost:8000`.
+- **DWES:** Superat el **Qüestionari d'avaluació de la Unitat 2 (PHP bàsic)** a la plataforma Aules.
+- **Convalidacions:** Tramitat i enviat el correu oficial a Secretaria i Prefectura d'Estudis sol·licitant les convalidacions de DAM a DAW (Annex XV degudament complimentat, certificat oficial de qualificacions i DNI) i la regularització dels cursos d'Aules.
 
 ### 2026-09-18 (Dijous)
 - **DIW:** Completada i entregada la pràctica **S01_PR1 (HCI. Interfaces. Elementos de las Int. Web)**. Resolució de les 4 activitats (mites del disseny, terminologia d'elements web en anglès, anàlisi de captures d'El Corte Inglés, anàlisi d'impacte visual, colors/tipografia i navegació de llocs web reals, i accessibilitat web per a diferents discapacitats). Formatat amb respostes en blau i exportat a PDF (`S01_PR1_CondeNoe.pdf`).
