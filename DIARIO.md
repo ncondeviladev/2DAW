@@ -1,7 +1,7 @@
 # 📘 DIARI DE SEGUIMENT — 2n DAW (Semipresencial)
 > **Alumne:** Noé Conde Vila  
 > **Centre:** IES Maria Enríquez (Gandia) — Curs 2026/2027  
-> **Última actualització:** 21 de setembre de 2026  
+> **Última actualització:** 22 de setembre de 2026  
 
 ---
 
@@ -56,7 +56,9 @@
 * **Progrés actual:**
   - [x] **UD1 Activitat puntuable:** Anàlisi d'una aplicació web senzilla (arquitectura client-servidor en 3 capes, flux de renderitzat HTML/CSS/JS DOM+CSSOM, peticions fetch/JSON, política Same-Origin i CORS + diagrama PNG). Document Markdown exportat a PDF: `ud1_activitat_noeconde.pdf`.
   - [x] **UD1 Qüestionari:** Test teòric superat a Aules.
-  - [ ] **UD2 Activitat puntuable:** Segona pràctica d'entorn client.
+  - [/] **UD2 Exercicis de Repàs:** Completats els 16 exercicis algorísmics (`exercicis_repas_ud2.md`) amb codi JS comentat.
+  - [/] **UD2 Exercicis de Pràctica:** Completats els 4 exercicis de pràctica (`exercicis_practica_ud2.md`) — classifyNumber, monthToSeason, sumaDigits i fibonacciN.
+  - [ ] **UD2 Activitat puntuable:** Problema dels graons (`ud2_activitat_noeconde.md`) — pendent d'implementar.
   - [ ] **UD2 Qüestionari:** Test teòric d'UD2.
 
 ---
@@ -83,6 +85,10 @@
 ---
 
 ## 📅 Registre Cronològic / Diari de Treball
+
+### 2026-09-22 (Dimarts)
+- **DWEC:** Completats i documentats els **16 exercicis de repàs d'algorísmia en JavaScript** (`exercicis_repas_ud2.md`). Exercicis del 1 al 7 resolts i entesos pas a pas (primalitat, factorial iteratiu, màxim de tres, divisors per arrel quadrada, comptar vocals, zeros de factorial amb la fórmula de Legendre, i coprimalitat amb l'algorisme d'Euclides). Exercicis del 8 al 16 completats (nombre perfecte, suma recursiva, inversió recursiva de cadena, particions palindromes amb DP, camins en graella amb obstacles, subcadena única més llarga amb finestra deslizant, generació de parèntesis per backtracking, màxima suma no adjacent i cerca binària recursiva). Cada funció inclou comentaris explicatius de línia per facilitar el repàs.
+- **DWEC:** Verificat i completat el document `exercicis_practica_ud2.md` amb les 4 funcions inicials de la unitat.
 
 ### 2026-09-21 (Dilluns)
 - **DWES:** Finalitzats tots els exercicis del **Bloc 6 de PHP** (`exercici6.1.php`, `exercici6.2.php`, `exercici6.3.php`) sobre formularis GET i POST, operador de fusió null `??`, sanitització amb `trim()` i estructura de validació amb array associatiu d'errors `$errors`. Provats amb el servidor local `php -S localhost:8000`.

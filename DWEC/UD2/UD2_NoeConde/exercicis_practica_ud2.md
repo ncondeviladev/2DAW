@@ -8,6 +8,7 @@
 </style>
 
 # DWEC — Unitat 2: Exercicis de Programació en JavaScript
+
 ## Sintaxi Bàsica, Estructures de Control, Bucles i Arrays
 
 | | |
@@ -23,13 +24,19 @@
 
 **Enunciat: Donat un nombre $n$, informa si és negatiu, zero o positiu. A més, si és positiu, indica també si és parell o senar. Escriu una funció `classifyNumber(n)` que retorni una cadena amb la classificació.**
 
-<p style="color: #1a73e8; font-family: Georgia, serif;">
-[Espai per a la resposta / explicació de l'alumne]
-</p>
-
 ```javascript
 function classifyNumber(n) {
-    // TODO: Implementar la funció
+  if (n < 0) {
+    return "Negatiu";
+  } else if (n === 0) {
+    return "Zero";
+  } else {
+    if (n % 2 === 0) {
+      return "Positiu parell";
+    } else {
+      return "Positiu senar";
+    }
+  }
 }
 
 // Proves
@@ -45,13 +52,19 @@ console.log(classifyNumber(7));
 
 **Enunciat: Donat un número de mes (1-12), mostra la temporada corresponent en l'hemisferi nord: hivern (desembre-febrer), primavera (març-maig), estiu (juny-agost), tardor (setembre-novembre). Implementa una funció `monthToSeason(month)` que retorni la cadena de la temporada. Si el mes no és vàlid, retorna "Mes invàlid".**
 
-<p style="color: #1a73e8; font-family: Georgia, serif;">
-[Espai per a la resposta / explicació de l'alumne]
-</p>
-
 ```javascript
 function monthToSeason(month) {
-    // TODO: Implementar la funció
+  if (month > 12 || month < 1) {
+    return "Mes invàlid";
+  } else if (month == 12 || month <= 2) {
+    return "Hivern";
+  } else if (month >= 3 && month <= 5) {
+    return "Primavera";
+  } else if (month >= 6 && month <= 8) {
+    return "Estiu";
+  } else {
+    return "Tardor";
+  }
 }
 
 // Proves
@@ -68,13 +81,14 @@ console.log(monthToSeason(15));
 
 **Enunciat: Escriu una funció `sumaDigits(n)` que, donat un enter $n \ge 0$, retorni la suma dels seus dígits. Cal utilitzar un bucle `while` per processar els dígits.**
 
-<p style="color: #1a73e8; font-family: Georgia, serif;">
-[Espai per a la resposta / explicació de l'alumne]
-</p>
-
 ```javascript
 function sumaDigits(n) {
-    // TODO: Implementar la funció
+  let suma = 0;
+  while (n > 0) {
+    suma += n % 10; // Coge el último dígito
+    n = Math.floor(n / 10); // Elimina el último dígito
+  }
+  return suma;
 }
 
 // Proves
@@ -89,13 +103,15 @@ console.log(sumaDigits(0));
 
 **Enunciat: Escriu una funció `fibonacciN(n)` que retorni un array amb els primers $n$ termes de la successió de Fibonacci, començant per `[0, 1]`. Cal fer servir un bucle `for`. Si $n$ és 0, retorna un array buit `[]`; si $n$ és 1, retorna `[0]`.**
 
-<p style="color: #1a73e8; font-family: Georgia, serif;">
-[Espai per a la resposta / explicació de l'alumne]
-</p>
-
 ```javascript
 function fibonacciN(n) {
-    // TODO: Implementar la funció
+  if (n <= 0) return [];
+  if (n === 1) return [0];
+  let fib = [0, 1];
+  for (let i = 2; i < n; i++) {
+    fib.push(fib[i - 1] + fib[i - 2]);
+  }
+  return fib;
 }
 
 // Proves
