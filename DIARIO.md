@@ -1,7 +1,7 @@
 # 📘 DIARI DE SEGUIMENT — 2n DAW (Semipresencial)
 > **Alumne:** Noé Conde Vila  
 > **Centre:** IES Maria Enríquez (Gandia) — Curs 2026/2027  
-> **Última actualització:** 22 de setembre de 2026  
+> **Última actualització:** 23 de setembre de 2026  
 
 ---
 
@@ -18,58 +18,29 @@
 | **DWEC** | `UD2 Activitat` | 🔴 **Pendent** | Segona unitat |
 | **DWEC** | `UD2 Qüestionari` | 🔴 **Pendent** | Test a la plataforma Aules |
 | **DIW** | `S01_PR1` (HCI, Interfícies i Elements Web) | ✅ **Fet** | Completada, exportada a PDF i entregada |
-| **DIW** | `S02_PR1` (Pràctica Setmana 2) | 🔴 **Pendent** | Segona pràctica de disseny web |
+| **DIW** | `S02_Ej PizzaDelivery` (Exercici HTML autoevaluació) | ✅ **Fet** | Completats Ej1 i Ej2 al 100%, validat a W3C (0 errors) |
+| **DIW** | `S02_PR1` (CV en HTML5) | 🔴 **Pendent** | Pràctica principal Setmana 2 |
 | **DIW** | `Autoavaluació` | 🔴 **Pendent** | Qüestionari d'autoavaluació |
 
 ---
 
-## 📚 Detall per Assignatura
+## 📚 Assignatures i Professorat
 
 ### 1. DWES — Desenvolupament Web en Entorn Servidor
 * **Professor:** Eloy Gutiérrez Paredes (`e.gutierrezparedes@edu.gva.es`)  
 * **Tutoría col·lectiva:** Dimecres vesprada (setmanes parells sessió doble, imparells sessió simple) / Dijous matí.
-* **Progrés actual:**
-  - [x] **U1_P1 Docker:** Stack muntat amb `docker-compose.yml` (`php_app` a :8080, `mysql_db` a :3306, `phpmyadmin` a :8081). Pàgines d'inici i test creades.
-  - [x] **U2_PHP Exercicis 1.1 a 5.3:** Sintaxi, tipus, estructures de control (`match`/`switch`), bucles, arrays indexats i associatius, funcions i `require_once`.
-  - [x] **U2_PHP Bloc 6 (Formularis):** Formularis GET vs POST, superglobals (`$_GET`, `$_POST`), operador de fusió null `??`, neteja amb `trim()` i gestió d'errors de validació amb `strlen()` i `filter_var()`.
-  - [x] **U2 Qüestionari d'avaluació:** Test teòric de PHP bàsic superat a Aules.
-
----
 
 ### 2. DaW — Desplegament d'Aplicacions Web
 * **Professor:** Juan Ramón Collado Esteve (`jr.colladoesteve@edu.gva.es`)  
 * **Tutoría col·lectiva:** Dimecres vesprada (setmanes imparells) / Dijous matí (setmanes parells).
-* **Progrés actual:**
-  - [x] **PEC1 Completada:** 
-    - Exercici 1: Pàgines d'error 404 personalitzades en Apache i Nginx.
-    - Exercici 2: Canvi de port a 8989.
-    - Exercici 3: Nginx multisitio (Server Blocks).
-    - Exercici 4: Coexistència simultània Apache + Nginx (mínim 4 llocs).
-    - Exercici 5: Accés remot SSH i transferència de fitxers SFTP amb FileZilla.
-    - PDF oficial generat: `PEC1_U1_NoeConde.pdf`.
-
----
 
 ### 3. DWEC — Desenvolupament Web en Entorn Client
 * **Professor:** José Ramón Migueles Hernández (`jr.migueleshernand@edu.gva.es`)  
 * **Tutoría col·lectiva:** Dimecres vesprada / Dijous matí.
-* **Progrés actual:**
-  - [x] **UD1 Activitat puntuable:** Anàlisi d'una aplicació web senzilla (arquitectura client-servidor en 3 capes, flux de renderitzat HTML/CSS/JS DOM+CSSOM, peticions fetch/JSON, política Same-Origin i CORS + diagrama PNG). Document Markdown exportat a PDF: `ud1_activitat_noeconde.pdf`.
-  - [x] **UD1 Qüestionari:** Test teòric superat a Aules.
-  - [/] **UD2 Exercicis de Repàs:** Completats els 16 exercicis algorísmics (`exercicis_repas_ud2.md`) amb codi JS comentat.
-  - [/] **UD2 Exercicis de Pràctica:** Completats els 4 exercicis de pràctica (`exercicis_practica_ud2.md`) — classifyNumber, monthToSeason, sumaDigits i fibonacciN.
-  - [ ] **UD2 Activitat puntuable:** Problema dels graons (`ud2_activitat_noeconde.md`) — pendent d'implementar.
-  - [ ] **UD2 Qüestionari:** Test teòric d'UD2.
-
----
 
 ### 4. DIW — Disseny d'Interfícies Web
 * **Professor:** Quique Savall Seguí (`e.savallsegui@edu.gva.es`)  
 * **Tutoría col·lectiva:** Dimecres vesprada (15:15–16:10) / Dijous matí (14:20–15:15).
-* **Progrés actual:**
-  - [x] **S01_PR1 (Completada i Entregada):** Pràctica d'HCI i interfícies: Mites del disseny, taula de 18 elements web en anglès, captures d'El Corte Inglés identificant components, comparatives de disseny visual/navegació (Yale/Chichilo, Enterprise/Lingscars, Arngren/MediaMarkt) i conceptes d'accessibilitat per a diverses discapacitats. Document exportat a PDF (`S01_PR1_CondeNoe.pdf`) seguint tots els criteris de format (enunciats en negreta, respostes en blau).
-  - [ ] **S02_PR1:** Pràctica de la Setmana 2.
-  - [ ] **Autoavaluació:** Qüestionari d'autoavaluació de la unitat.
 
 ---
 
@@ -79,35 +50,60 @@
 - [ ] **Identificació:** Nom de l'alumne (**Noé Conde Vila**) i curs (**2n DAW**) clarament indicats.
 - [ ] **Format dels enunciats:** Enunciat de cada activitat sempre en **negreta**.
 - [ ] **Format de respostes:** Text en estil diferent i en color **blau**.
-- [ ] **Imatges/Captures:** Sempre dins d'una carpeta dedicada `capturas/` (mai soltes a l'arrel).
+- [ ] **Imatges/Captures:** Sempre dins d'una carpeta dedicada `capturas/` o `img/` (mai soltes a l'arrel).
 - [ ] **Nomenclatura d'arxius:** Tot en minúscules, sense accents, sense 'ñ' i sense espais en blanc.
 
 ---
 
-## 📅 Registre Cronològic / Diari de Treball
+## 🏗️ Normes de Qualitat HTML — DIW (Prof. Savall) ← MUY ESTRICTO
 
-### 2026-09-22 (Dimarts)
-- **DWEC:** Completats i documentats els **16 exercicis de repàs d'algorísmia en JavaScript** (`exercicis_repas_ud2.md`). Exercicis del 1 al 7 resolts i entesos pas a pas (primalitat, factorial iteratiu, màxim de tres, divisors per arrel quadrada, comptar vocals, zeros de factorial amb la fórmula de Legendre, i coprimalitat amb l'algorisme d'Euclides). Exercicis del 8 al 16 completats (nombre perfecte, suma recursiva, inversió recursiva de cadena, particions palindromes amb DP, camins en graella amb obstacles, subcadena única més llarga amb finestra deslizant, generació de parèntesis per backtracking, màxima suma no adjacent i cerca binària recursiva). Cada funció inclou comentaris explicatius de línia per facilitar el repàs.
-- **DWEC:** Verificat i completat el document `exercicis_practica_ud2.md` amb les 4 funcions inicials de la unitat.
+### Estructura i Document
+- [ ] `<!DOCTYPE html>` sempre en la primera línia, sense excepció.
+- [ ] `<html lang="es">` — atribut `lang` **obligatori** (W3C i accessibilitat).
+- [ ] Estructura correcta: `<head>` i `<body>` com a únics fills directes de `<html>`.
+- [ ] Codi **ben indentat** (2 espais o tab consistent) — usar Prettier/Beautify a VSCode.
+- [ ] **Validació obligatòria** a `https://validator.w3.org` — el resultat **només pot tenir warnings, cap error**.
 
-### 2026-09-21 (Dilluns)
-- **DWES:** Finalitzats tots els exercicis del **Bloc 6 de PHP** (`exercici6.1.php`, `exercici6.2.php`, `exercici6.3.php`) sobre formularis GET i POST, operador de fusió null `??`, sanitització amb `trim()` i estructura de validació amb array associatiu d'errors `$errors`. Provats amb el servidor local `php -S localhost:8000`.
-- **DWES:** Superat el **Qüestionari d'avaluació de la Unitat 2 (PHP bàsic)** a la plataforma Aules.
-- **Convalidacions:** Tramitat i enviat el correu oficial a Secretaria i Prefectura d'Estudis sol·licitant les convalidacions de DAM a DAW (Annex XV degudament complimentat, certificat oficial de qualificacions i DNI) i la regularització dels cursos d'Aules.
+### HEAD — Mínims i Extres
+- [ ] `<meta charset="utf-8">` — sempre, és el primer meta.
+- [ ] `<title>` — sempre present, descriptiu.
+- [ ] `<meta name="author" content="Noé Conde Vila">` — identificació de l'autor.
+- [ ] `<meta name="description" content="...">` — descripció del contingut.
+- [ ] `<meta name="keywords" content="...">` — paraules clau.
+- [ ] `<meta name="robots" content="index, nofollow">` — indexar pàgina però no les filles.
+- [ ] `<meta name="theme-color" content="#...">` — color per a navegadors mòbils.
+- [ ] `<link rel="icon" ...>` — favicon a la barra del navegador.
+- [ ] (Opcional) Metes Open Graph (`og:title`, `og:description`, `og:image`, `og:url`).
 
-### 2026-09-18 (Dijous)
-- **DIW:** Completada i entregada la pràctica **S01_PR1 (HCI. Interfaces. Elementos de las Int. Web)**. Resolució de les 4 activitats (mites del disseny, terminologia d'elements web en anglès, anàlisi de captures d'El Corte Inglés, anàlisi d'impacte visual, colors/tipografia i navegació de llocs web reals, i accessibilitat web per a diferents discapacitats). Formatat amb respostes en blau i exportat a PDF (`S01_PR1_CondeNoe.pdf`).
-- **DWEC:** Completada la **UD1 Activitat Puntuable** — document Markdown amb les 8 seccions (introducció, arquitectura 3 capes, diagrama de components, flux de renderitzat DOM/CSSOM/JIT, comunicació HTTP/JSON, escalabilitat, seguretat SOP+CORS+XSS i conclusions). Exportat a PDF: `ud1_activitat_noeconde.pdf`.
-- **DWEC:** Superat el **UD1 Qüestionari** a Aules.
-- **Convalidacions:** Revisat i verificat el formulari `Sol·licitud convalidacions LOE (complimentat).pdf` — tot correcte. Termini d'entrega a secretaria: **a partir del 21 de setembre**.
+### BODY — Semàntica i Estructura
+- [ ] Usar **contenidors semàntics HTML5** (`<header>`, `<nav>`, `<main>`, `<section>`, `<article>`, `<aside>`, `<footer>`) — **MAI només `<div>`** on existeix l'etiqueta semàntica adequada.
+- [ ] `<div>` i `<span>` per a agrupació genèrica quan no hi ha etiqueta semàntica millor.
+- [ ] Tot el text visible ha d'estar dins d'un element (`<p>`, `<li>`, `<td>`, `<h1>`...) — **mai text nu directament al `<body>`**.
+- [ ] Un sol `<h1>` per pàgina (títol principal), jerarquia correcta `h1 > h2 > h3...`.
 
-### 2026-09-16 (Dimecres)
-- **DWES:** Finalitzada la configuració de Docker (`U1_P1_CondeNoe`) amb Apache PHP 8.2, MySQL i phpMyAdmin. Interfícies millorades de prova i test.
-- **DWES:** Aprovat el qüestionari d'avaluació de la Unitat 1 (conceptes client-servidor, HTTP, Apache, SPA, 3 capes).
-- **Consolidació:** Creat aquest document unificat `DIARIO.md` per a centralitzar el control de les 4 matèries.
+### Etiquetes Semàntiques de Text
+- [ ] **Usar** `<strong>` (important), `<em>` (èmfasi), `<mark>` (ressaltat), `<cite>` (citació), `<small>` (nota peu), `<code>` (codi), `<del>` (esborrat), `<ins>` (inserit), `<dfn>` (definició), `<abbr>` (abreviatura), `<time>` (data/hora), `<sub>`, `<sup>`.
+- [ ] **Evitar** les etiquetes visuals obsoletes: `<b>` → usar `<strong>`, `<i>` → usar `<em>`, `<s>` → usar `<del>`, `<u>` → usar CSS.
 
-### 2026-09-15 (Dimarts)
-- **DWES:** Resolució dels exercicis bàsics de PHP des de l'1.1 fins al 5.3 (variables, operadors, `match`, bucles, arrays indexats i associatius, funcions i modularització amb `require_once`).
+### Imatges
+- [ ] Sempre atribut `alt` a `<img>` — **obligatori** per accessibilitat i validació.
+- [ ] Atributs `width` i/o `height` en HTML (pre-renderitzat), l'estil visual amb CSS.
+- [ ] **No usar** atributs visuals obsolets (`align`, `border`, `hspace`, `vspace`) → usar CSS.
 
-### 2026-09-14 (Dilluns)
-- **DaW:** Finalització completa de la PEC1 (5 exercicis d'Apache i Nginx, multisitio, coexistència i accés remot amb SSH/SFTP). Generat el document Markdown i exportat a PDF.
+### Taules
+- [ ] `<table>` **NOMÉS per a dades tabulars** — mai per a maquetació de pàgina.
+- [ ] Usar `<th>` per a capçaleres, `<td>` per a cel·les de dades.
+- [ ] `<caption>` per a donar títol a la taula.
+- [ ] `colspan` i `rowspan` per a cel·les expandides.
+- [ ] **No usar** atributs visuals obsolets (`border`, `cellspacing`, `cellpadding`, `bgcolor`, `align`) → usar CSS.
+
+### Hiperenllaços
+- [ ] `<a href="#id">` per a navegació interna (ancles).
+- [ ] `target="_blank"` per a recursos externs (obrir en nova pestanya).
+- [ ] `<a href="#">` per a "tornar al principi" (top de la pàgina).
+- [ ] `mailto:` i `tel:` per a correu i telèfon respectivament.
+- [ ] Els espais en URLs de `mailto` han d'anar codificats com `%20`.
+
+### Rutes i Nomenclatura
+- [ ] **Sempre rutes relatives** (mai absolutes com `C:/...`) — garanteix portabilitat al servidor.
+- [ ] Noms de fitxers i carpetes: **minúscules, sense accents, sense ñ, sense espais** (usar guió `-` o guió baix `_`).
