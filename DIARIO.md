@@ -1,7 +1,7 @@
 # 📘 DIARI DE SEGUIMENT — 2n DAW (Semipresencial)
 > **Alumne:** Noé Conde Vila  
 > **Centre:** IES Maria Enríquez (Gandia) — Curs 2026/2027  
-> **Última actualització:** 23 de setembre de 2026  
+> **Última actualització:** 24 de setembre de 2026  
 
 ---
 
@@ -19,7 +19,7 @@
 | **DWEC** | `UD2 Qüestionari` | 🔴 **Pendent** | Test a la plataforma Aules |
 | **DIW** | `S01_PR1` (HCI, Interfícies i Elements Web) | ✅ **Fet** | Completada, exportada a PDF i entregada |
 | **DIW** | `S02_Ej PizzaDelivery` (Exercici HTML autoevaluació) | ✅ **Fet** | Completats Ej1 i Ej2 al 100%, validat a W3C (0 errors) |
-| **DIW** | `S02_PR1` (CV en HTML5) | 🔴 **Pendent** | Pràctica principal Setmana 2 |
+| **DIW** | `S02_PR1` (CV en HTML5) | ✅ **Fet** | Completada al 100%, validada a W3C (0 errors, 0 avisos) |
 | **DIW** | `Autoavaluació` | 🔴 **Pendent** | Qüestionari d'autoavaluació |
 
 ---
