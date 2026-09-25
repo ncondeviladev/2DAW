@@ -1,26 +1,30 @@
 # 📘 DIARI DE SEGUIMENT — 2n DAW (Semipresencial)
 > **Alumne:** Noé Conde Vila  
 > **Centre:** IES Maria Enríquez (Gandia) — Curs 2026/2027  
-> **Última actualització:** 24 de setembre de 2026  
+> **Última actualització:** 25 de setembre de 2026 (20:10)  
 
 ---
 
-## 🎯 Tauler General de Tasques (Les 4 Assignatures Principals)
+## 🎯 Tauler General de Tasques i Entregues (Les 4 Assignatures Principals)
 
-| Assignatura | Tasca / Activitat | Estat | Data límit / Notes |
-| :--- | :--- | :---: | :--- |
-| **DWES** | `U1_P1 Docker` (Preparació entorn Apache + MySQL + phpMyAdmin) | ✅ **Fet** | Contenidors operatius i fitxers creats |
-| **DWES** | `U2_P1 Exercicis PHP` (Exercicis 1.1 al 6.3) | ✅ **Fet** | Tots els exercicis resolts i provats en servidor local |
-| **DWES** | `U2 Qüestionari` (Test d'avaluació PHP bàsic) | ✅ **Fet** | Test superat a la plataforma Aules |
-| **DaW** | `PEC1` (Apache i Nginx, Error 404, Port 8989, Multilloc, SSH/SFTP) | ✅ **Fet** | Completat al 100% i compilat a PDF |
-| **DWEC** | `UD1 Activitat` (Anàlisi d'arquitectura web simple) | ✅ **Fet** | Document completat i exportat a PDF (`ud1_activitat_noeconde.pdf`) |
-| **DWEC** | `UD1 Qüestionari` | ✅ **Fet** | Test superat a la plataforma Aules |
-| **DWEC** | `UD2 Activitat` | 🔴 **Pendent** | Segona unitat |
-| **DWEC** | `UD2 Qüestionari` | 🔴 **Pendent** | Test a la plataforma Aules |
-| **DIW** | `S01_PR1` (HCI, Interfícies i Elements Web) | ✅ **Fet** | Completada, exportada a PDF i entregada |
-| **DIW** | `S02_Ej PizzaDelivery` (Exercici HTML autoevaluació) | ✅ **Fet** | Completats Ej1 i Ej2 al 100%, validat a W3C (0 errors) |
-| **DIW** | `S02_PR1` (CV en HTML5) | ✅ **Fet** | Completada al 100%, validada a W3C (0 errors, 0 avisos) |
-| **DIW** | `Autoavaluació` | 🔴 **Pendent** | Qüestionari d'autoavaluació |
+| Assignatura | Tasca / Activitat | Estat | Data d'obertura / Venciment | Notes |
+| :--- | :--- | :---: | :--- | :--- |
+| **DIW** | `S01_PR1` (Interfaces) | ✅ **Entregat** | Venciment: 07/10/2026 20:37 | Tasca tramesa a Aules |
+| **DIW** | `S02_PR1` (CV en HTML5) | ✅ **Entregat** | Venciment: 10/10/2026 20:36 | **Tramesa el 24/09 (14:18)** |
+| **DIW** | `S02 Autoevaluació` (PizzaDelivery) | ✅ **Fet** | Voluntària | Resolta al 100%, validada W3C |
+| **DIW** | `S03_PR1` (Formularis HTML5) | ✅ **Entregat** | Venciment: 17/10/2026 23:59 | **Tramesa el 25/09 (20:10)**. Formulari Supòsit 1 (Portal d'Ocupació) amb 7 fieldsets, icones, CSS extern i validació W3C |
+| **DaW** | `PEC1` (Apache, Nginx, SSH) | 🟡 **Fet (Local)** | **Venciment: diumenge, 18/10/2026 23:59** | Pràctica llesta, pendent trametre a Aules |
+| **DaW** | `PEC2` (Docker i desplegaments) | 🔴 **Pendent** | **Venciment: diumenge, 25/10/2026 23:59** | 🆕 Nova pràctica U2 Docker |
+| **DWEC** | `UD1 Activitat` (Arquitectura Web) | ✅ **Fet** | Obert el 14/09/2026 | Document completat i exportat a PDF |
+| **DWEC** | `UD1 Qüestionari` | ✅ **Fet** | Obert el 17/09/2026 | Test superat a Aules |
+| **DWEC** | `UD2 Activitat` (Problema graons) | 🟡 **Preparat** | **S'obri dilluns, 28/09/2026 00:47** | Exercicis resolts, obri dilluns |
+| **DWEC** | `UD2 Qüestionari` | 🔴 **Pendent** | Obert des del 21/09/2026 | Test a la plataforma Aules |
+| **DWEC** | `UD3 Activitat puntuable` | ⏳ *Pròximament* | S'obri diumenge, 11/10/2026 00:47 | S05-S07 (Arrais i funcions) |
+| **DWEC** | `UD4 Activitat puntuable` | ⏳ *Pròximament* | S'obri dimarts, 27/10/2026 00:47 | S08-S09 (Objectes) |
+| **DWES** | `U1_P1 Docker` (Entorn LAMP) | 🟡 **Fet (Local)** | **Venciment: dilluns, 30/11/2026 12:04** | Contenidors operatius en local |
+| **DWES** | `Autoavaluació U1` (Introducció) | 🔴 **Pendent** | Obert des del 16/09/2026 08:41 | Qüestionari a Aules |
+| **DWES** | `U2_P1 Exercicis PHP` (1.1 a 6.3) | 🟡 **Fet (Local)** | **Venciment: dissabte, 21/11/2026 08:16** | Exercicis resolts i comprovats |
+| **DWES** | `Autoavaluació U2` (PHP Bàsic) | ✅ **Fet** | Obert a Aules | Test d'avaluació superat |
 
 ---
 
@@ -107,3 +111,58 @@
 ### Rutes i Nomenclatura
 - [ ] **Sempre rutes relatives** (mai absolutes com `C:/...`) — garanteix portabilitat al servidor.
 - [ ] Noms de fitxers i carpetes: **minúscules, sense accents, sense ñ, sense espais** (usar guió `-` o guió baix `_`).
+
+---
+
+## 🚨 Dates Clau i Exàmens Presencials (1r Trimestre)
+* **DWEC (Client):** 
+  - **Examen 1a Avaluació:** **19 i 20 de Novembre de 2026** (Presencial).
+  - *Simulacre d'examen:* Previ a la data de l'examen oficial a Aules.
+* **DaW (Desplegament):**
+  - **Venciment PEC1:** **18 d'Octubre de 2026, 23:59**.
+  - **Venciment PEC2 (Docker):** **25 d'Octubre de 2026, 23:59**.
+* **DIW (Disseny d'Interfícies):**
+  - **Venciment S03_PR1 (Formularis):** **17 d'Octubre de 2026, 23:59**.
+* **DWES (Servidor):**
+  - **Venciment U2_P1 (PHP Bàsic):** **21 de Novembre de 2026, 08:16**.
+  - **Venciment U1_P1 (Docker):** **30 de Novembre de 2026, 12:04**.
+
+---
+
+## 📂 Mapa de Temari i Continguts d'Aules (Accés Ràpid)
+
+### 1. DWEC — Desenvolupament Web en Entorn Client (Prof. José Ramón Migueles)
+* **General / Previ:** Guia Alumnat, Classes JS útils (`String`, `Array`, `Date`, `Math`, `JSDOC`).
+* **UD1 — Arquitectures, llenguatge i eines:** Apunts UD1, WebAssembly (Wabt Toolkit), Go per a navegador, Frameworks 2026.
+* **UD2 — Guia de sintaxi i estructures bàsiques (Actual):**
+  - Apunts i guies: `Guia JavaScript`, `Com executar JavaScript`, `Mètodes útils cadenes, números i dates`, `RECURSIVIDAD`.
+  - Exercicis: Exercicis S03, Exercicis repàs (sense i amb solució).
+  - Tasca puntuable: S'obri **dilluns 28/09/2026, 00:47**.
+* **UD3 — Funcions, arrais i objectes predefinits (Del 05/10 al 27/10):**
+  - Apunts UD3, Guia d'objectes Web, Mètodes útils arrays, exercicis de funcions i arrais (amb/sense solució).
+  - Tasca puntuable UD3: S'obri **11/10/2026**.
+* **UD4 — Utilització d'objectes en JavaScript (Del 26/10 al 06/11):**
+  - Apunts UD4, exercicis fitxer extern `.js`, exercicis d'objectes (amb/sense solució).
+  - Tasca puntuable UD4: S'obri **27/10/2026**.
+
+### 2. DWES — Desenvolupament Web en Entorn Servidor (Prof. Eloy Gutiérrez)
+* **General:** Presentació del mòdul, Guia didàctica (actualitzada 22/09), Temporalització (actualitzada 22/09).
+* **Unitat 1 — Introducció al servidor:** Apunts web / PDF, exemples miniweb i PHP+JS. Pràctica `U1_P1 Docker` (venciment 30/11) i Autoavaluació U1.
+* **Unitat 2 — PHP Bàsic:** Apunts web, Pràctica `U2_P1 Exercicis PHP` (venciment 21/11), Solucionari de pràctiques publicat i Autoavaluació U2.
+
+### 3. DaW — Desplegament d'Aplicacions Web (Prof. Juan Ramón Collado)
+* **General:** Guia didàctica, Presentació, Calendari de tutories col·lectives (TCs).
+* **U1 — Introducció al desplegament i arquitectura C-S:** Apunts U1, Vídeo pràctica 1 i xarxes de la MV. Pràctica `PEC1` (venciment 18/10).
+* **U2 — Introducció a Docker i desplegaments en local:** Pròxima unitat (temari preparat a Aules).
+
+### 4. DIW — Disseny d'Interfícies Web (Prof. Quique Savall)
+* **U00 — Introducció al UI Design:** Apunts S01 Teoria i Presentació Interfaces. `S01_PR1` (Entregat).
+* **U01 — HTML - Estructura de la Informació:**
+  - **S02 (Intro HTML5):** Teoria HTML5, Presentació Estructura, Presentació Elements Bàsics, Ejercicio Pizza Delivery, `S02_PR1 CV en HTML5` (Entregat el 24/09).
+  - **S03 (HTML5 Forms):** `S03 UF01 TEORIA FORMS y CONTROLES`, exemples S03, pràctica `S03_PR1_Formulario_HTML5` (**Entregat el 25/09**):
+    - Formulari complet de Portal d'Ocupació (`index.html`) complint el 100% de la rúbrica del Prof. Savall.
+    - 7 seccions amb `fieldset` i `legend` acompanyats d'icones a 24x24 px.
+    - Tots els nous controls HTML5 (`number`, `date`, `range`, `color`, `file`, `tel`, `email`, `url`, `datalist`).
+    - Enllaços de tornada amunt amb icona de fletxa accessible.
+    - Estil separat en `css/style.css` (alineació de labels, ombres suaus a targetes, pseudo-element `::placeholder` i botons estilitzats).
+    - Codi validat sense errors al W3C Nu HTML Validator.

@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <title>Formulario CV</title>
+    <meta name="author" content="Noé Conde Vila">
+    <meta name="description" content="Exercici Formulario">
+    <meta name="keywords" content="cv, curriculum, empleo, candidatura">
+    <meta name="robots" content="index, nofollow">
+    <meta name="theme-color" content="#2C5179">
+    <link rel="icon" type="image/png" href="img/formacion.png">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <header>
+        <h1>Formulario CV - Candidatura de empleo</h1>
+        <p>Rellena el siguiente fomrulario con tus datos para inscribirte en nuesta base de datos de selección de
+            personal.</p>
+    </header>
+    <hr>
+    <main>
+        <nav>
+            <strong>Secciones: </strong>
+            <a href="#datosPersonales">Datos Personales</a> |
+            <a href="#formacion">Formación</a> |
+            <a href="#experiencia">Experiencia</a> |
+            <a href="#idiomas">Idiomas</a> |
+            <a href="#habilidades">Habilidades</a> |
+            <a href="#intereses">Intereses</a> |
+            <a href="#contacto">Contacto</a>
+        </nav>
+        <!-- 1. DATOS PERSONALES-->
+
+        <form action="#" method="post" enctype="multipart/form-data">
+
+            <fieldset id="datosPersonales">
+                <legend><img src="img/usuario.png" alt="Icono datos personales" width="24" height="24"> Datos Personales
+                </legend>
+                <p>
+                    <label for="nombre">Nombre completo *:</label>
+                    <input type="text" id="nombre" name="nombre" placeholder="Ej: Noé Conde Vila" required autofocus>
+                </p>
+                <p>
+                    <label for="dni">DNI / NIF *:</label>
+                    <input type="text" id="dni" name="dni" placeholder="12345678X" pattern="[0-9]{8}[A-Za-z]{1}"
+                        required>
+                </p>
+                <p>
+                    <label for="fechaNacimiento">Fecha de nacimiento *:</label>
+                    <input type="date" id="fechaNacimiento" name="fechaNacimiento" required>
+                </p>
+                <p>
+                    <label for="fotoPerfil">Fotografía de perfil:</label>
+                    <input type="file" id="fotoPerfil" name="fotoPerfil" accept="image/png, image/jpeg">
+                </p>
+
+                <a href="#"><img src="img/flecha.png" alt="Volver arriba" width="16" height="16"
+                        title="Volver arriba"></a>
+            </fieldset>
+
+            <!-- 2. FORMACIÓN ACADÉMICA -->
+
+            <fieldset id="formacion">
+                <legend><img src="img/formacion.png" alt="Icono formación" width="24" height="24"> Formación Académica
+                </legend>
+
+                <p>
+                    <label for="nivelEstudios">Nivel de estudios *:</label>
+                    <select id="nivelEstudios" name="nivelEstudios" required>
+                        <option value="" disabled selected>Seleccionar nivel de estudios *</option>
+                        <optgroup label="Formación profesional">
+                            <option value="cfgs">Ciclo Formativo Grado Superior (CFGS)</option>
+                            <option value="cfgm">Ciclo Formativo Grado Medio (CFGM)</option>
+                            <option value="cert">Certificado de profesionalidad</option>
+                            <option value="otro">Otro</option>
+                        </optgroup>
+                        <optgroup label="universidad">
+                            <option value="grado">Grado Universitario</option>
+                            <option value="master">Master</option>
+                            <option value="doctorado">Doctorado</option>
+                        </optgroup>
+                        <optgroup label="secundaria">
+                            <option value="bachillerato">Bachillerato</option>
+                            <option value="eso">E.S.O.</option>
+                        </optgroup>
+                    </select>
+                </p>
+                <p>
+                    <label for="titulacion">Título obtenido *:</label>
+                    <input type="text" id="titulacion" name="titulacion"
+                        placeholder="Ej: DAM, DAW, Grado en Informática" required>
+                </p>
+                <p>
+                    <label for="centro">Centro educativo *:</label>
+                    <input type="text" id="centro" name="centro" placeholder="Ej: IES Maria Enríquez" required>
+                </p>
+                <p>
+                    <label for="anioFin">Año de finalización:</label>
+                    <input type="number" id="anioFin" name="anioFin" min="1970" max="2030" step="1"
+                        placeholder="Ej: 2026">
+                </p>
+                <a href="#"><img src="img/flecha.png" alt="Volver arriba" width="16" height="16"
+                        title="Volver arriba"></a>
+            </fieldset>
+            <!-- 3. EXPERIENCIA LABORAL -->
+
+            <fieldset id="experiencia">
+                <legend><img src="img/experiencia.png" alt="Icono experiencia" width="24" height="24"> Experiencia
+                    Laboral</legend>
+                <p>
+                    <label for="puesto">Puesto o rol principal</label>
+                    <input type="text" id="puesto" name="puesto" list="listaPuestos"
+                        placeholder="Escribe o selecciona tu puesto..." required>
+
+                    <datalist id="listaPuestos">
+                        <option value="Operario / Operaria">
+                        <option value="Técnico / Especialista">
+                        <option value="Administrativo / Gestión">
+                        <option value="Informático / Programador">
+                        <option value="Comercial / Ventas">
+                        <option value="Logística / Mozo de almacén">
+                    </datalist>
+                </p>
+                <p>
+                    <label for="empresa">Última empresa *:</label>
+                    <input type="text" id="empresa" name="empresa" placeholder="Ej: Sklum, Vicky Foods..." required>
+                </p>
+                <p>
+                    <label for="aniosExperiencia">Años de experiencia:</label>
+                    <input type="number" id="aniosExperiencia" name="aniosExperiencia" min="0" max="40" step="1"
+                        value="0">
+                </p>
+                <p>
+                    <label for="fechaInicio">Fecha de inicio:</label>
+                    <input type="date" id="fechaInicio" name="fechaInicio">
+                </p>
+                <p>
+                    <label for="trabajoActual">Situación laboral:</label>
+                    <input type="checkbox" id="trabajoActual" name="trabajoActual" value="si">
+                    <label for="trabajoActual">Actualmente trabajo en este puesto</label>
+                </p>
+                <p>
+                    <label for="descripcionPuesto">Resumen de funciones:</label><br>
+                    <textarea id="descripcionPuesto" name="descripcionPuesto" rows="4" cols="50" maxlength="500"
+                        placeholder="Describe brevemente tus principales funciones..."></textarea>
+                </p>
+                <a href="#"><img src="img/flecha.png" alt="Volver arriba" width="16" height="16"
+                        title="Volver arriba"></a>
+            </fieldset>
+            <!-- 4. IDIOMAS -->
+            <fieldset id="idiomas">
+                <legend><img src="img/idioma.png" alt="Icono idiomas" width="24" height="24"> Idiomas</legend>
+                <p>
+                    <label for="lenguaMaterna">Lengua materna *:</label>
+                    <select id="lenguaMaterna" name="lenguaMaterna" required>
+                        <!--si un select lleva required la primera opción debe tener value="" vacío sirve obligar a elegir-->
+                        <option value="" disabled selected>-- Selecciona lengua materna --</option>
+                        <option value="castellano">Castellano</option>
+                        <option value="valenciano">Valenciano / Catalán</option>
+                        <option value="ingles">Inglés</option>
+                        <option value="frances">Francés</option>
+                        <option value="aleman">Alemán</option>
+                        <option value="otro">Otro</option>
+                    </select>
+                </p>
+                <p>
+                    <label for="nivelIngles">Nivel de inglés (1 al 5) *:</label>
+                    <input type="range" id="nivelIngles" name="nivelIngles" min="1" max="5" step="1" value="3">
+                    <small>(1: Inicial / 3: Intermedio / 5: C2 o Nativo)</small>
+                </p>
+                <p>
+                    <label for="certIngles">Certificaciones:</label>
+                    <input type="checkbox" id="certIngles" name="certIngles" value="si">
+                    <label for="certIngles">Dispongo de certificado oficial de idiomas (EOI, Cambridge, etc.)</label>
+                </p>
+                <a href="#"><img src="img/flecha.png" alt="Volver arriba" width="16" height="16"
+                        title="Volver arriba"></a>
+            </fieldset>
+
+            <!-- 5. HABILIDADES Y COMPETENCIAS -->
+            <fieldset id="habilidades">
+                <legend><img src="img/habilidades.png" alt="Icono habilidades" width="24" height="24"> Habilidades y
+                    Competencias</legend>
+
+                <p><strong>Competencias y aptitudes generales (selecciona las aplicables):</strong></p>
+                <!--habilidades[] como lista para marcar mas de una-->
+                <p>
+                    <input type="checkbox" id="habOfimatica" name="habilidades[]" value="ofimatica">
+                    <label for="habOfimatica">Ofimática y herramientas digitales (Word, Excel, correo)</label><br>
+
+                    <input type="checkbox" id="habEquipo" name="habilidades[]" value="trabajo_equipo">
+                    <label for="habEquipo">Trabajo en equipo y comunicación interpersonal</label><br>
+
+                    <input type="checkbox" id="habProblemas" name="habilidades[]" value="resolucion_problemas">
+                    <label for="habProblemas">Resolución de problemas técnicos y capacidad analítica</label><br>
+
+                    <input type="checkbox" id="habCliente" name="habilidades[]" value="atencion_cliente">
+                    <label for="habCliente">Atención al cliente y orientación al usuario</label><br>
+
+                    <input type="checkbox" id="habOrganizacion" name="habilidades[]" value="organizacion">
+                    <label for="habOrganizacion">Organización, puntualidad y gestión del tiempo</label><br>
+
+                    <input type="checkbox" id="habAprendizaje" name="habilidades[]" value="aprendizaje">
+                    <label for="habAprendizaje">Capacidad de aprendizaje rápido y adaptación</label>
+                </p>
+
+                <p><strong>Permisos y movilidad:</strong></p>
+                <p>
+                    <input type="checkbox" id="carnet" name="carnetConducir" value="si">
+                    <label for="carnet">Dispone de carnet de conducir (B)</label><br>
+
+                    <input type="checkbox" id="vehiculo" name="vehiculoPropio" value="si">
+                    <label for="vehiculo">Vehículo propio disponible</label><br>
+
+                    <input type="checkbox" id="viajar" name="disponibilidadViajar" value="si">
+                    <label for="viajar">Disponibilidad para viajar o cambiar de residencia</label>
+                </p>
+
+                <a href="#"><img src="img/flecha.png" alt="Volver arriba" width="16" height="16"
+                        title="Volver arriba"></a>
+            </fieldset>
+
+            <!-- 6. PREFERENCIAS E INTERESES LABORALES -->
+            <fieldset id="intereses">
+                <legend><img src="img/aficiones.png" alt="Icono aficiones" width="24" height="24"> Intereses y
+                    Preferencias Laborales</legend>
+
+                <p>
+                    <label>Jornada laboral deseada *:</label>
+                    <input type="radio" id="jornadaCompleta" name="tipoJornada" value="completa" checked>
+                    <label for="jornadaCompleta">Jornada completa</label>
+
+                    <input type="radio" id="jornadaParcial" name="tipoJornada" value="parcial">
+                    <label for="jornadaParcial">Media jornada</label>
+
+                    <input type="radio" id="jornadaIndiferente" name="tipoJornada" value="indiferente">
+                    <label for="jornadaIndiferente">Indiferente</label>
+                </p>
+
+                <p>
+                    <label for="modalidad">Modalidad preferida:</label>
+                    <select id="modalidad" name="modalidad">
+                        <option value="presencial">Presencial</option>
+                        <option value="hibrido" selected>Híbrido (días oficina / teletrabajo)</option>
+                        <option value="remoto">100% Teletrabajo</option>
+                    </select>
+                </p>
+
+                <p>
+                    <label for="expectativaSalarial">Salario bruto anual esperado (€):</label>
+                    <input type="number" id="expectativaSalarial" name="expectativaSalarial" min="15000" max="100000"
+                        step="1000" placeholder="Ej: 24000">
+                </p>
+
+                <p>
+                    <label for="colorCabecera">Color de cabecera para tu perfil:</label>
+                    <input type="color" id="colorCabecera" name="colorCabecera" value="#2C5179">
+                    <small>(Color distintivo para tu ficha de candidato)</small>
+                </p>
+
+                <a href="#"><img src="img/flecha.png" alt="Volver arriba" width="16" height="16"
+                        title="Volver arriba"></a>
+            </fieldset>
+
+            <!-- 7. DATOS DE CONTACTO -->
+            <fieldset id="contacto">
+                <legend><img src="img/contacto.png" alt="Icono contacto" width="24" height="24"> Datos de Contacto
+                </legend>
+
+                <p>
+                    <label for="email">Correo electrónico *:</label>
+                    <input type="email" id="email" name="email" placeholder="ejemplo@correo.com" required>
+                </p>
+
+                <p>
+                    <label for="telefono">Teléfono de contacto *:</label>
+                    <input type="tel" id="telefono" name="telefono" placeholder="677478851" pattern="[0-9]{9}"
+                        title="Debe contener exactamente 9 dígitos" required>
+                </p>
+
+                <p>
+                    <label for="perfilUrl">Enlace a LinkedIn o Portfolio:</label>
+                    <input type="url" id="perfilUrl" name="perfilUrl"
+                        placeholder="https://www.linkedin.com/in/tu-perfil">
+                </p>
+
+                <p>
+                    <label for="cvArchivo">Adjuntar Curriculum Vitae (PDF) *:</label>
+                    <input type="file" id="cvArchivo" name="cvArchivo" accept=".pdf" required>
+                </p>
+
+                <p>
+                    <input type="checkbox" id="politica" name="politica" value="aceptada" required>
+                    <label for="politica">He leído y acepto la política de protección de datos y el tratamiento de mi
+                        candidatura *</label>
+                </p>
+
+                <a href="#"><img src="img/flecha.png" alt="Volver arriba" width="16" height="16"
+                        title="Volver arriba"></a>
+            </fieldset>
+
+            <!-- BOTONES DE ACCIÓN DEL FORMULARIO -->
+            <p>
+                <button type="submit">Enviar Candidatura</button>
+                <button type="reset">Limpiar Formulario</button>
+            </p>
+
+        </form>
+    </main>
+    <footer>
+        <p><small>2026 Portal de Empleo TechTalent &mdash;</small></p>
+        <a href="#"><img src="img/flecha.png" alt="Volver arriba" width="16" height="16" title="Volver arriba"></a>
+    </footer>
+
+</body>
+
+
+</html>
