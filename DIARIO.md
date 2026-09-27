@@ -1,7 +1,7 @@
 # 📘 DIARI DE SEGUIMENT — 2n DAW (Semipresencial)
 > **Alumne:** Noé Conde Vila  
 > **Centre:** IES Maria Enríquez (Gandia) — Curs 2026/2027  
-> **Última actualització:** 25 de setembre de 2026 (20:10)  
+> **Última actualització:** 27 de setembre de 2026 (13:15)  
 
 ---
 
@@ -9,21 +9,24 @@
 
 | Assignatura | Tasca / Activitat | Estat | Data d'obertura / Venciment | Notes |
 | :--- | :--- | :---: | :--- | :--- |
-| **DIW** | `S01_PR1` (Interfaces) | ✅ **Entregat** | Venciment: 07/10/2026 20:37 | Tasca tramesa a Aules |
-| **DIW** | `S02_PR1` (CV en HTML5) | ✅ **Entregat** | Venciment: 10/10/2026 20:36 | **Tramesa el 24/09 (14:18)** |
-| **DIW** | `S02 Autoevaluació` (PizzaDelivery) | ✅ **Fet** | Voluntària | Resolta al 100%, validada W3C |
-| **DIW** | `S03_PR1` (Formularis HTML5) | ✅ **Entregat** | Venciment: 17/10/2026 23:59 | **Tramesa el 25/09 (20:10)**. Formulari Supòsit 1 (Portal d'Ocupació) amb 7 fieldsets, icones, CSS extern i validació W3C |
-| **DaW** | `PEC1` (Apache, Nginx, SSH) | 🟡 **Fet (Local)** | **Venciment: diumenge, 18/10/2026 23:59** | Pràctica llesta, pendent trametre a Aules |
-| **DaW** | `PEC2` (Docker i desplegaments) | 🔴 **Pendent** | **Venciment: diumenge, 25/10/2026 23:59** | 🆕 Nova pràctica U2 Docker |
-| **DWEC** | `UD1 Activitat` (Arquitectura Web) | ✅ **Fet** | Obert el 14/09/2026 | Document completat i exportat a PDF |
-| **DWEC** | `UD1 Qüestionari` | ✅ **Fet** | Obert el 17/09/2026 | Test superat a Aules |
-| **DWEC** | `UD2 Activitat` (Problema graons) | 🟡 **Preparat** | **S'obri dilluns, 28/09/2026 00:47** | Exercicis resolts, obri dilluns |
-| **DWEC** | `UD2 Qüestionari` | 🔴 **Pendent** | Obert des del 21/09/2026 | Test a la plataforma Aules |
-| **DWEC** | `UD3 Activitat puntuable` | ⏳ *Pròximament* | S'obri diumenge, 11/10/2026 00:47 | S05-S07 (Arrais i funcions) |
-| **DWEC** | `UD4 Activitat puntuable` | ⏳ *Pròximament* | S'obri dimarts, 27/10/2026 00:47 | S08-S09 (Objectes) |
-| **DWES** | `U1_P1 Docker` (Entorn LAMP) | 🟡 **Fet (Local)** | **Venciment: dilluns, 30/11/2026 12:04** | Contenidors operatius en local |
-| **DWES** | `Autoavaluació U1` (Introducció) | 🔴 **Pendent** | Obert des del 16/09/2026 08:41 | Qüestionari a Aules |
-| **DWES** | `U2_P1 Exercicis PHP` (1.1 a 6.3) | 🟡 **Fet (Local)** | **Venciment: dissabte, 21/11/2026 08:16** | Exercicis resolts i comprovats |
+| **DIW** | `S01_PR1` (Interfaces) | ✅ **Entregat** | Venciment: 07/10/2026 20:37 | Tramesa a Aules |
+| **DIW** | `S02 Autoevaluació` (PizzaDelivery) | ✅ **Entregat** | Voluntària (venciment 05/10/2027) | Resolta al 100%, validada W3C |
+| **DIW** | `S02_PR1` (CV en HTML5) | ✅ **Entregat** | Venciment: 10/10/2026 20:36 | Tramesa el 24/09 (14:18) |
+| **DIW** | `S03_PR1` (Formularis HTML5) | ✅ **Entregat** | Venciment: 17/10/2026 23:59 | Tramesa el 25/09 (20:10). 7 fieldsets, icones, CSS extern, validació W3C |
+| **DIW** | `S04+` (CSS — U02/U03/U04/U05) | ⏳ *No disponible* | Pendent d'obertura | CSS, maquetació, Responsive, Llibreries |
+| **DaW** | `PEC1` (Apache, Nginx, SSH, U1) | ✅ **Completada i revisada** | Venciment: 18/10/2026 23:59 | Document revisat al 100%, comandos i captures alineats, CSS anti-talls per a PDF afegit i chuleta d'examen actualitzada |
+| **DaW** | `PEC2` (Docker i desplegaments, U2) | 🔴 **Pendent iniciar** | **Venciment: 25/10/2026 23:59** | U2 disponible a Aules (6 vídeos + documentació oficial) |
+| **DWEC** | `UD1 Activitat` (Arquitectura Web) | ✅ **Entregat** | Obert: 14/09/2026 | Document completat i exportat a PDF |
+| **DWEC** | `UD1 Qüestionari` | ✅ **Fet** | Obert: 17/09/2026 | Test superat a Aules |
+| **DWEC** | `UD2 Activitat puntuable` | ✅ **Entregat** | S'obri: 28/09/2026 00:47 | Document completat, codi i preguntes explicades, llest per adjuntar PDF a Aules |
+| **DWEC** | `UD2 Qüestionari` | ✅ **Fet** | Obert des del: 21/09/2026 | Test superat a Aules |
+| **DWEC** | `UD3 Activitat puntuable` | ⏳ *Pròximament* | S'obri: 11/10/2026 00:47 | S05-S07 (Funcions, Arrays, Objectes predefinits) |
+| **DWEC** | `UD3 Qüestionari` | ⏳ *Pròximament* | Per confirmar | — |
+| **DWEC** | `UD4 Activitat puntuable` | ⏳ *Pròximament* | S'obri: 27/10/2026 00:47 | S08-S09 (Objectes en JS) |
+| **DWEC** | `UD4 Qüestionari` | ⏳ *Pròximament* | Per confirmar | — |
+| **DWES** | `U1_P1 Docker` (Entorn LAMP) | ✅ **Entregat** | Venciment: 30/11/2026 12:04 | Entregat. Contenidors Docker operatius |
+| **DWES** | `Autoavaluació U1` (Introducció) | ✅ **Fet** | Obert des del: 16/09/2026 08:41 | Test superat a Aules |
+| **DWES** | `U2_P1 Exercicis PHP` (1.1 a 6.3) | ✅ **Entregat** | Venciment: 21/11/2026 08:16 | Exercicis resolts i entregats a Aules |
 | **DWES** | `Autoavaluació U2` (PHP Bàsic) | ✅ **Fet** | Obert a Aules | Test d'avaluació superat |
 
 ---

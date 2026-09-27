@@ -103,10 +103,32 @@ sudo a2dissite sitio.conf              # Deshabilitar sitio
 sudo systemctl reload apache2          # Aplicar cambios
 ```
 
-### Cambiar puerto (ports.conf)
+### Error 404 personalizado
 ```bash
+# 1. Crear el HTML personalizado
+sudo nano /var/www/miproyecto/404.html
+
+# 2. Añadir directiva en el VirtualHost (dentro de <VirtualHost ...>):
+sudo nano /etc/apache2/sites-available/000-default.conf
+# → ErrorDocument 404 /404.html
+
+# 3. Comprobar y recargar:
+sudo apachectl configtest && sudo systemctl reload apache2
+curl http://localhost/ruta-inexistente
+```
+
+### Cambiar puerto (¡En DOS archivos obligatoriamente!)
+```bash
+# 1. Archivo de puertos:
 sudo nano /etc/apache2/ports.conf
-# Cambiar: Listen 80 → Listen 8080
+# → Listen 8089 (o el puerto pedido)
+
+# 2. Archivo del VirtualHost:
+sudo nano /etc/apache2/sites-available/000-default.conf
+# → <VirtualHost *:8089>
+
+# 3. Comprobar y recargar:
+sudo apachectl configtest && sudo systemctl reload apache2
 ```
 
 ### Cambiar DocumentRoot
@@ -124,7 +146,7 @@ sudo nano /etc/apache2/sites-available/000-default.conf
 /etc/nginx/nginx.conf                  → Config global
 /etc/nginx/sites-available/            → Sitios configurados
 /etc/nginx/sites-enabled/              → Sitios activos (enlaces simbólicos)
-/usr/share/nginx/html/                 → Carpeta raíz web por defecto
+/var/www/ o /usr/share/nginx/html/     → Carpetas raíz web
 /var/log/nginx/access.log              → Log de accesos
 /var/log/nginx/error.log               → Log de errores
 ```
@@ -132,8 +154,110 @@ sudo nano /etc/apache2/sites-available/000-default.conf
 ### Comandos útiles
 ```bash
 sudo apt install nginx                 # Instalar Nginx
-sudo nginx -t                          # Verificar sintaxis config
-sudo systemctl reload nginx            # Aplicar cambios
+sudo nginx -t                          # Verificar sintaxis config (FUNDAMENTAL)
+sudo systemctl reload nginx            # Aplicar cambios sin caída
+sudo systemctl restart nginx           # Reiniciar servicio
+```
+
+### Error 404 personalizado
+```bash
+# 1. Crear el HTML
+sudo nano /var/www/miproyecto/404.html
+
+# 2. Añadir dentro del bloque server { ... }:
+sudo nano /etc/nginx/sites-available/default
+# → error_page 404 /404.html;
+
+# 3. Verificar y recargar:
+sudo nginx -t && sudo systemctl reload nginx
+curl http://localhost/ruta-inexistente
+```
+
+### Cambiar puerto
+```bash
+# En el bloque server { ... } cambiar ambas líneas:
+sudo nano /etc/nginx/sites-available/default
+# → listen 8089 default_server;
+# → listen [::]:8089 default_server;
+
+# Verificar y recargar:
+sudo nginx -t && sudo systemctl reload nginx
+```
+
+### Multisitio en Nginx (Virtual Hosts por dominio) — Secuencia de examen
+```bash
+# 1. Carpetas y permisos:
+sudo mkdir -p /var/www/sitio1 /var/www/sitio2
+sudo chown -R www-data:www-data /var/www/sitio1 /var/www/sitio2
+
+# 2. Crear index.html en cada una:
+sudo nano /var/www/sitio1/index.html
+sudo nano /var/www/sitio2/index.html
+
+# 3. Fichero de configuración para cada sitio:
+sudo nano /etc/nginx/sites-available/sitio1.conf
+# Contenido mínimo esencial:
+# server {
+#     listen 80;
+#     server_name sitio1.daw;
+#     root /var/www/sitio1;
+#     index index.html;
+# }
+
+# 4. Habilitar sitios mediante enlaces simbólicos:
+sudo ln -sf /etc/nginx/sites-available/sitio1.conf /etc/nginx/sites-enabled/
+sudo ln -sf /etc/nginx/sites-available/sitio2.conf /etc/nginx/sites-enabled/
+
+# 5. Comprobar sintaxis y recargar:
+sudo nginx -t && sudo systemctl reload nginx
+
+# 6. Comprobar con curl simulando la cabecera Host:
+curl -H "Host: sitio1.daw" http://localhost
+curl -H "Host: sitio2.daw" http://localhost
+```
+
+---
+
+## ⚡ Convivencia simultánea: Apache + Nginx en la misma máquina
+
+Para tener ambos servidores a la vez con múltiples sitios:
+* **Nginx** atiende en el puerto **80** (múltiples dominios con `server_name`).
+* **Apache** se configura en puertos libres alternativos (ej: **8181** y **8282**) para no colisionar.
+
+```bash
+# 1. En Apache, definir los puertos alternativos:
+sudo nano /etc/apache2/ports.conf
+# → Listen 8181
+# → Listen 8282
+
+# 2. Crear los VirtualHosts de Apache:
+sudo nano /etc/apache2/sites-available/apache1.conf
+# → <VirtualHost *:8181>
+#       DocumentRoot /var/www/apache1
+#   </VirtualHost>
+
+# 3. Habilitar sitios y recargar Apache:
+sudo a2ensite apache1.conf apache2.conf
+sudo apachectl configtest
+sudo systemctl reload apache2
+
+# 4. Comprobación simultánea:
+curl -H "Host: sitio1.daw" http://localhost   # Nginx (puerto 80)
+curl http://localhost:8181                    # Apache 1
+curl http://localhost:8282                    # Apache 2
+```
+
+---
+
+## 🌐 Resolución de nombres local (archivo hosts en Windows)
+
+Para acceder a nombres de dominio de la MV (`sitio1.daw`) desde el navegador del PC anfitrión:
+1. Abrir el **Bloc de notas como Administrador**.
+2. Abrir archivo: `C:\Windows\System32\drivers\etc\hosts`.
+3. Añadir la IP de la MV asociada a los dominios:
+```text
+192.168.0.23  sitio1.daw
+192.168.0.23  sitio2.daw
 ```
 
 ---
@@ -152,16 +276,26 @@ sudo systemctl reload nginx            # Aplicar cambios
 
 ---
 
-## SSH — Conexión remota
+## SSH & SFTP — Conexión y Transferencia Remota
 
+### Servidor (Ubuntu Server)
 ```bash
-ssh usuario@192.168.1.50       # Conectarse al servidor
-exit                           # Desconectarse
-
-# Si da error de conexión:
-sudo ufw allow ssh
-sudo ufw enable
+sudo apt update && sudo apt install -y openssh-server  # Instalar servidor SSH
+sudo systemctl status ssh                              # Verificar que está activo
 ```
+
+### Cliente (PowerShell en Windows anfitrión)
+```powershell
+ssh usuario@192.168.0.23      # Conectarse por terminal
+exit                          # Salir de la sesión
+```
+
+### Transferencia de archivos con FileZilla (SFTP)
+* **Protocolo:** SFTP - SSH File Transfer Protocol (funciona sobre el puerto 22 de SSH).
+* **Servidor / Host:** `192.168.0.23` (IP de la MV).
+* **Puerto:** `22`.
+* **Usuario y contraseña:** Credenciales del usuario de la máquina virtual.
+* Comprobar en terminal con `ls` o `ls -la` en la carpeta destino.
 
 ---
 
@@ -174,20 +308,10 @@ sudo localectl set-keymap es   # Cargar layout español (permanente)
 
 ---
 
-## 📋 Resumen de Prácticas
-*(se irá completando al terminar cada una)*
+## 📋 Resumen de Prácticas DaW
 
-### Práctica 1 — Apache en MV Ubuntu Server
-> 🚧 En progreso...
+### PEC 1 — Introducción al despliegue, Apache, Nginx, Multisitio y Acceso Remoto
+> ✅ **Completada y entregada** (Revisada al 100%, con documentación paso a paso y capturas).
 
-### Práctica 1.1 — Acceso remoto SSH + FTP
-> ⏳ Pendiente
-
-### Práctica 2 — Nginx en MV Ubuntu Server
-> ⏳ Pendiente
-
-### Práctica 3 — Cambiar puertos + DocumentRoot
-> ⏳ Pendiente
-
-### Práctica Final — Nginx multisitio
-> ⏳ Pendiente
+### PEC 2 — Introducción a Docker y despliegues en local
+> ⏳ **Próxima entrega (vence 25/10/2026)**. Entorno de contenedores, Dockerfile y despliegue de aplicaciones.
