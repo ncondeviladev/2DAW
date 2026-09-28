@@ -1,7 +1,7 @@
 # 📘 DIARI DE SEGUIMENT — 2n DAW (Semipresencial)
 > **Alumne:** Noé Conde Vila  
 > **Centre:** IES Maria Enríquez (Gandia) — Curs 2026/2027  
-> **Última actualització:** 27 de setembre de 2026 (13:15)  
+> **Última actualització:** 28 de setembre de 2026 (15:25)  
 
 ---
 
@@ -28,6 +28,7 @@
 | **DWES** | `Autoavaluació U1` (Introducció) | ✅ **Fet** | Obert des del: 16/09/2026 08:41 | Test superat a Aules |
 | **DWES** | `U2_P1 Exercicis PHP` (1.1 a 6.3) | ✅ **Entregat** | Venciment: 21/11/2026 08:16 | Exercicis resolts i entregats a Aules |
 | **DWES** | `Autoavaluació U2` (PHP Bàsic) | ✅ **Fet** | Obert a Aules | Test d'avaluació superat |
+| **DWES** | `U2_P2 Problemes PHP Bàsic` | ✅ **Completada 100%** | Pendent entrega a Aules | Resolta: Part 1 Descompte (app interactiva Pico.css) i Part 2 (productes.php, ciutats.php amb formulari i metadades DIW, generarPassword.php amb named arguments) |
 
 ---
 
@@ -151,7 +152,12 @@
 ### 2. DWES — Desenvolupament Web en Entorn Servidor (Prof. Eloy Gutiérrez)
 * **General:** Presentació del mòdul, Guia didàctica (actualitzada 22/09), Temporalització (actualitzada 22/09).
 * **Unitat 1 — Introducció al servidor:** Apunts web / PDF, exemples miniweb i PHP+JS. Pràctica `U1_P1 Docker` (venciment 30/11) i Autoavaluació U1.
-* **Unitat 2 — PHP Bàsic:** Apunts web, Pràctica `U2_P1 Exercicis PHP` (venciment 21/11), Solucionari de pràctiques publicat i Autoavaluació U2.
+* **Unitat 2 — PHP Bàsic:** Apunts web, Pràctica `U2_P1 Exercicis PHP` (venciment 21/11), Solucionari de pràctiques publicat, Autoavaluació U2 superada.
+  - **Pràctica `U2_P2 Problemes i exercicis PHP Bàsic` (Completada 100%):**
+    - **Part 1 — Descompte (`DWES/U2_P2/Descompte/index.php`):** Aplicació web interactiva amb formulari per a codi de descompte (`comprobarDesc`), descompte per volum de compra (`preuDescompte`), llistat de productes dinàmic en taula amb bucle `foreach`, estils moderns amb Pico.css i gestió de missatges d'error / reset.
+    - **Part 2, Ex 1 (`DWES/U2_P2/productes.php`):** Funció `calcularCompra` per a iterar sobre un array multidimensional de productes (`nom`, `preu`, `quantitat`) i calcular el total de la compra.
+    - **Part 2, Ex 2 (`DWES/U2_P2/ciutats.php`):** Funció `buscarPoblacio` per a consultar dades en un array associatiu de ciutats i població. Formulari POST accessible integrat amb metadades de qualitat HTML5 de DIW.
+    - **Part 2, Ex 3 (`DWES/U2_P2/generarPassword.php`):** Funció `generarPassword` amb paràmetre obligatori (`$longitud`) i opcionals (`$inclouNumeros = true`, `$inclouSimbols = false`). Conjunt de caràcters dinàmic, selecció aleatòria amb `rand` i cridades de prova tant posicionals com amb arguments amb nom de PHP 8 (*named arguments*).
 
 ### 3. DaW — Desplegament d'Aplicacions Web (Prof. Juan Ramón Collado)
 * **General:** Guia didàctica, Presentació, Calendari de tutories col·lectives (TCs).
