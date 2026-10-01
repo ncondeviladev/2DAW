@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="esp">
+	<head>
+		<title>Ejemplo de elementos Mashup</title>
+		<meta charset="utf-8"/>
+		<style type="text/css">
+            div#tabular{
+                display: table;
+            }
+            div#tabular main, aside{
+                 display: table-cell;
+				vertical-align: top;
+            }            
+         
+            div#tabular main section{
+                width: 100%;
+                text-align: center;
+            }        
+        
+        </style>
+		<script src="https://www.powr.io/powr.js?platform=html"></script>
+	</head>
+	<body>
+		<header><h3>Mashup: Página con iframes y widgets de otros sitios </h3>
+		<p>Contiene maps, noticias, galerias, etc, obtenido de otras fuenres</p></header>
+		<div id="tabular"><!-- div que contiene a main y a aside -->
+		<main> 
+			<section id="map">
+			<h4>Mapa de Google</h4>
+				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3102.4267494672445!2d-0.1841581850042326!3d38.959922579561045!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd61e84e9483662b%3A0x479e968c3685f8d4!2sInstitut+d&#39;Educaci%C3%B3+Secund%C3%A0ria+IES+Mar%C3%ADa+Enr%C3%ADquez!5e0!3m2!1ses!2ses!4v1507159329171" width="600" height="400" frameborder="0" style="border:0" allowfullscreen></iframe>
+            </section>
+            
+			<section id="galeria1">
+                <h4>Galeria Imágenes Albumizr </h4>
+			
+               <iframe src="https://albumizr.com/a/SMlr" scrolling="no" frameborder="0" allowfullscreen width="700" height="400"></iframe>
+            </section>
+            			
+			<section id="video">
+				<h4>Video Youtube </h4>
+
+				<iframe width="600" height="400" src="https://www.youtube.com/embed/OzF3m-P1nFM?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
+			</section>
+			
+			<section id="noticias">
+            	<h4>Noticias de RSS de El Pais (Elfsight)</h4>
+				<!-- Elfsight RSS Feed | Untitled RSS Feed -->
+				<script src="https://elfsightcdn.com/platform.js" async></script>
+				<div class="elfsight-app-1dd065bc-ad08-49e3-9b38-1577e9f3b5cb" data-elfsight-app-lazy></div>
+
+				<h4>Noticias tecnológicas</h4>
+                <div id="glbd-widget"><div id="glbd-load" style="width: 600px; height: 400px; background: url(http://globedia.com/img/loading.gif) center no-repeat;"></div><div id="glbd-link" style="text-align:right; font-size:10px; font-family:'Trebuchet MS', Arial; margin: auto; width: 600px;"><a href="http://globedia.com" title="Noticias" target="_blank" style="color:#999; text-decoration:none;">globedia.com</a></div></div><script type="text/javascript" src="http://globedia.com/widgets/widget.js"></script><script type="text/javascript" src="http://globedia.com/widgets/widget.php?country=ES&category=ciencia-y-tecnologia&order=date&cols=2&num=4&width=600&height=400&title=Noticias%20de%20Globedia&author=false&images=false&summaries=true&votes=false">
+                </script><script type="text/javascript">GlobediaWidget.init();</script>				
+			</section>
+			
+			<section id="bolsa">
+				 <h4>Cotización Bolsa</h4>
+				 <!-- TradingView Widget BEGIN -->
+				  <div class="tradingview-widget-container">
+				  <div class="tradingview-widget-container__widget"></div>
+				  <div class="tradingview-widget-copyright"><a href="https://es.tradingview.com" rel="noopener" target="_blank"><span class="blue-text">Cotizaciones</span></a> por TradingView</div>
+				  <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-tickers.js" async>
+				  {
+				  "symbols": [
+					{
+					  "title": "S&P 500",
+					  "proName": "INDEX:SPX"
+					},
+					{
+					  "title": "Nasdaq 100",
+					  "proName": "INDEX:IUXX"
+					},
+					{
+					  "title": "EUR/USD",
+					  "proName": "FX_IDC:EURUSD"
+					},
+					{
+					  "title": "BTC/USD",
+					  "proName": "BITFINEX:BTCUSD"
+					},
+					{
+					  "title": "ETH/USD",
+					  "proName": "BITFINEX:ETHUSD"
+					}
+				  ],
+				  "locale":"es"
+				  }
+				 </script>
+				 </div>
+			<!-- TradingView Widget END -->
+			</section>
+		</main>
+		<aside style="display:inline-block; vertical-align:top;">
+			<section id="tiempo">
+				<h4>Tiempo </h4>
+				<script type='text/javascript' src='http://www.aemet.es/va/eltiempo/prediccion/municipios/launchwidget/madrid-id28079?w=g2p01111011ohm9999ffw300z300x003366t95b6e9r1s6n1'></script><noscript><a target='_blank' style='font-weight: bold;font-size: 1.20em;' href='http://www.aemet.es/va/eltiempo/prediccion/municipios/madrid-id28079'>El temps. Consulte la predicció de l'AEMET per a Madrid</a></noscript>
+			</section>
+			<section id="calendar">
+				<h4>Calendario</h4>
+				<iframe src="https://calendar.google.com/calendar/embed?showTitle=0&amp;showNav=0&amp;showDate=0&amp;showPrint=0&amp;showTabs=0&amp;showCalendars=0&amp;height=300&amp;wkst=2&amp;bgcolor=%23333399&amp;src=jh9piopr9e9r3001is7ppn71qk%40group.calendar.google.com&amp;color=%238C500B&amp;ctz=Europe%2FMadrid" style="border:solid 1px #777" width="300" height="300" frameborder="0" scrolling="no"></iframe>
+			</section>	
+            <section id="laliga">
+                <h4>La Liga</h4>
+        
+                 <script language="Javascript" type="text/javascript" 
+                        src="https://www.marca.com/widgets/launcher.html?c=Rojo&w=300&h=550&cid=WID33801&s_kw=futbol" id="wm001001304"></script>
+            </section>
+		</aside>
+        </div>
+		<footer>
+			<div id="bolsa"><a id="widgetIFB" href="http://www.infobolsa.es/cotizacion/ibex_35">Cotización Ibex 35</a><script type="text/javascript" src="http://www.infobolsa.es/widgets/ticker?width=320&amp;speed=1"></script></div>
+		</footer>
+	</body>
+</html>

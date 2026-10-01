@@ -1,11 +1,11 @@
 # 📘 DIARI DE SEGUIMENT — 2n DAW (Semipresencial)
 > **Alumne:** Noé Conde Vila  
 > **Centre:** IES Maria Enríquez (Gandia) — Curs 2026/2027  
-> **Última actualització:** 28 de setembre de 2026 (15:25)  
+> **Última actualització:** 30 de setembre de 2026 (16:10)  
 
 ---
 
-## 🎯 Tauler General de Tasques i Entregues (Les 4 Assignatures Principals)
+## 🎯 Tauler General de Tasques i Entregues (Assignatures i Projecte)
 
 | Assignatura | Tasca / Activitat | Estat | Data d'obertura / Venciment | Notes |
 | :--- | :--- | :---: | :--- | :--- |
@@ -13,15 +13,16 @@
 | **DIW** | `S02 Autoevaluació` (PizzaDelivery) | ✅ **Entregat** | Voluntària (venciment 05/10/2027) | Resolta al 100%, validada W3C |
 | **DIW** | `S02_PR1` (CV en HTML5) | ✅ **Entregat** | Venciment: 10/10/2026 20:36 | Tramesa el 24/09 (14:18) |
 | **DIW** | `S03_PR1` (Formularis HTML5) | ✅ **Entregat** | Venciment: 17/10/2026 23:59 | Tramesa el 25/09 (20:10). 7 fieldsets, icones, CSS extern, validació W3C |
-| **DIW** | `S04+` (CSS — U02/U03/U04/U05) | ⏳ *No disponible* | Pendent d'obertura | CSS, maquetació, Responsive, Llibreries |
+| **DIW** | `S04_PR1` (CafeNet_Pico_FA) | 🔴 **Pendent iniciar** | **Venciment: 24/10/2026 21:36** | HTML5 Multimèdia + Pico.css + FontAwesome + iFrames. Imatges a Aules |
+| **DIW** | `S05+` (CSS — U02/U03/U04/U05) | ⏳ *No disponible* | Pendent d'obertura | CSS, maquetació, Responsive, Llibreries |
 | **DaW** | `PEC1` (Apache, Nginx, SSH, U1) | ✅ **Completada i revisada** | Venciment: 18/10/2026 23:59 | Document revisat al 100%, comandos i captures alineats, CSS anti-talls per a PDF afegit i chuleta d'examen actualitzada |
 | **DaW** | `PEC2` (Docker i desplegaments, U2) | 🔴 **Pendent iniciar** | **Venciment: 25/10/2026 23:59** | U2 disponible a Aules (6 vídeos + documentació oficial) |
 | **DWEC** | `UD1 Activitat` (Arquitectura Web) | ✅ **Entregat** | Obert: 14/09/2026 | Document completat i exportat a PDF |
 | **DWEC** | `UD1 Qüestionari` | ✅ **Fet** | Obert: 17/09/2026 | Test superat a Aules |
-| **DWEC** | `UD2 Activitat puntuable` | ✅ **Entregat** | S'obri: 28/09/2026 00:47 | Document completat, codi i preguntes explicades, llest per adjuntar PDF a Aules |
+| **DWEC** | `UD2 Activitat puntuable` | ✅ **Entregat** | Obert: 28/09/2026 00:47 | Tramesa el 30/09 a Aules. Document completat, codi i preguntes justificades en PDF |
 | **DWEC** | `UD2 Qüestionari` | ✅ **Fet** | Obert des del: 21/09/2026 | Test superat a Aules |
-| **DWEC** | `UD3 Activitat puntuable` | ⏳ *Pròximament* | S'obri: 11/10/2026 00:47 | S05-S07 (Funcions, Arrays, Objectes predefinits) |
-| **DWEC** | `UD3 Qüestionari` | ⏳ *Pròximament* | Per confirmar | — |
+| **DWEC** | `UD3 Activitat puntuable` | 🟡 **A mitges (en progrés)** | S'obri: 11/10/2026 00:47 | Codi `analizaNumeros` completat i provat; pendent acabar respostes de justificació |
+| **DWEC** | `UD3 Qüestionari` | ✅ **Fet** | Fet el 30/09/2026 | Test superat a Aules (10/10) |
 | **DWEC** | `UD4 Activitat puntuable` | ⏳ *Pròximament* | S'obri: 27/10/2026 00:47 | S08-S09 (Objectes en JS) |
 | **DWEC** | `UD4 Qüestionari` | ⏳ *Pròximament* | Per confirmar | — |
 | **DWES** | `U1_P1 Docker` (Entorn LAMP) | ✅ **Entregat** | Venciment: 30/11/2026 12:04 | Entregat. Contenidors Docker operatius |
@@ -29,6 +30,10 @@
 | **DWES** | `U2_P1 Exercicis PHP` (1.1 a 6.3) | ✅ **Entregat** | Venciment: 21/11/2026 08:16 | Exercicis resolts i entregats a Aules |
 | **DWES** | `Autoavaluació U2` (PHP Bàsic) | ✅ **Fet** | Obert a Aules | Test d'avaluació superat |
 | **DWES** | `U2_P2 Problemes PHP Bàsic` | ✅ **Completada 100%** | Pendent entrega a Aules | Resolta: Part 1 Descompte (app interactiva Pico.css) i Part 2 (productes.php, ciutats.php amb formulari i metadades DIW, generarPassword.php amb named arguments) |
+| **PIM** | `S03 Autoevaluació` (Test Disseny) | ⏳ *Voluntari* | Venciment: 07/10/2026 14:25 | Test autoevaluació disseny d'interfícies web |
+| **PIM** | `S03 Tutorial Wireframe` (Balsamiq) | ⏳ *Voluntari* | Venciment: 07/10/2026 14:25 | Autoaprenentatge Balsamiq, pujar captura i arxiu `.bmpr` |
+| **PIM** | `Sprint 0` (MirandoAlMar S05-S08) | ⏳ *Pròximament* | Pendent d'obertura | Fase prèvia del projecte |
+| **PIM** | `Sprint 1 a Final` (App AgriVall) | ⏳ *Futur* | S09 a S40 | Estudi complet i desenvolupament d'App AgriVall |
 
 ---
 
@@ -49,6 +54,11 @@
 ### 4. DIW — Disseny d'Interfícies Web
 * **Professor:** Quique Savall Seguí (`e.savallsegui@edu.gva.es`)  
 * **Tutoría col·lectiva:** Dimecres vesprada (15:15–16:10) / Dijous matí (14:20–15:15).
+
+### 5. PIM — Projecte Intermodular (2n DAW)
+* **Professor:** Quique Savall Seguí / Equip docent  
+* **Tutoría col·lectiva:** Dimecres vesprada / Dijous matí.
+* **Documentació:** `Guia didactica 2 DAWsemi - PIM (beta)`.
 
 ---
 
@@ -127,6 +137,9 @@
   - **Venciment PEC2 (Docker):** **25 d'Octubre de 2026, 23:59**.
 * **DIW (Disseny d'Interfícies):**
   - **Venciment S03_PR1 (Formularis):** **17 d'Octubre de 2026, 23:59**.
+  - **Venciment S04_PR1 (CafeNet Multimedia):** **24 d'Octubre de 2026, 21:36**.
+* **PIM (Projecte Intermodular):**
+  - **Venciment S03 (Test + Wireframe Balsamiq):** **7 d'Octubre de 2026, 14:25** (Voluntari).
 * **DWES (Servidor):**
   - **Venciment U2_P1 (PHP Bàsic):** **21 de Novembre de 2026, 08:16**.
   - **Venciment U1_P1 (Docker):** **30 de Novembre de 2026, 12:04**.
@@ -141,10 +154,11 @@
 * **UD2 — Guia de sintaxi i estructures bàsiques (Actual):**
   - Apunts i guies: `Guia JavaScript`, `Com executar JavaScript`, `Mètodes útils cadenes, números i dates`, `RECURSIVIDAD`.
   - Exercicis: Exercicis S03, Exercicis repàs (sense i amb solució).
-  - Tasca puntuable: S'obri **dilluns 28/09/2026, 00:47**.
+  - Tasca puntuable: Obert el 28/09/2026 (Entregat el 30/09 a Aules).
 * **UD3 — Funcions, arrais i objectes predefinits (Del 05/10 al 27/10):**
   - Apunts UD3, Guia d'objectes Web, Mètodes útils arrays, exercicis de funcions i arrais (amb/sense solució).
-  - Tasca puntuable UD3: S'obri **11/10/2026**.
+  - Qüestionari UD3: Superat a Aules (9/10) el 30/09/2026.
+  - Tasca puntuable UD3: S'obri **11/10/2026** (En progrés: codi `analizaNumeros` completat i verificat, pendents respostes teòriques per a exportar PDF).
 * **UD4 — Utilització d'objectes en JavaScript (Del 26/10 al 06/11):**
   - Apunts UD4, exercicis fitxer extern `.js`, exercicis d'objectes (amb/sense solució).
   - Tasca puntuable UD4: S'obri **27/10/2026**.
@@ -175,3 +189,20 @@
     - Enllaços de tornada amunt amb icona de fletxa accessible.
     - Estil separat en `css/style.css` (alineació de labels, ombres suaus a targetes, pseudo-element `::placeholder` i botons estilitzats).
     - Codi validat sense errors al W3C Nu HTML Validator.
+  - **S04 (HTML5 Multimedia) — PENDENT:**
+    - `S04 TEORIA MULTIMEDIA`, enllaços externs a iFrame, exemples S04.
+    - Pràctica `S04_PR1_CafeNet_Pico_FA`: Pràctica multimèdia més extensa amb Pico.css i FontAwesome.
+    - Imatges necessàries disponibles per a descàrrega a Aules.
+    - Venciment: **dissabte, 24 d’octubre 2026, 21:36**.
+
+### 5. PIM — Projecte Intermodular (2n DAW)
+* **General:** `Guia didactica 2 DAWsemi - PIM (beta)`.
+* **Semana 03 — Fases Disseny Interfaces Web:**
+  - `S03 TEORIA Diseño Web` i `S03 PRESENT Fases Diseño Web`.
+  - `S03 Test Diseño Interfaces (Autoevaluación)`: Voluntària (venciment 07/10/2026, 14:25).
+  - `S03 Tutorial Wireframe con Balsamiq`: Autoaprenentatge, pujar captura i fitxer `.bmpr` (venciment 07/10/2026, 14:25).
+* **Full de Ruta del Projecte (Sprints):**
+  - **Sprint 0 (S05 a S08):** Prèvia Projecte MirandoAlMar (*No disponible encara*).
+  - **Sprint 1 (S09 a S12):** Estudi complet de la nova App (*No disponible encara*).
+  - **Sprint 2 (S14 a S23):** Inici del desenvolupament d'App AgriVall (*No disponible encara*).
+  - **Sprint Final (S25 a S40):** Entrega final de l'App (*No disponible encara*).

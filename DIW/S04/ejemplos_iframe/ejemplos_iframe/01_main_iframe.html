@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="utf-8">
+	<title>Ejemplo IFRAME</title>
+	<style type="text/css">
+		html,body,main,iframe{ height: 100%; width: 100%; }
+	</style>
+</head>
+<body>
+	<header>
+		<h1>Ejemplos IFrame</h1>
+		<p><small>Nota: Google no funciona dentro de iframe, porque tiene métodos para evitarlo</small></p>
+	</header>
+	<nav>
+		<p>
+			<a href="https://marca.com" target="frame1">Marca </a>&nbsp;&nbsp; 
+			<a href="https://elpais.com#main-content" target="frame1">El País </a>&nbsp;&nbsp; 
+			<a href="https://google.com" target="frame1">Google(no irá) </a>&nbsp;&nbsp; 
+			<a href="./xx_mostrar_en_iframe.html" target="frame1">Página prueba Sandbox</a>
+			<!-- fijaros que en target pongo el nombre del iframe -->
+		</p>
+	</nav>
+	<main>
+		<iframe name="frame1" src="https://marca.com" sandbox></iframe>
+		<!-- sin Sandbox permite todo -->
+		<!-- con Sandbox no permite nada: ni scripts, ni envio de datos de form, ni pop-ups... -->
+		<!-- Para permitir envio de Forms: sandbox="allow-forms allow-same-origin" -->
+		<!-- Para permitir Scripts: sandbox="allow-scripts" -->
+		<!-- Para permitir cambiar URL del parent: sandbox="allow-top-navigation" -->
+		
+	</main>
+</body>
+</html>

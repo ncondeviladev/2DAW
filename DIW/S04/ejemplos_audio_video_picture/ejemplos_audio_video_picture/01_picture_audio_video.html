@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplos controles multimedia</title>
+</head>
+<body>
+    <header><h1>Controles multimedia</h1></header>
+    <main>
+        <section id="picture">
+            <h3>Control Picture (responsive)</h3>
+            <p>Cambia el tamaño del navegador y verás que cambia la foto del gatito</p>
+            <picture>
+                <source media="(min-width:800px)" srcset="./media/kitten-large.png">
+                <source media="(min-width:600px)" srcset="./media/kitten-medium.png">
+                <img src="./media/kitten-small.png" alt="gatito">
+            </picture>
+        </section>
+        <hr>
+        <section id="imginteractiva">
+            <h3>Imágenes interactivas</h3>
+            <p>Si pulsas en la cabeza te lleva a El Pais, Si pulsas en la barriga te lleva a Marca.es</p>
+            <p><img src="./media/kitten-large.png" alt="gato" usemap="#mapa1"></p>
+            <!-- nota el "mapa1" lo podemos poner al final del html-->    
+        </section>
+        <hr>
+        <section id="ejemploaudio">
+            <h3>Control de audio</h3>
+            <audio controls autoplay id="audio1">  <!-- autoplay de base no funciona -->
+                <source src="./media/test.mp3" type="audio/mpeg">
+                <source src="./media/test.ogg" type="audio/ogg">
+                No se puede reproducir<br>
+                <a href="./media/test.mp3">Descargar</a>
+            </audio>
+            
+            <p>Podemos controlar el audio/video con javascript: </p>
+            <p>
+               <input type="button" value="Play" onclick="playMusic()">
+               <input type="button" value="Stop" onclick="stopMusic()">
+            </p>
+        </section> 
+        <hr>
+        <section id="video">
+            <h3>Control Video</h3>
+            <video controls  muted autoplay preload="none" poster="./media/kitten-small.png"  >
+                <!-- autoplay de video sí funciona si ponemos muted (sin sonido) -->
+                <!-- poster es la imagen cuando video parado-->
+                <!-- preload=none, no pre-carga video, solo cuando Play -->
+                <source src="./media/colon.mp4" type="video/mp4">
+                <source src="./media/colon.ogv" type="video/ogg">
+                No se puede reproducir video
+            </video>
+        </section>
+        <hr>
+        <section id="youtube">
+            <h3>Video youtube</h3>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/CaiaUsnD1bk?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>        
+        </section>
+    </main>
+
+    <!-- Maps de Zonas interactivas-->
+    <map name="mapa1">
+        <area target="_blank" alt="Marca" title="Marca" href="https://marca.es" coords="322,159,70" shape="circle">
+        <area target="_blank" alt="El Pais" title="El Pais" href="https://elpais.es" coords="395,113,412,69,446,33,467,45,497,44,531,29,537,52,577,85,589,117,590,157,589,173,598,198,570,206,545,228,533,253,512,252,469,247,435,225,407,186,395,157" shape="poly">
+        <area target="_blank" alt="Google" title="Google" href="https://google.es" coords="78,198,165,226" shape="rect">
+
+    </map>
+
+    <!-- No estudiar: Audio/Video se pueden controlar por javascript-->
+    <script type="text/javascript" defer> 
+        function playMusic(){
+            var aud=document.querySelector("#audio1");
+            aud.play();
+        }
+        function stopMusic(){
+            var aud=document.querySelector("#audio1");
+            aud.pause();
+        }
+    </script>
+</body>
+</html>

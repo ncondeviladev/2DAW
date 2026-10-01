@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Doc con Scripts, Form,enlace Top</title>
+	<style>
+		body{  background-color: aqua;}
+	</style>
+</head>
+<body>
+	<header>
+		<h4>Página para mostrar dentro de 01_main_iframe</h4>
+		<p>Esta página tiene Scripts, Forms, Alerts..<br>
+		   Con ella comprobamos si el atributo sandbox funciona o no.</p>
+		<p><small>Si en el iframe donde se muestro tenemos el atributo sandbox, veremos que no se ha ejecutado el script de abajo, ni se puede enviar el Form cuando pulso enviar...</small></p>
+		<p><small>Si en el iframe donde se muestro quito sandbox, veremos que sí se ejecuta script, y sí se envian datos del Form... </small></p>
+	</header>
+	<hr>
+	<main>
+		<form name="datos" method="get" action="procesa.php">
+			Nom:<input type="text" name="nom" id="nom">
+			<input type="submit" value="Enviar">
+		</form>
+	</main>
+	<hr>
+	<footer>
+		<a href="http://iesmariaenriquez.es" target="_parent">ir a M.E.</a>	
+	</footer>
+</body>
+<script type="text/javascript">
+	window.alert("hola mundo!!")
+	window.open("http://google.es"); //Abre nueva pestaña
+	document.getElementById("nom").value="E.Savall"; //Escribe en control de texto
+</script>
+</html>
