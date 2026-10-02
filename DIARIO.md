@@ -1,7 +1,7 @@
 # 📘 DIARI DE SEGUIMENT — 2n DAW (Semipresencial)
 > **Alumne:** Noé Conde Vila  
 > **Centre:** IES Maria Enríquez (Gandia) — Curs 2026/2027  
-> **Última actualització:** 30 de setembre de 2026 (16:10)  
+> **Última actualització:** 2 d'octubre de 2026 (13:35)  
 
 ---
 
@@ -21,7 +21,7 @@
 | **DWEC** | `UD1 Qüestionari` | ✅ **Fet** | Obert: 17/09/2026 | Test superat a Aules |
 | **DWEC** | `UD2 Activitat puntuable` | ✅ **Entregat** | Obert: 28/09/2026 00:47 | Tramesa el 30/09 a Aules. Document completat, codi i preguntes justificades en PDF |
 | **DWEC** | `UD2 Qüestionari` | ✅ **Fet** | Obert des del: 21/09/2026 | Test superat a Aules |
-| **DWEC** | `UD3 Activitat puntuable` | 🟡 **A mitges (en progrés)** | S'obri: 11/10/2026 00:47 | Codi `analizaNumeros` completat i provat; pendent acabar respostes de justificació |
+| **DWEC** | `UD3 Activitat puntuable` | ✅ **Completada 100%** | S'obri: 11/10/2026 00:47 | Preparada i llesta per a pujar quan s'òbriga a Aules. Codi `analizaNumeros` verificat amb 4 casos, preguntes d'autoria respostes i document maquetat clònic al PDF |
 | **DWEC** | `UD3 Qüestionari` | ✅ **Fet** | Fet el 30/09/2026 | Test superat a Aules (10/10) |
 | **DWEC** | `UD4 Activitat puntuable` | ⏳ *Pròximament* | S'obri: 27/10/2026 00:47 | S08-S09 (Objectes en JS) |
 | **DWEC** | `UD4 Qüestionari` | ⏳ *Pròximament* | Per confirmar | — |
@@ -29,9 +29,9 @@
 | **DWES** | `Autoavaluació U1` (Introducció) | ✅ **Fet** | Obert des del: 16/09/2026 08:41 | Test superat a Aules |
 | **DWES** | `U2_P1 Exercicis PHP` (1.1 a 6.3) | ✅ **Entregat** | Venciment: 21/11/2026 08:16 | Exercicis resolts i entregats a Aules |
 | **DWES** | `Autoavaluació U2` (PHP Bàsic) | ✅ **Fet** | Obert a Aules | Test d'avaluació superat |
-| **DWES** | `U2_P2 Problemes PHP Bàsic` | ✅ **Completada 100%** | Pendent entrega a Aules | Resolta: Part 1 Descompte (app interactiva Pico.css) i Part 2 (productes.php, ciutats.php amb formulari i metadades DIW, generarPassword.php amb named arguments) |
-| **PIM** | `S03 Autoevaluació` (Test Disseny) | ⏳ *Voluntari* | Venciment: 07/10/2026 14:25 | Test autoevaluació disseny d'interfícies web |
-| **PIM** | `S03 Tutorial Wireframe` (Balsamiq) | ⏳ *Voluntari* | Venciment: 07/10/2026 14:25 | Autoaprenentatge Balsamiq, pujar captura i arxiu `.bmpr` |
+| **DWES** | `U2_P2 Problemes PHP Bàsic` | ✅ **Entregat** | Tramesa a Aules | Entregat el fitxer `U2_P2_CondeNoe.zip` a Aules. Resolta: Part 1 Descompte (app interactiva Pico.css) i Part 2 (productes.php, ciutats.php, generarPassword.php) |
+| **PIM** | `S03 Autoevaluació` (Test Disseny) | ✅ **Entregat** | Venciment: 07/10/2026 14:25 | Test de 20 preguntes de Disseny Web i GUI completat i enviat a Aules el 02/10 |
+| **PIM** | `S03 Tutorial Wireframe` (Balsamiq) | ✅ **Entregat** | Venciment: 07/10/2026 14:25 | Entregat el 02/10. Wireframe mòbil "Job Seeking - Noé Conde" fet; captura i arxiu `.bmpr` enviats a Aules |
 | **PIM** | `Sprint 0` (MirandoAlMar S05-S08) | ⏳ *Pròximament* | Pendent d'obertura | Fase prèvia del projecte |
 | **PIM** | `Sprint 1 a Final` (App AgriVall) | ⏳ *Futur* | S09 a S40 | Estudi complet i desenvolupament d'App AgriVall |
 
@@ -158,7 +158,7 @@
 * **UD3 — Funcions, arrais i objectes predefinits (Del 05/10 al 27/10):**
   - Apunts UD3, Guia d'objectes Web, Mètodes útils arrays, exercicis de funcions i arrais (amb/sense solució).
   - Qüestionari UD3: Superat a Aules (9/10) el 30/09/2026.
-  - Tasca puntuable UD3: S'obri **11/10/2026** (En progrés: codi `analizaNumeros` completat i verificat, pendents respostes teòriques per a exportar PDF).
+  - Tasca puntuable UD3: S'obri **11/10/2026** (Completada al 100%: codi `analizaNumeros.js` verificat amb 4 casos incloent valors no numèrics, 5 preguntes d'autoria completades per Noé i fitxer `ud3_activitat_noeconde.md` maquetat clònic al PDF original).
 * **UD4 — Utilització d'objectes en JavaScript (Del 26/10 al 06/11):**
   - Apunts UD4, exercicis fitxer extern `.js`, exercicis d'objectes (amb/sense solució).
   - Tasca puntuable UD4: S'obri **27/10/2026**.
@@ -167,7 +167,7 @@
 * **General:** Presentació del mòdul, Guia didàctica (actualitzada 22/09), Temporalització (actualitzada 22/09).
 * **Unitat 1 — Introducció al servidor:** Apunts web / PDF, exemples miniweb i PHP+JS. Pràctica `U1_P1 Docker` (venciment 30/11) i Autoavaluació U1.
 * **Unitat 2 — PHP Bàsic:** Apunts web, Pràctica `U2_P1 Exercicis PHP` (venciment 21/11), Solucionari de pràctiques publicat, Autoavaluació U2 superada.
-  - **Pràctica `U2_P2 Problemes i exercicis PHP Bàsic` (Completada 100%):**
+  - **Pràctica `U2_P2 Problemes i exercicis PHP Bàsic` (✅ Entregada a Aules):**
     - **Part 1 — Descompte (`DWES/U2_P2/Descompte/index.php`):** Aplicació web interactiva amb formulari per a codi de descompte (`comprobarDesc`), descompte per volum de compra (`preuDescompte`), llistat de productes dinàmic en taula amb bucle `foreach`, estils moderns amb Pico.css i gestió de missatges d'error / reset.
     - **Part 2, Ex 1 (`DWES/U2_P2/productes.php`):** Funció `calcularCompra` per a iterar sobre un array multidimensional de productes (`nom`, `preu`, `quantitat`) i calcular el total de la compra.
     - **Part 2, Ex 2 (`DWES/U2_P2/ciutats.php`):** Funció `buscarPoblacio` per a consultar dades en un array associatiu de ciutats i població. Formulari POST accessible integrat amb metadades de qualitat HTML5 de DIW.
@@ -176,7 +176,10 @@
 ### 3. DaW — Desplegament d'Aplicacions Web (Prof. Juan Ramón Collado)
 * **General:** Guia didàctica, Presentació, Calendari de tutories col·lectives (TCs).
 * **U1 — Introducció al desplegament i arquitectura C-S:** Apunts U1, Vídeo pràctica 1 i xarxes de la MV. Pràctica `PEC1` (venciment 18/10).
-* **U2 — Introducció a Docker i desplegaments en local:** Pròxima unitat (temari preparat a Aules).
+* **U2 — Introducció a Docker i desplegaments en local:**
+  - Diapositives `U2 - Introd. docker.pdf` i vídeos de Juanra Collado.
+  - Exercicis pràctics de les diapositives organitzats a [DaW/S02/ejercicios_practica/](file:///f:/OneDrive%20-%20Conselleria%20d'Educaci%C3%B3/2DAW/DaW/S02/ejercicios_practica/README.md) (Pràctiques 1 a 7, amb la web d'`octopus-underwater-app` situada a `02_ejemplo_octopus/`).
+  - Pràctica avaluable `PEC2` (Venciment: **25 d'octubre de 2026, 23:59**).
 
 ### 4. DIW — Disseny d'Interfícies Web (Prof. Quique Savall)
 * **U00 — Introducció al UI Design:** Apunts S01 Teoria i Presentació Interfaces. `S01_PR1` (Entregat).
@@ -197,10 +200,10 @@
 
 ### 5. PIM — Projecte Intermodular (2n DAW)
 * **General:** `Guia didactica 2 DAWsemi - PIM (beta)`.
-* **Semana 03 — Fases Disseny Interfaces Web:**
-  - `S03 TEORIA Diseño Web` i `S03 PRESENT Fases Diseño Web`.
-  - `S03 Test Diseño Interfaces (Autoevaluación)`: Voluntària (venciment 07/10/2026, 14:25).
-  - `S03 Tutorial Wireframe con Balsamiq`: Autoaprenentatge, pujar captura i fitxer `.bmpr` (venciment 07/10/2026, 14:25).
+* **Semana 03 — Fases Disseny Interfaces Web (Materials descarregats a `PIM/`):**
+  - `S03_TEORIA_Diseño Web.pdf` i `S03_PRESENT_Fases Diseño Web.pdf` (Teoria de fases de disseny UCD, prototipat i entrevistes).
+  - `S03 Test Diseño Interfaces (Autoevaluación)`: ✅ **Entregat el 02/10/2026**. Test de 20 preguntes superat i enviat a Aules.
+  - `S02_Autoaprendizaje_Wireframe con Balsamiq.pdf`: ✅ **Entregat el 02/10/2026**. Wireframe mòbil completat ("Job Seeking - Noé Conde"). Captura de pantalla i arxiu natiu `.bmpr` enviats a Aules.
 * **Full de Ruta del Projecte (Sprints):**
   - **Sprint 0 (S05 a S08):** Prèvia Projecte MirandoAlMar (*No disponible encara*).
   - **Sprint 1 (S09 a S12):** Estudi complet de la nova App (*No disponible encara*).

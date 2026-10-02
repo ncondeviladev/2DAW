@@ -308,6 +308,100 @@ sudo localectl set-keymap es   # Cargar layout español (permanente)
 
 ---
 
+## 🐳 Docker — Comandos y Conceptos (Unidad 2)
+
+### Conceptos Clave
+* **Imagen:** Plantilla de solo lectura compuesta por capas (como una ISO).
+* **Contenedor:** Instancia en ejecución (máquina virtual ligera) creada a partir de una imagen.
+* **Dockerfile:** Fichero de instrucciones para construir una imagen propia.
+
+### Gestión de Imágenes
+```bash
+docker pull <imagen>:<tag>           # Descargar imagen de Docker Hub (ej: nginx:alpine)
+docker images                         # Listar imágenes en local
+docker rmi <ID/nombre>               # Eliminar una imagen
+docker image prune -a                 # Limpiar todas las imágenes sin contenedor asociado
+docker history <imagen>               # Ver historial de capas de una imagen
+docker build -t <nombre>[:tag] <dir>  # Construir imagen desde Dockerfile (ej: docker build -t octopus .)
+```
+
+### Gestión de Contenedores
+```bash
+# Arrancar en segundo plano con puertos y nombre
+docker run -d -p 8080:80 --name mi-web nginx:alpine
+
+# Modo interactivo con terminal (Ubuntu / Alpine)
+docker run -it --name mi-ubuntu ubuntu bash
+docker run -it alpine sh
+
+# Crear contenedor SIN arrancarlo
+docker create --name practica2 -p 8080:80 nginx:alpine
+
+# Mantener activo un contenedor que no corre ningún servicio
+docker run -d --name mi-test ubuntu tail -f /dev/null
+
+# Control de estado
+docker ps                             # Ver contenedores activos
+docker ps -a                          # Ver TODOS los contenedores (activos y parados)
+docker stop <nombre/ID>               # Parar contenedor
+docker start <nombre/ID>              # Arrancar contenedor parado
+docker restart <nombre/ID>            # Reiniciar contenedor
+docker rm <nombre/ID>                 # Eliminar contenedor (debe estar parado)
+docker rm -f <nombre/ID>              # Forzar eliminación de contenedor activo
+
+# Ejecutar comandos dentro de un contenedor en marcha
+docker exec -it <nombre/ID> bash
+docker exec -it <nombre/ID> sh        # Para contenedores ligeros tipo Alpine
+```
+
+### Opciones más comunes de `docker run`
+* `-d`: Segundo plano (*detached*).
+* `-it`: Interactivo conectado a la terminal (*tty + stdin*).
+* `--name <nombre>`: Asignar nombre identificativo.
+* `-p <puerto_host>:<puerto_contenedor>`: Redirigir puertos (ej: `-p 8080:80`).
+* `-v <volumen>:<ruta_contenedor>`: Montar volumen o carpeta compartida.
+* `--network <red>`: Conectar a una red específica.
+* `-e VARIABLE=valor`: Pasar variables de entorno (ej: `-e MYSQL_ROOT_PASSWORD=secret`).
+* `--rm`: Eliminar contenedor automáticamente al pararse.
+
+### Instrucciones de un `Dockerfile`
+```dockerfile
+FROM node:18                    # Imagen base de partida
+WORKDIR /usr/src/app            # Directorio de trabajo interno
+COPY package.json ./            # Copiar dependencias del host al contenedor
+RUN npm install                 # Se ejecuta al CREAR la imagen (build)
+COPY . .                        # Copiar resto de archivos
+EXPOSE 3000                     # Puerto informativo de la aplicación
+CMD ["node", "app.js"]          # Comando al ARRANCAR el contenedor (run)
+```
+> **Diferencia clave:** `RUN` prepara el entorno en tiempo de construcción (`build`), mientras que `CMD` es el comando por defecto que se lanza al encender el contenedor (`run`).
+
+### Almacenamiento y Persistencia (Volúmenes)
+```bash
+# 1. Volúmenes gestionados por Docker (Managed Volumes) - Recomendado para Bases de Datos
+docker volume create mi_volumen       # Crear volumen
+docker volume ls                      # Listar volúmenes
+docker inspect mi_volumen             # Ver ruta real en el host (Mountpoint)
+docker volume rm mi_volumen           # Eliminar volumen
+docker run -d --name mi-db -v mi_volumen:/var/lib/mysql mysql:8.0
+
+# 2. Enlace de directorios del PC (Bind Mounts) - Ideal para desarrollo
+docker run -d -p 8080:80 -v ${PWD}/html:/usr/share/nginx/html nginx:alpine
+```
+
+### Redes en Docker (Networks)
+```bash
+docker network ls                     # Listar redes (bridge, host, none)
+docker network create -d bridge mi-red# Crear red propia con DNS automático por nombre
+
+# Conectar contenedores a la misma red:
+docker run -d --name mongo --network mi-red mongo
+docker run -d --name app --network mi-red -p 3000:3000 mi-app-node
+# En la app nos conectamos usando el nombre: mongodb://root:pass@mongo:27017
+```
+
+---
+
 ## 📋 Resumen de Prácticas DaW
 
 ### PEC 1 — Introducción al despliegue, Apache, Nginx, Multisitio y Acceso Remoto
@@ -315,3 +409,4 @@ sudo localectl set-keymap es   # Cargar layout español (permanente)
 
 ### PEC 2 — Introducción a Docker y despliegues en local
 > ⏳ **Próxima entrega (vence 25/10/2026)**. Entorno de contenedores, Dockerfile y despliegue de aplicaciones.
+
