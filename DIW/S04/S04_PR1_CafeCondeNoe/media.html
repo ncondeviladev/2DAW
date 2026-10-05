@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="light">
+<!--tema claro para que el texto sea color negro (me daba problemas con mi ide tema oscuro en el preview)-->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"><!--Vista mobil suando 100% de la pantalla-->
+    <title>Café.net — Multimedia</title>
+
+    <meta name="author" content="Noé Conde Vila">
+    <meta name="description"
+        content="Café.net — Descubre el origen del café, sus variedades de grano y métodos de preparación.">
+    <meta name="theme-color" content="#F8F2EC">
+
+    <!--ogg para enlaces compartidos-->
+    <meta property="og:title" content="Café.net — Pasión por el café">
+    <meta property="og:description"
+        content="Descubre el origen del café, sus variedades y métodos de preparación artesanal.">
+    <meta property="og:image" content="./img/logo_cafenet.png">
+    <meta property="og:type" content="website">
+    <!--Enlaces de estilos picocss y font awsome-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <link rel="stylesheet" href="css/style.css">
+
+
+</head>
+
+<body class="container">
+
+    <header>
+        <nav>
+            <img src="./img/logo_cafenet.png" alt="logo">
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="variedades.html">Variedades</a></li>
+                <li><a href="media.html">Media</a></li>
+                <li><a href="contacta.html">Contacta</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Contenido Multimedia</h1>
+        <article id="video">
+            <h2>Youtube</h2>
+            <iframe src="https://www.youtube.com/embed/ijCV8_3D7fI" title="Guía para hacer el mejor café" height="200"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen>
+            </iframe>
+            <a href="#">Ir arriba</a>
+        </article>
+
+        <article id="video2">
+            <h2>Video descargado</h2>
+            <video controls height="200" preload="metadata">
+                <source src="video/cafe.mp4" type="video/mp4" title="video café por ia">
+            </video>
+            <a href="#">Ir arriba</a>
+        </article>
+        <!--maps de google siempre confiable-->
+        <article id="mapa">
+            <h2>Ubicación</h2>
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d127255.57846445455!2d-74.16989399846841!3d4.640966829408302!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3f9beaa5647337%3A0x6fa358372e109359!2sTeusaquillo%2C%20Bogot%C3%A1%2C%20Colombia!5e0!3m2!1ses!2ses!4v1791206077179!5m2!1ses!2ses"
+                height="200" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="strict-origin-when-cross-origin"></iframe>
+            <a href="#">Ir arriba</a>
+        </article>
+
+        <article id="widgets">
+            <h2>Widgets</h2>
+            <hr>
+            <div>
+                <!--Para el clima he usado weatherwidget.io, otros no encajaba bien el contenido o eran demasiado altos-->
+                <h3>Metereología</h3>
+                <a class="weatherwidget-io" href="https://forecast7.com/es/4d71n74d07/bogota/" data-label_1="BOGOTÁ"
+                    data-label_2="Zona cafetera" data-theme="pure">BOGOTÁ Zona cafetera</a>
+                <script>
+                    !function (d, s, id) { var js, fjs = d.getElementsByTagName(s)[0]; if (!d.getElementById(id)) { js = d.createElement(s); js.id = id; js.src = 'https://weatherwidget.io/js/widget.min.js'; fjs.parentNode.insertBefore(js, fjs); } }(document, 'script', 'weatherwidget-io-js');
+                </script>
+
+            </div>
+            <div>
+                <!--Para el carrusel de fotos he usado albumizr-->
+                <h3>Imágenes</h3>
+                <iframe src="https://albumizr.com/a/xQmr" allowfullscreen height="260" style="border: 0;"
+                    title="Galería de imágenes Albumizr"></iframe>
+            </div>
+
+            <a href="#">Ir arriba</a>
+        </article>
+
+        <!--calendario de google, no pongo ningun evento como pides porque habria que agregarle una cuenta personal y crear un evento-->
+        <article id="calendario">
+            <h2>Calendario de Eventos y Catas</h2>
+            <iframe
+                src="https://calendar.google.com/calendar/embed?src=es.spain%23holiday%40group.v.calendar.google.com&ctz=Europe%2FMadrid&title=Eventos%20y%20Catas%20%E2%80%94%20Caf%C3%A9.net&showTitle=1&showNav=1&showDate=1&showPrint=0&showTabs=1&showCalendars=0&showTz=0&mode=MONTH&bgcolor=%23F8F2EC"
+                title="Calendario de catas de Café.net" height="350">
+            </iframe>
+            <a href="#">Ir arriba</a>
+        </article>
+
+        <article id="noticias">
+            <h2>Noticias</h2>
+            <h3>El auge del café de especialidad</h3>
+            <p>El consumo de café de origen único y métodos de extracción artesanal crece un 25% este año.</p>
+            <hr>
+            <h3>Compromiso ecológico y sostenible</h3>
+            <p>Nuevos convenios aseguran que todas nuestras variedades cuentan con sello de comercio justo.</p>
+            <a href="#">Ir arriba</a>
+        </article>
+
+
+        <article id="galeria">
+            <h2>Galería: El viaje del café</h2>
+            <div class="grid">
+                <figure>
+                    <img src="img/cafe(1).jpg" alt="Despulpado artesanal de café">
+                    <figcaption>1. Despulpado y lavado tradicional</figcaption>
+                </figure>
+                <figure>
+                    <img src="img/cafe(2).jpg" alt="Secado de café al sol">
+                    <figcaption>2. Secado en camas africanas</figcaption>
+                </figure>
+                <figure>
+                    <img src="img/cafe(3).jpg" alt="Pesaje y ensacado en yute">
+                    <figcaption>3. Selección y ensacado de origen</figcaption>
+                </figure>
+            </div>
+
+            <div class="grid">
+                <figure>
+                    <img src="img/cafe(4).jpg" alt="Transporte tradicional en chiva por los Andes">
+                    <figcaption>4. Transporte por la cordillera andina</figcaption>
+                </figure>
+                <figure>
+                    <img src="img/cafe(5).jpg" alt="Taza de café con latte art en cafetería">
+                    <figcaption>5. La taza perfecta servida en mesa</figcaption>
+                </figure>
+            </div>
+
+            <a href="#">Ir arriba</a>
+        </article>
+
+
+    </main>
+
+
+    <footer>
+        <nav>
+            <ul>
+                <li><strong>Café.net</strong></li>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="variedades.html">Variedades</a></li>
+                <li><a href="media.html">Media</a></li>
+                <li><a href="contacta.html">Contacta</a></li>
+            </ul>
+        </nav>
+    </footer>
+
+</body>
+
+</html>

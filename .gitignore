@@ -11,6 +11,8 @@ bower_components/
 *.key
 *.p12
 
+Proyecto2DAW_NoeConde/
+
 # Build / compilados
 /dist/
 /build/

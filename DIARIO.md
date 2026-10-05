@@ -1,7 +1,7 @@
 # 📘 DIARI DE SEGUIMENT — 2n DAW (Semipresencial)
 > **Alumne:** Noé Conde Vila  
 > **Centre:** IES Maria Enríquez (Gandia) — Curs 2026/2027  
-> **Última actualització:** 2 d'octubre de 2026 (13:35)  
+> **Última actualització:** 5 d'octubre de 2026 (17:10)  
 
 ---
 
@@ -13,10 +13,10 @@
 | **DIW** | `S02 Autoevaluació` (PizzaDelivery) | ✅ **Entregat** | Voluntària (venciment 05/10/2027) | Resolta al 100%, validada W3C |
 | **DIW** | `S02_PR1` (CV en HTML5) | ✅ **Entregat** | Venciment: 10/10/2026 20:36 | Tramesa el 24/09 (14:18) |
 | **DIW** | `S03_PR1` (Formularis HTML5) | ✅ **Entregat** | Venciment: 17/10/2026 23:59 | Tramesa el 25/09 (20:10). 7 fieldsets, icones, CSS extern, validació W3C |
-| **DIW** | `S04_PR1` (CafeNet_Pico_FA) | 🔴 **Pendent iniciar** | **Venciment: 24/10/2026 21:36** | HTML5 Multimèdia + Pico.css + FontAwesome + iFrames. Imatges a Aules |
+| **DIW** | `S04_PR1` (CafeNet_Pico_FA) | ✅ **Entregat** | **Venciment: 24/10/2026 21:36** | 4 pàgines HTML5 (index, variedades, media, contacta), Pico.css v2, FontAwesome, CSS extern corporatiu, iframes (YouTube, Maps, Meteo, Albumizr, Calendar), vídeo local, galeria <figure>/<figcaption> i formulari complet validat W3C |
 | **DIW** | `S05+` (CSS — U02/U03/U04/U05) | ⏳ *No disponible* | Pendent d'obertura | CSS, maquetació, Responsive, Llibreries |
 | **DaW** | `PEC1` (Apache, Nginx, SSH, U1) | ✅ **Completada i revisada** | Venciment: 18/10/2026 23:59 | Document revisat al 100%, comandos i captures alineats, CSS anti-talls per a PDF afegit i chuleta d'examen actualitzada |
-| **DaW** | `PEC2` (Docker i desplegaments, U2) | 🔴 **Pendent iniciar** | **Venciment: 25/10/2026 23:59** | U2 disponible a Aules (6 vídeos + documentació oficial) |
+| **DaW** | `PEC2` (Docker i desplegaments, U2) | ✅ **Entregat** | Venciment: 25/10/2026 23:59 | Tramesa a Aules el 05/10/2026. Ejercicio 1 (Apache Alpine, Dockerfile, puerto 9090) y Ejercicio 2 (red personalizada, volumen persistente, MySQL 5.7 y phpMyAdmin con tabla Alumnos). Documento maquetado y PDF entregado |
 | **DWEC** | `UD1 Activitat` (Arquitectura Web) | ✅ **Entregat** | Obert: 14/09/2026 | Document completat i exportat a PDF |
 | **DWEC** | `UD1 Qüestionari` | ✅ **Fet** | Obert: 17/09/2026 | Test superat a Aules |
 | **DWEC** | `UD2 Activitat puntuable` | ✅ **Entregat** | Obert: 28/09/2026 00:47 | Tramesa el 30/09 a Aules. Document completat, codi i preguntes justificades en PDF |
@@ -32,7 +32,11 @@
 | **DWES** | `U2_P2 Problemes PHP Bàsic` | ✅ **Entregat** | Tramesa a Aules | Entregat el fitxer `U2_P2_CondeNoe.zip` a Aules. Resolta: Part 1 Descompte (app interactiva Pico.css) i Part 2 (productes.php, ciutats.php, generarPassword.php) |
 | **PIM** | `S03 Autoevaluació` (Test Disseny) | ✅ **Entregat** | Venciment: 07/10/2026 14:25 | Test de 20 preguntes de Disseny Web i GUI completat i enviat a Aules el 02/10 |
 | **PIM** | `S03 Tutorial Wireframe` (Balsamiq) | ✅ **Entregat** | Venciment: 07/10/2026 14:25 | Entregat el 02/10. Wireframe mòbil "Job Seeking - Noé Conde" fet; captura i arxiu `.bmpr` enviats a Aules |
-| **PIM** | `Sprint 0` (MirandoAlMar S05-S08) | ⏳ *Pròximament* | Pendent d'obertura | Fase prèvia del projecte |
+| **PIM** | `Sprint 0 - Reto 1A` (Prep. Entrevista Usuari) | ✅ **Completat 100%** | **Venciment: 13/10/2026 23:59** | Document maquetat en Markdown i exportat a PDF (`sprint0_RetoA_CondeNoe.pdf`), llest per a enviar a Aules i arxivat a `S0/` |
+| **PIM** | `Sprint 0 - Reto 1B` (Realització Entrevista) | 📅 **Sessió TEAMS** | **14/10/2026 al migdia** | Sessió síncrona col·lectiva d'entrevista a usuari per TEAMS (o gravació a Aules) |
+| **PIM** | `Sprint 0 - Reto 1C` (Document Specs) | ⏳ **Pendent** | **Venciment: 18/10/2026 23:59** | Es redactarà després de la sessió del 14/10 amb les respostes de l'usuari |
+| **PIM** | `Sprint 0 - Reto 2` (Repositori GIT DAW) | ✅ **Completat i pujat** | **Venciment: 24/10/2026 14:25** | Repo remot creat (`Proyecto2DAW_NoeConde`), branques `main, Sprint0, Sprint1, Sprint2` creades i pujades, `README.md` estructurat i carpeta `S0/` vinculada |
+| **PIM** | `Sprint 0 - Entrega Final` | ⏳ **Pendent** | **Venciment: 08/11/2026 14:25** | Entregable complet consolidat de tot l'Sprint 0 |
 | **PIM** | `Sprint 1 a Final` (App AgriVall) | ⏳ *Futur* | S09 a S40 | Estudi complet i desenvolupament d'App AgriVall |
 
 ---
@@ -179,7 +183,9 @@
 * **U2 — Introducció a Docker i desplegaments en local:**
   - Diapositives `U2 - Introd. docker.pdf` i vídeos de Juanra Collado.
   - Exercicis pràctics de les diapositives organitzats a [DaW/S02/ejercicios_practica/](file:///f:/OneDrive%20-%20Conselleria%20d'Educaci%C3%B3/2DAW/DaW/S02/ejercicios_practica/README.md) (Pràctiques 1 a 7, amb la web d'`octopus-underwater-app` situada a `02_ejemplo_octopus/`).
-  - Pràctica avaluable `PEC2` (Venciment: **25 d'octubre de 2026, 23:59**).
+  - Pràctica avaluable `PEC2`: ✅ **Entregada a Aules el 05/10/2026** (PDF `PEC2_U2_NoeConde.pdf`).
+    - **Exercici 1:** Modificació del `Dockerfile` a `httpd:alpine`, còpia de la carpeta `static/` a `/usr/local/apache2/htdocs/`, construcció de la imatge `octopus-apache` i execució del contenidor `octopus-app` en port 9090:80.
+    - **Exercici 2:** Creació de xarxa bridge `red-pec2`, volum `mysql_data`, llançament de `mysql-server` (MySQL 5.7) i `phpmyadmin-web` (port 8080:80). Comprovació de connectivitat per `exec` (`iputils-ping`, 0% packet loss) i comprovació web amb creació de la taula `Alumnos` en la base de dades `pec2_db`. Maquetació en Markdown amb estils anti-talls de pàgina i respostes en blau marí discret.
 
 ### 4. DIW — Disseny d'Interfícies Web (Prof. Quique Savall)
 * **U00 — Introducció al UI Design:** Apunts S01 Teoria i Presentació Interfaces. `S01_PR1` (Entregat).
@@ -192,11 +198,14 @@
     - Enllaços de tornada amunt amb icona de fletxa accessible.
     - Estil separat en `css/style.css` (alineació de labels, ombres suaus a targetes, pseudo-element `::placeholder` i botons estilitzats).
     - Codi validat sense errors al W3C Nu HTML Validator.
-  - **S04 (HTML5 Multimedia) — PENDENT:**
-    - `S04 TEORIA MULTIMEDIA`, enllaços externs a iFrame, exemples S04.
-    - Pràctica `S04_PR1_CafeNet_Pico_FA`: Pràctica multimèdia més extensa amb Pico.css i FontAwesome.
-    - Imatges necessàries disponibles per a descàrrega a Aules.
-    - Venciment: **dissabte, 24 d’octubre 2026, 21:36**.
+  - **S04 (HTML5 Multimedia — CafeNet_Pico_FA):** ✅ **Completada 100% i llesta per a entrega**
+    - Desenvolupament complet del lloc web multipàgina `S04_PR1_CafeCondeNoe` amb HTML5 semàntic, framework Pico.css v2, FontAwesome 6 i full d'estils personalitzat `css/style.css`.
+    - **`index.html` (Portada):** Header amb logotip i navegació horitzontal responsive (`nav`), secció Hero amb imatge de tassa de cafè (`object-fit: cover`), títol `h1`, text descriptiu i botó d'acció amb icona FontAwesome; secció de resum amb 3 articles semàntics en quadrícula (`div class="grid"`) i footer corporatiu amb enllaços. Metadades completes (author, description, theme-color `#F8F2EC`) i etiquetes Open Graph (`og:`).
+    - **`variedades.html` (Varietats i Cultius):** Pàgina llarga amb navegació interna per àncores (`#arabica`, `#robusta`, `#caracolillo`, `#cultivos`). Seccions amb títols `h2` acompanyats d'icona de gra (`grano.svg`), descripcions completes de cada varietat de cafè i taula semàntica de cultius amb `rowspan="2"`, `colspan="2"`, vores arrodonides i classe `overflow-auto` de Pico.css per a garantir scroll suau en pantalles mòbils.
+    - **`media.html` (Multimèdia i Mashups):** Integració completa d'elements externs i nadius: vídeo de YouTube incrustat amb format `/embed/` i paràmetres de seguretat; reproductor de vídeo local HTML5 (`<video controls>` amb `<source src="video/cafe.mp4" type="video/mp4">`); mapa interactiu de Google Maps amb ubicació a Bogotà (Colòmbia); widget meteorològic responsive amb WeatherWidget.io; carrusel fotogràfic interactiu amb Albumizr; Google Calendar públic integrat amb paleta temàtica; dues notícies d'actualitat cafetera; i galeria narrativa de 5 passos del procés artesanal del cafè (despulpament, assecat en llits africans, ensacat en jute, transport en xiva andina i degustació final) utilitzant estrictament `<figure>` i `<figcaption>`. Validat W3C amb 0 errors.
+    - **`contacta.html` (Formulari HTML5 complet):** Formulari semàntic accessible amb `<hgroup>`, agrupacions per `<fieldset>` i camps de validació avançats: nom/cognoms (`required`, `autofocus`), DNI amb expressió regular `pattern`, correu electrònic natiu HTML5, rang d'edat numèric, ràdios de consum diari amb identificadors únics i etiquetes clicables, selector desplegable de varietat preferida (`<select>`, `<option>`), mètode de preparació amb desplegable predictiu (`<input list>` i `<datalist>`), selector de rang d'intensitat (`input type="range"`), selector visual de color de torrat (`input type="color"`), data de tast (`input type="date"`), àrea de comentaris limitada a 4 files i 200 caràcters (`<textarea>`), i botons d'acció en graella (`submit` i `reset`) amb estils diferenciats.
+    - **`css/style.css` (Estils corporatius):** Full d'estils extern integrat que respecta el disseny net de Pico.css v2, definint el color de fons corporatiu `#F8F2EC`, variables primàries `:root` per a sobreescriure el blau per defecte de Pico amb terracota `#C85A32`, paleta càlida de cafè per a enllaços (`#8C533C` i hover `#5C2D0C`), estils d'imatges adaptatives, icones alineades en línia (`vertical-align: middle`), taules col·lapsades i estilitzades, i enllaços flotants "Ir arriba".
+    - Venciment: **dissabte, 24 d’octubre 2026, 21:36**. Arxiu preparat per a empaquetar en `.zip` i trametre a Aules.
 
 ### 5. PIM — Projecte Intermodular (2n DAW)
 * **General:** `Guia didactica 2 DAWsemi - PIM (beta)`.
@@ -205,7 +214,15 @@
   - `S03 Test Diseño Interfaces (Autoevaluación)`: ✅ **Entregat el 02/10/2026**. Test de 20 preguntes superat i enviat a Aules.
   - `S02_Autoaprendizaje_Wireframe con Balsamiq.pdf`: ✅ **Entregat el 02/10/2026**. Wireframe mòbil completat ("Job Seeking - Noé Conde"). Captura de pantalla i arxiu natiu `.bmpr` enviats a Aules.
 * **Full de Ruta del Projecte (Sprints):**
-  - **Sprint 0 (S05 a S08):** Prèvia Projecte MirandoAlMar (*No disponible encara*).
+  - **Sprint 0 (S05 a S08) — Previa Projecte Previsions Marítimes (MirandoAlMar):**
+    - `RESUMEN DE RETOS y TAREAS DE SPRINT 0` (Recursos a Aules).
+    - **Reto 1A (Preparació d'Entrevista Usuari):** 🔴 **Venciment: dimarts, 13 d'octubre 2026, 23:59**.
+    - **Reto 1B (Realització Entrevista):** 📅 **Dimecres, 14 d'octubre 2026 al migdia** per TEAMS.
+    - **Reto 1C (Document Specs: Funcionals, Visuals, Tècniques, Legals):** ⏳ **Venciment: diumenge, 18 d'octubre 2026, 23:59**.
+    - **Reto 2 (Repositori GIT DAW):** ⏳ **Venciment: dissabte, 24 d'octubre 2026, 14:25**.
+    - **Reto 3 (Estudi Previ Interfície Web - Mòdul DIW):** Integrat en Sprint 0.
+    - **Reto 4 (Estudi de les Dades de l'App - Mòdul DWES):** Integrat en Sprint 0.
+    - **Entrega Final Sprint 0:** ⏳ **Venciment: diumenge, 8 de novembre 2026, 14:25**.
   - **Sprint 1 (S09 a S12):** Estudi complet de la nova App (*No disponible encara*).
   - **Sprint 2 (S14 a S23):** Inici del desenvolupament d'App AgriVall (*No disponible encara*).
   - **Sprint Final (S25 a S40):** Entrega final de l'App (*No disponible encara*).

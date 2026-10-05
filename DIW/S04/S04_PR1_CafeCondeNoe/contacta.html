@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="light">
+<!--tema claro para que el texto sea color negro (me daba problemas con mi ide tema oscuro en el preview)-->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"><!--Vista mobil suando 100% de la pantalla-->
+    <title>Café.net — Contacta</title>
+
+    <meta name="author" content="Noé Conde Vila">
+    <meta name="description"
+        content="Café.net — Descubre el origen del café, sus variedades de grano y métodos de preparación.">
+    <meta name="theme-color" content="#F8F2EC">
+
+    <!--ogg para enlaces compartidos-->
+    <meta property="og:title" content="Café.net — Pasión por el café">
+    <meta property="og:description"
+        content="Descubre el origen del café, sus variedades y métodos de preparación artesanal.">
+    <meta property="og:image" content="./img/logo_cafenet.png">
+    <meta property="og:type" content="website">
+    <!--Enlaces de estilos picocss y font awsome-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <link rel="stylesheet" href="css/style.css">
+
+
+</head>
+
+<body class="container">
+
+    <header>
+        <nav>
+            <img src="./img/logo_cafenet.png" alt="logo">
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="variedades.html">Variedades</a></li>
+                <li><a href="media.html">Media</a></li>
+                <li><a href="contacta.html">Contacta</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <form method="POST" action="#">
+            <hgroup>
+                <h1>Contacta</h1>
+                <p>Formulario de contacto</p>
+            </hgroup>
+            <fieldset>
+                <label for="nombre">Nombre*:</label>
+                <input type="text" id="nombre" name="nombre" placeholder="Nombre y apellidos" required maxlength="100"
+                    autofocus>
+                <label for="dni">DNI*:</label>
+                <input type="text" id="dni" name="dni" placeholder="DNI" pattern="[0-9]{8}[A-Z]" required maxlength="9">
+                <label for="email">Correo electrónico*:</label>
+                <input type="email" id="email" name="email" placeholder="Tu correo electrónico" required
+                    maxlength="100">
+                <label for="edad">Edad:</label>
+                <input type="number" id="edad" name="edad" placeholder="18-99" min="18" max="99">
+            </fieldset>
+            <fieldset>
+                <legend>¿Cuantas tazas de café tomas al dia?</legend>
+                <label for="tazas1">
+                    <input type="radio" id="tazas1" name="tazas" value="1-2" checked> 1 a 2 tazas
+                </label>
+                <label for="tazas2">
+                    <input type="radio" id="tazas2" name="tazas" value="2-5"> 2 a 5 tazas
+                </label>
+                <label for="tazas3">
+                    <input type="radio" id="tazas3" name="tazas" value="mas5"> Más de 5 tazas
+                </label>
+            </fieldset>
+            <fieldset>
+                <label for="tipo-cafe">Variedad de café preferida:</label>
+                <select id="tipo-cafe" name="tipo_cafe" required>
+                    <option value="" disabled selected>Selecciona una opción...</option>
+                    <option value="arabica">Café Arábica</option>
+                    <option value="robusta">Café Robusta</option>
+                    <option value="caracolillo">Café Caracolillo</option>
+                    <option value="liberica">Café Libérica</option>
+                </select>
+
+            </fieldset>
+            <fieldset>
+                <label for="comentarios">Comentarios:</label>
+                <textarea name="comentarios" id="comentarios" placeholder="Escribe tu consulta o comentario." rows="4"
+                    maxlength="200"></textarea>
+            </fieldset>
+            <fieldset>
+                <label for="metodo">Método de preparación habitual:</label>
+                <input list="metodos" id="metodo" name="metodo" placeholder="Escribe o elige tu método habitual:">
+                <datalist id="metodos">
+                    <option value="Cafetera italiana"></option>
+                    <option value="Espresso tradicional"></option>
+                    <option value="Filtro manual"></option>
+                    <option value="Nescafé de toda la vida"></option>
+
+                </datalist>
+
+                <label for="intensidad">Intensidad del tueste preferida (del 1 al 10)</label>
+                <input type="range" id="intensidad" name="intensidad" min="1" max="10" value="5" step="1">
+
+                <label for="color">Color del grano tostado preferido:</label>
+                <input type="color" id="color" name="color_tostado" value="#8C533C">
+
+
+                <label for="fecha">Fecha preferida para asistir a una cata:</label>
+                <input type="date" id="fecha" name="fecha">
+            </fieldset>
+
+            <p><strong>Los campos con asteriscos (*) son obligatorios.</strong></p>
+            <div class="grid">
+                <button type="submit">Enviar formulario</button>
+                <button type="reset" class="secondary">Restablecer datos</button>
+            </div>
+
+
+
+        </form>
+    </main>
+
+
+
+
+    <footer>
+        <nav>
+            <ul>
+                <li><strong>Café.net</strong></li>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="variedades.html">Variedades</a></li>
+                <li><a href="media.html">Media</a></li>
+                <li><a href="contacta.html">Contacta</a></li>
+            </ul>
+        </nav>
+    </footer>
+
+</body>
+
+</html>

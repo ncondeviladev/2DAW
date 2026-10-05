@@ -1,0 +1,139 @@
+body {
+    background-color: #F8F2EC;
+
+}
+
+
+
+/* Enlaces color café */
+a {
+    color: #8C533C;
+}
+
+a:hover {
+    color: #5C2D0C;
+    text-decoration-color: #5C2D0C;
+}
+
+/* Botones */
+a[role="button"],
+button {
+    background-color: #C85A32;
+    border-color: #C85A32;
+    color: #ffffff;
+}
+
+a[role="button"]:hover,
+button:hover,
+button {
+    background-color: #A84420;
+    border-color: #A84420;
+}
+
+/* Taza de café ajustada */
+.hero img {
+    border-radius: 8px;
+    width: 100%;
+    max-height: 250px;
+    object-fit: cover;
+}
+
+/* Ajuste del logo */
+nav img {
+    max-height: 50px;
+    width: auto;
+}
+
+/* Ajuste de los enlaces */
+nav a {
+    font-size: 0.85rem;
+    padding: 4px;
+}
+
+/* Títulos de las variedades  */
+article h2 {
+    color: #be5329;
+    font-size: 1.4rem;
+}
+
+/* Icono del grano variedades */
+article h2 img {
+    width: 32px;
+    height: 32px;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 8px;
+}
+article h3 {
+    color: #8C533C;
+    font-size: 1.15rem;
+    margin-top: 0.6rem;
+    margin-bottom: 0.3rem;
+}
+
+table {
+    border-collapse: collapse;
+    border-radius: 8px;
+    overflow: hidden;
+    width: 100%;
+    margin-top: 1rem;
+
+}
+
+th {
+    text-align: center;
+
+}
+
+th,
+td {
+    border: 2px solid #d6c7b2;
+    text-align: center;
+    padding: 8px;
+}
+
+/* Enlaces de ir arriba de las tarjetas */
+article a[href="#"] {
+    display: inline-block;
+    margin-top: 1.2rem;
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-decoration: none;
+
+}
+
+article a[href="#"]:hover {
+    text-decoration: underline;
+}
+
+/* Botón principal de envío */
+button,
+button[type="submit"],
+a[role="button"] {
+    background-color: #C85A32;
+    border-color: #C85A32;
+    color: #ffffff;
+}
+
+button:hover,
+button[type="submit"]:hover,
+a[role="button"]:hover {
+    background-color: #A84420;
+    border-color: #A84420;
+}
+/* Botón restablecer */
+
+button[type="reset"] {
+    background-color: transparent;
+    border: 2px solid #8C533C;
+    color: #8C533C;
+}
+
+button[type="reset"]:hover {
+    background-color: #8C533C;
+    border-color: #8C533C;
+    color: #ffffff;
+}
+iframe, video {
+    width: 100%;
+}
