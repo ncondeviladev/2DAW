@@ -1,58 +1,86 @@
 <?php
-    function importarLead(string $linia): array {
-        $camps = explode(';', $linia);
+function importarLead(string $linia): array
+{
+    $camps = explode(';', $linia);
 
-        // TODO 1: Valida la línia llançant una Exception, cada una amb el seu missatge i el seu codi
-        // (segon paràmetre del constructor d'Exception), en este ordre:
-        // - Si no té exactament 3 camps (count): 'Format incorrecte: calen 3 camps.', codi 1
-        //   (fes esta comprovació abans de llegir els camps)
-        // - Després, guarda els camps (sense espais als extrems) en $nom, $email i $pressupost
-        //   (per exemple, amb array_map('trim', $camps) i una assignació per desestructuració)
-        // - Si $nom està buit: 'El nom és obligatori.', codi 2
-        // - Si $email no és vàlid (filter_var): 'L\'email no és vàlid.', codi 3
-        // - Si $pressupost no és numèric (is_numeric): 'El pressupost ha de ser un número.', codi 4
-        // Si tot és correcte, retorna ['nom' => ..., 'email' => ..., 'pressupost' => ...],
-        // amb el pressupost convertit a float
+    // TODO 1: Valida la línia llançant una Exception, cada una amb el seu missatge i el seu codi
+    // (segon paràmetre del constructor d'Exception), en este ordre:
+    // - Si no té exactament 3 camps (count): 'Format incorrecte: calen 3 camps.', codi 1
+    //   (fes esta comprovació abans de llegir els camps)
+    // - Després, guarda els camps (sense espais als extrems) en $nom, $email i $pressupost
+    //   (per exemple, amb array_map('trim', $camps) i una assignació per desestructuració)
+    // - Si $nom està buit: 'El nom és obligatori.', codi 2
+    // - Si $email no és vàlid (filter_var): 'L\'email no és vàlid.', codi 3
+    // - Si $pressupost no és numèric (is_numeric): 'El pressupost ha de ser un número.', codi 4
+    // Si tot és correcte, retorna ['nom' => ..., 'email' => ..., 'pressupost' => ...],
+    // amb el pressupost convertit a float
 
-        if(count($camps) !== 3) {
-            throw new Exception('Format incorrecte: calen 3 camps.', 1);
-        }
-        array_map('trim', $camps);
-        $nom = $camps[0];
-        if(empty($nom)) throw new Exception('El nom es obligatori.', 2);
-        $pressupost = $camps[2];
-
+    if (count($camps) !== 3) {
+        throw new Exception('Format incorrecte: calen 3 camps.', 1);
     }
+    [$nom, $email, $pressupost] = array_map('trim', $camps);
 
-    // Línies a importar (ja proporcionades, format: nom;email;pressupost)
-    $linies = [
-        'Aina Soler;aina@textils.cat;4500',
-        'Marc Climent;marc-at-econova.cat;800',
-        'Laura Sanchis;laura@innovacio.cat;12000',
-        ';pau@exemple.cat;300',
-        'Joan Peris;joan@exemple.cat;abc',
-        'Rosa Vidal;rosa@exemple.cat',
+    if (empty($nom))
+        throw new Exception('El nom es obligatori.', 2);
+    if (!filter_var($email, FILTER_VALIDATE_EMAIL))
+        throw new Exception('L\'email no es vàlid.', 3);
+    if (!is_numeric($pressupost))
+        throw new Exception('El pressupost ha de ser un número.', 4);
+
+    return [
+        'nom' => $nom,
+        'email' => $email,
+        'pressupost' => (float) $pressupost
     ];
 
-    $importats   = [];
-    $errors      = [];
-    $processades = 0;
 
-    // TODO 2: Recorre $linies amb un foreach (clau $i i valor $linia). Dins de cada volta:
-    // - Dins d'un bloc try, crida a importarLead($linia) i afig el resultat a $importats
-    // - Amb un bloc catch (Exception $e), afig a $errors un array amb les claus
-    //   'linia' ($i + 1), 'codi' (getCode()) i 'missatge' (getMessage())
-    // - Afig un bloc finally que incremente $processades: s'executa tant si hi ha excepció com si no
+}
+
+// Línies a importar (ja proporcionades, format: nom;email;pressupost)
+$linies = [
+    'Aina Soler;aina@textils.cat;4500',
+    'Marc Climent;marc-at-econova.cat;800',
+    'Laura Sanchis;laura@innovacio.cat;12000',
+    ';pau@exemple.cat;300',
+    'Joan Peris;joan@exemple.cat;abc',
+    'Rosa Vidal;rosa@exemple.cat',
+];
+
+$importats = [];
+$errors = [];
+$processades = 0;
+
+// TODO 2: Recorre $linies amb un foreach (clau $i i valor $linia). Dins de cada volta:
+// - Dins d'un bloc try, crida a importarLead($linia) i afig el resultat a $importats
+// - Amb un bloc catch (Exception $e), afig a $errors un array amb les claus
+//   'linia' ($i + 1), 'codi' (getCode()) i 'missatge' (getMessage())
+// - Afig un bloc finally que incremente $processades: s'executa tant si hi ha excepció com si no
+foreach ($linies as $i => $linia) {
+    try {
+        $importats[] = importarLead($linia);
+
+    } catch (Exception $e) {
+        $errors[] = [
+            'linia' => $i + 1,
+            'codi' => $e->getCode(),
+            'missatge' => $e->getMessage(),
+        ];
+    } finally {
+        $processades++;
+    }
+}
 
 ?>
 <!DOCTYPE html>
 <html lang="ca">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Exercici 7.2 - Importació de leads</title>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
+
 <body class="bg-gray-100 min-h-screen p-8">
 
     <!-- VISTA: no cal tocar res d'ací en avall -->
@@ -125,4 +153,5 @@
     </div>
 
 </body>
+
 </html>

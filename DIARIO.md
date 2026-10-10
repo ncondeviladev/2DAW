@@ -1,7 +1,7 @@
 # 📘 DIARI DE SEGUIMENT — 2n DAW (Semipresencial)
 > **Alumne:** Noé Conde Vila  
 > **Centre:** IES Maria Enríquez (Gandia) — Curs 2026/2027  
-> **Última actualització:** 9 d'octubre de 2026  
+> **Última actualització:** 10 d'octubre de 2026  
 
 ---
 
@@ -31,9 +31,9 @@
 | **DWES** | `U2_P1 Exercicis PHP` (1.1 a 6.3) | ✅ **Entregat** | Venciment: 21/11/2026 08:16 | Tramesa a Aules |
 | **DWES** | `U2_P2 Problemes PHP Bàsic` | ✅ **Entregat** | Venciment: 28/11/2026 09:56 | Tramesa a Aules (`U2_P2_CondeNoe.zip`) |
 | **DWES** | `Autoavaluació U2` (PHP Bàsic) | ✅ **Fet** | Obert a Aules | Test superat a Aules |
-| **DWES** | `Exercicis U3` (PHP Avançat) | 🔄 **En procés** | Continu | Fets de l'1.1 al 7.1; el 7.2 començat (a mitges en TODO 1) |
-| **DWES** | `U3_P1 Exercicis PHP Avançat` | ⏳ **Pendent** | Venciment: 21/11/2026 08:16 | Pràctica avaluable de la Unitat 3 |
-| **DWES** | `Autoavaluació U3` (PHP Avançat) | ⏳ **Pendent** | Obert a Aules | Test d'avaluació Unitat 3 |
+| **DWES** | `Exercicis U3` (PHP Avançat) | ✅ **Fet** | Continu | Fets del bloc 1 al 8 (1.1 a 8.3 complets) i pujats a GitHub |
+| **DWES** | `U3_P1 Exercicis PHP Avançat` | ✅ **Entregat** | Venciment: 21/11/2026 08:16 | Pràctica avaluable de la Unitat 3 (Blocs 1-8 enllestits) |
+| **DWES** | `Autoavaluació U3` (PHP Avançat) | ✅ **Fet** | Obert a Aules | Test superat a Aules |
 | **PIM** | `S03 Autoevaluació` (Test Disseny) | ✅ **Entregat** | Venciment: 07/10/2026 14:25 | Tramesa a Aules |
 | **PIM** | `S03 Tutorial Wireframe` (Balsamiq) | ✅ **Entregat** | Venciment: 07/10/2026 14:25 | Tramesa a Aules |
 | **PIM** | `Sprint 0 - Reto 1A` (Prep. Entrevista) | ✅ **Entregat** | Venciment: 13/10/2026 23:59 | Tramesa a Aules |
@@ -191,9 +191,9 @@
     - **Part 2, Ex 3 (`DWES/U2_P2/generarPassword.php`):** Funció `generarPassword` amb paràmetre obligatori (`$longitud`) i opcionals (`$inclouNumeros = true`, `$inclouSimbols = false`). Conjunt de caràcters dinàmic, selecció aleatòria amb `rand` i cridades de prova tant posicionals com amb arguments amb nom de PHP 8 (*named arguments*).
 * **Unitat 3 — PHP Avançat (Actual):**
   - Apunts web `Unitat 3. PHP Avançat`, PDF `PHP xDebug`.
-  - Exercicis de classe a `DWES/U3/exercicis/`: 🔄 **En procés** (completats 1.1 al 7.1; el 7.2 començat a mitges en TODO 1).
-  - Pràctica avaluable `U3_P1. Exercicis PHP Avançat`: ⏳ **Pendent** (Venciment: 21 de Novembre de 2026, 08:16).
-  - Autoavaluació Unitat 3 (PHP Avançat): ⏳ **Pendent**.
+  - Exercicis de classe a `DWES/U3/exercicis/`: ✅ **Completats** (Tots els blocs de l'1 al 8, del 1.1 al 8.3, validats i pujats a GitHub).
+  - Pràctica avaluable `U3_P1. Exercicis PHP Avançat`: ✅ **Entregada** (Venciment: 21 de Novembre de 2026, 08:16).
+  - Autoavaluació Unitat 3 (PHP Avançat): ✅ **Feta** (Test superat a Aules).
 
 ### 3. DaW — Desplegament d'Aplicacions Web (Prof. Juan Ramón Collado)
 * **General:** Guia didàctica, Presentació, Calendari de tutories col·lectives (TCs).
