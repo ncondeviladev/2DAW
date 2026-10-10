@@ -1,7 +1,7 @@
 # 📘 DIARI DE SEGUIMENT — 2n DAW (Semipresencial)
 > **Alumne:** Noé Conde Vila  
 > **Centre:** IES Maria Enríquez (Gandia) — Curs 2026/2027  
-> **Última actualització:** 5 d'octubre de 2026 (17:10)  
+> **Última actualització:** 9 d'octubre de 2026  
 
 ---
 
@@ -10,33 +10,37 @@
 | Assignatura | Tasca / Activitat | Estat | Data d'obertura / Venciment | Notes |
 | :--- | :--- | :---: | :--- | :--- |
 | **DIW** | `S01_PR1` (Interfaces) | ✅ **Entregat** | Venciment: 07/10/2026 20:37 | Tramesa a Aules |
-| **DIW** | `S02 Autoevaluació` (PizzaDelivery) | ✅ **Entregat** | Voluntària (venciment 05/10/2027) | Resolta al 100%, validada W3C |
-| **DIW** | `S02_PR1` (CV en HTML5) | ✅ **Entregat** | Venciment: 10/10/2026 20:36 | Tramesa el 24/09 (14:18) |
-| **DIW** | `S03_PR1` (Formularis HTML5) | ✅ **Entregat** | Venciment: 17/10/2026 23:59 | Tramesa el 25/09 (20:10). 7 fieldsets, icones, CSS extern, validació W3C |
-| **DIW** | `S04_PR1` (CafeNet_Pico_FA) | ✅ **Entregat** | **Venciment: 24/10/2026 21:36** | 4 pàgines HTML5 (index, variedades, media, contacta), Pico.css v2, FontAwesome, CSS extern corporatiu, iframes (YouTube, Maps, Meteo, Albumizr, Calendar), vídeo local, galeria <figure>/<figcaption> i formulari complet validat W3C |
-| **DIW** | `S05+` (CSS — U02/U03/U04/U05) | ⏳ *No disponible* | Pendent d'obertura | CSS, maquetació, Responsive, Llibreries |
-| **DaW** | `PEC1` (Apache, Nginx, SSH, U1) | ✅ **Completada i revisada** | Venciment: 18/10/2026 23:59 | Document revisat al 100%, comandos i captures alineats, CSS anti-talls per a PDF afegit i chuleta d'examen actualitzada |
-| **DaW** | `PEC2` (Docker i desplegaments, U2) | ✅ **Entregat** | Venciment: 25/10/2026 23:59 | Tramesa a Aules el 05/10/2026. Ejercicio 1 (Apache Alpine, Dockerfile, puerto 9090) y Ejercicio 2 (red personalizada, volumen persistente, MySQL 5.7 y phpMyAdmin con tabla Alumnos). Documento maquetado y PDF entregado |
-| **DWEC** | `UD1 Activitat` (Arquitectura Web) | ✅ **Entregat** | Obert: 14/09/2026 | Document completat i exportat a PDF |
+| **DIW** | `S02 Autoevaluació` (PizzaDelivery) | ✅ **Entregat** | Voluntària (05/10/2027) | Validada W3C |
+| **DIW** | `S02_PR1` (CV en HTML5) | ✅ **Entregat** | Venciment: 10/10/2026 20:36 | Tramesa a Aules |
+| **DIW** | `S03_PR1` (Formularis HTML5) | ✅ **Entregat** | Venciment: 17/10/2026 23:59 | Tramesa a Aules |
+| **DIW** | `S04_PR1` (CafeNet_Pico_FA) | ✅ **Entregat** | Venciment: 24/10/2026 21:36 | 4 pàgines HTML5, Pico.css, FA, validat W3C |
+| **DIW** | `S05 Playground1` (CSS Selectors) | ⏳ **Pendent (Voluntari)** | Venciment: 15/10/2026 23:37 | Exercici pràctic voluntari |
+| **DaW** | `PEC1` (Apache, Nginx, SSH, U1) | ✅ **Entregat** | Venciment: 18/10/2026 23:59 | Tramesa a Aules |
+| **DaW** | `PEC2` (Docker i desplegaments, U2) | ✅ **Entregat** | Venciment: 25/10/2026 23:59 | Tramesa a Aules |
+| **DaW** | `PEC3` (Docker avançat, U3) | ⏳ **Pendent** | Venciment: 08/11/2026 23:59 | Nova unitat oberta a Aules |
+| **DWEC** | `UD1 Activitat` (Arquitectura Web) | ✅ **Entregat** | Obert: 14/09/2026 | Tramesa a Aules |
 | **DWEC** | `UD1 Qüestionari` | ✅ **Fet** | Obert: 17/09/2026 | Test superat a Aules |
-| **DWEC** | `UD2 Activitat puntuable` | ✅ **Entregat** | Obert: 28/09/2026 00:47 | Tramesa el 30/09 a Aules. Document completat, codi i preguntes justificades en PDF |
-| **DWEC** | `UD2 Qüestionari` | ✅ **Fet** | Obert des del: 21/09/2026 | Test superat a Aules |
-| **DWEC** | `UD3 Activitat puntuable` | ✅ **Completada 100%** | S'obri: 11/10/2026 00:47 | Preparada i llesta per a pujar quan s'òbriga a Aules. Codi `analizaNumeros` verificat amb 4 casos, preguntes d'autoria respostes i document maquetat clònic al PDF |
+| **DWEC** | `UD2 Activitat puntuable` | ✅ **Entregat** | Obert: 28/09/2026 | Tramesa a Aules |
+| **DWEC** | `UD2 Qüestionari` | ✅ **Fet** | Obert: 21/09/2026 | Test superat a Aules |
 | **DWEC** | `UD3 Qüestionari` | ✅ **Fet** | Fet el 30/09/2026 | Test superat a Aules (10/10) |
-| **DWEC** | `UD4 Activitat puntuable` | ⏳ *Pròximament* | S'obri: 27/10/2026 00:47 | S08-S09 (Objectes en JS) |
-| **DWEC** | `UD4 Qüestionari` | ⏳ *Pròximament* | Per confirmar | — |
-| **DWES** | `U1_P1 Docker` (Entorn LAMP) | ✅ **Entregat** | Venciment: 30/11/2026 12:04 | Entregat. Contenidors Docker operatius |
-| **DWES** | `Autoavaluació U1` (Introducció) | ✅ **Fet** | Obert des del: 16/09/2026 08:41 | Test superat a Aules |
-| **DWES** | `U2_P1 Exercicis PHP` (1.1 a 6.3) | ✅ **Entregat** | Venciment: 21/11/2026 08:16 | Exercicis resolts i entregats a Aules |
-| **DWES** | `Autoavaluació U2` (PHP Bàsic) | ✅ **Fet** | Obert a Aules | Test d'avaluació superat |
-| **DWES** | `U2_P2 Problemes PHP Bàsic` | ✅ **Entregat** | Tramesa a Aules | Entregat el fitxer `U2_P2_CondeNoe.zip` a Aules. Resolta: Part 1 Descompte (app interactiva Pico.css) i Part 2 (productes.php, ciutats.php, generarPassword.php) |
-| **PIM** | `S03 Autoevaluació` (Test Disseny) | ✅ **Entregat** | Venciment: 07/10/2026 14:25 | Test de 20 preguntes de Disseny Web i GUI completat i enviat a Aules el 02/10 |
-| **PIM** | `S03 Tutorial Wireframe` (Balsamiq) | ✅ **Entregat** | Venciment: 07/10/2026 14:25 | Entregat el 02/10. Wireframe mòbil "Job Seeking - Noé Conde" fet; captura i arxiu `.bmpr` enviats a Aules |
-| **PIM** | `Sprint 0 - Reto 1A` (Prep. Entrevista Usuari) | ✅ **Completat 100%** | **Venciment: 13/10/2026 23:59** | Document maquetat en Markdown i exportat a PDF (`sprint0_RetoA_CondeNoe.pdf`), llest per a enviar a Aules i arxivat a `S0/` |
-| **PIM** | `Sprint 0 - Reto 1B` (Realització Entrevista) | 📅 **Sessió TEAMS** | **14/10/2026 al migdia** | Sessió síncrona col·lectiva d'entrevista a usuari per TEAMS (o gravació a Aules) |
-| **PIM** | `Sprint 0 - Reto 1C` (Document Specs) | ⏳ **Pendent** | **Venciment: 18/10/2026 23:59** | Es redactarà després de la sessió del 14/10 amb les respostes de l'usuari |
-| **PIM** | `Sprint 0 - Reto 2` (Repositori GIT DAW) | ✅ **Completat i pujat** | **Venciment: 24/10/2026 14:25** | Repo remot creat (`Proyecto2DAW_NoeConde`), branques `main, Sprint0, Sprint1, Sprint2` creades i pujades, `README.md` estructurat i carpeta `S0/` vinculada |
-| **PIM** | `Sprint 0 - Entrega Final` | ⏳ **Pendent** | **Venciment: 08/11/2026 14:25** | Entregable complet consolidat de tot l'Sprint 0 |
+| **DWEC** | `UD3 Activitat puntuable` | ⏳ **Pendent d'obertura** | S'obri: 11/10/2026 00:47 | Feta en local, pendent de pujar quan s'òbriga a Aules |
+| **DWEC** | `UD4 Activitat puntuable` | ⏳ **Pendent** | S'obri: 27/10/2026 00:47 | S08-S09 (Objectes en JS) |
+| **DWEC** | `UD4 Qüestionari` | ⏳ **Pendent** | Per confirmar | Cüestionari d'avaluació UD4 |
+| **DWES** | `U1_P1 Docker` (Entorn LAMP) | ✅ **Entregat** | Venciment: 30/11/2026 12:04 | Tramesa a Aules |
+| **DWES** | `Autoavaluació U1` (Introducció) | ✅ **Fet** | Obert: 16/09/2026 | Test superat a Aules |
+| **DWES** | `U2_P1 Exercicis PHP` (1.1 a 6.3) | ✅ **Entregat** | Venciment: 21/11/2026 08:16 | Tramesa a Aules |
+| **DWES** | `U2_P2 Problemes PHP Bàsic` | ✅ **Entregat** | Venciment: 28/11/2026 09:56 | Tramesa a Aules (`U2_P2_CondeNoe.zip`) |
+| **DWES** | `Autoavaluació U2` (PHP Bàsic) | ✅ **Fet** | Obert a Aules | Test superat a Aules |
+| **DWES** | `Exercicis U3` (PHP Avançat) | 🔄 **En procés** | Continu | Fets de l'1.1 al 7.1; el 7.2 començat (a mitges en TODO 1) |
+| **DWES** | `U3_P1 Exercicis PHP Avançat` | ⏳ **Pendent** | Venciment: 21/11/2026 08:16 | Pràctica avaluable de la Unitat 3 |
+| **DWES** | `Autoavaluació U3` (PHP Avançat) | ⏳ **Pendent** | Obert a Aules | Test d'avaluació Unitat 3 |
+| **PIM** | `S03 Autoevaluació` (Test Disseny) | ✅ **Entregat** | Venciment: 07/10/2026 14:25 | Tramesa a Aules |
+| **PIM** | `S03 Tutorial Wireframe` (Balsamiq) | ✅ **Entregat** | Venciment: 07/10/2026 14:25 | Tramesa a Aules |
+| **PIM** | `Sprint 0 - Reto 1A` (Prep. Entrevista) | ✅ **Entregat** | Venciment: 13/10/2026 23:59 | Tramesa a Aules |
+| **PIM** | `Sprint 0 - Reto 1B` (Realització Entrevista) | 📅 **Sessió TEAMS** | **14/10/2026 al migdia** | Sessió col·lectiva per TEAMS |
+| **PIM** | `Sprint 0 - Reto 1C` (Document Specs) | ⏳ **Pendent** | Venciment: 18/10/2026 23:59 | Es redactarà després de la sessió del 14/10 |
+| **PIM** | `Sprint 0 - Reto 2` (Repositori GIT DAW) | ✅ **Entregat** | Venciment: 24/10/2026 14:25 | Tramesa a Aules |
+| **PIM** | `Sprint 0 - Entrega Final` | ⏳ **Pendent** | Venciment: 08/11/2026 14:25 | Entregable consolidat de tot l'Sprint 0 |
 | **PIM** | `Sprint 1 a Final` (App AgriVall) | ⏳ *Futur* | S09 a S40 | Estudi complet i desenvolupament d'App AgriVall |
 
 ---
@@ -134,18 +138,27 @@
 
 ## 🚨 Dates Clau i Exàmens Presencials (1r Trimestre)
 * **DWEC (Client):** 
+  - **Obertura UD3 Activitat puntuable:** **11 d'Octubre de 2026, 00:47**.
+  - **Obertura UD4 Activitat puntuable:** **27 d'Octubre de 2026, 00:47**.
   - **Examen 1a Avaluació:** **19 i 20 de Novembre de 2026** (Presencial).
   - *Simulacre d'examen:* Previ a la data de l'examen oficial a Aules.
 * **DaW (Desplegament):**
   - **Venciment PEC1:** **18 d'Octubre de 2026, 23:59**.
   - **Venciment PEC2 (Docker):** **25 d'Octubre de 2026, 23:59**.
+  - **Venciment PEC3 (Docker avançat):** **8 de Novembre de 2026, 23:59**.
 * **DIW (Disseny d'Interfícies):**
   - **Venciment S03_PR1 (Formularis):** **17 d'Octubre de 2026, 23:59**.
   - **Venciment S04_PR1 (CafeNet Multimedia):** **24 d'Octubre de 2026, 21:36**.
+  - **Venciment S05 Playground1 (Voluntari):** **15 d'Octubre de 2026, 23:37**.
 * **PIM (Projecte Intermodular):**
-  - **Venciment S03 (Test + Wireframe Balsamiq):** **7 d'Octubre de 2026, 14:25** (Voluntari).
+  - **Sprint 0 - Reto 1B (Entrevista Teams):** **14 d'Octubre de 2026 al migdia**.
+  - **Venciment Reto 1C (Specs):** **18 d'Octubre de 2026, 23:59**.
+  - **Venciment Reto 2 (Repo Git):** **24 d'Octubre de 2026, 14:25**.
+  - **Venciment Sprint 0 Final:** **8 de Novembre de 2026, 14:25**.
 * **DWES (Servidor):**
   - **Venciment U2_P1 (PHP Bàsic):** **21 de Novembre de 2026, 08:16**.
+  - **Venciment U3_P1 (PHP Avançat):** **21 de Novembre de 2026, 08:16**.
+  - **Venciment U2_P2 (Problemes PHP):** **28 de Novembre de 2026, 09:56**.
   - **Venciment U1_P1 (Docker):** **30 de Novembre de 2026, 12:04**.
 
 ---
@@ -176,36 +189,33 @@
     - **Part 2, Ex 1 (`DWES/U2_P2/productes.php`):** Funció `calcularCompra` per a iterar sobre un array multidimensional de productes (`nom`, `preu`, `quantitat`) i calcular el total de la compra.
     - **Part 2, Ex 2 (`DWES/U2_P2/ciutats.php`):** Funció `buscarPoblacio` per a consultar dades en un array associatiu de ciutats i població. Formulari POST accessible integrat amb metadades de qualitat HTML5 de DIW.
     - **Part 2, Ex 3 (`DWES/U2_P2/generarPassword.php`):** Funció `generarPassword` amb paràmetre obligatori (`$longitud`) i opcionals (`$inclouNumeros = true`, `$inclouSimbols = false`). Conjunt de caràcters dinàmic, selecció aleatòria amb `rand` i cridades de prova tant posicionals com amb arguments amb nom de PHP 8 (*named arguments*).
+* **Unitat 3 — PHP Avançat (Actual):**
+  - Apunts web `Unitat 3. PHP Avançat`, PDF `PHP xDebug`.
+  - Exercicis de classe a `DWES/U3/exercicis/`: 🔄 **En procés** (completats 1.1 al 7.1; el 7.2 començat a mitges en TODO 1).
+  - Pràctica avaluable `U3_P1. Exercicis PHP Avançat`: ⏳ **Pendent** (Venciment: 21 de Novembre de 2026, 08:16).
+  - Autoavaluació Unitat 3 (PHP Avançat): ⏳ **Pendent**.
 
 ### 3. DaW — Desplegament d'Aplicacions Web (Prof. Juan Ramón Collado)
 * **General:** Guia didàctica, Presentació, Calendari de tutories col·lectives (TCs).
-* **U1 — Introducció al desplegament i arquitectura C-S:** Apunts U1, Vídeo pràctica 1 i xarxes de la MV. Pràctica `PEC1` (venciment 18/10).
+* **U1 — Introducció al desplegament i arquitectura C-S:** Apunts U1, Vídeo pràctica 1 i xarxes de la MV. Pràctica `PEC1` (✅ **Entregat**).
 * **U2 — Introducció a Docker i desplegaments en local:**
   - Diapositives `U2 - Introd. docker.pdf` i vídeos de Juanra Collado.
-  - Exercicis pràctics de les diapositives organitzats a [DaW/S02/ejercicios_practica/](file:///f:/OneDrive%20-%20Conselleria%20d'Educaci%C3%B3/2DAW/DaW/S02/ejercicios_practica/README.md) (Pràctiques 1 a 7, amb la web d'`octopus-underwater-app` situada a `02_ejemplo_octopus/`).
-  - Pràctica avaluable `PEC2`: ✅ **Entregada a Aules el 05/10/2026** (PDF `PEC2_U2_NoeConde.pdf`).
-    - **Exercici 1:** Modificació del `Dockerfile` a `httpd:alpine`, còpia de la carpeta `static/` a `/usr/local/apache2/htdocs/`, construcció de la imatge `octopus-apache` i execució del contenidor `octopus-app` en port 9090:80.
-    - **Exercici 2:** Creació de xarxa bridge `red-pec2`, volum `mysql_data`, llançament de `mysql-server` (MySQL 5.7) i `phpmyadmin-web` (port 8080:80). Comprovació de connectivitat per `exec` (`iputils-ping`, 0% packet loss) i comprovació web amb creació de la taula `Alumnos` en la base de dades `pec2_db`. Maquetació en Markdown amb estils anti-talls de pàgina i respostes en blau marí discret.
+  - Exercicis pràctics organitzats a [DaW/S02/ejercicios_practica/](file:///c:/Users/ncond/OneDrive%20-%20Conselleria%20d%27Educaci%C3%B3/2DAW/DaW/S02/ejercicios_practica/README.md).
+  - Pràctica avaluable `PEC2`: ✅ **Entregat a Aules el 05/10/2026** (PDF `PEC2_U2_NoeConde.pdf`).
+* **U3 — Docker avançat (Nova Unitat):**
+  - Diapositives `U3 - Docker avanzado.pdf`, documentació oficial de Docker Compose i Kubernetes, vídeos `U3_1` i `U3_2`.
+  - Recurs `Manifesto Práctica 3`.
+  - Pràctica avaluable `PEC3`: ⏳ **Pendent** (Venciment: 8 de Novembre de 2026, 23:59).
 
 ### 4. DIW — Disseny d'Interfícies Web (Prof. Quique Savall)
-* **U00 — Introducció al UI Design:** Apunts S01 Teoria i Presentació Interfaces. `S01_PR1` (Entregat).
+* **U00 — Introducció al UI Design:** Apunts S01 Teoria i Presentació Interfaces. `S01_PR1` (✅ **Entregat**).
 * **U01 — HTML - Estructura de la Informació:**
-  - **S02 (Intro HTML5):** Teoria HTML5, Presentació Estructura, Presentació Elements Bàsics, Ejercicio Pizza Delivery, `S02_PR1 CV en HTML5` (Entregat el 24/09).
-  - **S03 (HTML5 Forms):** `S03 UF01 TEORIA FORMS y CONTROLES`, exemples S03, pràctica `S03_PR1_Formulario_HTML5` (**Entregat el 25/09**):
-    - Formulari complet de Portal d'Ocupació (`index.html`) complint el 100% de la rúbrica del Prof. Savall.
-    - 7 seccions amb `fieldset` i `legend` acompanyats d'icones a 24x24 px.
-    - Tots els nous controls HTML5 (`number`, `date`, `range`, `color`, `file`, `tel`, `email`, `url`, `datalist`).
-    - Enllaços de tornada amunt amb icona de fletxa accessible.
-    - Estil separat en `css/style.css` (alineació de labels, ombres suaus a targetes, pseudo-element `::placeholder` i botons estilitzats).
-    - Codi validat sense errors al W3C Nu HTML Validator.
-  - **S04 (HTML5 Multimedia — CafeNet_Pico_FA):** ✅ **Completada 100% i llesta per a entrega**
-    - Desenvolupament complet del lloc web multipàgina `S04_PR1_CafeCondeNoe` amb HTML5 semàntic, framework Pico.css v2, FontAwesome 6 i full d'estils personalitzat `css/style.css`.
-    - **`index.html` (Portada):** Header amb logotip i navegació horitzontal responsive (`nav`), secció Hero amb imatge de tassa de cafè (`object-fit: cover`), títol `h1`, text descriptiu i botó d'acció amb icona FontAwesome; secció de resum amb 3 articles semàntics en quadrícula (`div class="grid"`) i footer corporatiu amb enllaços. Metadades completes (author, description, theme-color `#F8F2EC`) i etiquetes Open Graph (`og:`).
-    - **`variedades.html` (Varietats i Cultius):** Pàgina llarga amb navegació interna per àncores (`#arabica`, `#robusta`, `#caracolillo`, `#cultivos`). Seccions amb títols `h2` acompanyats d'icona de gra (`grano.svg`), descripcions completes de cada varietat de cafè i taula semàntica de cultius amb `rowspan="2"`, `colspan="2"`, vores arrodonides i classe `overflow-auto` de Pico.css per a garantir scroll suau en pantalles mòbils.
-    - **`media.html` (Multimèdia i Mashups):** Integració completa d'elements externs i nadius: vídeo de YouTube incrustat amb format `/embed/` i paràmetres de seguretat; reproductor de vídeo local HTML5 (`<video controls>` amb `<source src="video/cafe.mp4" type="video/mp4">`); mapa interactiu de Google Maps amb ubicació a Bogotà (Colòmbia); widget meteorològic responsive amb WeatherWidget.io; carrusel fotogràfic interactiu amb Albumizr; Google Calendar públic integrat amb paleta temàtica; dues notícies d'actualitat cafetera; i galeria narrativa de 5 passos del procés artesanal del cafè (despulpament, assecat en llits africans, ensacat en jute, transport en xiva andina i degustació final) utilitzant estrictament `<figure>` i `<figcaption>`. Validat W3C amb 0 errors.
-    - **`contacta.html` (Formulari HTML5 complet):** Formulari semàntic accessible amb `<hgroup>`, agrupacions per `<fieldset>` i camps de validació avançats: nom/cognoms (`required`, `autofocus`), DNI amb expressió regular `pattern`, correu electrònic natiu HTML5, rang d'edat numèric, ràdios de consum diari amb identificadors únics i etiquetes clicables, selector desplegable de varietat preferida (`<select>`, `<option>`), mètode de preparació amb desplegable predictiu (`<input list>` i `<datalist>`), selector de rang d'intensitat (`input type="range"`), selector visual de color de torrat (`input type="color"`), data de tast (`input type="date"`), àrea de comentaris limitada a 4 files i 200 caràcters (`<textarea>`), i botons d'acció en graella (`submit` i `reset`) amb estils diferenciats.
-    - **`css/style.css` (Estils corporatius):** Full d'estils extern integrat que respecta el disseny net de Pico.css v2, definint el color de fons corporatiu `#F8F2EC`, variables primàries `:root` per a sobreescriure el blau per defecte de Pico amb terracota `#C85A32`, paleta càlida de cafè per a enllaços (`#8C533C` i hover `#5C2D0C`), estils d'imatges adaptatives, icones alineades en línia (`vertical-align: middle`), taules col·lapsades i estilitzades, i enllaços flotants "Ir arriba".
-    - Venciment: **dissabte, 24 d’octubre 2026, 21:36**. Arxiu preparat per a empaquetar en `.zip` i trametre a Aules.
+  - **S02 (Intro HTML5):** Teoria HTML5, Pizza Delivery (✅ **Entregat**), `S02_PR1 CV en HTML5` (✅ **Entregat**).
+  - **S03 (HTML5 Forms):** Teoria Forms, pràctica `S03_PR1_Formulario_HTML5` (✅ **Entregat**).
+  - **S04 (HTML5 Multimedia — CafeNet_Pico_FA):** ✅ **Entregat**. Desenvolupament complet del lloc web multipàgina `S04_PR1_CafeCondeNoe` amb HTML5 semàntic, framework Pico.css v2, FontAwesome 6, embeds multimèdia i formulari validat W3C.
+* **U02 — CSS - Estilitzant elements del doc HTML (Nova Unitat):**
+  - **S05 (Intro CSS i Selectors):** Apunts `S05 APUNTES CSS Intro Selectores1`, Presentació `S05 PRESENT CSS Intro Selectores Propiedades`, enllaços W3Schools i chuletes.
+  - `Playground1`: ⏳ **Pendent (Voluntari)** (Venciment: 15 d'Octubre de 2026, 23:37). Solució es publicarà el 16/10.
 
 ### 5. PIM — Projecte Intermodular (2n DAW)
 * **General:** `Guia didactica 2 DAWsemi - PIM (beta)`.
