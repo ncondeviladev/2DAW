@@ -1,7 +1,7 @@
 # 📘 DIARI DE SEGUIMENT — 2n DAW (Semipresencial)
 > **Alumne:** Noé Conde Vila  
 > **Centre:** IES Maria Enríquez (Gandia) — Curs 2026/2027  
-> **Última actualització:** 10 d'octubre de 2026  
+> **Última actualització:** 12 d'octubre de 2026  
 
 ---
 
@@ -14,7 +14,6 @@
 | **DIW** | `S02_PR1` (CV en HTML5) | ✅ **Entregat** | Venciment: 10/10/2026 20:36 | Tramesa a Aules |
 | **DIW** | `S03_PR1` (Formularis HTML5) | ✅ **Entregat** | Venciment: 17/10/2026 23:59 | Tramesa a Aules |
 | **DIW** | `S04_PR1` (CafeNet_Pico_FA) | ✅ **Entregat** | Venciment: 24/10/2026 21:36 | 4 pàgines HTML5, Pico.css, FA, validat W3C |
-| **DIW** | `S05 Playground1` (CSS Selectors) | ⏳ **Pendent (Voluntari)** | Venciment: 15/10/2026 23:37 | Exercici pràctic voluntari |
 | **DaW** | `PEC1` (Apache, Nginx, SSH, U1) | ✅ **Entregat** | Venciment: 18/10/2026 23:59 | Tramesa a Aules |
 | **DaW** | `PEC2` (Docker i desplegaments, U2) | ✅ **Entregat** | Venciment: 25/10/2026 23:59 | Tramesa a Aules |
 | **DaW** | `PEC3` (Docker avançat, U3) | ⏳ **Pendent** | Venciment: 08/11/2026 23:59 | Nova unitat oberta a Aules |
@@ -23,8 +22,8 @@
 | **DWEC** | `UD2 Activitat puntuable` | ✅ **Entregat** | Obert: 28/09/2026 | Tramesa a Aules |
 | **DWEC** | `UD2 Qüestionari` | ✅ **Fet** | Obert: 21/09/2026 | Test superat a Aules |
 | **DWEC** | `UD3 Qüestionari` | ✅ **Fet** | Fet el 30/09/2026 | Test superat a Aules (10/10) |
-| **DWEC** | `UD3 Activitat puntuable` | ⏳ **Pendent d'obertura** | S'obri: 11/10/2026 00:47 | Feta en local, pendent de pujar quan s'òbriga a Aules |
-| **DWEC** | `UD4 Activitat puntuable` | ⏳ **Pendent** | S'obri: 27/10/2026 00:47 | S08-S09 (Objectes en JS) |
+| **DWEC** | `UD3 Activitat puntuable` | ✅ **Entregat** | Obert: 11/10/2026 | Tramesa a Aules (Codi i memòria) |
+| **DWEC** | `UD4 Activitat puntuable` | 🟢 **Fet (Pendent d'obertura)** | S'obri: 27/10/2026 00:47 | Feta al 100% en local (`Libro.js` i PDF llestos per pujar) |
 | **DWEC** | `UD4 Qüestionari` | ⏳ **Pendent** | Per confirmar | Cüestionari d'avaluació UD4 |
 | **DWES** | `U1_P1 Docker` (Entorn LAMP) | ✅ **Entregat** | Venciment: 30/11/2026 12:04 | Tramesa a Aules |
 | **DWES** | `Autoavaluació U1` (Introducció) | ✅ **Fet** | Obert: 16/09/2026 | Test superat a Aules |
@@ -149,11 +148,11 @@
 * **DIW (Disseny d'Interfícies):**
   - **Venciment S03_PR1 (Formularis):** **17 d'Octubre de 2026, 23:59**.
   - **Venciment S04_PR1 (CafeNet Multimedia):** **24 d'Octubre de 2026, 21:36**.
-  - **Venciment S05 Playground1 (Voluntari):** **15 d'Octubre de 2026, 23:37**.
+  - **S05 Playground1 (Voluntari):** ✅ **Completat** (Autoaprenentatge realitzat).
 * **PIM (Projecte Intermodular):**
   - **Sprint 0 - Reto 1B (Entrevista Teams):** **14 d'Octubre de 2026 al migdia**.
   - **Venciment Reto 1C (Specs):** **18 d'Octubre de 2026, 23:59**.
-  - **Venciment Reto 2 (Repo Git):** **24 d'Octubre de 2026, 14:25**.
+  - **Reto 2 (Repo Git):** ✅ **Entregat** (Tramesa a Aules feta).
   - **Venciment Sprint 0 Final:** **8 de Novembre de 2026, 14:25**.
 * **DWES (Servidor):**
   - **Venciment U2_P1 (PHP Bàsic):** **21 de Novembre de 2026, 08:16**.
@@ -175,10 +174,10 @@
 * **UD3 — Funcions, arrais i objectes predefinits (Del 05/10 al 27/10):**
   - Apunts UD3, Guia d'objectes Web, Mètodes útils arrays, exercicis de funcions i arrais (amb/sense solució).
   - Qüestionari UD3: Superat a Aules (9/10) el 30/09/2026.
-  - Tasca puntuable UD3: S'obri **11/10/2026** (Completada al 100%: codi `analizaNumeros.js` verificat amb 4 casos incloent valors no numèrics, 5 preguntes d'autoria completades per Noé i fitxer `ud3_activitat_noeconde.md` maquetat clònic al PDF original).
+  - Tasca puntuable UD3: ✅ **Entregada a Aules el 12/10/2026** (Codi `analizaNumeros.js` i memòria `ud3_activitat_noeconde.md` tramesos).
 * **UD4 — Utilització d'objectes en JavaScript (Del 26/10 al 06/11):**
   - Apunts UD4, exercicis fitxer extern `.js`, exercicis d'objectes (amb/sense solució).
-  - Tasca puntuable UD4: S'obri **27/10/2026**.
+  - Tasca puntuable UD4: 🟢 **Feta al 100% en local el 12/10/2026** (S'obri el 27/10/2026; codi `Libro.js` i `ud4_activitat_noeconde.pdf` enllestits per a pujar quan s'òbriga).
 
 ### 2. DWES — Desenvolupament Web en Entorn Servidor (Prof. Eloy Gutiérrez)
 * **General:** Presentació del mòdul, Guia didàctica (actualitzada 22/09), Temporalització (actualitzada 22/09).
@@ -215,7 +214,7 @@
   - **S04 (HTML5 Multimedia — CafeNet_Pico_FA):** ✅ **Entregat**. Desenvolupament complet del lloc web multipàgina `S04_PR1_CafeCondeNoe` amb HTML5 semàntic, framework Pico.css v2, FontAwesome 6, embeds multimèdia i formulari validat W3C.
 * **U02 — CSS - Estilitzant elements del doc HTML (Nova Unitat):**
   - **S05 (Intro CSS i Selectors):** Apunts `S05 APUNTES CSS Intro Selectores1`, Presentació `S05 PRESENT CSS Intro Selectores Propiedades`, enllaços W3Schools i chuletes.
-  - `Playground1`: ⏳ **Pendent (Voluntari)** (Venciment: 15 d'Octubre de 2026, 23:37). Solució es publicarà el 16/10.
+  - `Playground1`: ✅ **Completat** (Exercici d'autoaprenentatge voluntari realitzat).
 
 ### 5. PIM — Projecte Intermodular (2n DAW)
 * **General:** `Guia didactica 2 DAWsemi - PIM (beta)`.
@@ -229,7 +228,7 @@
     - **Reto 1A (Preparació d'Entrevista Usuari):** 🔴 **Venciment: dimarts, 13 d'octubre 2026, 23:59**.
     - **Reto 1B (Realització Entrevista):** 📅 **Dimecres, 14 d'octubre 2026 al migdia** per TEAMS.
     - **Reto 1C (Document Specs: Funcionals, Visuals, Tècniques, Legals):** ⏳ **Venciment: diumenge, 18 d'octubre 2026, 23:59**.
-    - **Reto 2 (Repositori GIT DAW):** ⏳ **Venciment: dissabte, 24 d'octubre 2026, 14:25**.
+    - **Reto 2 (Repositori GIT DAW):** ✅ **Entregat** (Tramesa a Aules completada).
     - **Reto 3 (Estudi Previ Interfície Web - Mòdul DIW):** Integrat en Sprint 0.
     - **Reto 4 (Estudi de les Dades de l'App - Mòdul DWES):** Integrat en Sprint 0.
     - **Entrega Final Sprint 0:** ⏳ **Venciment: diumenge, 8 de novembre 2026, 14:25**.
