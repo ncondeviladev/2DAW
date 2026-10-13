@@ -1,0 +1,71 @@
+apiVersion: apps/v1 #versión de la API que define el recurso
+kind: Deployment #tipo de recurso que se está definiendo. En este caso, es un Deployment que gestiona la creación y actualización de Pods
+metadata: #información que identifica el recurso
+  name: nginx-deployment
+spec: #especificaciones del Deployment. Se define el comportamiento
+  replicas: 1 #número de réplicas del Pod que se desean
+  selector: #etiquetas que el Deployment usará para identificar los Pods que gestiona
+    matchLabels:
+      app: nginx
+  template: #plantilla para los Pods que se crearán
+    metadata:
+      labels:
+        app: nginx
+    spec:
+      containers: #definición de los contenedores que se ejecutarán en los Pods
+        - name: nginx
+          image: nginx:latest
+          ports:
+            - containerPort: 80 #puerto que el contenedor expondrá. No es accesible desde fuera del Pod todavía
+
+---
+
+apiVersion: v1
+kind: Service #exponer el Deployment al exterior
+metadata:
+  name: nginx-service
+spec:
+  selector:
+    app: nginx #selecciona los Pods a los que aplicar el servicio
+  ports: 
+    - port: 80 
+      targetPort: 80 
+  type: LoadBalancer #podríamos utilizar NodePort o ClusterIP dependiendo del caso de uso. Para localhost mejor LoadBalancer
+
+
+---
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: mysql-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: mysql
+  template:
+    metadata:
+      labels:
+        app: mysql
+    spec:
+      containers:
+        - name: mysql
+          image: mysql:8.0
+          env:
+            - name: MYSQL_ROOT_PASSWORD
+              value: root
+          ports:
+            - containerPort: 3306
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: mysql-service
+spec:
+  selector:
+    app: mysql
+  ports:
+    - port: 3306
+      targetPort: 3306
+  clusterIP: None #Permite que otros pods del cluster se conecten a este servicio usando su nombre (mysql-service)

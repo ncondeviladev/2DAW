@@ -1,0 +1,136 @@
+# =======================================================
+# 1. SERVIDOR WEB (3 RÉPLICAS)
+# =======================================================
+apiVersion: apps/v1
+kind: Deployment # Crea y controla los pods del servidor web
+metadata:
+  name: php-deployment # Nombre del deployment
+spec:
+  replicas: 3 # Creamos 3 pods iguales del servidor web
+  selector:
+    matchLabels:
+      app: php-app # Busca los pods que tengan esta etiqueta
+  template:
+    metadata:
+      labels:
+        app: php-app # Etiqueta que le ponemos a cada pod
+    spec:
+      containers:
+        - name: php-app
+          image: php:8.3-apache # Imagen con Apache y PHP
+          env: # Variables para conectar con la base de datos
+            - name: MYSQL_HOST
+              value: "db" # Nombre del servicio de la bd
+            - name: MYSQL_DATABASE
+              value: "blog" # Base de datos a usar
+            - name: MYSQL_USER
+              value: "user" # Usuario
+            - name: MYSQL_PASSWORD
+              value: "user" # Contraseña
+          ports:
+            - containerPort: 80 # Puerto interno de Apache
+
+---
+
+apiVersion: v1
+kind: Service # Abre el puerto para acceder desde fuera
+metadata:
+  name: php-service # Nombre del servicio
+spec:
+  type: LoadBalancer # Permite entrar desde nuestro navegador (localhost)
+  selector:
+    app: php-app # Conecta y reparte peticiones entre los pods con esta etiqueta
+  ports:
+    - port: 8080 # Puerto que abrimos en el navegador
+      targetPort: 80 # Puerto interno del contenedor al que entra
+
+---
+# =======================================================
+# 2. BASE DE DATOS MYSQL
+# =======================================================
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: mysql-deployment # Nombre del deployment de la base de datos
+spec:
+  replicas: 1 # Solo 1 pod para la base de datos
+  selector:
+    matchLabels:
+      app: mysql # Busca el pod con la etiqueta mysql
+  template:
+    metadata:
+      labels:
+        app: mysql # Etiqueta del pod
+    spec:
+      containers:
+        - name: mysql
+          image: mysql:8.0 # Imagen de MySQL
+          env: # Datos de configuración de MySQL
+            - name: MYSQL_ROOT_PASSWORD
+              value: "secret" # Clave del root
+            - name: MYSQL_DATABASE
+              value: "blog" # Base de datos a crear
+            - name: MYSQL_USER
+              value: "user" # Usuario normal
+            - name: MYSQL_PASSWORD
+              value: "user" # Clave del usuario
+          ports:
+            - containerPort: 3306 # Puerto interno de MySQL
+
+---
+
+apiVersion: v1
+kind: Service # Red interna para que la app y phpmyadmin encuentren la base de datos
+metadata:
+  name: db # Al llamarlo 'db', actúa como dominio para conectarse
+spec:
+  selector:
+    app: mysql # Redirige el tráfico al pod de mysql
+  ports:
+    - port: 3306
+      targetPort: 3306
+
+---
+# =======================================================
+# 3. PHPMYADMIN
+# =======================================================
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: phpmyadmin-deployment # Deployment para phpMyAdmin
+spec:
+  replicas: 1 # 1 solo pod para la interfaz web
+  selector:
+    matchLabels:
+      app: phpmyadmin
+  template:
+    metadata:
+      labels:
+        app: phpmyadmin
+    spec:
+      containers:
+        - name: phpmyadmin
+          image: phpmyadmin/phpmyadmin
+          env: # Conexión directa con la base de datos
+            - name: PMA_HOST
+              value: "db" # Conecta al servicio 'db'
+            - name: PMA_USER
+              value: "root"
+            - name: PMA_PASSWORD
+              value: "secret"
+          ports:
+            - containerPort: 80
+
+---
+
+apiVersion: v1
+kind: Service # Expone phpMyAdmin al navegador
+metadata:
+  name: phpmyadmin-service
+spec:
+  type: LoadBalancer # Para acceder desde localhost
+  selector:
+    app: phpmyadmin # Conecta con el pod de phpmyadmin
+  ports:
+    - port: 8081 # Puerto en el navegador
+      targetPort: 80

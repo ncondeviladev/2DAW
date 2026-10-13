@@ -1,7 +1,7 @@
 # 📘 DIARI DE SEGUIMENT — 2n DAW (Semipresencial)
 > **Alumne:** Noé Conde Vila  
 > **Centre:** IES Maria Enríquez (Gandia) — Curs 2026/2027  
-> **Última actualització:** 12 d'octubre de 2026  
+> **Última actualització:** 13 d'octubre de 2026  
 
 ---
 
@@ -16,7 +16,7 @@
 | **DIW** | `S04_PR1` (CafeNet_Pico_FA) | ✅ **Entregat** | Venciment: 24/10/2026 21:36 | 4 pàgines HTML5, Pico.css, FA, validat W3C |
 | **DaW** | `PEC1` (Apache, Nginx, SSH, U1) | ✅ **Entregat** | Venciment: 18/10/2026 23:59 | Tramesa a Aules |
 | **DaW** | `PEC2` (Docker i desplegaments, U2) | ✅ **Entregat** | Venciment: 25/10/2026 23:59 | Tramesa a Aules |
-| **DaW** | `PEC3` (Docker avançat, U3) | ⏳ **Pendent** | Venciment: 08/11/2026 23:59 | Nova unitat oberta a Aules |
+| **DaW** | `PEC3` (Docker avançat, U3) | ✅ **Entregat** | Venciment: 08/11/2026 23:59 | PDF generat i llest per a Aules (Compose + K8s 3 rèpliques) |
 | **DWEC** | `UD1 Activitat` (Arquitectura Web) | ✅ **Entregat** | Obert: 14/09/2026 | Tramesa a Aules |
 | **DWEC** | `UD1 Qüestionari` | ✅ **Fet** | Obert: 17/09/2026 | Test superat a Aules |
 | **DWEC** | `UD2 Activitat puntuable` | ✅ **Entregat** | Obert: 28/09/2026 | Tramesa a Aules |
@@ -33,6 +33,7 @@
 | **DWES** | `Exercicis U3` (PHP Avançat) | ✅ **Fet** | Continu | Fets del bloc 1 al 8 (1.1 a 8.3 complets) i pujats a GitHub |
 | **DWES** | `U3_P1 Exercicis PHP Avançat` | ✅ **Entregat** | Venciment: 21/11/2026 08:16 | Pràctica avaluable de la Unitat 3 (Blocs 1-8 enllestits) |
 | **DWES** | `Autoavaluació U3` (PHP Avançat) | ✅ **Fet** | Obert a Aules | Test superat a Aules |
+| **DWES** | `Projecte Final U3 — TechLeads` | ⏳ **Pendent** | Per confirmar | Miniprojecte PHP complet: formulari públic, panell intern, sessions, classes, pujada fitxers (`DWES/U3/projecte-final-techleads/`) |
 | **PIM** | `S03 Autoevaluació` (Test Disseny) | ✅ **Entregat** | Venciment: 07/10/2026 14:25 | Tramesa a Aules |
 | **PIM** | `S03 Tutorial Wireframe` (Balsamiq) | ✅ **Entregat** | Venciment: 07/10/2026 14:25 | Tramesa a Aules |
 | **PIM** | `Sprint 0 - Reto 1A` (Prep. Entrevista) | ✅ **Entregat** | Venciment: 13/10/2026 23:59 | Tramesa a Aules |
@@ -193,6 +194,7 @@
   - Exercicis de classe a `DWES/U3/exercicis/`: ✅ **Completats** (Tots els blocs de l'1 al 8, del 1.1 al 8.3, validats i pujats a GitHub).
   - Pràctica avaluable `U3_P1. Exercicis PHP Avançat`: ✅ **Entregada** (Venciment: 21 de Novembre de 2026, 08:16).
   - Autoavaluació Unitat 3 (PHP Avançat): ✅ **Feta** (Test superat a Aules).
+  - **Projecte Final U3 — TechLeads** ⏳ **Pendent**: Miniprojecte PHP complet a [`DWES/U3/projecte-final-techleads/`](file:///f:/OneDrive%20-%20Conselleria%20d%27Educaci%C3%B3/2DAW/DWES/U3/projecte-final-techleads/ENUNCIAT.md). Inclou formulari públic (index.php + processar_lead.php), panell intern amb login/logout/leads, classe `Lead`, gestor de sessions, pujada de fitxers i patró PRG.
 
 ### 3. DaW — Desplegament d'Aplicacions Web (Prof. Juan Ramón Collado)
 * **General:** Guia didàctica, Presentació, Calendari de tutories col·lectives (TCs).
@@ -204,7 +206,7 @@
 * **U3 — Docker avançat (Nova Unitat):**
   - Diapositives `U3 - Docker avanzado.pdf`, documentació oficial de Docker Compose i Kubernetes, vídeos `U3_1` i `U3_2`.
   - Recurs `Manifesto Práctica 3`.
-  - Pràctica avaluable `PEC3`: ⏳ **Pendent** (Venciment: 8 de Novembre de 2026, 23:59).
+  - Pràctica avaluable `PEC3`: ✅ **Entregat el 13/10/2026** (PDF `PEC3_U3_NoeConde.pdf` complet amb anàlisi Compose, entorn LAMP+phpMyAdmin en local i clúster Kubernetes amb 3 rèpliques).
 
 ### 4. DIW — Disseny d'Interfícies Web (Prof. Quique Savall)
 * **U00 — Introducció al UI Design:** Apunts S01 Teoria i Presentació Interfaces. `S01_PR1` (✅ **Entregat**).
