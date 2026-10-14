@@ -1,7 +1,7 @@
 # 📘 DIARI DE SEGUIMENT — 2n DAW (Semipresencial)
 > **Alumne:** Noé Conde Vila  
 > **Centre:** IES Maria Enríquez (Gandia) — Curs 2026/2027  
-> **Última actualització:** 13 d'octubre de 2026  
+> **Última actualització:** 14 d'octubre de 2026  
 
 ---
 
@@ -37,8 +37,8 @@
 | **PIM** | `S03 Autoevaluació` (Test Disseny) | ✅ **Entregat** | Venciment: 07/10/2026 14:25 | Tramesa a Aules |
 | **PIM** | `S03 Tutorial Wireframe` (Balsamiq) | ✅ **Entregat** | Venciment: 07/10/2026 14:25 | Tramesa a Aules |
 | **PIM** | `Sprint 0 - Reto 1A` (Prep. Entrevista) | ✅ **Entregat** | Venciment: 13/10/2026 23:59 | Tramesa a Aules |
-| **PIM** | `Sprint 0 - Reto 1B` (Realització Entrevista) | 📅 **Sessió TEAMS** | **14/10/2026 al migdia** | Sessió col·lectiva per TEAMS |
-| **PIM** | `Sprint 0 - Reto 1C` (Document Specs) | ⏳ **Pendent** | Venciment: 18/10/2026 23:59 | Es redactarà després de la sessió del 14/10 |
+| **PIM** | `Sprint 0 - Reto 1B` (Realització Entrevista) | ✅ **Fet** | **14/10/2026** | Sessió TEAMS realitzada amb el client Quique Savall |
+| **PIM** | `Sprint 0 - Reto 1C` (Document Specs) | 🟡 **Borrador llest** | Venciment: 18/10/2026 23:59 | Borrador avançat en `PIM/requisitos.md` (esperant vídeo/descàrrega) |
 | **PIM** | `Sprint 0 - Reto 2` (Repositori GIT DAW) | ✅ **Entregat** | Venciment: 24/10/2026 14:25 | Tramesa a Aules |
 | **PIM** | `Sprint 0 - Entrega Final` | ⏳ **Pendent** | Venciment: 08/11/2026 14:25 | Entregable consolidat de tot l'Sprint 0 |
 | **PIM** | `Sprint 1 a Final` (App AgriVall) | ⏳ *Futur* | S09 a S40 | Estudi complet i desenvolupament d'App AgriVall |
@@ -227,9 +227,9 @@
 * **Full de Ruta del Projecte (Sprints):**
   - **Sprint 0 (S05 a S08) — Previa Projecte Previsions Marítimes (MirandoAlMar):**
     - `RESUMEN DE RETOS y TAREAS DE SPRINT 0` (Recursos a Aules).
-    - **Reto 1A (Preparació d'Entrevista Usuari):** 🔴 **Venciment: dimarts, 13 d'octubre 2026, 23:59**.
-    - **Reto 1B (Realització Entrevista):** 📅 **Dimecres, 14 d'octubre 2026 al migdia** per TEAMS.
-    - **Reto 1C (Document Specs: Funcionals, Visuals, Tècniques, Legals):** ⏳ **Venciment: diumenge, 18 d'octubre 2026, 23:59**.
+    - **Reto 1A (Preparació d'Entrevista Usuari):** ✅ **Entregat** (Venciment: 13/10/2026).
+    - **Reto 1B (Realització Entrevista):** ✅ **Fet el 14/10/2026**. Sessió virtual realitzada per TEAMS amb el client/professor Quique Savall (recollida de notes i presa de requisits per a l'app de previsions marítimes).
+    - **Reto 1C (Document Specs: Funcionals, Visuals, Tècniques, Legals):** 🟡 **Borrador avançat**. Document preliminar complet generat a `PIM/requisitos.md` (fórmules d'especificació, matriu MoSCoW, Mobile-first sota el sol, fonts AEMET/Puertos del Estado, webcams GVA/Oceanía). Pendent de revisió final quan el professor active la descàrrega del vídeo o el puge a Aules. ⏳ **Venciment: diumenge, 18 d'octubre 2026, 23:59**.
     - **Reto 2 (Repositori GIT DAW):** ✅ **Entregat** (Tramesa a Aules completada).
     - **Reto 3 (Estudi Previ Interfície Web - Mòdul DIW):** Integrat en Sprint 0.
     - **Reto 4 (Estudi de les Dades de l'App - Mòdul DWES):** Integrat en Sprint 0.
