@@ -14,6 +14,8 @@
 | **DIW** | `S02_PR1` (CV en HTML5) | ✅ **Entregat** | Venciment: 10/10/2026 20:36 | Tramesa a Aules |
 | **DIW** | `S03_PR1` (Formularis HTML5) | ✅ **Entregat** | Venciment: 17/10/2026 23:59 | Tramesa a Aules |
 | **DIW** | `S04_PR1` (CafeNet_Pico_FA) | ✅ **Entregat** | Venciment: 24/10/2026 21:36 | 4 pàgines HTML5, Pico.css, FA, validat W3C |
+| **DIW** | `Playground1` (Selectores Simples) | ✅ **Fet** | Venciment: 15/10/2026 23:37 | Voluntari completat |
+| **DIW** | `S06_PR1` (CV CSS - new!) | ⏳ **Pendent** | Venciment: 02/11/2026 23:59 | Nova pràctica d'estils CSS per al CV |
 | **DaW** | `PEC1` (Apache, Nginx, SSH, U1) | ✅ **Entregat** | Venciment: 18/10/2026 23:59 | Tramesa a Aules |
 | **DaW** | `PEC2` (Docker i desplegaments, U2) | ✅ **Entregat** | Venciment: 25/10/2026 23:59 | Tramesa a Aules |
 | **DaW** | `PEC3` (Docker avançat, U3) | ✅ **Entregat** | Venciment: 08/11/2026 23:59 | PDF generat i llest per a Aules (Compose + K8s 3 rèpliques) |
@@ -33,13 +35,14 @@
 | **DWES** | `Exercicis U3` (PHP Avançat) | ✅ **Fet** | Continu | Fets del bloc 1 al 8 (1.1 a 8.3 complets) i pujats a GitHub |
 | **DWES** | `U3_P1 Exercicis PHP Avançat` | ✅ **Entregat** | Venciment: 21/11/2026 08:16 | Pràctica avaluable de la Unitat 3 (Blocs 1-8 enllestits) |
 | **DWES** | `Autoavaluació U3` (PHP Avançat) | ✅ **Fet** | Obert a Aules | Test superat a Aules |
-| **DWES** | `Projecte Final U3 — TechLeads` | ⏳ **Pendent** | Per confirmar | Miniprojecte PHP complet: formulari públic, panell intern, sessions, classes, pujada fitxers (`DWES/U3/projecte-final-techleads/`) |
+| **DWES** | `Projecte Final U3 — TechLeads` | ⏳ **Pendent** | Venciment: 28/11/2026 09:56 | Miniprojecte PHP complet: formulari públic, panell intern, sessions, classes, pujada fitxers (`DWES/U3/projecte-final-techleads/`) |
 | **PIM** | `S03 Autoevaluació` (Test Disseny) | ✅ **Entregat** | Venciment: 07/10/2026 14:25 | Tramesa a Aules |
 | **PIM** | `S03 Tutorial Wireframe` (Balsamiq) | ✅ **Entregat** | Venciment: 07/10/2026 14:25 | Tramesa a Aules |
 | **PIM** | `Sprint 0 - Reto 1A` (Prep. Entrevista) | ✅ **Entregat** | Venciment: 13/10/2026 23:59 | Tramesa a Aules |
 | **PIM** | `Sprint 0 - Reto 1B` (Realització Entrevista) | ✅ **Fet** | **14/10/2026** | Sessió TEAMS realitzada amb el client Quique Savall |
-| **PIM** | `Sprint 0 - Reto 1C` (Document Specs) | 🟡 **Borrador llest** | Venciment: 18/10/2026 23:59 | Borrador avançat en `PIM/requisitos.md` (esperant vídeo/descàrrega) |
-| **PIM** | `Sprint 0 - Reto 2` (Repositori GIT DAW) | ✅ **Entregat** | Venciment: 24/10/2026 14:25 | Tramesa a Aules |
+| **PIM** | `Sprint 0 - Reto 1C` (Document Specs) | 🟡 **Borrador llest** | Venciment: 19/10/2026 23:59 | Borrador avançat en `PIM/requisitos.md` (esperant tancar àudio) |
+| **PIM** | `Sprint 0 - Reto 2` (Repositori GIT DAW) | ✅ **Entregat** | Venciment: 19/10/2026 23:59 | Tramesa a Aules |
+| **PIM** | `Sprint 0 - Reto 4` (DWS BBDD) | ⏳ **Pendent** | Venciment: 19/10/2026 23:59 | Estudi de les dades de l'App (Mòdul DWES) |
 | **PIM** | `Sprint 0 - Entrega Final` | ⏳ **Pendent** | Venciment: 08/11/2026 14:25 | Entregable consolidat de tot l'Sprint 0 |
 | **PIM** | `Sprint 1 a Final` (App AgriVall) | ⏳ *Futur* | S09 a S40 | Estudi complet i desenvolupament d'App AgriVall |
 
@@ -229,10 +232,10 @@
     - `RESUMEN DE RETOS y TAREAS DE SPRINT 0` (Recursos a Aules).
     - **Reto 1A (Preparació d'Entrevista Usuari):** ✅ **Entregat** (Venciment: 13/10/2026).
     - **Reto 1B (Realització Entrevista):** ✅ **Fet el 14/10/2026**. Sessió virtual realitzada per TEAMS amb el client/professor Quique Savall (recollida de notes i presa de requisits per a l'app de previsions marítimes).
-    - **Reto 1C (Document Specs: Funcionals, Visuals, Tècniques, Legals):** 🟡 **Borrador avançat**. Document preliminar complet generat a `PIM/requisitos.md` (fórmules d'especificació, matriu MoSCoW, Mobile-first sota el sol, fonts AEMET/Puertos del Estado, webcams GVA/Oceanía). Pendent de revisió final quan el professor active la descàrrega del vídeo o el puge a Aules. ⏳ **Venciment: diumenge, 18 d'octubre 2026, 23:59**.
+    - **Reto 1C (Document Specs: Funcionals, Visuals, Tècniques, Legals):** 🟡 **Borrador avançat**. Document preliminar complet generat a `PIM/requisitos.md` (fórmules d'especificació, matriu MoSCoW, Mobile-first sota el sol, fonts AEMET/Puertos del Estado, webcams GVA/Oceanía). Pendent de revisió final quan el professor active la descàrrega del vídeo o el puge a Aules. ⏳ **Venciment: dilluns, 19 d'octubre 2026, 23:59**.
     - **Reto 2 (Repositori GIT DAW):** ✅ **Entregat** (Tramesa a Aules completada).
     - **Reto 3 (Estudi Previ Interfície Web - Mòdul DIW):** Integrat en Sprint 0.
-    - **Reto 4 (Estudi de les Dades de l'App - Mòdul DWES):** Integrat en Sprint 0.
+    - **Reto 4 (Estudi de les Dades de l'App - Mòdul DWES):** ⏳ **Pendent** (RETO4 DWS BBDD, Venciment: dilluns, 19 d'octubre 2026, 23:59).
     - **Entrega Final Sprint 0:** ⏳ **Venciment: diumenge, 8 de novembre 2026, 14:25**.
   - **Sprint 1 (S09 a S12):** Estudi complet de la nova App (*No disponible encara*).
   - **Sprint 2 (S14 a S23):** Inici del desenvolupament d'App AgriVall (*No disponible encara*).
