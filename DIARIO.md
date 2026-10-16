@@ -40,7 +40,7 @@
 | **PIM** | `S03 Tutorial Wireframe` (Balsamiq) | ✅ **Entregat** | Venciment: 07/10/2026 14:25 | Tramesa a Aules |
 | **PIM** | `Sprint 0 - Reto 1A` (Prep. Entrevista) | ✅ **Entregat** | Venciment: 13/10/2026 23:59 | Tramesa a Aules |
 | **PIM** | `Sprint 0 - Reto 1B` (Realització Entrevista) | ✅ **Fet** | **14/10/2026** | Sessió TEAMS realitzada amb el client Quique Savall |
-| **PIM** | `Sprint 0 - Reto 1C` (Document Specs) | 🟡 **Borrador llest** | Venciment: 19/10/2026 23:59 | Borrador avançat en `PIM/requisitos.md` (esperant tancar àudio) |
+| **PIM** | `Sprint 0 - Reto 1C` (Document Specs) | ✅ **Enllestit** | Venciment: 19/10/2026 23:59 | Document formal de specs a `PIM/requisitos.md` (fidel 100% a Quique, 6 RF, 4 RV, 3 RT, 2 RL) |
 | **PIM** | `Sprint 0 - Reto 2` (Repositori GIT DAW) | ✅ **Entregat** | Venciment: 19/10/2026 23:59 | Tramesa a Aules |
 | **PIM** | `Sprint 0 - Reto 4` (DWS BBDD) | ⏳ **Pendent** | Venciment: 19/10/2026 23:59 | Estudi de les dades de l'App (Mòdul DWES) |
 | **PIM** | `Sprint 0 - Entrega Final` | ⏳ **Pendent** | Venciment: 08/11/2026 14:25 | Entregable consolidat de tot l'Sprint 0 |
@@ -232,7 +232,7 @@
     - `RESUMEN DE RETOS y TAREAS DE SPRINT 0` (Recursos a Aules).
     - **Reto 1A (Preparació d'Entrevista Usuari):** ✅ **Entregat** (Venciment: 13/10/2026).
     - **Reto 1B (Realització Entrevista):** ✅ **Completat**. Sessió virtual realitzada per TEAMS amb el client/professor Quique Savall i document de notes en brut consolidat a [`PIM/Sprint0/notes_entrevista_sprint0.md`](file:///f:/OneDrive%20-%20Conselleria%20d'Educaci%C3%B3/2DAW/PIM/Sprint0/notes_entrevista_sprint0.md) (registre de preguntes d'alumnes, respostes de negoci/meteo/IA i calaix d'extracció de requisits).
-    - **Reto 1C (Document Specs: Funcionals, Visuals, Tècniques, Legals):** ✅ **Completat**. Document formal d'especificacions de requisits de l'usuari (SRS) finalitzat a [`PIM/requisitos.md`](file:///f:/OneDrive%20-%20Conselleria%20d'Educaci%C3%B3/2DAW/PIM/requisitos.md). Inclou fórmules d'especificació d'usuari normalitzades, matriu MoSCoW, 16 RF, 6 RV, 5 RT, 3 RL, contrast solar per a platja, integració d'APIs i disseny d'IA («coctelera» i xatbot expert). Llest per a lliurament a Aules (Venciment: dilluns, 19 d'octubre 2026, 23:59).
+    - **Reto 1C (Document Specs: Funcionals, Visuals, Tècniques, Legals):** ✅ **Completat**. Document formal d'especificacions de requisits de l'usuari (SRS) finalitzat a [`PIM/requisitos.md`](file:///f:/OneDrive%20-%20Conselleria%20d'Educaci%C3%B3/2DAW/PIM/requisitos.md). Resumit, concís i fidel 100% a la sessió de Teams amb Quique: portada formal, índex, fórmules d'especificació d'usuari normalitzades («El usuari podrà/disposarà... Per a fer-ho el sistema...»), matriu MoSCoW, 6 RF (3 spots, temps real, 4h/8h/24h, IA coctelera, webcams i favorits), 4 RV (mòbil vertical, 3 quesitos de viabilitat, contrast extrem per a sol i semàfor), 3 RT (web mòbil, APIs obertes i mode offline/caché) i 2 RL (disclaimer nàutic i privacitat bàsica). Llest per a lliurament a Aules (Venciment: dilluns, 19 d'octubre 2026, 23:59).
     - **Reto 2 (Repositori GIT DAW):** ✅ **Entregat** (Tramesa a Aules completada).
     - **Reto 3 (Estudi Previ Interfície Web - Mòdul DIW):** Integrat en Sprint 0.
     - **Reto 4 (Estudi de les Dades de l'App - Mòdul DWES):** ⏳ **Pendent** (RETO4 DWS BBDD, Venciment: dilluns, 19 d'octubre 2026, 23:59).
