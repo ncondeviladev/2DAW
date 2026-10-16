@@ -231,8 +231,8 @@
   - **Sprint 0 (S05 a S08) — Previa Projecte Previsions Marítimes (MirandoAlMar):**
     - `RESUMEN DE RETOS y TAREAS DE SPRINT 0` (Recursos a Aules).
     - **Reto 1A (Preparació d'Entrevista Usuari):** ✅ **Entregat** (Venciment: 13/10/2026).
-    - **Reto 1B (Realització Entrevista):** ✅ **Fet el 14/10/2026**. Sessió virtual realitzada per TEAMS amb el client/professor Quique Savall (recollida de notes i presa de requisits per a l'app de previsions marítimes).
-    - **Reto 1C (Document Specs: Funcionals, Visuals, Tècniques, Legals):** 🟡 **Borrador avançat**. Document preliminar complet generat a `PIM/requisitos.md` (fórmules d'especificació, matriu MoSCoW, Mobile-first sota el sol, fonts AEMET/Puertos del Estado, webcams GVA/Oceanía). Pendent de revisió final quan el professor active la descàrrega del vídeo o el puge a Aules. ⏳ **Venciment: dilluns, 19 d'octubre 2026, 23:59**.
+    - **Reto 1B (Realització Entrevista):** ✅ **Completat**. Sessió virtual realitzada per TEAMS amb el client/professor Quique Savall i document de notes en brut consolidat a [`PIM/Sprint0/notes_entrevista_sprint0.md`](file:///f:/OneDrive%20-%20Conselleria%20d'Educaci%C3%B3/2DAW/PIM/Sprint0/notes_entrevista_sprint0.md) (registre de preguntes d'alumnes, respostes de negoci/meteo/IA i calaix d'extracció de requisits).
+    - **Reto 1C (Document Specs: Funcionals, Visuals, Tècniques, Legals):** ✅ **Completat**. Document formal d'especificacions de requisits de l'usuari (SRS) finalitzat a [`PIM/requisitos.md`](file:///f:/OneDrive%20-%20Conselleria%20d'Educaci%C3%B3/2DAW/PIM/requisitos.md). Inclou fórmules d'especificació d'usuari normalitzades, matriu MoSCoW, 16 RF, 6 RV, 5 RT, 3 RL, contrast solar per a platja, integració d'APIs i disseny d'IA («coctelera» i xatbot expert). Llest per a lliurament a Aules (Venciment: dilluns, 19 d'octubre 2026, 23:59).
     - **Reto 2 (Repositori GIT DAW):** ✅ **Entregat** (Tramesa a Aules completada).
     - **Reto 3 (Estudi Previ Interfície Web - Mòdul DIW):** Integrat en Sprint 0.
     - **Reto 4 (Estudi de les Dades de l'App - Mòdul DWES):** ⏳ **Pendent** (RETO4 DWS BBDD, Venciment: dilluns, 19 d'octubre 2026, 23:59).

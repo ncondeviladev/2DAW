@@ -1,281 +1,196 @@
 <style>
   body {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Segoe UI', Arial, Helvetica, sans-serif;
     line-height: 1.6;
-    color: #24292f;
+    color: #1e293b;
     max-width: 900px;
     margin: 0 auto;
-    padding: 20px;
+    padding: 24px;
+    background-color: #ffffff;
   }
   blockquote {
-    background-color: #f6f8fa;
-    border-left: 4px solid #1e3a8a;
-    padding: 10px 16px;
-    margin: 14px 0;
-    color: #374151;
+    background-color: #f0fdf4;
+    border-left: 5px solid #0284c7;
+    padding: 12px 18px;
+    margin: 16px 0;
+    color: #0f172a;
+    border-radius: 0 6px 6px 0;
   }
   h1 {
-    color: #0f172a;
-    border-bottom: 2px solid #1e3a8a;
-    padding-bottom: 8px;
+    color: #0c4a6e;
+    border-bottom: 3px solid #0284c7;
+    padding-bottom: 10px;
+    font-size: 1.9em;
   }
   h2 {
-    color: #1e3a8a;
-    border-bottom: 1px solid #e2e8f0;
+    color: #0369a1;
+    border-bottom: 1px solid #cbd5e1;
     padding-bottom: 6px;
     margin-top: 28px;
+    font-size: 1.35em;
   }
   h3 {
-    color: #1e293b;
+    color: #0f172a;
     margin-top: 20px;
+    font-size: 1.15em;
   }
   table {
     width: 100%;
     border-collapse: collapse;
     margin: 16px 0;
+    font-size: 0.95em;
   }
   th, td {
     border: 1px solid #cbd5e1;
     padding: 8px 12px;
     text-align: left;
+    vertical-align: top;
   }
   th {
-    background-color: #f1f5f9;
+    background-color: #f8fafc;
     color: #0f172a;
+    font-weight: 600;
+  }
+  tr:nth-child(even) {
+    background-color: #f8fafc;
   }
   .req-id {
     font-weight: bold;
-    color: #1e3a8a;
-    white-space: nowrap;
-  }
-  .req-formula {
-    color: #1e3a8a;
+    color: #0369a1;
   }
   .badge {
     display: inline-block;
-    padding: 2px 8px;
-    font-size: 0.85em;
-    font-weight: bold;
+    padding: 2px 7px;
+    font-size: 0.8em;
+    font-weight: 600;
     border-radius: 4px;
-    background-color: #e0e7ff;
-    color: #1e3a8a;
   }
-  @media print {
-    body {
-      max-width: 100%;
-      padding: 0;
-    }
-    h1, h2, h3 {
-      page-break-after: avoid;
-      break-after: avoid;
-    }
-    table, tr {
-      page-break-inside: avoid;
-    }
-  }
+  .badge-must { background-color: #fee2e2; color: #991b1b; }
+  .badge-should { background-color: #fef3c7; color: #92400e; }
+  .badge-could { background-color: #e0f2fe; color: #075985; }
+  .badge-wont { background-color: #f1f5f9; color: #475569; }
 </style>
 
-# PIM — Sprint 0: Reto 1C — Documento de Especificación de Requisitos de Usuario
+# PIM — Sprint 0: Reto 1C — Especificación de Requisitos de Usuario (Borrador Resumido)
 
-> **Documento:** Especificación Formal de Requisitos (SRS Preliminar)  
-> **Proyecto:** Web App Meteorológica y Marítima para Deportes Náuticos y Aguas Abiertas  
-> **Alumno:** Noé Conde Vila (2º DAW — Modalidad Semipresencial)  
-> **Centro:** IES Maria Enríquez (Gandia)  
-> **Módulo:** Projecte Intermodular (PIM) — Sprint 0  
-> **Cliente / Profesor:** Quique Savall (Dunes Kite Piles / Gandia Surf / MirandoAlMar)  
-> **Fecha:** Octubre de 2026  
-
----
-
-## 📑 Índice de Contenidos
-1. [Introducción y Contexto del Proyecto](#1-introducción-y-contexto-del-proyecto)
-   - 1.1. Propósito y Misión de la Aplicación
-   - 1.2. Perfil del Cliente y Clubes Promotores
-   - 1.3. Público Objetivo y Nicho de Mercado
-2. [Estado del Arte y Estudio de Competencia](#2-estado-del-arte-y-estudio-de-competencia)
-3. [Requisitos Funcionales (RF)](#3-requisitos-funcionales-rf)
-   - 3.1. Gestión de Datos Meteorológicos y Marítimos
-   - 3.2. Visualización Multimedia y Webcams en Tiempo Real
-   - 3.3. Motor de Predicción Inteligente e Inteligencia Artificial (IA)
-   - 3.4. Gestión de Usuarios, Personalización y Favoritos
-   - 3.5. Módulo Comercial y Negocio Local (Comercios Asociados)
-4. [Requisitos Visuales y de Interfaz (UI/UX)](#4-requisitos-visuales-y-de-interfaz-uiux)
-5. [Requisitos Técnicos y de Arquitectura (RT)](#5-requisitos-técnicos-y-de-arquitectura-rt)
-6. [Requisitos Legales y de Seguridad (RL)](#6-requisitos-legales-y-de-seguridad-rl)
-7. [Matriz de Priorización de Requisitos (MoSCoW)](#7-matriz-de-priorización-de-requisitos-moscow)
+> **Documento:** Especificación de Requisitos de Usuario (SRS) — Versión Resumida de Revisión  
+> **Proyecto:** Web App de Previsión Marítima Inteligente para Deportes Náuticos  
+> **Alumno:** Noé Conde Vila (2º DAW — Semipresencial) — IES Maria Enríquez (Gandia)  
+> **Cliente / Entrevistado:** Quique Savall (Dunes Kite Piles / Gandia Surf)  
+> **Fecha de la entrevista:** 14 de octubre de 2026 (Reunión Teams con Quique y el equipo de alumnos)  
+> **Objetivo de este borrador:** Documento ceñido 100% a lo tratado en la entrevista para revisión antes de la versión final limpia.
 
 ---
 
-## 1. Introducción y Contexto del Proyecto
+## 1. Resumen y Contexto Extraído de la Entrevista
 
-### 1.1. Propósito y Misión de la Aplicación
-El proyecto nace de la necesidad de proporcionar una herramienta digital ágil, moderna y visualmente intuitiva que permita consultar en tiempo real el estado del mar y la previsión meteorológica en las costas de la Comunidad Valenciana (con foco prioritario en la comarca de La Safor y comarcas limítrofes).
-
-A diferencia de las plataformas tradicionales basadas en tablas numéricas densas y de difícil lectura en dispositivos móviles, esta solución unifica:
-- Mediciones fiables en directo (boyas y estaciones oficiales).
-- Predicción basada en modelos abiertos contrastados.
-- Transmisión visual directa (webcams en directo).
-- Recomendaciones sintéticas generadas mediante técnicas de Inteligencia Artificial (IA).
-
-### 1.2. Perfil del Cliente y Clubes Promotores
-- **Cliente:** Quique Savall, profesional y promotor náutico.
-- **Entidades vinculadas:**
-  - **Dunes Kite Piles:** Club de kitesurf ubicado en la playa de Piles (adyacente a Oliva).
-  - **Gandia Surf:** Club de deportes náuticos en Gandia.
-- **Objetivo estratégico:** Mejorar la seguridad de los deportistas, dinamizar la comunidad local de deportes de mar y canalizar usuarios hacia servicios asociados (cursos, alquiler de material y comercios náuticos).
-
-### 1.3. Público Objetivo y Nicho de Mercado
-Se identifican dos grandes grupos de usuarios:
-1. **Deportistas de viento y olas (alta dependencia técnica):** Practicantes de kitesurf, windsurf, wingfoil y surf que requieren datos precisos de fuerza y rachas de viento, dirección y periodo de ola.
-2. **Deportistas de mar plana y aguas abiertas (nicho en auge):** Comunidad creciente de nadadores de aguas abiertas (travesías), practicantes de stand-up paddle (SUP) y kayak, que buscan condiciones de mar calma, temperatura del agua y ausencia de corrientes peligrosas o medusas.
+* **Problema detectado por el cliente:**  
+  Actualmente, para decidir si salir a navegar o al mar, Quique consulta **Windguru** (muy fiable pero con tablas numéricas densas y difíciles de interpretar a pleno sol en el móvil), **Windy** o **WindFinder**, y las **webcams** de la costa. Los usuarios casuales y deportistas pierden tiempo interpretando números y necesitan algo directo, visual y adaptado al móvil.
+* **Solución acordada:**  
+  Una aplicación web enfocada al móvil donde la Inteligencia Artificial actúa como una **«coctelera»** que cruza datos en tiempo real (boyas y estaciones oficiales) con modelos predictivos, mostrando de forma directa el **porcentaje de viabilidad (0% a 100%)** para cada deporte en **gráficos circulares («quesitos»)**.
+* **Deportes tratados en la reunión:**
+  1. **Natación en aguas abiertas:** Requiere mar plano, poco viento y ausencia de corrientes peligrosas (nicho en fuerte crecimiento).
+  2. **Embarcaciones de vela ligera:** Sensibles a la fuerza y dirección del viento.
+  3. **Deportes de viento (Kitesurf, Windsurf, Wingfoil):** Requieren viento constante (mínimo 12-15 nudos) y control de rachas.
+* **Los 3 Spots prioritarios definidos por Quique:**
+  1. **La Safor:** Piles (Dunes Kite) y Gandia (Gandia Surf / playa norte).
+  2. **Dénia:** Zona del puerto y Les Marines.
+  3. **Calpe / Altea:** Costa Blanca.
+* **Ventanas de tiempo acordadas:** **4 horas, 8 horas y 24 horas**.
 
 ---
 
-## 2. Estado del Arte y Estudio de Competencia
+## 2. Requisitos Funcionales (RF)
+*Redactados bajo la fórmula solicitada por Quique: «El usuario podrá/dispondrá [acción]. Para hacerlo, el sistema [mecanismo]»*
 
-A partir de las rutinas de consulta expuestas por el cliente en la entrevista, se analiza la competencia de referencia:
+* **RF-01: Selección de los 3 spots costeros prioritarios**  
+  El usuario dispondrá de un selector inicial con los 3 spots acordados (La Safor: Piles/Gandia, Dénia: Marines/Puerto, y Calpe/Altea). Para hacerlo, el sistema cargará al inicio la selección de spot y filtrará toda la información meteorológica en base a esa playa.
 
-| Plataforma | Puntos Fuertes Identificados | Carencias / Puntos de Fricción | Oportunidad para Nuestra App |
-| :--- | :--- | :--- | :--- |
-| **Windguru** | Alta fiabilidad en predicción de viento y olas; gran detalle de modelos (GFS, ICON). | Interfaz anticuada, tablas de números densas, difícil de interpretar rápidamente en móvil bajo la luz del sol. | Presentar los datos clave mediante tarjetas limpias, códigos de color y resúmenes visuales. |
-| **Windy** | Animaciones visuales de corrientes y viento excelentes en mapa global. | Requiere un aprendizaje elevado; saturación de capas y alto consumo de datos/batería. | Focalizar en spots concretos con información pre-filtrada lista para consumir. |
-| **WindFinder** | Buena localización de spots y alertas de viento. | Publicidad intrusiva en versión gratuita; falta de integración de webcams locales fiables. | Modelo freemium limpio, integración directa de webcams autonómicas y locales. |
-| **Webcams oficiales (GVA / Oceanía)** | Permiten verificar el estado visual real del mar en Calp, Tavernes, Gandia, etc. | Dispersas en distintas páginas web institucionales sin vinculación a los datos numéricos de la estación. | Centralizar los feeds de webcam junto a la tarjeta meteorológica del spot. |
+* **RF-02: Consulta de datos de viento y mar en tiempo real**  
+  El usuario podrá consultar la velocidad del viento (en nudos), la dirección y las rachas máximas, así como el oleaje (altura y período). Para hacerlo, el sistema consumirá lecturas en tiempo real de boyas marítimas y estaciones oficiales abiertas.
 
----
+* **RF-03: Previsión en tramos de 4h, 8h y 24h**  
+  El usuario dispondrá de predicciones a corto plazo divididas en las ventanas clave de 4 horas, 8 horas y 24 horas. Para hacerlo, el sistema procesará los modelos meteorológicos y los agrupará en dichos intervalos.
 
-## 3. Requisitos Funcionales (RF)
+* **RF-04: Visualización de webcams en directo del spot**  
+  El usuario podrá ver la imagen en directo de las cámaras web oficiales de la zona (Generalitat Valenciana y Oceanía) para comprobar visualmente la arena y el rompiente antes de desplazarse. Para hacerlo, el sistema integrará el reproductor/feed de las webcams en la ficha del spot.
 
-> *Nota de formato:* Siguiendo las directrices del enunciado, los requisitos se definen mediante la fórmula normalizada:  
-> **«El usuario podrá/dispondrá [acción]. Para hacerlo, el sistema [mecanismo]»** o **«El sitio deberá [funcionalidad]. Para ello, [implementación]»**.
+* **RF-05: Motor de viabilidad por IA con porcentaje gráfico (0% a 100%)**  
+  El usuario dispondrá de un porcentaje de viabilidad (del 0% al 100%) para cada deporte en las franjas de 4h, 8h y 24h. Para hacerlo, la IA funcionará como «coctelera», cruzando los datos en tiempo real de boyas y modelos predictivos para calcular la probabilidad de practicar cada disciplina.
 
-### 3.1. Gestión de Datos Meteorológicos y Marítimos
+* **RF-06: Chatbot asistente: «Experto local a pie de playa»**  
+  El usuario podrá consultar un asistente conversacional inteligente con el rol de un experto náutico local. Para hacerlo, el chatbot responderá preguntas sobre condiciones marítimas, vientos térmicos (Garbí/Llebeig), estado de banderas y recomendaciones de seguridad para el spot consultado.
 
-* <span class="req-id">RF-01: Consulta de spots prioritarios</span>  
-  <span class="req-formula">El usuario dispondrá de un listado y selector de spots costeros prioritarios (playa de Piles, Gandia, Oliva, Tavernes, Calp y litoral valenciano). Para hacerlo, el sistema ofrecerá un buscador predictivo y un acceso directo a las ubicaciones más populares.</span>
+* **RF-07: Registro y perfil de usuario (CRUD)**  
+  El usuario deberá registrarse mediante un formulario sencillo para acceder de forma personalizada y guardar sus spots preferidos como favoritos. Para hacerlo, el sistema contará con gestión de cuentas de usuario almacenadas en base de datos.
 
-* <span class="req-id">RF-02: Visualización de variables de viento</span>  
-  <span class="req-formula">El usuario podrá consultar en tiempo real y en previsión la velocidad del viento (en nudos y km/h), la dirección cardinal/flecha gráfica y la intensidad de las rachas máximas. Para hacerlo, el sistema consultará APIs meteorológicas abiertas y procesará los datos horarios.</span>
+* **RF-08: Indicador de afluencia comunitaria en el spot**  
+  El usuario podrá consultar cuántos deportistas hay actualmente en la playa o navegando (*check-in* voluntario). Para hacerlo, el sistema permitirá a los usuarios registrados marcar su presencia en el spot.
 
-* <span class="req-id">RF-03: Visualización de variables de oleaje y mar</span>  
-  <span class="req-formula">El usuario dispondrá de métricas marítimas esenciales: altura significativa de ola (metros), periodo entre olas (segundos) y dirección del mar de fondo (*swell*). Para lograrlo, el sistema integrará datos de boyas de Puertos del Estado y modelos marinos en abierto.</span>
+* **RF-09: Promoción de escuelas y comercios locales asociados**  
+  El usuario dispondrá de información de servicios, cursos y alquiler de material de los clubes colaboradores (Dunes Kite Piles, Gandia Surf). Para hacerlo, el sistema mostrará tarjetas de patrocinadores locales contextualizadas en el spot.
 
-* <span class="req-id">RF-04: Estado general del tiempo y temperatura</span>  
-  <span class="req-formula">El usuario podrá verificar la probabilidad de lluvia, temperatura ambiente, temperatura superficial del agua y radiación UV. Para ello, el sistema integrará el pronóstico por franjas horarias de las estaciones AEMET/Open-Meteo correspondientes.</span>
-
-* <span class="req-id">RF-05: Ventana temporal de pronóstico</span>  
-  <span class="req-formula">El usuario dispondrá de una previsión detallada a corto plazo (horas actuales y próximas 48 horas) y una tendencia extendida a 5-7 días. Para hacerlo, el sistema estructurará la información en una línea temporal horizontal interactiva.</span>
+* **RF-10: Preparación para modelo Freemium / Premium**  
+  El sitio deberá dejar su arquitectura preparada para una futura monetización de pago (ampliación de días de previsión o alertas personalizadas). Para ello, las funciones avanzadas quedarán desacopladas en la base de datos sin implementarse el cobro en esta fase inicial.
 
 ---
 
-### 3.2. Visualización Multimedia y Webcams en Tiempo Real
+## 3. Requisitos Visuales y de Interfaz (RV)
 
-* <span class="req-id">RF-06: Centralización de webcams de playas</span>  
-  <span class="req-formula">El usuario podrá visualizar imágenes en vivo o feeds actualizados de webcams situadas en los spots clave (cámaras de la Generalitat Valenciana y proveedores como Oceanía). Para hacerlo, el sistema integrará reproductores embebidos y capturas sincronizadas por spot para validar las condiciones antes de desplazarse.</span>
+* **RV-01: Enfoque prioritario Mobile-First**  
+  La interfaz se diseñará exclusivamente pensada para el teléfono móvil, con navegación rápida y botones táctiles amplios para poder utilizarse con una sola mano en exteriores.
 
-* <span class="req-id">RF-07: Verificación de estado visual inmediato</span>  
-  <span class="req-formula">El sitio deberá permitir al usuario alternar entre la vista de datos técnicos y la vista de cámara en un solo toque. Para ello, cada ficha de spot contará con una pestaña multimedia vinculada.</span>
+* **RV-02: Gráficos circulares («quesitos») y adiós a las tablas numéricas**  
+  La pantalla principal del spot mostrará los porcentajes de viabilidad mediante **tres gráficos circulares de sectores («quesitos»)** o barras visuales (ejemplo del croquis de Quique: 75% nadar, 50% vela ligera, 25% kitesurf), eliminando las tablas complejas de números.
 
----
+* **RV-03: Legibilidad y contraste extremo para sol directo en la playa**  
+  El sitio deberá garantizar que los datos se lean con total claridad bajo la radiación solar en la arena. Para ello, se usarán números grandes, tipografía de trazo grueso y una relación de alto contraste visual.
 
-### 3.3. Motor de Predicción Inteligente e Inteligencia Artificial (IA)
+* **RV-04: Conmutador de Modo Claro y Modo Oscuro**  
+  El sitio dispondrá de un selector accesible para alternar entre modo claro (óptimo para luz solar en la playa) y modo oscuro (para interiores o noche).
 
-* <span class="req-id">RF-08: Resumen inteligente del estado del mar (IA Asistencial)</span>  
-  <span class="req-formula">El usuario dispondrá de una interpretación en lenguaje natural elaborada por IA que sintetice si las condiciones son favorables, complejas o peligrosas. Para hacerlo, un modelo de lenguaje o agente IA analizará el cruce de viento, rachas y periodo de ola traduciéndolo en una recomendación clara (ej.: *"Excelente para kitesurf a partir de las 15:00 con viento térmico de Garbí; desaconsejado para nado por resaca"*).</span>
+* **RV-05: Semáforo visual unificado**  
+  El estado del mar se representará con el código universal de semáforo:
+  - 🟢 **Verde:** Condiciones óptimas y seguras para el deporte.
+  - 🟡 **Amarillo:** Precaución (nivel técnico medio o avanzado).
+  - 🔴 **Rojo:** Desfavorable o peligroso (no entrar al agua).
 
-* <span class="req-id">RF-09: Clasificación por perfil de deporte</span>  
-  <span class="req-formula">El usuario podrá filtrar la idoneidad del spot según su deporte (Kitesurf, Windsurf, Surf, Natación en aguas abiertas, Paddle Surf). Para hacerlo, el sistema evaluará las condiciones contra reglas paramétricas adaptadas a cada disciplina (ej.: el surf requiere ola con periodo alto; el paddle surf requiere mar plato sin viento).</span>
-
-* <span class="req-id">RF-10: Detección preventiva de alertas de seguridad</span>  
-  <span class="req-formula">El sitio deberá generar avisos preventivos automáticos mediante IA cuando se detecten caídas bruscas de presión, giros de viento repentinos o condiciones peligrosas de resaca. Para ello, el sistema monitorizará las anomalías en los modelos de predicción cada 60 minutos.</span>
-
----
-
-### 3.4. Gestión de Usuarios, Personalización y Favoritos
-
-* <span class="req-id">RF-11: Acceso abierto vs. Registro de usuario</span>  
-  <span class="req-formula">El usuario podrá consultar las condiciones generales y spots principales de forma pública sin registro. Para acceder a personalización (guardar spots favoritos, historial y alertas), el sistema ofrecerá un registro gratuito y sencillo mediante email o federación social.</span>
-
-* <span class="req-id">RF-12: Lista de spots favoritos</span>  
-  <span class="req-formula">El usuario registrado podrá anclar sus playas preferidas en el panel principal (*dashboard*). Para hacerlo, el sistema guardará sus preferencias asociadas a su cuenta para presentarlas al iniciar la app.</span>
+* **RV-06: Identidad visual marina con acentos de contraste**  
+  La paleta cromática se basará en tonos azules marinos que evoquen el mar y el agua, combinados con colores de acento llamativos (naranjas o rojos) para destacar botones de acción y advertencias.
 
 ---
 
-### 3.5. Módulo Comercial y Negocio Local (Comercios Asociados)
+## 4. Requisitos Técnicos y de Arquitectura (RT)
 
-* <span class="req-id">RF-13: Promoción de escuelas y comercios locales</span>  
-  <span class="req-formula">El usuario podrá visualizar ofertas, servicios de alquiler de material y cursos impartidos por clubes asociados (Dunes Kite Piles, Gandia Surf). Para hacerlo, el sistema mostrará tarjetas de patrocinador no invasivas contextualizadas al spot seleccionado.</span>
-
-* <span class="req-id">RF-14: Funcionalidades Premium / Monetización futura</span>  
-  <span class="req-formula">El sitio deberá prever la segregación de cuentas gratuitas y cuentas *Pro/Premium*. Para ello, el sistema contemplará en su arquitectura accesos avanzados (previsión a 14 días, alertas SMS/push inmediatas y descuentos exclusivos en comercios náuticos).</span>
-
----
-
-## 4. Requisitos Visuales y de Interfaz (UI/UX)
-
-* <span class="req-id">RV-01: Enfoque *Mobile-First*</span>  
-  El sitio deberá diseñarse prioritariamente para smartphones y pantallas táctiles, garantizando que el 100% de las funciones de consulta se ejecuten cómodamente con una sola mano.
-
-* <span class="req-id">RV-02: Usabilidad bajo radiación solar intensa</span>  
-  El sitio deberá ofrecer una interfaz con paleta de alto contraste, tipografías legibles y números de gran tamaño para las variables críticas (nudos, metros de ola), evitando contrastes pobres que impidan la lectura en la playa a pleno sol.
-
-* <span class="req-id">RV-03: Semáforo visual de condiciones</span>  
-  El sitio dispondrá de indicadores cromáticos unificados (verde = óptimo, amarillo = precaución / nivel avanzado, rojo = desfavorable / peligroso) que permitan al usuario evaluar en un vistazo el estado del spot sin necesidad de analizar cada cifra.
-
-* <span class="req-id">RV-04: Diseño limpio y modular en tarjetas (*Cards*)</span>  
-  La interfaz organizará la información en tarjetas modulares auto-contenidas: tarjeta de viento, tarjeta de mar, tarjeta de webcam y tarjeta de recomendación IA, minimizando el desplazamiento vertical excesivo.
-
-* <span class="req-id">RV-05: Identidad náutica y deportiva</span>  
-  El diseño visual adoptará una estética marina profesional (tonos azules marinos, cian, blancos puros y acentos de advertencia en naranja/amarillo náutico), transmitiendo fiabilidad, dinamismo y frescura.
+* **RT-01: Arquitectura Web PWA con el stack de 2º DAW**  
+  La aplicación será una Progressive Web App (PWA) desarrollada con las tecnologías del curso:
+  - **Backend:** PHP 8 orientado a objetos con base de datos relacional MySQL/MariaDB.
+  - **Frontend:** HTML5 semántico, CSS3 nativo responsive y JavaScript moderno asíncrono para consumir las APIs.
+* **RT-02: Integración de fuentes oficiales y abiertas de datos**  
+  El sistema recopilará datos de boyas en tiempo real (Puertos del Estado), estaciones meteorológicas oficiales y modelos marinos abiertos, sin depender de servicios privados de pago.
+* **RT-03: Integración de webcams públicas**  
+  El sistema incrustará las transmisiones de las cámaras web públicas de la Generalitat Valenciana y la red Oceanía correspondientes a los 3 spots definidos.
+* **RT-04: Conexión con servicio de Inteligencia Artificial**  
+  El backend se conectará con una API de IA para alimentar el motor de cálculo del porcentaje de viabilidad y las respuestas del chatbot local a pie de playa.
 
 ---
 
-## 5. Requisitos Técnicos y de Arquitectura (RT)
+## 5. Requisitos Legales y de Seguridad (RL)
 
-* <span class="req-id">RT-01: Arquitectura Web Responsive y PWA (Progressive Web App)</span>  
-  El sistema se desarrollará como una aplicación web responsiva capaz de instalarse en la pantalla de inicio del móvil como una PWA ligera, permitiendo carga rápida sin necesidad de descargas desde tiendas de aplicaciones.
-
-* <span class="req-id">RT-02: Integración de fuentes de datos abiertas y estandarizadas</span>  
-  El backend consumirá datos de APIs meteorológicas públicas y contrastadas:
-  - **Open-Meteo Marine / ECMWF / GFS** para modelos de viento y oleaje.
-  - **Puertos del Estado / AEMET** para mediciones en tiempo real de boyas costeras de la zona.
-  - Formatos de intercambio: REST en formato JSON con tipado estricto.
-
-* <span class="req-id">RT-03: Caché eficiente y mitigación de baja cobertura</span>  
-  Debido a que la cobertura móvil en espigones y playas puede ser irregular, el sistema implementará almacenamiento local en el cliente (*localStorage* / *IndexedDB*) y estrategias de caché (*Service Workers*) para mostrar la última previsión consultada en caso de pérdida de señal.
-
-* <span class="req-id">RT-04: Rendimiento y optimización de carga</span>  
-  El sitio deberá cargar los datos meteorológicos críticos en menos de 2 segundos en conexiones móviles 4G/5G, aplicando carga diferida (*lazy loading*) para las transmisiones de vídeo de las webcams.
-
-* <span class="req-id">RT-05: Integración modular con servicio de IA</span>  
-  La arquitectura dispondrá de un microservicio o endpoint que conectará con una API de Inteligencia Artificial (Gemini API) enviando el contexto numérico del spot para devolver la síntesis textual de recomendación sin bloquear la carga principal de datos.
+* **RL-01: Descargo explícito de responsabilidad (*Disclaimer*)**  
+  El sitio deberá mostrar de forma obligatoria un aviso legal advirtiendo que **las estimaciones meteorológicas y de la IA son orientativas y pueden fallar**. La responsabilidad de adentrarse en el agua recae exclusivamente en el usuario, eximiendo al promotor y a los clubes de cualquier responsabilidad civil.
+* **RL-02: Protección de datos y privacidad (RGPD)**  
+  El registro de usuarios solicitará únicamente los datos imprescindibles, con almacenamiento seguro de contraseñas y política de privacidad accesible.
+* **RL-03: Política de Cookies**  
+  El sitio incluirá un aviso claro para la aceptación o configuración de cookies y almacenamiento de preferencias locales del usuario.
 
 ---
 
-## 6. Requisitos Legales y de Seguridad (RL)
+## 6. Matriz de Priorización (MoSCoW)
 
-* <span class="req-id">RL-01: Descargo de responsabilidad marítima (*Disclaimer*)</span>  
-  El sitio deberá mostrar de forma visible un aviso legal explícito indicando que los datos mostrados son estimaciones y que la responsabilidad última de seguridad al ingresar al agua recae siempre en el propio navegante o nadador, eximiendo a la plataforma de accidentes derivados de cambios meteorológicos sobrevenidos.
-
-* <span class="req-id">RL-02: Cumplimiento RGPD y LOPDGDD</span>  
-  El sitio garantizará el cumplimiento estricto de la normativa europea de protección de datos: política de privacidad transparente, consentimiento explícito para usuarios registrados y posibilidad de ejercitar los derechos de acceso, rectificación y supresión de datos.
-
-* <span class="req-id">RL-03: Política de cookies y almacenamiento local</span>  
-  El sistema dispondrá de un banner de consentimiento de cookies conforme a las directrices de la AEPD, permitiendo al usuario configurar y aceptar únicamente las cookies técnicas necesarias si así lo desea.
-
----
-
-## 7. Matriz de Priorización de Requisitos (MoSCoW)
-
-Para planificar las siguientes fases del Sprint 0 y los sprints de desarrollo (DAW, DIW, DWS, DWC), se clasifican los requisitos acordados:
-
-| Categoría | Requisitos Asignados | Justificación |
+| Nivel MoSCoW | Requisitos Incluidos | Justificación según la reunión con Quique |
 | :--- | :--- | :--- |
-| **Must Have** *(Imprescindible para MVP)* | RF-01, RF-02, RF-03, RF-04, RV-01, RV-02, RV-03, RT-01, RT-02, RL-01 | Sin datos fiables de viento/mar en móvil y el aviso legal, la app no es viable operativamente. |
-| **Should Have** *(Muy importante)* | RF-05, RF-06, RF-07, RF-08, RF-09, RV-04, RT-03, RT-04, RL-02, RL-03 | Webcams, resúmenes de IA por deporte y caché offline marcan la diferencia competitiva frente a Windguru. |
-| **Could Have** *(Deseable si hay tiempo)* | RF-10, RF-11, RF-12, RF-13, RV-05, RT-05 | Alertas preventivas automatizadas, registro de usuarios para guardar favoritos y tarjetas comerciales. |
-| **Won't Have** *(Para versiones futuras)* | RF-14 (Pasarela de pago y suscripción Premium activa) | Se diseña la arquitectura preparada, pero la monetización de cobro se abordará en sprints posteriores. |
-
----
-
-> **Aprobado para entrega preliminar:** Documento elaborado siguiendo las directrices del Sprint 0 (PIM Reto 1C) para su validación por el cliente y el equipo docente.
+| **Must Have** *(Obligatorio)* | **RF-01, RF-02, RF-03, RF-05, RF-07, RV-01, RV-02, RV-03, RV-05, RT-01, RT-02, RL-01** | Es el núcleo pedido por el cliente: los 3 spots, datos de viento/mar en 4h/8h/24h, cálculo de viabilidad (0-100%) por IA en quesitos, registro de usuarios, diseño legible al sol y descargo legal de responsabilidad. |
+| **Should Have** *(Importante)* | **RF-04, RF-06, RV-04, RV-06, RT-03, RT-04, RL-02, RL-03** | Webcams de GVA/Oceanía, chatbot experto local a pie de playa, selector de modo claro/oscuro y cumplimiento de privacidad/cookies. |
+| **Could Have** *(Deseable)* | **RF-08, RF-09** | Indicador de afluencia comunitaria en la playa y tarjetas de servicios de las escuelas asociadas (Dunes Kite, Gandia Surf). |
+| **Won't Have** *(Futuro)* | **RF-10** | La pasarela de cobro de suscripciones Premium queda pospuesta para versiones comerciales posteriores. |
