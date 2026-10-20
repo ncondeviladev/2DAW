@@ -1,7 +1,7 @@
 # 📘 DIARI DE SEGUIMENT — 2n DAW (Semipresencial)
 > **Alumne:** Noé Conde Vila  
 > **Centre:** IES Maria Enríquez (Gandia) — Curs 2026/2027  
-> **Última actualització:** 14 d'octubre de 2026  
+> **Última actualització:** 20 d'octubre de 2026  
 
 ---
 
@@ -35,7 +35,8 @@
 | **DWES** | `Exercicis U3` (PHP Avançat) | ✅ **Fet** | Continu | Fets del bloc 1 al 8 (1.1 a 8.3 complets) i pujats a GitHub |
 | **DWES** | `U3_P1 Exercicis PHP Avançat` | ✅ **Entregat** | Venciment: 21/11/2026 08:16 | Pràctica avaluable de la Unitat 3 (Blocs 1-8 enllestits) |
 | **DWES** | `Autoavaluació U3` (PHP Avançat) | ✅ **Fet** | Obert a Aules | Test superat a Aules |
-| **DWES** | `Projecte Final U3 — TechLeads` | ⏳ **Pendent** | Venciment: 28/11/2026 09:56 | Miniprojecte PHP complet: formulari públic, panell intern, sessions, classes, pujada fitxers (`DWES/U3/projecte-final-techleads/`) |
+| **DWES** | `U3_P2 Miniprojecte` (TechLeads) | ✅ **Entregat** | Venciment: 28/11/2026 09:56 | Miniprojecte PHP complet: formulari públic, panell intern, sessions, classes, pujada fitxers (`DWES/U3/projecte-final-techleads/`). Tramesa a Aules completada. |
+| **DWES** | `U4_P1 Exercicis` (Accés a dades) | ⏳ **Pendent** | Venciment: 21/11/2026 08:16 | Pràctica avaluable U4 (ProjecteBase, Docker, MySQL 8.4, Composer PSR-4, DAOs, PDO i 9 captures de seguiment) |
 | **PIM** | `S03 Autoevaluació` (Test Disseny) | ✅ **Entregat** | Venciment: 07/10/2026 14:25 | Tramesa a Aules |
 | **PIM** | `S03 Tutorial Wireframe` (Balsamiq) | ✅ **Entregat** | Venciment: 07/10/2026 14:25 | Tramesa a Aules |
 | **PIM** | `Sprint 0 - Reto 1A` (Prep. Entrevista) | ✅ **Entregat** | Venciment: 13/10/2026 23:59 | Tramesa a Aules |
@@ -43,7 +44,7 @@
 | **PIM** | `Sprint 0 - Reto 1C` (Document Specs) | ✅ **Entregat** | Venciment: 19/10/2026 23:59 | Document formal de specs a `PIM/Sprint0/exercicis/Sprint 0_Reto_1C_CondeNoe.pdf` trames a Aules |
 | **PIM** | `Sprint 0 - Reto 2` (Repositori GIT DAW) | ✅ **Entregat** | Venciment: 19/10/2026 23:59 | Tramesa a Aules |
 | **PIM** | `Sprint 0 - Reto 4` (DWS BBDD) | ✅ **Entregat** | Venciment: 19/10/2026 23:59 | Document i model ER a `PIM/Sprint0/exercicis/Sprint0_Reto4_CondeNoe.pdf` trames a Aules |
-| **PIM** | `Sprint 0 - Entrega Final` | ⏳ **Pendent** | Venciment: 08/11/2026 14:25 | Entregable consolidat de tot l'Sprint 0 |
+| **PIM** | `Sprint 0 - Entrega Final` | 🟢 **Fet (A la recambra)** | Venciment: 08/11/2026 14:25 | Memòria i PDF maquetats a 14 pàgines (`Sprint0_EntregaFinal_CondeNoe.pdf`). Llest per a trametre a Aules quan arribe la data. |
 | **PIM** | `Sprint 1 a Final` (App AgriVall) | ⏳ *Futur* | S09 a S40 | Estudi complet i desenvolupament d'App AgriVall |
 
 ---
@@ -161,7 +162,9 @@
 * **DWES (Servidor):**
   - **Venciment U2_P1 (PHP Bàsic):** **21 de Novembre de 2026, 08:16**.
   - **Venciment U3_P1 (PHP Avançat):** **21 de Novembre de 2026, 08:16**.
+  - **Venciment U4_P1 (Exercicis Accés a dades):** **21 de Novembre de 2026, 08:16**.
   - **Venciment U2_P2 (Problemes PHP):** **28 de Novembre de 2026, 09:56**.
+  - **Venciment U3_P2 (Miniprojecte TechLeads):** **28 de Novembre de 2026, 09:56**.
   - **Venciment U1_P1 (Docker):** **30 de Novembre de 2026, 12:04**.
 
 ---
@@ -192,12 +195,51 @@
     - **Part 2, Ex 1 (`DWES/U2_P2/productes.php`):** Funció `calcularCompra` per a iterar sobre un array multidimensional de productes (`nom`, `preu`, `quantitat`) i calcular el total de la compra.
     - **Part 2, Ex 2 (`DWES/U2_P2/ciutats.php`):** Funció `buscarPoblacio` per a consultar dades en un array associatiu de ciutats i població. Formulari POST accessible integrat amb metadades de qualitat HTML5 de DIW.
     - **Part 2, Ex 3 (`DWES/U2_P2/generarPassword.php`):** Funció `generarPassword` amb paràmetre obligatori (`$longitud`) i opcionals (`$inclouNumeros = true`, `$inclouSimbols = false`). Conjunt de caràcters dinàmic, selecció aleatòria amb `rand` i cridades de prova tant posicionals com amb arguments amb nom de PHP 8 (*named arguments*).
-* **Unitat 3 — PHP Avançat (Actual):**
+* **Unitat 3 — PHP Avançat:**
+  - Fòrum: `Dubtes i preguntes unitat 3`.
   - Apunts web `Unitat 3. PHP Avançat`, PDF `PHP xDebug`.
   - Exercicis de classe a `DWES/U3/exercicis/`: ✅ **Completats** (Tots els blocs de l'1 al 8, del 1.1 al 8.3, validats i pujats a GitHub).
-  - Pràctica avaluable `U3_P1. Exercicis PHP Avançat`: ✅ **Entregada** (Venciment: 21 de Novembre de 2026, 08:16).
+  - Pràctica avaluable `U3_P1. Exercicis PHP Avançat`: ✅ **Entregada** (Venciment: 21 de Novembre de 2026, 08:16). Solució publicada a Aules.
   - Autoavaluació Unitat 3 (PHP Avançat): ✅ **Feta** (Test superat a Aules).
-  - **Projecte Final U3 — TechLeads** ⏳ **Pendent**: Miniprojecte PHP complet a [`DWES/U3/projecte-final-techleads/`](file:///f:/OneDrive%20-%20Conselleria%20d%27Educaci%C3%B3/2DAW/DWES/U3/projecte-final-techleads/ENUNCIAT.md). Inclou formulari públic (index.php + processar_lead.php), panell intern amb login/logout/leads, classe `Lead`, gestor de sessions, pujada de fitxers i patró PRG.
+  - **Pràctica avaluable `U3_P2. Miniprojecte` (TechLeads)** ✅ **Entregat**:
+    - Recursos a Aules: `U3_P2. Miniprojecte Fitxer` i `U3_P2. Miniprojecte [Solució] Fitxer`.
+    - Bústia de lliurament: `Lliurament U3_P2. Miniprojecte Tasca` (Obert el 28/09/2026 09:56, Venciment: dissabte, 28 de novembre 2026, 09:56).
+    - Codi del projecte a [`DWES/U3/projecte-final-techleads/`](file:///f:/OneDrive%20-%20Conselleria%20d%27Educaci%C3%B3/2DAW/DWES/U3/projecte-final-techleads/ENUNCIAT.md). Inclou formulari públic (index.php + processar_lead.php), panell intern amb login/logout/leads, classe `Lead`, gestor de sessions, pujada de fitxers i patró PRG.
+* **Unitat 4 — Accés a dades (Nova Unitat):**
+  - **Recursos i enllaços oficials d'Aules:**
+    - Fòrum de dubtes: `Dubtes i preguntes unitat 4 Fòrum` (id: 3671002).
+    - Teoria i apunts oficials: `Unitat 4. Accés a dades URL` (id: 3671004).
+    - Pràctiques i recursos:
+      - `U4_P1. Exercicis URL` (id: 3671008).
+      - `U4_P1. ProjecteBase Fitxer` (id: 3674745) — Fitxer ZIP base proveït pel professor.
+      - Bústia de lliurament: `Lliurament U4_P1. Exercicis Tasca` (id: 3671009) — Obert el dilluns, 21 de setembre 2026, 08:16; **Venciment: dissabte, 21 de novembre 2026, 08:16**.
+  - **Documentació i apunts locals de suport:**
+    - Document complet d'apunts a [`DWES/U4/U4_Acces_a_dades_Apunts.md`](file:///f:/OneDrive%20-%20Conselleria%20d%27Educaci%C3%B3/2DAW/DWES/U4/U4_Acces_a_dades_Apunts.md) (12 punts, 3.215 línies de teoria, codi pas a pas i diagrames).
+    - Diagrames d'arquitectura a [`DWES/U4/media/`](file:///f:/OneDrive%20-%20Conselleria%20d%27Educaci%C3%B3/2DAW/DWES/U4/media/) (`u4_arquitectura.png`, `u4_fluxe_dades.png`, `u4_DAO.png`).
+  - **Contingut tècnic de la unitat:**
+    1. *Entorn Docker:* Apache + PHP 8.5 + MySQL 8.4 + phpMyAdmin (`docker-compose.yml`, `Dockerfile`, volums de persistència).
+    2. *Base de dades:* Taules `leads` i `usuaris` a phpMyAdmin / script `base-de-dades.sql`.
+    3. *Estructura i Composer:* `composer.json`, `vendor/autoload.php` amb PSR-4 (`App\`) i PSR-12.
+    4. *Model:* Classes `Lead` i `Usuari`.
+    5. *Interfície:* Contracte `IDbAccess`.
+    6. *PDO:* Connexió PDO a MySQL, consultes preparades contra injeccions SQL i maneig de `PDOException`.
+    7. *Injecció de Dependències:* Classe `DBConnection`, `config/database.php` i `config/bootstrap.php`.
+    8. *Capa DAO:* `LeadDAO` i `UsuariDAO` amb mapatge automàtic a objectes (`PDO::FETCH_CLASS`).
+    9. *Helpers d'arxius:* `pujarArxiu()` i `eliminarArxiu()` a `src/helpers.php`.
+    10. *CRUD de Leads:* `index.php`, `processar_lead.php`, `dashboard/leads.php`, `dashboard/lead.php`, `dashboard/editar.php`, eliminació de registres i patró PRG.
+    11. *Autenticació BBDD:* `dashboard/login.php`, `dashboard/logout.php`, `requereixLogin()` i contrasenyes xifrades amb `password_hash()` / `password_verify()`.
+  - **Entregables de la tasca `U4_P1. Exercicis` (Punt 12):**
+    9 captures de pantalla de seguiment i verificació:
+    1. Captura `prova-model.php` (punt 5.5)
+    2. Captura `prova-connexio.php` (punt 7.6)
+    3. Captura `prova-dao.php` (punt 8.6)
+    4. Captura `prova-arxiu.php` (punt 9.6)
+    5. Captura `prova-usuari.php` (punt 11.4)
+    6. Captura final de `index.php`
+    7. Captura final de `dashboard/leads.php`
+    8. Captura final de `dashboard/lead.php`
+    9. Captura final de `dashboard/editar.php`
+
 
 ### 3. DaW — Desplegament d'Aplicacions Web (Prof. Juan Ramón Collado)
 * **General:** Guia didàctica, Presentació, Calendari de tutories col·lectives (TCs).
@@ -235,7 +277,7 @@
     - **Reto 1C (Document Specs: Funcionals, Visuals, Tècniques, Legals):** ✅ **Entregat**. Document formal d'especificacions de requisits (SRS) finalitzat i maquetat en PDF a [`PIM/Sprint0/exercicis/Sprint 0_Reto_1C_CondeNoe.pdf`](file:///f:/OneDrive%20-%20Conselleria%20d'Educaci%C3%B3/2DAW/PIM/Sprint0/Sprint%200_Reto_1C_CondeNoe.pdf) (fidel a Quique, estructura paginada neta, 7 RF principals, 4 RV, 4 RT, 2 RL, bloc de futures versions i matriu MoSCoW completa). Tramesa a Aules completada.
     - **Reto 2 (Repositori GIT DAW):** ✅ **Entregat** (Tramesa a Aules completada).
     - **Reto 3 (Estudi Previ Interfície Web - Mòdul DIW):** Integrat en Sprint 0.
-    - **Reto 4 (Estudi de les Dades de l'App - Mòdul DWES):** ⏳ **Pendent** (RETO4 DWS BBDD, Venciment: dilluns, 19 d'octubre 2026, 23:59).
+    - **Reto 4 (Estudi de les Dades de l'App - Mòdul DWES):** ✅ **Entregat** (RETO4 DWS BBDD, tramesa a Aules completada amb model ER en PDF).
     - **Entrega Final Sprint 0:** ⏳ **Venciment: diumenge, 8 de novembre 2026, 14:25**.
   - **Sprint 1 (S09 a S12):** Estudi complet de la nova App (*No disponible encara*).
   - **Sprint 2 (S14 a S23):** Inici del desenvolupament d'App AgriVall (*No disponible encara*).
