@@ -1,0 +1,135 @@
+@charset "utf-8";
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/*Custom properties*/
+:root {
+
+    --fuente-principal: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    --tamano-base: 16px;
+    --color-fondo-app: #f4f6f8;
+    --color-fondo-tarjeta: #ffffff;
+    --color-primario: #1e3a5f;
+    --color-secundario: #475569;
+    --color-acento: #0d9488;
+    --color-texto: #1e293b;
+    --color-texto-suave: #64748b;
+    --color-borde: #e2e8f0;
+
+    --espacio-xs: 0.25rem;
+    --espacio-sm: 0.5rem;
+    --espacio-md: 1rem;
+    --espacio-lg: 1.5rem;
+}
+/*Body contenedor principal*/
+body{
+    font-family: var(--fuente-principal);
+    font-size: var(--tamano-base);
+    line-height: 1.6;
+    color: var(--color-texto);
+    background-color: var(--color-fondo-app);
+    
+    width: 100%;
+    max-width: 650px;
+    margin: 0 auto;
+    padding: var(--espacio-md);
+}
+
+header{
+    text-align: center;
+    margin-bottom: var(--espacio-md);
+    
+}
+/*Contenedor de botones*/
+header .conmutador-estilos {
+    margin-bottom: var(--espacio-md);
+    text-align: right; /*Botones en mobils en una esquina*/
+
+}
+/* Selector extendido para los botones */
+header .conmutador-estilos button.btn-estilo {
+    background-color: var(--color-fondo-tarjeta);
+    color: var(--color-secundario);
+    border: 1px solid var(--color-borde);
+    padding: var(--espacio-xs) var(--espacio-sm);
+    font-size: 0.8rem;
+    font-weight: 600;
+    cursor: pointer;
+    border-radius: 4px;
+}
+/* Solo el primer boton para separarlo del segundo**/
+header .conmutador-estilos button.btn-estilo:first-child {
+    margin-right: var(--espacio-xs);
+}
+/* Hover para los botones conmutador*/
+header .conmutador-estilos button.btn-estilo:hover {
+    background-color: var(--color-primario);
+    color: #ffffff;
+    border-color: var(--color-primario);
+}
+/* Título principal h1*/
+header > h1 {
+    font-size: 1.5rem;
+    color: var(--color-primario);
+    margin-top: var(--espacio-xs);
+    font-weight: 700;
+}
+/*Lineas hr suavizadas*/
+hr {
+    border: 0;
+    height: 1px;
+    background-color: var(--color-borde);
+    margin: var(--espacio-md) 0;
+}
+nav {
+    text-align: center;
+    margin-bottom: var(--espacio-md);
+    line-height: 2.2; /*Separa las líneas si los botones saltan de fila*/
+}
+/*Enlaces del nav*/
+nav a[href^="#"]{
+display: inline-block;
+    padding: var(--espacio-xs) var(--espacio-sm);
+    margin: 2px;
+    background-color: var(--color-fondo-tarjeta);
+    color: var(--color-secundario);
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: 500;
+    border: 1px solid var(--color-borde);
+    border-radius: 20px; 
+
+}
+/*Hover enlaces nav*/
+nav a[href^="#"]:hover {
+    background-color: var(--color-primario);
+    color: #ffffff;
+    border-color: var(--color-primario);
+}
+
+/*Contenedores tarjeta*/
+
+:is(section, aside).tarjeta {
+    background-color: var(--color-fondo-tarjeta);
+    border: 1px solid var(--color-borde);
+    border-radius: 8px;
+    padding: var(--espacio-md);
+    margin-bottom: var(--espacio-sm); 
+}
+/* Títulos H2 dentro de las tarjetas */
+main .tarjeta > h2 {
+    color: var(--color-primario);
+    font-size: 1.15rem;
+    padding-bottom: var(--espacio-xs);
+    border-bottom: 2px solid var(--color-fondo-app); 
+    margin-bottom: var(--espacio-sm);
+}
+/* Iconos dentro de los H2 */
+main .tarjeta > h2 > img {
+    vertical-align: middle;
+    margin-right: var(--espacio-xs);
+}
