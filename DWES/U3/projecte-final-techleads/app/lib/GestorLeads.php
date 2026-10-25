@@ -6,7 +6,8 @@ declare(strict_types=1);
  * Gestiona les funciones de la clase Lead
  */
 
-require_once __DIR__ . '/Lead.php';
+
+require_once __DIR__ . '/../../vendor/autoload.php';
 
 
 //Assegura que la sesio esta iniciadai que existeix el array de leads

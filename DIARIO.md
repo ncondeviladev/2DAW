@@ -1,7 +1,7 @@
 # 📘 DIARI DE SEGUIMENT — 2n DAW (Semipresencial)
 > **Alumne:** Noé Conde Vila  
 > **Centre:** IES Maria Enríquez (Gandia) — Curs 2026/2027  
-> **Última actualització:** 20 d'octubre de 2026  
+> **Última actualització:** 25 d'octubre de 2026  
 
 ---
 
@@ -15,7 +15,7 @@
 | **DIW** | `S03_PR1` (Formularis HTML5) | ✅ **Entregat** | Venciment: 17/10/2026 23:59 | Tramesa a Aules |
 | **DIW** | `S04_PR1` (CafeNet_Pico_FA) | ✅ **Entregat** | Venciment: 24/10/2026 21:36 | 4 pàgines HTML5, Pico.css, FA, validat W3C |
 | **DIW** | `Playground1` (Selectores Simples) | ✅ **Fet** | Venciment: 15/10/2026 23:37 | Voluntari completat |
-| **DIW** | `S06_PR1` (CV CSS - new!) | ⏳ **Pendent** | Venciment: 02/11/2026 23:59 | Nova pràctica d'estils CSS per al CV |
+| **DIW** | `S06_PR1` (CV CSS) | ✅ **Entregat** | Venciment: 02/11/2026 23:59 | Maquetació Mobile First, conmutador formal.css / diver.css, Google Fonts (@import), @font-face local (Righteous), pattern amb background-attachment: fixed, checklist complet de selectors avançats i validació W3C |
 | **DaW** | `PEC1` (Apache, Nginx, SSH, U1) | ✅ **Entregat** | Venciment: 18/10/2026 23:59 | Tramesa a Aules |
 | **DaW** | `PEC2` (Docker i desplegaments, U2) | ✅ **Entregat** | Venciment: 25/10/2026 23:59 | Tramesa a Aules |
 | **DaW** | `PEC3` (Docker avançat, U3) | ✅ **Entregat** | Venciment: 08/11/2026 23:59 | PDF generat i llest per a Aules (Compose + K8s 3 rèpliques) |
@@ -36,7 +36,7 @@
 | **DWES** | `U3_P1 Exercicis PHP Avançat` | ✅ **Entregat** | Venciment: 21/11/2026 08:16 | Pràctica avaluable de la Unitat 3 (Blocs 1-8 enllestits) |
 | **DWES** | `Autoavaluació U3` (PHP Avançat) | ✅ **Fet** | Obert a Aules | Test superat a Aules |
 | **DWES** | `U3_P2 Miniprojecte` (TechLeads) | ✅ **Entregat** | Venciment: 28/11/2026 09:56 | Miniprojecte PHP complet: formulari públic, panell intern, sessions, classes, pujada fitxers (`DWES/U3/projecte-final-techleads/`). Tramesa a Aules completada. |
-| **DWES** | `U4_P1 Exercicis` (Accés a dades) | ⏳ **Pendent** | Venciment: 21/11/2026 08:16 | Pràctica avaluable U4 (ProjecteBase, Docker, MySQL 8.4, Composer PSR-4, DAOs, PDO i 9 captures de seguiment) |
+| **DWES** | `U4_P1 Exercicis` (Accés a dades) | ✅ **Entregat** | Venciment: 21/11/2026 08:16 | Pràctica avaluable U4 enllestida al 100%. Codi complet (Docker, MySQL 8.4, DAOs, PDO, patró PRG, CRUD complet, login BBDD), 9 captures oficials a `capturas/`, 2 diagrames a `diagrames/` i memòria maquetada a `U4_P1_CondeNoe/memoria.md`. |
 | **PIM** | `S03 Autoevaluació` (Test Disseny) | ✅ **Entregat** | Venciment: 07/10/2026 14:25 | Tramesa a Aules |
 | **PIM** | `S03 Tutorial Wireframe` (Balsamiq) | ✅ **Entregat** | Venciment: 07/10/2026 14:25 | Tramesa a Aules |
 | **PIM** | `Sprint 0 - Reto 1A` (Prep. Entrevista) | ✅ **Entregat** | Venciment: 13/10/2026 23:59 | Tramesa a Aules |
@@ -212,7 +212,7 @@
     - Pràctiques i recursos:
       - `U4_P1. Exercicis URL` (id: 3671008).
       - `U4_P1. ProjecteBase Fitxer` (id: 3674745) — Fitxer ZIP base proveït pel professor.
-      - Bústia de lliurament: `Lliurament U4_P1. Exercicis Tasca` (id: 3671009) — Obert el dilluns, 21 de setembre 2026, 08:16; **Venciment: dissabte, 21 de novembre 2026, 08:16**.
+      - Bústia de lliurament: `Lliurament U4_P1. Exercicis Tasca` (id: 3671009) — ✅ **Completada i enllestida el 25/10/2026** (Venciment: dissabte, 21 de novembre 2026, 08:16). Projecte refactoritzat i provat, 9 captures oficials a `capturas/`, 2 diagrames d'ajuda a `diagrames/` i memòria maquetada a `U4_P1_CondeNoe/memoria.md`.
   - **Documentació i apunts locals de suport:**
     - Document complet d'apunts a [`DWES/U4/U4_Acces_a_dades_Apunts.md`](file:///f:/OneDrive%20-%20Conselleria%20d%27Educaci%C3%B3/2DAW/DWES/U4/U4_Acces_a_dades_Apunts.md) (12 punts, 3.215 línies de teoria, codi pas a pas i diagrames).
     - Diagrames d'arquitectura a [`DWES/U4/media/`](file:///f:/OneDrive%20-%20Conselleria%20d%27Educaci%C3%B3/2DAW/DWES/U4/media/) (`u4_arquitectura.png`, `u4_fluxe_dades.png`, `u4_DAO.png`).
@@ -262,6 +262,7 @@
 * **U02 — CSS - Estilitzant elements del doc HTML (Nova Unitat):**
   - **S05 (Intro CSS i Selectors):** Apunts `S05 APUNTES CSS Intro Selectores1`, Presentació `S05 PRESENT CSS Intro Selectores Propiedades`, enllaços W3Schools i chuletes.
   - `Playground1`: ✅ **Completat** (Exercici d'autoaprenentatge voluntari realitzat).
+  - **Pràctica `S06_PR1. Maquetació de CV amb HTML5/CSS3`:** ✅ **Entregat** (Venciment: 02/11/2026 23:59). Desenvolupament a `DIW/UD2/S06/S06_PR1_CVcssCondeNoe/`: pàgina única `S06_PR1_CVCondeNoe.html`, conmutador dinàmic `formal.css` / `diver.css`, Google Fonts Poppins, font local Righteous .ttf amb `@font-face`, pattern.png amb `background-attachment: fixed`, degradats CSS3, sombras box/text-shadow i checklist complet de selectors avançats.
 
 ### 5. PIM — Projecte Intermodular (2n DAW)
 * **General:** `Guia didactica 2 DAWsemi - PIM (beta)`.
