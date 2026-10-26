@@ -16,7 +16,11 @@
 8. [Cálculo de Especificidad y Cascada](#8-cálculo-de-especificidad-y-cascada)
 9. [Modelo de Caja (Box Model) y Unidades](#9-modelo-de-caja-box-model-y-unidades)
 10. [Display, Posicionamiento y Buenas Prácticas](#10-display-posicionamiento-y-buenas-prácticas)
-
+11. [Variables CSS (Custom Properties)](#11-variables-css-custom-properties)
+12. [Mobile First y Resolución de Desbordamientos (Overflow)](#12-mobile-first-y-resolución-de-desbordamientos-overflow)
+13. [Tipografía en CSS3: Google Fonts vs @font-face](#13-tipografía-en-css3-google-fonts-vs-font-face)
+14. [Efectos Visuales CSS3: Sombras, Degradados y Fondos](#14-efectos-visuales-css3-sombras-degradados-y-fondos)
+15. [Sintaxis Extendida: Con Espacio vs Sin Espacio](#15-sintaxis-extendida-con-espacio-vs-sin-espacio)
 ---
 
 ## 1. Estructura y Reglas de Oro HTML5
@@ -206,6 +210,10 @@ input[type="email"] { background-color: #f0f8ff; }
   li:nth-child(3)    { font-weight: bold; }    /* Solo el 3er elemento */
   li:nth-child(3n+1) { color: blue; }          /* El 1º, 4º, 7º, 10º... */
   ```
+* `:is(sel1, sel2)`: **Agrupador compacto**. Aplica estilos si coincide con cualquiera de la lista:
+  ```css
+  :is(section, aside).tarjeta { padding: 1rem; } /* Equivale a section.tarjeta, aside.tarjeta */
+  ```
 
 ### Pseudoclases de Formularios
 * `:checked`: Checkbox o radio button marcado.
@@ -314,3 +322,170 @@ padding: 1.5rem;
 * `absolute`: Se despega del flujo y se posiciona relativo al **ancestro posicionado más cercano** (el primer padre con `position: relative`).
 * `fixed`: Se fija en la pantalla y no se mueve aunque hagas scroll (menús fijos, botones de chat flotantes).
 * `sticky`: Fluye con el scroll pero se "pega" arriba o abajo al llegar a cierta coordenada (`top: 0`).
+
+---
+
+## 11. Variables CSS (Custom Properties)
+
+Permiten centralizar colores, tipografías y espaciados para no repetir valores mágicos a mano:
+
+### Declaración en `:root` (Visibilidad Global)
+```css
+:root {
+    /* Colores */
+    --color-primario: #1e3a5f;
+    --color-fondo-app: #f4f6f8;
+    --color-borde: #e2e8f0;
+
+    /* Tipografía y Tamaños */
+    --fuente-principal: system-ui, sans-serif;
+    --tamano-base: 16px;
+    --tamano-sm: 0.875rem;
+
+    /* Espaciados */
+    --espacio-xs: 0.25rem;
+    --espacio-sm: 0.5rem;
+    --espacio-md: 1rem;
+}
+```
+
+### Uso con `var(--nombre)`
+```css
+body {
+    font-family: var(--fuente-principal);
+    background-color: var(--color-fondo-app);
+    padding: var(--espacio-md);
+}
+
+/* Con valor de respaldo (fallback) por si la variable no existe */
+h1 {
+    color: var(--color-primario, #000000);
+}
+```
+
+### ¿Cuándo SÍ y cuándo NO usar variables CSS?
+* **SÍ usar variables:** Para valores del **sistema de diseño global** que se reutilizan en múltiples sitios (paleta de colores, escala tipográfica, escala de `margin`/`padding`, radios de bordes `--radio-sm`, sombras estándar).
+* **NO usar variables:** Para dimensiones puntuales exclusivas de un solo elemento (ej: el ancho de una foto de carnet `width: 85px;` o anchos en porcentaje `width: 32%;`). Llenar `:root` de variables de un solo uso solo añade ruido y dificulta el mantenimiento.
+
+---
+
+## 12. Mobile First y Resolución de Desbordamientos (Overflow)
+
+### Contenedor Estándar Mobile First (Savall)
+Para maquetar centrado y adaptable en móviles sin frameworks:
+```css
+body {
+    width: 100%;
+    max-width: 650px; /* Ancho máximo para que no se estire en pantallas grandes */
+    margin: 0 auto;   /* Centrado horizontal automático */
+    padding: var(--espacio-md);
+}
+```
+
+### ¿Por qué desbordan los emails/URLs en móvil y cómo arreglarlo?
+* **El problema:** Por defecto, los navegadores consideran que las cadenas continuas sin espacios (`ncondevila@gmail.com` o `https://muy-larga...`) son una sola palabra indivisible. En pantallas estrechas (360px), esto fuerza a la celda de una tabla o párrafo a ensancharse más allá de la pantalla, rompiendo la maquetación.
+* **La solución profesional:**
+```css
+td, p, a {
+    word-break: break-word;   /* Permite partir palabras solo si desbordan */
+    overflow-wrap: anywhere;  /* Garantiza ruptura limpia en cualquier punto necesario */
+}
+```
+
+### Distribución de Columnas en Tablas Móviles
+Si una tabla tiene varias columnas en móvil:
+1. Dar un ancho fijo y contenido a la foto (`width: 85px` y `img { max-width: 75px; }`).
+2. Reducir el padding lateral de las celdas a `var(--espacio-xs)`.
+3. Dejar que los valores de texto respiren sin forzar porcentajes rígidos que ahoguen la tercera columna.
+
+---
+
+## 13. Tipografía en CSS3: Google Fonts vs @font-face
+
+Para cumplir con rúbricas de fuentes externas y locales:
+
+### 1. Fuente Externa con `@import` (Google Fonts)
+Solo sirve para importar **archivos CSS o URLs web que devuelven CSS**. **NUNCA** se usa para enlazar archivos binarios directos (`.ttf`, `.otf`).
+```css
+/* Debe ir siempre arriba del todo, justo debajo de @charset */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+```
+
+### 2. Fuente Local Descargada con `@font-face`
+Es la regla nativa de CSS3 para registrar archivos binarios locales (`.ttf`, `.otf`) colocados en una carpeta `fonts/`:
+```css
+@font-face {
+    font-family: 'MiFuenteLocal';
+    src: url('../fonts/NombreFuente-Regular.ttf') format('truetype');
+    /* Si fuera .otf se usa format('opentype') */
+}
+
+h1, h2 {
+    font-family: 'MiFuenteLocal', cursive, sans-serif;
+}
+```
+
+---
+
+## 14. Efectos Visuales CSS3: Sombras, Degradados y Fondos
+
+### Sombras (`box-shadow` y `text-shadow`)
+Sintaxis: `desplazamiento-X  desplazamiento-Y  difuminado  color`
+```css
+/* Sombra en cajas/tarjetas (da relieve y profundidad) */
+.tarjeta {
+    box-shadow: 0 8px 24px rgba(79, 70, 229, 0.12);
+}
+
+/* Sombra en texto (para títulos destacados) */
+h1 {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+```
+
+### Degradados (`linear-gradient`)
+```css
+/* Fondo o botón con degradado en ángulo */
+button {
+    background: linear-gradient(135deg, #4f46e5 0%, #06b6d4 100%);
+    border: none;
+    color: #ffffff;
+}
+
+/* Línea divisoria elegante que se difumina por los lados */
+hr {
+    border: 0;
+    height: 2px;
+    background: linear-gradient(to right, transparent, #e0e7ff, transparent);
+}
+```
+
+### Fondos con Patrón y Fijos (`background-attachment: fixed`)
+```css
+body {
+    background-color: #f0f2f5;
+    background-image: url('../img/pattern.png');
+    background-repeat: repeat;
+    background-attachment: fixed; /* El fondo se queda quieto mientras el contenido hace scroll */
+}
+```
+
+---
+
+## 15. Sintaxis Extendida: Con Espacio vs Sin Espacio
+
+La presencia o ausencia de un espacio cambia radicalmente el significado del selector:
+
+| Selector | Espacio | Significado | Ejemplo HTML que coincide |
+| :--- | :---: | :--- | :--- |
+| `aside#intereses` | **Sin espacio** | El **mismo elemento** es un `<aside>` y tiene el `id="intereses"`. | `<aside id="intereses">` |
+| `aside #intereses` | **Con espacio** | Busca un elemento `#intereses` que esté **dentro** de un `<aside>` (descendiente). | `<aside><div id="intereses"></div></aside>` |
+| `button.btn-estilo` | **Sin espacio** | Una etiqueta `<button>` que tiene la clase `.btn-estilo`. | `<button class="btn-estilo">` |
+| `table td.celda-foto` | Combinado | Un `<td>` con clase `.celda-foto` que está dentro de una `table`. | `<table><tr><td class="celda-foto">` |
+
+> 💡 **Recomendación de examen (Savall):** Usa siempre selectores con sintaxis extendida (`main .tarjeta>h2`, `table tr td.foto`) para ganar especificidad natural y evitar colisiones de estilos sin recurrir a `!important`.
+

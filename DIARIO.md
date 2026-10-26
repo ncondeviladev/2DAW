@@ -1,14 +1,14 @@
 # 📘 DIARI DE SEGUIMENT — 2n DAW (Semipresencial)
 > **Alumne:** Noé Conde Vila  
 > **Centre:** IES Maria Enríquez (Gandia) — Curs 2026/2027  
-> **Última actualització:** 25 d'octubre de 2026  
+> **Última actualització:** 26 d'octubre de 2026  
 
 ---
 
 ## 🎯 Tauler General de Tasques i Entregues (Assignatures i Projecte)
 
 | Assignatura | Tasca / Activitat | Estat | Data d'obertura / Venciment | Notes |
-| :--- | :--- | :---: | :--- | :--- |
+| :--- | :--- | :--- | :---: | :--- | :--- |
 | **DIW** | `S01_PR1` (Interfaces) | ✅ **Entregat** | Venciment: 07/10/2026 20:37 | Tramesa a Aules |
 | **DIW** | `S02 Autoevaluació` (PizzaDelivery) | ✅ **Entregat** | Voluntària (05/10/2027) | Validada W3C |
 | **DIW** | `S02_PR1` (CV en HTML5) | ✅ **Entregat** | Venciment: 10/10/2026 20:36 | Tramesa a Aules |
@@ -27,6 +27,7 @@
 | **DWEC** | `UD3 Activitat puntuable` | ✅ **Entregat** | Obert: 11/10/2026 | Tramesa a Aules (Codi i memòria) |
 | **DWEC** | `UD4 Activitat puntuable` | 🟢 **Fet (Pendent d'obertura)** | S'obri: 27/10/2026 00:47 | Feta al 100% en local (`Libro.js` i PDF llestos per pujar) |
 | **DWEC** | `UD4 Qüestionari` | ⏳ **Pendent** | Per confirmar | Cüestionari d'avaluació UD4 |
+| **DWEC** | `Repàs Integral 1a Avaluació` | ✅ **Completat** | Finalitzat el 26/10/2026 | 7 de 7 blocs completats amb exercicis pràctics resolts a [`temario_resumido.md`](file:///f:/OneDrive%20-%20Conselleria%20d%27Educaci%C3%B3/2DAW/DWEC/temario_resumido.md) per a preparar l'examen presencial (19-20 nov). |
 | **DWES** | `U1_P1 Docker` (Entorn LAMP) | ✅ **Entregat** | Venciment: 30/11/2026 12:04 | Tramesa a Aules |
 | **DWES** | `Autoavaluació U1` (Introducció) | ✅ **Fet** | Obert: 16/09/2026 | Test superat a Aules |
 | **DWES** | `U2_P1 Exercicis PHP` (1.1 a 6.3) | ✅ **Entregat** | Venciment: 21/11/2026 08:16 | Tramesa a Aules |
@@ -37,6 +38,8 @@
 | **DWES** | `Autoavaluació U3` (PHP Avançat) | ✅ **Fet** | Obert a Aules | Test superat a Aules |
 | **DWES** | `U3_P2 Miniprojecte` (TechLeads) | ✅ **Entregat** | Venciment: 28/11/2026 09:56 | Miniprojecte PHP complet: formulari públic, panell intern, sessions, classes, pujada fitxers (`DWES/U3/projecte-final-techleads/`). Tramesa a Aules completada. |
 | **DWES** | `U4_P1 Exercicis` (Accés a dades) | ✅ **Entregat** | Venciment: 21/11/2026 08:16 | Pràctica avaluable U4 enllestida al 100%. Codi complet (Docker, MySQL 8.4, DAOs, PDO, patró PRG, CRUD complet, login BBDD), 9 captures oficials a `capturas/`, 2 diagrames a `diagrames/` i memòria maquetada a `U4_P1_CondeNoe/memoria.md`. |
+| **DWES** | `U4_P2 TechLeads amb notes` | ⏳ **Pendent** | Venciment: 21/11/2026 08:16 | Pràctica avaluable U4.2: relació 1:N `notes`, nou model `Nota`, `NotaDAO` amb consultes preparades PDO i `PDO::FETCH_KEY_PAIR` (sense problema N+1), control de permisos (autor / admin) i vistes. Enunciat a [`DWES/U4/U4_P2_CondeNoe/ENUNCIAT.md`](file:///f:/OneDrive%20-%20Conselleria%20d%27Educaci%C3%B3/2DAW/DWES/U4/U4_P2_CondeNoe/ENUNCIAT.md). |
+| **DWES** | `Autoavaluació U4` (Accés a dades) | ⏳ **Pendent** | Obert a Aules | Qüestionari d'autoavaluació de la Unitat 4 disponible a Aules |
 | **PIM** | `S03 Autoevaluació` (Test Disseny) | ✅ **Entregat** | Venciment: 07/10/2026 14:25 | Tramesa a Aules |
 | **PIM** | `S03 Tutorial Wireframe` (Balsamiq) | ✅ **Entregat** | Venciment: 07/10/2026 14:25 | Tramesa a Aules |
 | **PIM** | `Sprint 0 - Reto 1A` (Prep. Entrevista) | ✅ **Entregat** | Venciment: 13/10/2026 23:59 | Tramesa a Aules |
@@ -185,6 +188,9 @@
 * **UD4 — Utilització d'objectes en JavaScript (Del 26/10 al 06/11):**
   - Apunts UD4, exercicis fitxer extern `.js`, exercicis d'objectes (amb/sense solució).
   - Tasca puntuable UD4: 🟢 **Feta al 100% en local el 12/10/2026** (S'obri el 27/10/2026; codi `Libro.js` i `ud4_activitat_noeconde.pdf` enllestits per a pujar quan s'òbriga).
+* **Quadern de Repàs Integral DWEC (1a Avaluació):**
+  - Document d'estudi i síntesi completat a [`DWEC/temario_resumido.md`](file:///f:/OneDrive%20-%20Conselleria%20d%27Educaci%C3%B3/2DAW/DWEC/temario_resumido.md) (**7 de 7 blocs completats al 100%**).
+  - Inclou teoria condensada, bones pràctiques i 21 exercicis pràctics resolts (Motor JS, Variables/Mutabilitat, Control de flux, Bucles `for...of`/`for...in`, Funcions/Closures, Mètodes funcionals d'Array, String, Math, BOM/DOM, Events, `localStorage`/`JSON`, POO ES6 amb `#privat` i Asincronia amb `async`/`await`/`fetch` i Event Loop). Preparació completa per a l'examen presencial del 19–20 de novembre de 2026.
 
 ### 2. DWES — Desenvolupament Web en Entorn Servidor (Prof. Eloy Gutiérrez)
 * **General:** Presentació del mòdul, Guia didàctica (actualitzada 22/09), Temporalització (actualitzada 22/09).
@@ -211,10 +217,16 @@
     - Teoria i apunts oficials: `Unitat 4. Accés a dades URL` (id: 3671004).
     - Pràctiques i recursos:
       - `U4_P1. Exercicis URL` (id: 3671008).
-      - `U4_P1. ProjecteBase Fitxer` (id: 3674745) — Fitxer ZIP base proveït pel professor.
+      - `U4_P1. ProjecteBase [actualitzat] Fitxer` (id: 3674745) — Fitxer ZIP base proveït pel professor.
       - Bústia de lliurament: `Lliurament U4_P1. Exercicis Tasca` (id: 3671009) — ✅ **Completada i enllestida el 25/10/2026** (Venciment: dissabte, 21 de novembre 2026, 08:16). Projecte refactoritzat i provat, 9 captures oficials a `capturas/`, 2 diagrames d'ajuda a `diagrames/` i memòria maquetada a `U4_P1_CondeNoe/memoria.md`.
+      - `U4_P1. Projecte TechLeads Complet [Solució] Fitxer` (id: 3671010) — Solució oficial publicada pel professor.
+      - `U4_P2. Techleads_notes URL` (id: 3676639) — Enunciat oficial online.
+      - `U4_P2. ProjecteBase Fitxer` (id: 3676640) — Fitxer ZIP base proveït pel professor per a la pràctica U4_P2.
+      - Bústia de lliurament: `Lliurament U4_P2 Tasca` (id: 3676641) — S'ha obert el 21/09/2026 08:16, Venciment: dissabte, 21 de novembre 2026, 08:16.
+      - `Autoavaluació Unitat 4. Accés a dades Qüestionari` (id: 3671015) — Disponible a Aules.
   - **Documentació i apunts locals de suport:**
     - Document complet d'apunts a [`DWES/U4/U4_Acces_a_dades_Apunts.md`](file:///f:/OneDrive%20-%20Conselleria%20d%27Educaci%C3%B3/2DAW/DWES/U4/U4_Acces_a_dades_Apunts.md) (12 punts, 3.215 línies de teoria, codi pas a pas i diagrames).
+    - Enunciat oficial de la nova pràctica a [`DWES/U4/U4_P2_CondeNoe/ENUNCIAT.md`](file:///f:/OneDrive%20-%20Conselleria%20d%27Educaci%C3%B3/2DAW/DWES/U4/U4_P2_CondeNoe/ENUNCIAT.md).
     - Diagrames d'arquitectura a [`DWES/U4/media/`](file:///f:/OneDrive%20-%20Conselleria%20d%27Educaci%C3%B3/2DAW/DWES/U4/media/) (`u4_arquitectura.png`, `u4_fluxe_dades.png`, `u4_DAO.png`).
   - **Contingut tècnic de la unitat:**
     1. *Entorn Docker:* Apache + PHP 8.5 + MySQL 8.4 + phpMyAdmin (`docker-compose.yml`, `Dockerfile`, volums de persistència).
@@ -239,6 +251,19 @@
     7. Captura final de `dashboard/leads.php`
     8. Captura final de `dashboard/lead.php`
     9. Captura final de `dashboard/editar.php`
+  - **Pràctica avaluable `U4_P2. TechLeads amb notes` (⏳ Pendent):**
+    - Enunciat detallat guardat a [`DWES/U4/U4_P2_CondeNoe/ENUNCIAT.md`](file:///f:/OneDrive%20-%20Conselleria%20d%27Educaci%C3%B3/2DAW/DWES/U4/U4_P2_CondeNoe/ENUNCIAT.md) i bústia a Aules oberta fins al 21/11/2026 a les 08:16.
+    - **Requisits tècnics i arquitectura a desenvolupar:**
+      1. *Base de dades:* Taula `notes` a `databases/base-de-dades.sql` (`id`, `lead_id` FK amb `ON DELETE CASCADE`, `usuari_id` FK, `text` VARCHAR(500), `data_creacio` TIMESTAMP) + 3 notes de prova repartides en 2 leads.
+      2. *Model:* `src/Model/Nota.php` (`App\Model`) amb camps, getters/setters i propietat per al nom de l'usuari autor.
+      3. *DAO:* `src/DAO/NotaDAO.php` (`App\DAO`) amb mètodes `insert`, `findByLead` (amb `JOIN usuaris`), `findById`, `delete`, i `comptarPerLead` (agrupació amb `PDO::FETCH_KEY_PAIR` per evitar el problema de les N+1 consultes).
+      4. *Bootstrap:* Registre de `NotaDAO` a `config/bootstrap.php`.
+      5. *Controladors i Vistes:*
+         - `public/dashboard/lead.php`: Mostrar historial de notes i formulari d'afegir nota.
+         - `public/dashboard/afegir_nota.php`: POST, validació de sessió, text obligatori (<500 caràcters), autor des de la sessió, patró PRG.
+         - `public/dashboard/eliminar_nota.php`: POST, validació de sessió i permisos (només autor o admin).
+         - `public/dashboard/leads.php`: Columna addicional amb el recompte de notes per lead.
+      6. *Seguretat:* Consultes preparades obligatòries, escapament amb `e()`, protecció `requereixLogin()`, accions destructives estrictament per POST.
 
 
 ### 3. DaW — Desplegament d'Aplicacions Web (Prof. Juan Ramón Collado)
