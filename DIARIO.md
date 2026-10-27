@@ -1,7 +1,7 @@
 # 📘 DIARI DE SEGUIMENT — 2n DAW (Semipresencial)
 > **Alumne:** Noé Conde Vila  
 > **Centre:** IES Maria Enríquez (Gandia) — Curs 2026/2027  
-> **Última actualització:** 26 d'octubre de 2026  
+> **Última actualització:** 27 d'octubre de 2026  
 
 ---
 
@@ -16,7 +16,7 @@
 | **DIW** | `S04_PR1` (CafeNet_Pico_FA) | ✅ **Entregat** | Venciment: 24/10/2026 21:36 | 4 pàgines HTML5, Pico.css, FA, validat W3C |
 | **DIW** | `Playground1` (Selectores Simples) | ✅ **Fet** | Venciment: 15/10/2026 23:37 | Voluntari completat |
 | **DIW** | `S06_PR1` (CV CSS) | ✅ **Entregat** | Venciment: 02/11/2026 23:59 | Maquetació Mobile First, conmutador formal.css / diver.css, Google Fonts (@import), @font-face local (Righteous), pattern amb background-attachment: fixed, checklist complet de selectors avançats i validació W3C |
-| **DaW** | `PEC1` (Apache, Nginx, SSH, U1) | ✅ **Entregat** | Venciment: 18/10/2026 23:59 | Tramesa a Aules |
+| **DaW** | `PEC1` (Apache, Nginx, SSH, U1) | ✅ **Entregat (8/10)** | Venciment: 18/10/2026 23:59 | Qualificat: 8,00/10. Feedback: P4 configuració de ports dels vhosts |
 | **DaW** | `PEC2` (Docker i desplegaments, U2) | ✅ **Entregat** | Venciment: 25/10/2026 23:59 | Tramesa a Aules |
 | **DaW** | `PEC3` (Docker avançat, U3) | ✅ **Entregat** | Venciment: 08/11/2026 23:59 | PDF generat i llest per a Aules (Compose + K8s 3 rèpliques) |
 | **DWEC** | `UD1 Activitat` (Arquitectura Web) | ✅ **Entregat** | Obert: 14/09/2026 | Tramesa a Aules |
@@ -25,8 +25,8 @@
 | **DWEC** | `UD2 Qüestionari` | ✅ **Fet** | Obert: 21/09/2026 | Test superat a Aules |
 | **DWEC** | `UD3 Qüestionari` | ✅ **Fet** | Fet el 30/09/2026 | Test superat a Aules (10/10) |
 | **DWEC** | `UD3 Activitat puntuable` | ✅ **Entregat** | Obert: 11/10/2026 | Tramesa a Aules (Codi i memòria) |
-| **DWEC** | `UD4 Activitat puntuable` | 🟢 **Fet (Pendent d'obertura)** | S'obri: 27/10/2026 00:47 | Feta al 100% en local (`Libro.js` i PDF llestos per pujar) |
-| **DWEC** | `UD4 Qüestionari` | ⏳ **Pendent** | Per confirmar | Cüestionari d'avaluació UD4 |
+| **DWEC** | `UD4 Activitat puntuable` | ✅ **Entregat** | Obert: 27/10/2026 00:47 | Tramesa a Aules realitzada (`Libro.js` i memòria `ud4_activitat_noeconde.pdf`) |
+| **DWEC** | `UD4 Qüestionari` | ✅ **Fet** | Fet el 27/10/2026 | Test superat a Aules (10/10) |
 | **DWEC** | `Repàs Integral 1a Avaluació` | ✅ **Completat** | Finalitzat el 26/10/2026 | 7 de 7 blocs completats amb exercicis pràctics resolts a [`temario_resumido.md`](file:///f:/OneDrive%20-%20Conselleria%20d%27Educaci%C3%B3/2DAW/DWEC/temario_resumido.md) per a preparar l'examen presencial (19-20 nov). |
 | **DWES** | `U1_P1 Docker` (Entorn LAMP) | ✅ **Entregat** | Venciment: 30/11/2026 12:04 | Tramesa a Aules |
 | **DWES** | `Autoavaluació U1` (Introducció) | ✅ **Fet** | Obert: 16/09/2026 | Test superat a Aules |
@@ -39,15 +39,16 @@
 | **DWES** | `U3_P2 Miniprojecte` (TechLeads) | ✅ **Entregat** | Venciment: 28/11/2026 09:56 | Miniprojecte PHP complet: formulari públic, panell intern, sessions, classes, pujada fitxers (`DWES/U3/projecte-final-techleads/`). Tramesa a Aules completada. |
 | **DWES** | `U4_P1 Exercicis` (Accés a dades) | ✅ **Entregat** | Venciment: 21/11/2026 08:16 | Pràctica avaluable U4 enllestida al 100%. Codi complet (Docker, MySQL 8.4, DAOs, PDO, patró PRG, CRUD complet, login BBDD), 9 captures oficials a `capturas/`, 2 diagrames a `diagrames/` i memòria maquetada a `U4_P1_CondeNoe/memoria.md`. |
 | **DWES** | `U4_P2 TechLeads amb notes` | ⏳ **Pendent** | Venciment: 21/11/2026 08:16 | Pràctica avaluable U4.2: relació 1:N `notes`, nou model `Nota`, `NotaDAO` amb consultes preparades PDO i `PDO::FETCH_KEY_PAIR` (sense problema N+1), control de permisos (autor / admin) i vistes. Enunciat a [`DWES/U4/U4_P2_CondeNoe/ENUNCIAT.md`](file:///f:/OneDrive%20-%20Conselleria%20d%27Educaci%C3%B3/2DAW/DWES/U4/U4_P2_CondeNoe/ENUNCIAT.md). |
-| **DWES** | `Autoavaluació U4` (Accés a dades) | ⏳ **Pendent** | Obert a Aules | Qüestionari d'autoavaluació de la Unitat 4 disponible a Aules |
+| **DWES** | `Autoavaluació U4` (Accés a dades) | ✅ **Fet** | Fet el 27/10/2026 | Test superat a Aules |
 | **PIM** | `S03 Autoevaluació` (Test Disseny) | ✅ **Entregat** | Venciment: 07/10/2026 14:25 | Tramesa a Aules |
 | **PIM** | `S03 Tutorial Wireframe` (Balsamiq) | ✅ **Entregat** | Venciment: 07/10/2026 14:25 | Tramesa a Aules |
 | **PIM** | `Sprint 0 - Reto 1A` (Prep. Entrevista) | ✅ **Entregat** | Venciment: 13/10/2026 23:59 | Tramesa a Aules |
 | **PIM** | `Sprint 0 - Reto 1B` (Realització Entrevista) | ✅ **Fet** | **14/10/2026** | Sessió TEAMS realitzada amb el client Quique Savall |
-| **PIM** | `Sprint 0 - Reto 1C` (Document Specs) | ✅ **Entregat** | Venciment: 19/10/2026 23:59 | Document formal de specs a `PIM/Sprint0/exercicis/Sprint 0_Reto_1C_CondeNoe.pdf` trames a Aules |
-| **PIM** | `Sprint 0 - Reto 2` (Repositori GIT DAW) | ✅ **Entregat** | Venciment: 19/10/2026 23:59 | Tramesa a Aules |
-| **PIM** | `Sprint 0 - Reto 4` (DWS BBDD) | ✅ **Entregat** | Venciment: 19/10/2026 23:59 | Document i model ER a `PIM/Sprint0/exercicis/Sprint0_Reto4_CondeNoe.pdf` trames a Aules |
-| **PIM** | `Sprint 0 - Entrega Final` | 🟢 **Fet (A la recambra)** | Venciment: 08/11/2026 14:25 | Memòria i PDF maquetats a 14 pàgines (`Sprint0_EntregaFinal_CondeNoe.pdf`). Llest per a trametre a Aules quan arribe la data. |
+| **PIM** | `Sprint 0 - Reto 1C` (Document Specs) | ✅ **Entregat** | Venciment: 20/10/2026 23:59 | Document formal de specs a `PIM/Sprint0/exercicis/Sprint 0_Reto_1C_CondeNoe.pdf` trames a Aules |
+| **PIM** | `Sprint 0 - Reto 2` (Repositori GIT DAW) | ✅ **Entregat** | Venciment: 25/10/2026 23:59 | Tramesa a Aules |
+| **PIM** | `Sprint 0 - Reto 3` (Estudi Previ UI Web) | ✅ **Entregat** | Venciment: 30/10/2026 23:59 | Document específic a `PIM/Sprint0/exercicis/Sprint0_Reto3_CondeNoe.pdf` (Mapa web, wireframes mòbil/PC, colors, fonts i logo). Tramesa a Aules completada. |
+| **PIM** | `Sprint 0 - Reto 4` (DWS BBDD) | ✅ **Entregat** | Venciment: 01/11/2026 23:59 | Document i model ER a `PIM/Sprint0/exercicis/Sprint0_Reto4_CondeNoe.pdf` trames a Aules |
+| **PIM** | `Sprint 0 - Entrega Final` | ✅ **Entregat** | Venciment: 07/11/2026 14:00 | Memòria i PDF maquetats a 14 pàgines (`Sprint0_EntregaFinal_CondeNoe.pdf`). Tramesa a Aules completada. |
 | **PIM** | `Sprint 1 a Final` (App AgriVall) | ⏳ *Futur* | S09 a S40 | Estudi complet i desenvolupament d'App AgriVall |
 
 ---
@@ -159,9 +160,11 @@
   - **S05 Playground1 (Voluntari):** ✅ **Completat** (Autoaprenentatge realitzat).
 * **PIM (Projecte Intermodular):**
   - **Sprint 0 - Reto 1B (Entrevista Teams):** **14 d'Octubre de 2026 al migdia**.
-  - **Venciment Reto 1C (Specs):** **18 d'Octubre de 2026, 23:59**.
-  - **Reto 2 (Repo Git):** ✅ **Entregat** (Tramesa a Aules feta).
-  - **Venciment Sprint 0 Final:** **8 de Novembre de 2026, 14:25**.
+  - **Venciment Reto 1C (Specs):** **20 d'Octubre de 2026, 23:59** (✅ Entregat).
+  - **Reto 2 (Repo Git):** **25 d'Octubre de 2026, 23:59** (✅ Entregat).
+  - **Venciment Reto 3 (Estudi Previ UI Web):** **30 d'Octubre de 2026, 23:59** (🟢 Fet en Part 1 de la memòria final).
+  - **Venciment Reto 4 (BBDD):** **1 de Novembre de 2026, 23:59** (✅ Entregat).
+  - **Venciment Sprint 0 Final:** **7 de Novembre de 2026, 14:00** (🟢 Fet a la recambra).
 * **DWES (Servidor):**
   - **Venciment U2_P1 (PHP Bàsic):** **21 de Novembre de 2026, 08:16**.
   - **Venciment U3_P1 (PHP Avançat):** **21 de Novembre de 2026, 08:16**.
@@ -186,8 +189,8 @@
   - Qüestionari UD3: Superat a Aules (9/10) el 30/09/2026.
   - Tasca puntuable UD3: ✅ **Entregada a Aules el 12/10/2026** (Codi `analizaNumeros.js` i memòria `ud3_activitat_noeconde.md` tramesos).
 * **UD4 — Utilització d'objectes en JavaScript (Del 26/10 al 06/11):**
-  - Apunts UD4, exercicis fitxer extern `.js`, exercicis d'objectes (amb/sense solució).
-  - Tasca puntuable UD4: 🟢 **Feta al 100% en local el 12/10/2026** (S'obri el 27/10/2026; codi `Libro.js` i `ud4_activitat_noeconde.pdf` enllestits per a pujar quan s'òbriga).
+  - Tasca puntuable UD4: ✅ **Entregada a Aules el 27/10/2026** (Codi `Libro.js` i memòria `ud4_activitat_noeconde.pdf` tramesos).
+  - Qüestionari UD4: ✅ **Fet el 27/10/2026** (Test superat a Aules amb 10/10).
 * **Quadern de Repàs Integral DWEC (1a Avaluació):**
   - Document d'estudi i síntesi completat a [`DWEC/temario_resumido.md`](file:///f:/OneDrive%20-%20Conselleria%20d%27Educaci%C3%B3/2DAW/DWEC/temario_resumido.md) (**7 de 7 blocs completats al 100%**).
   - Inclou teoria condensada, bones pràctiques i 21 exercicis pràctics resolts (Motor JS, Variables/Mutabilitat, Control de flux, Bucles `for...of`/`for...in`, Funcions/Closures, Mètodes funcionals d'Array, String, Math, BOM/DOM, Events, `localStorage`/`JSON`, POO ES6 amb `#privat` i Asincronia amb `async`/`await`/`fetch` i Event Loop). Preparació completa per a l'examen presencial del 19–20 de novembre de 2026.
@@ -223,7 +226,7 @@
       - `U4_P2. Techleads_notes URL` (id: 3676639) — Enunciat oficial online.
       - `U4_P2. ProjecteBase Fitxer` (id: 3676640) — Fitxer ZIP base proveït pel professor per a la pràctica U4_P2.
       - Bústia de lliurament: `Lliurament U4_P2 Tasca` (id: 3676641) — S'ha obert el 21/09/2026 08:16, Venciment: dissabte, 21 de novembre 2026, 08:16.
-      - `Autoavaluació Unitat 4. Accés a dades Qüestionari` (id: 3671015) — Disponible a Aules.
+      - `Autoavaluació Unitat 4. Accés a dades Qüestionari` (id: 3671015) — ✅ **Fet el 27/10/2026** (Superat a Aules).
   - **Documentació i apunts locals de suport:**
     - Document complet d'apunts a [`DWES/U4/U4_Acces_a_dades_Apunts.md`](file:///f:/OneDrive%20-%20Conselleria%20d%27Educaci%C3%B3/2DAW/DWES/U4/U4_Acces_a_dades_Apunts.md) (12 punts, 3.215 línies de teoria, codi pas a pas i diagrames).
     - Enunciat oficial de la nova pràctica a [`DWES/U4/U4_P2_CondeNoe/ENUNCIAT.md`](file:///f:/OneDrive%20-%20Conselleria%20d%27Educaci%C3%B3/2DAW/DWES/U4/U4_P2_CondeNoe/ENUNCIAT.md).
@@ -267,8 +270,10 @@
 
 
 ### 3. DaW — Desplegament d'Aplicacions Web (Prof. Juan Ramón Collado)
-* **General:** Guia didàctica, Presentació, Calendari de tutories col·lectives (TCs).
-* **U1 — Introducció al desplegament i arquitectura C-S:** Apunts U1, Vídeo pràctica 1 i xarxes de la MV. Pràctica `PEC1` (✅ **Entregat**).
+* **U1 — Introducció al desplegament i arquitectura C-S:**
+  - Apunts U1, Vídeo pràctica 1 i xarxes de la MV.
+  - Pràctica `PEC1`: ✅ **Entregada (Qualificació: 8,00 / 10,00)**.
+  - 🔄 **Tasca de repàs i millora (pràctica d'examen):** Repassar i refer l'Exercici 4 de la PEC1 configurant els 4 vhosts basats en nom de domini utilitzant **només 2 ports en total** (Port 80 en Nginx per a `sitio1.daw` i `sitio2.daw`, i Port 8080 en Apache per a `apache1.daw` i `apache2.daw` amb `ServerName`). Guardar i reentregar si el professor ho admet.
 * **U2 — Introducció a Docker i desplegaments en local:**
   - Diapositives `U2 - Introd. docker.pdf` i vídeos de Juanra Collado.
   - Exercicis pràctics organitzats a [DaW/S02/ejercicios_practica/](file:///c:/Users/ncond/OneDrive%20-%20Conselleria%20d%27Educaci%C3%B3/2DAW/DaW/S02/ejercicios_practica/README.md).
@@ -300,11 +305,11 @@
     - `RESUMEN DE RETOS y TAREAS DE SPRINT 0` (Recursos a Aules).
     - **Reto 1A (Preparació d'Entrevista Usuari):** ✅ **Entregat** (Venciment: 13/10/2026).
     - **Reto 1B (Realització Entrevista):** ✅ **Completat**. Sessió virtual realitzada per TEAMS amb el client/professor Quique Savall i document de notes en brut consolidat a [`PIM/Sprint0/notes_entrevista_sprint0.md`](file:///f:/OneDrive%20-%20Conselleria%20d'Educaci%C3%B3/2DAW/PIM/Sprint0/notes_entrevista_sprint0.md) (registre de preguntes d'alumnes, respostes de negoci/meteo/IA i calaix d'extracció de requisits).
-    - **Reto 1C (Document Specs: Funcionals, Visuals, Tècniques, Legals):** ✅ **Entregat**. Document formal d'especificacions de requisits (SRS) finalitzat i maquetat en PDF a [`PIM/Sprint0/exercicis/Sprint 0_Reto_1C_CondeNoe.pdf`](file:///f:/OneDrive%20-%20Conselleria%20d'Educaci%C3%B3/2DAW/PIM/Sprint0/Sprint%200_Reto_1C_CondeNoe.pdf) (fidel a Quique, estructura paginada neta, 7 RF principals, 4 RV, 4 RT, 2 RL, bloc de futures versions i matriu MoSCoW completa). Tramesa a Aules completada.
-    - **Reto 2 (Repositori GIT DAW):** ✅ **Entregat** (Tramesa a Aules completada).
-    - **Reto 3 (Estudi Previ Interfície Web - Mòdul DIW):** Integrat en Sprint 0.
-    - **Reto 4 (Estudi de les Dades de l'App - Mòdul DWES):** ✅ **Entregat** (RETO4 DWS BBDD, tramesa a Aules completada amb model ER en PDF).
-    - **Entrega Final Sprint 0:** ⏳ **Venciment: diumenge, 8 de novembre 2026, 14:25**.
+    - **Reto 1C (Document Specs: Funcionals, Visuals, Tècniques, Legals):** ✅ **Entregat** (Venciment: dimarts, 20/10/2026 23:59). Document formal d'especificacions de requisits (SRS) finalitzat i maquetat en PDF a [`PIM/Sprint0/exercicis/Sprint 0_Reto_1C_CondeNoe.pdf`](file:///f:/OneDrive%20-%20Conselleria%20d'Educaci%C3%B3/2DAW/PIM/Sprint0/Sprint%200_Reto_1C_CondeNoe.pdf). Tramesa a Aules completada.
+    - **Reto 2 (Repositori GIT DAW):** ✅ **Entregat** (Venciment: diumenge, 25/10/2026 23:59). Tramesa a Aules completada.
+    - **Reto 3 (Estudi Previ Interfície Web - Mòdul DIW):** ✅ **Entregat** (Venciment: divendres, 30/10/2026 23:59). Document maquetat a [`PIM/Sprint0/exercicis/Sprint0_Reto3_CondeNoe.md`](file:///f:/OneDrive%20-%20Conselleria%20d'Educaci%C3%B3/2DAW/PIM/Sprint0/exercicis/Sprint0_Reto3_CondeNoe.md) i PDF tramès a Aules.
+    - **Reto 4 (Estudi de les Dades de l'App - Mòdul DWES):** ✅ **Entregat** (Venciment: diumenge, 01/11/2026 23:59). RETO4 DWS BBDD trames a Aules amb model ER en PDF.
+    - **Entrega Final Sprint 0:** ✅ **Entregat** (Venciment: dissabte, 7 de novembre 2026, 14:00). Memòria consolidada de 14 pàgines a [`Sprint0_EntregaFinal_CondeNoe.pdf`](file:///f:/OneDrive%20-%20Conselleria%20d'Educaci%C3%B3/2DAW/PIM/Sprint0/Sprint0_EntregaFinal_CondeNoe.pdf). Tramesa a Aules completada.
   - **Sprint 1 (S09 a S12):** Estudi complet de la nova App (*No disponible encara*).
   - **Sprint 2 (S14 a S23):** Inici del desenvolupament d'App AgriVall (*No disponible encara*).
   - **Sprint Final (S25 a S40):** Entrega final de l'App (*No disponible encara*).
