@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <!-- ==========================================================================
+         PLANTILLA ESQUELETO LIMPIA (SIN CONTENIDO MOCK) — EXAMEN DIW
+         Autor: Noé Conde Vila | 2º DAW Semipresencial | IES Maria Enríquez
+         Profesor: Quique Savall
+         ========================================================================== -->
+    
+    <!-- 1. CODIFICACIÓN Y VIEWPORT (OBLIGATORIOS PARA VALIDACIÓN W3C) -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- 2. TÍTULO DE LA PÁGINA (Reemplazar según el enunciado) -->
+    <title>[Título de la Web / Proyecto del Examen]</title>
+    
+    <!-- 3. METADATOS DE AUTORÍA Y SEO -->
+    <meta name="author" content="Noé Conde Vila">
+    <meta name="description" content="[Breve descripción de la web según el examen]">
+    <meta name="keywords" content="[palabra1, palabra2, palabra3]">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#2563eb">
+    
+    <!-- 4. GOOGLE FONTS (Preconnect de alto rendimiento) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- 5. VÍNCULO A LA HOJA DE ESTILOS MODULAR -->
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+
+    <!-- ==========================================================================
+         CABECERA DEL SITIO (HEADER) + BARRA DE NAVEGACIÓN (NAV)
+         ========================================================================== -->
+    <header class="cabecera-sitio">
+        <div class="contenedor nav-contenedor">
+            <!-- Logo o Marca Principal -->
+            <a href="#inicio" class="logo-marca">
+                <!-- OPCIÓN A: Logo con texto + icono emoji -->
+                <span class="logo-icono">🌐</span> [Nombre Marca/Logo]
+
+                <!-- OPCIÓN B: Logo con imagen gráfica (Descomentar si te dan archivo y borrar la opción A) -->
+                <!-- <img src="img/logo.png" alt="Logotipo oficial" class="logo-img"> -->
+            </a>
+
+            <!-- Navegación Semántica (ul > li > a) -->
+            <nav class="navbar" aria-label="Navegación principal">
+                <ul class="nav-enlaces">
+                    <li><a href="#inicio">[Inicio]</a></li>
+                    <li><a href="#seccion-cards">[Sección 1]</a></li>
+                    <li><a href="#seccion-tabla">[Sección 2]</a></li>
+                    <li><a href="#contacto">[Contacto]</a></li>
+                    <!-- Enlace externo (Demuestra selector a[href^="http"]::after con flecha ↗) -->
+                    <li><a href="https://validator.w3.org" target="_blank" rel="noopener">[Enlace Externo]</a></li>
+                </ul>
+            </nav>
+
+            <!-- Botón de Acción en Cabecera (Opcional, borrar si no lo piden) -->
+            <div class="nav-acciones">
+                <a href="#contacto" class="btn btn-sm btn-primary">[Acción Rápida]</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- ==========================================================================
+         CONTENIDO PRINCIPAL (MAIN — Solo 1 único <main> por página)
+         ========================================================================== -->
+    <main>
+
+        <!-- ======================================================================
+             SECCIÓN HERO / PORTADA (Con el único <h1> del documento)
+             ====================================================================== -->
+        <section id="inicio" class="hero">
+            <div class="contenedor hero-contenido">
+                <!-- REGLA DE ORO W3C: Solo 1 elemento <h1> por documento -->
+                <h1 class="hero-titulo">
+                    <!-- OPCIÓN ICONO EN H1: <img src="img/icono.png" alt="" class="icono-titulo"> -->
+                    [Título Principal H1 del Sitio Web]
+                </h1>
+                <p class="hero-subtitulo">
+                    [Subtítulo explicativo o lema del proyecto con <strong>texto destacado</strong>.]
+                </p>
+                <div class="hero-botones">
+                    <a href="#seccion-cards" class="btn btn-primary">[Botón Principal]</a>
+                    <a href="#contacto" class="btn btn-outline">[Botón Secundario]</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ======================================================================
+             SECCIÓN 1: GRID DE TARJETAS / ARTÍCULOS (CSS GRID RESPONSIVE)
+             ====================================================================== -->
+        <section id="seccion-cards" class="seccion-servicios">
+            <div class="contenedor">
+                <div class="seccion-encabezado">
+                    <h2>
+                        <!-- OPCIÓN ICONO EN TÍTULO H2: <img src="img/icono-seccion.png" alt="" class="icono-titulo"> -->
+                        [Título de Sección con H2]
+                    </h2>
+                    <!-- Hermano adyacente (h2 + p) para estilos tipográficos -->
+                    <p>[Subtítulo breve describiendo el contenido de las tarjetas a continuación.]</p>
+                </div>
+
+                <!-- Contenedor Grid con columnas automáticas (repeat(auto-fit, minmax(280px, 1fr))) -->
+                <div class="grid-cards">
+                    
+                    <!-- Tarjeta 1 (Con soporte para imagen real, fondo o SVG) -->
+                    <article class="card">
+                        <div class="card-badge">[Destacado / Nuevo]</div>
+                        
+                        <div class="card-imagen-caja">
+                            <!-- OPCIÓN 1: Imagen real con etiqueta <img> (La habitual si dan archivos jpg/png) -->
+                            <!-- <img src="img/foto1.jpg" alt="Descripción de la imagen" class="card-img"> -->
+
+                            <!-- OPCIÓN 2: Cabecera con imagen de fondo CSS (Estilo banner) -->
+                            <!-- <div class="card-header-bg" style="background-image: url('img/foto1.jpg');"></div> -->
+
+                            <!-- OPCIÓN 3: SVG contenedor de muestra (Placeholder sin archivos externos) -->
+                            <svg class="card-svg" viewBox="0 0 400 220" role="img" aria-label="Espacio para imagen">
+                                <rect width="100%" height="100%" fill="#e0e7ff"/>
+                                <text x="50%" y="50%" font-size="18" font-family="'Outfit', sans-serif" font-weight="700" fill="#3730a3" text-anchor="middle" dominant-baseline="middle">[Imagen / Ilustración 1]</text>
+                            </svg>
+                        </div>
+                        <div class="card-cuerpo">
+                            <h3>
+                                <!-- OPCIÓN ICONO EN CARD: <img src="img/icono-card.png" alt="" class="icono-titulo"> -->
+                                [Título de Tarjeta 1]
+                            </h3>
+                            <p>[Descripción del elemento, servicio o producto.]</p>
+                            <ul class="lista-detalles">
+                                <li>[Característica A]</li>
+                                <li>[Característica B]</li>
+                                <li>[Característica C]</li>
+                            </ul>
+                            <a href="#contacto" class="btn btn-block btn-outline">[Acción de Tarjeta]</a>
+                        </div>
+                    </article>
+
+                    <!-- Tarjeta 2 -->
+                    <article class="card">
+                        <div class="card-imagen-caja">
+                            <svg class="card-svg" viewBox="0 0 400 220" role="img" aria-label="Espacio para imagen">
+                                <rect width="100%" height="100%" fill="#ccfbf1"/>
+                                <text x="50%" y="50%" font-size="18" font-family="'Outfit', sans-serif" font-weight="700" fill="#115e59" text-anchor="middle" dominant-baseline="middle">[Imagen / Ilustración 2]</text>
+                            </svg>
+                        </div>
+                        <div class="card-cuerpo">
+                            <h3>[Título de Tarjeta 2]</h3>
+                            <p>[Descripción del elemento, servicio o producto.]</p>
+                            <ul class="lista-detalles">
+                                <li>[Característica A]</li>
+                                <li>[Característica B]</li>
+                                <li>[Característica C]</li>
+                            </ul>
+                            <a href="#contacto" class="btn btn-block btn-outline">[Acción de Tarjeta]</a>
+                        </div>
+                    </article>
+
+                    <!-- Tarjeta 3 -->
+                    <article class="card">
+                        <div class="card-badge card-badge-nuevo">[Etiqueta 2]</div>
+                        <div class="card-imagen-caja">
+                            <svg class="card-svg" viewBox="0 0 400 220" role="img" aria-label="Espacio para imagen">
+                                <rect width="100%" height="100%" fill="#fef3c7"/>
+                                <text x="50%" y="50%" font-size="18" font-family="'Outfit', sans-serif" font-weight="700" fill="#92400e" text-anchor="middle" dominant-baseline="middle">[Imagen / Ilustración 3]</text>
+                            </svg>
+                        </div>
+                        <div class="card-cuerpo">
+                            <h3>[Título de Tarjeta 3]</h3>
+                            <p>[Descripción del elemento, servicio o producto.]</p>
+                            <ul class="lista-detalles">
+                                <li>[Característica A]</li>
+                                <li>[Característica B]</li>
+                                <li>[Característica C]</li>
+                            </ul>
+                            <a href="#contacto" class="btn btn-block btn-outline">[Acción de Tarjeta]</a>
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ======================================================================
+             SECCIÓN 2: TABLA DE DATOS SEMÁNTICA (W3C Estricto)
+             ====================================================================== -->
+        <section id="seccion-tabla" class="seccion-precios">
+            <div class="contenedor">
+                <div class="seccion-encabezado">
+                    <h2>[Título de la Sección de Datos / Tabla]</h2>
+                    <p>[Descripción breve de la información tabular que se muestra a continuación.]</p>
+                </div>
+
+                <div class="tabla-contenedor">
+                    <!-- REGLA W3C: Toda tabla debe tener caption, thead, tbody y opcional tfoot -->
+                    <table>
+                        <caption>[Título Accesible Obligatorio de la Tabla con caption]</caption>
+                        <thead>
+                            <tr>
+                                <th scope="col">[Encabezado 1]</th>
+                                <th scope="col">[Encabezado 2]</th>
+                                <th scope="col">[Encabezado 3]</th>
+                                <th scope="col">[Encabezado 4]</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">[Fila 1 - Clave]</th>
+                                <td>[Dato 1.1]</td>
+                                <td>[Dato 1.2]</td>
+                                <td>[Dato 1.3]</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">[Fila 2 - Clave]</th>
+                                <td>[Dato 2.1]</td>
+                                <td>[Dato 2.2]</td>
+                                <td>[Dato 2.3]</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">[Fila 3 - Clave]</th>
+                                <td>[Dato 3.1]</td>
+                                <td>[Dato 3.2]</td>
+                                <td>[Dato 3.3]</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">[Fila 4 - Clave]</th>
+                                <td><strong>[Resultado / Total 1]</strong></td>
+                                <td><strong>[Resultado / Total 2]</strong></td>
+                                <td><strong>[Resultado / Total 3]</strong></td>
+                            </tr>
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                                <td colspan="4"><small>[* Nota al pie de la tabla, aclaraciones legales o fuentes de datos.]</small></td>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- ======================================================================
+             SECCIÓN 3: FORMULARIO COMPLETO Y ACCESIBLE (Todos los tipos de input)
+             ====================================================================== -->
+        <section id="contacto" class="seccion-contacto">
+            <div class="contenedor">
+                <div class="seccion-encabezado">
+                    <h2>[Título del Formulario]</h2>
+                    <p>[Instrucciones para el usuario al rellenar el formulario.]</p>
+                </div>
+
+                <div class="form-contenedor">
+                    <form action="#" method="post" class="formulario-estilizado" novalidate>
+                        
+                        <!-- BLOQUE 1: Datos Personales (Inputs de texto, email, tel, date) -->
+                        <fieldset>
+                            <legend>[1. Datos Personales y de Contacto]</legend>
+                            
+                            <!-- Fila doble a 2 columnas en pantallas medianas -->
+                            <div class="fila-doble">
+                                <div class="form-grupo">
+                                    <label for="campo-nombre">[Nombre Completo] <span class="obligatorio">*</span>:</label>
+                                    <input type="text" id="campo-nombre" name="nombre" required placeholder="[Escribe tu nombre...]" autocomplete="name">
+                                </div>
+                                <div class="form-grupo">
+                                    <label for="campo-email">[Correo Electrónico] <span class="obligatorio">*</span>:</label>
+                                    <input type="email" id="campo-email" name="email" required placeholder="correo@ejemplo.com" autocomplete="email">
+                                </div>
+                            </div>
+
+                            <div class="fila-doble">
+                                <div class="form-grupo">
+                                    <label for="campo-telefono">[Teléfono de Contacto]:</label>
+                                    <input type="tel" id="campo-telefono" name="telefono" pattern="[0-9]{9}" placeholder="612345678" autocomplete="tel">
+                                </div>
+                                <div class="form-grupo">
+                                    <label for="campo-fecha">[Fecha Requerida]:</label>
+                                    <input type="date" id="campo-fecha" name="fecha">
+                                </div>
+                            </div>
+                        </fieldset>
+
+                        <!-- BLOQUE 2: Opciones, Radios, Checks y Sliders -->
+                        <fieldset>
+                            <legend>[2. Opciones y Preferencias]</legend>
+
+                            <!-- Desplegable select -->
+                            <div class="form-grupo">
+                                <label for="campo-select">[Seleccionar Categoría / Tipo]:</label>
+                                <select id="campo-select" name="categoria" required>
+                                    <option value="" disabled selected>[Selecciona una opción...]</option>
+                                    <option value="opcion1">[Opción 1]</option>
+                                    <option value="opcion2">[Opción 2]</option>
+                                    <option value="opcion3">[Opción 3]</option>
+                                </select>
+                            </div>
+
+                            <!-- Opciones tipo RADIO (Exclusivas: mismo 'name') -->
+                            <div class="form-grupo">
+                                <span class="label-titulo">[Modalidad de Selección Única]:</span>
+                                <div class="opciones-inline">
+                                    <label class="opcion-control" for="rad-opcion1">
+                                        <input type="radio" id="rad-opcion1" name="modalidad" value="opc1" checked>
+                                        [Opción Radio A]
+                                    </label>
+                                    <label class="opcion-control" for="rad-opcion2">
+                                        <input type="radio" id="rad-opcion2" name="modalidad" value="opc2">
+                                        [Opción Radio B]
+                                    </label>
+                                </div>
+                            </div>
+
+                            <!-- Opciones tipo CHECKBOX (Múltiples selecciones) -->
+                            <div class="form-grupo">
+                                <span class="label-titulo">[Opciones de Selección Múltiple]:</span>
+                                <div class="opciones-inline">
+                                    <label class="opcion-control" for="chk-item1">
+                                        <input type="checkbox" id="chk-item1" name="items[]" value="item1" checked>
+                                        [Opción Check 1]
+                                    </label>
+                                    <label class="opcion-control" for="chk-item2">
+                                        <input type="checkbox" id="chk-item2" name="items[]" value="item2">
+                                        [Opción Check 2]
+                                    </label>
+                                    <label class="opcion-control" for="chk-item3">
+                                        <input type="checkbox" id="chk-item3" name="items[]" value="item3">
+                                        [Opción Check 3]
+                                    </label>
+                                </div>
+                            </div>
+
+                            <!-- Control tipo RANGO (Slider con output visual interactivo) -->
+                            <div class="form-grupo">
+                                <label for="campo-rango">[Valor Numérico / Rango]:</label>
+                                <div class="rango-contenedor">
+                                    <input type="range" id="campo-rango" name="rango" min="0" max="100" step="5" value="50" oninput="this.nextElementSibling.value = this.value">
+                                    <output>50</output>
+                                </div>
+                            </div>
+                        </fieldset>
+
+                        <!-- BLOQUE 3: Textarea y Checkbox Legal -->
+                        <fieldset>
+                            <legend>[3. Observaciones y Consentimiento]</legend>
+
+                            <div class="form-grupo">
+                                <label for="campo-mensaje">[Comentarios o Detalles Adicionales]:</label>
+                                <textarea id="campo-mensaje" name="mensaje" rows="4" placeholder="[Escribe aquí tus observaciones...]"></textarea>
+                            </div>
+
+                            <div class="form-grupo-check">
+                                <label class="opcion-control" for="chk-terminos">
+                                    <input type="checkbox" id="chk-terminos" name="terminos" required>
+                                    [Acepto los términos y condiciones y el tratamiento de mis datos personales.] <span class="obligatorio">*</span>
+                                </label>
+                            </div>
+                        </fieldset>
+
+                        <!-- Botones de Enviar y Reset -->
+                        <div class="form-botones">
+                            <button type="submit" class="btn btn-primary">[Enviar Formulario]</button>
+                            <button type="reset" class="btn btn-secondary">[Restablecer Campos]</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- ======================================================================
+             SECCIÓN 4: MULTIMEDIA Y CITAS (Figure, Figcaption, Blockquote)
+             ====================================================================== -->
+        <section id="seccion-multimedia" class="seccion-multimedia">
+            <div class="contenedor">
+                <div class="seccion-encabezado">
+                    <h2>[Título de Sección Multimedia / Citas]</h2>
+                    <p>[Descripción del contenido de apoyo visual.]</p>
+                </div>
+
+                <div class="multimedia-grid">
+                    <!-- Figura con ilustración / imagen y figcaption -->
+                    <figure class="figura-estilizada">
+                        <svg class="multimedia-svg" viewBox="0 0 600 350" role="img" aria-label="Espacio multimedia">
+                            <rect width="100%" height="100%" fill="#1e293b"/>
+                            <circle cx="300" cy="175" r="70" fill="#2563eb" opacity="0.4"/>
+                            <text x="50%" y="50%" font-size="20" font-family="'Outfit', sans-serif" font-weight="700" fill="#ffffff" text-anchor="middle">[Espacio Multimedia / Figura]</text>
+                        </svg>
+                        <figcaption>[Figura 1: Pie de foto descriptivo con figcaption.]</figcaption>
+                    </figure>
+
+                    <!-- Cita textual semántica con blockquote y cite -->
+                    <div class="cita-contenedor">
+                        <blockquote cite="https://ejemplo.com">
+                            «[Cita textual o frase destacada que sintetiza el proyecto o filosofía del sitio web.]»
+                        </blockquote>
+                        <p class="cita-autor">— <strong>[Nombre del Autor]</strong>, [Cargo o Institución]</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ==========================================================================
+         PIE DE PÁGINA (FOOTER — 3 Columnas + Copyright)
+         ========================================================================== -->
+    <footer class="pie-sitio">
+        <div class="contenedor pie-contenedor">
+            <div class="pie-columna">
+                <p class="pie-marca"><strong>[Nombre Marca/Empresa]</strong></p>
+                <p><small>[Breve texto descriptivo o dirección física.]</small></p>
+            </div>
+            
+            <div class="pie-columna">
+                <p class="pie-titulo-col"><strong>[Enlaces Rápidos]</strong></p>
+                <ul class="pie-lista">
+                    <li><a href="#inicio">[Volver al Inicio]</a></li>
+                    <li><a href="#seccion-cards">[Sección 1]</a></li>
+                    <li><a href="#seccion-tabla">[Sección 2]</a></li>
+                    <li><a href="#contacto">[Contacto]</a></li>
+                </ul>
+            </div>
+
+            <div class="pie-columna">
+                <p class="pie-titulo-col"><strong>[Avisos Legales]</strong></p>
+                <ul class="pie-lista">
+                    <li><a href="#privacidad">[Política de Privacidad]</a></li>
+                    <li><a href="#cookies">[Política de Cookies]</a></li>
+                    <li><a href="#accesibilidad">[Declaración Accesibilidad]</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="pie-copyright">
+            <div class="contenedor">
+                <p><small>&copy; 2026 Noé Conde Vila — IES Maria Enríquez (Gandia). Examen DIW.</small></p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

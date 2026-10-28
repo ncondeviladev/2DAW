@@ -1,0 +1,1118 @@
+@charset "utf-8";
+
+/* =============================================================================
+   PLANTILLA MAESTRA DE ESTILOS CSS3 — EXAMEN DIW
+   Autor: Noé Conde Vila | 2º DAW Semipresencial | IES Maria Enríquez (Gandia)
+   Profesor: Quique Savall
+   
+   ÍNDICE MODULAR:
+   1. Tipografías: @import y @font-face local
+   2. Reseteo Universal Moderno & Box Model
+   3. Variables CSS (:root Custom Properties / Sistema de Tokens)
+   4. Estilos Base, Body y Contenedor Mobile First
+   5. Tipografía y Jerarquía de Encabezados
+   6. Cabecera (Header) y Navegación Responsive con Flexbox
+   7. Sección Hero / Portada (Degradados y Sombras)
+   8. Componente Botones (.btn y sus variantes)
+   9. Sección Servicios / CSS Grid de Tarjetas (.card)
+   10. Sección Precios / Tabla de Datos Semántica y Accesible
+   11. Sección Contacto / Formulario Completo, Fieldsets y Controles
+   12. Sección Multimedia, Figure y Blockquote
+   13. Pie de Página (Footer) Multicolumna
+   14. Demostración de Selectores Avanzados y Pseudoclases
+   15. Media Queries (Enfoque Mobile First: 768px y 1024px)
+   16. Reglas de Impresión (@media print)
+   ============================================================================= */
+
+
+/* =============================================================================
+   1. TIPOGRAFÍAS (@import y @font-face)
+   =============================================================================
+   - @import: Solo para hojas de estilo web remotas (Google Fonts). Debe ir al inicio.
+   - @font-face: Para registrar archivos binarios (.ttf, .otf, .woff2) locales.
+   ============================================================================= */
+
+/* Fuente remota de respaldo por si no se carga desde el HTML */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@600;700;800&display=swap');
+
+/* Registro de fuente local descargada en la carpeta /fonts/ */
+@font-face {
+    font-family: 'RighteousLocal';
+    src: url('../fonts/Righteous-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap; /* Optimiza el renderizado evitando FOIT */
+}
+
+
+/* =============================================================================
+   2. RESETEO UNIVERSAL MODERNO & BOX MODEL
+   =============================================================================
+   - box-sizing: border-box asegura que padding y border NO ensanchen la caja.
+   - Eliminamos margin y padding por defecto de los navegadores.
+   ============================================================================= */
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth; /* Desplazamiento suave al pulsar enlaces internos # */
+    font-size: 100%;         /* Respeta el tamaño de fuente elegido por el usuario (16px base) */
+}
+
+
+/* =============================================================================
+   3. VARIABLES CSS (:root — TOKENS DE DISEÑO)
+   =============================================================================
+   REGLA DE EXAMEN: Si el enunciado pide cambiar los colores a "temática ecológica"
+   o "clínica médica", solo modificas estas variables y TODO el sitio cambia al instante.
+   ============================================================================= */
+
+:root {
+    /* --- Paleta de Colores Corporativa --- */
+    --color-primario: #2563eb;          /* Azul vibrante principal */
+    --color-primario-oscuro: #1d4ed8;   /* Para estados :hover y activos */
+    --color-primario-claro: #dbeafe;    /* Fondos suaves y destacados */
+    --color-secundario: #0ea5e9;        /* Celeste complementario */
+    --color-acento: #f59e0b;            /* Ámbar para badges y llamadas de atención */
+    --color-exito: #10b981;             /* Verde para estados válidos y confirmaciones */
+    --color-peligro: #ef4444;           /* Rojo para errores y campos obligatorios */
+
+    /* --- Escala de Grises y Fondos Neutros --- */
+    --color-fondo-app: #f8fafc;         /* Gris muy tenue para el fondo general */
+    --color-fondo-tarjeta: #ffffff;     /* Blanco puro para cards y contenedores */
+    --color-fondo-suave: #f1f5f9;       /* Gris claro para tablas y fieldsets */
+    --color-texto: #0f172a;             /* Gris pizarra muy oscuro para lectura cómoda (WCAG AAA) */
+    --color-texto-suave: #64748b;       /* Gris medio para subtítulos y metadatos */
+    --color-borde: #e2e8f0;             /* Gris claro para líneas y bordes limpios */
+    --color-borde-foco: #3b82f6;        /* Azul para anillo de accesibilidad :focus */
+
+    /* --- Familias Tipográficas --- */
+    --fuente-cuerpo: 'Inter', system-ui, -apple-system, sans-serif;
+    --fuente-titulos: 'Outfit', 'RighteousLocal', sans-serif;
+    --fuente-mono: ui-monospace, 'Courier New', monospace;
+
+    /* --- Escala Modular de Espaciados (en rem para diseño escalable) --- */
+    --espacio-3xs: 0.125rem; /* 2px */
+    --espacio-2xs: 0.25rem;  /* 4px */
+    --espacio-xs: 0.5rem;    /* 8px */
+    --espacio-sm: 0.75rem;   /* 12px */
+    --espacio-md: 1rem;      /* 16px */
+    --espacio-lg: 1.5rem;    /* 24px */
+    --espacio-xl: 2rem;      /* 32px */
+    --espacio-2xl: 3rem;     /* 48px */
+
+    /* --- Radios de Borde (Border Radius) --- */
+    --radio-sm: 6px;
+    --radio-md: 10px;
+    --radio-lg: 16px;
+    --radio-pill: 9999px;    /* Para botones redondeados y badges */
+
+    /* --- Sombras (Box Shadow) y Relieve --- */
+    --sombra-sm: 0 1px 3px rgba(15, 23, 42, 0.08);
+    --sombra-md: 0 4px 12px rgba(15, 23, 42, 0.08);
+    --sombra-lg: 0 10px 25px rgba(15, 23, 42, 0.12);
+    --sombra-elevada: 0 14px 28px rgba(37, 99, 235, 0.18);
+
+    /* --- Degradados (Gradients) --- */
+    --gradiente-hero: linear-gradient(135deg, #1e3a8a 0%, #2563eb 50%, #0284c7 100%);
+    --gradiente-boton: linear-gradient(135deg, #2563eb 0%, #0ea5e9 100%);
+    --gradiente-badge: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+
+    /* --- Transiciones Universales --- */
+    --transicion-rapida: 0.2s ease-in-out;
+    --transicion-media: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+
+/* =============================================================================
+   4. ESTILOS BASE, BODY Y CONTENEDOR MOBILE FIRST
+   =============================================================================
+   Enfoque Mobile First: Se diseña por defecto pensando en pantallas estrechas.
+   ============================================================================= */
+
+body {
+    font-family: var(--fuente-cuerpo);
+    font-size: 1rem;
+    line-height: 1.6;
+    color: var(--color-texto);
+    background-color: var(--color-fondo-app);
+    background-image: url("../img/pattern.png");
+    background-repeat: repeat;
+    background-attachment: fixed; /* El fondo se mantiene quieto al hacer scroll */
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column; /* Estructura sticky footer: header, main (flex-grow), footer */
+}
+
+/* El elemento main crece para empujar el footer siempre al final */
+main {
+    flex-grow: 1;
+}
+
+/* Prevenir desbordamientos horizontales por URLs largas o emails */
+p, td, a, blockquote {
+    word-break: break-word;
+    overflow-wrap: anywhere;
+}
+
+/* Enlaces base limpios con transición */
+a {
+    color: var(--color-primario);
+    text-decoration: none;
+    transition: color var(--transicion-rapida);
+}
+
+a:hover {
+    color: var(--color-primario-oscuro);
+    text-decoration: underline;
+}
+
+/* Imágenes y SVGs fluidos (Nunca deben desbordar su contenedor padre) */
+img, svg {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Contenedor central fluido con ancho máximo */
+.contenedor {
+    width: 100%;
+    max-width: 1140px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: var(--espacio-md);
+    padding-right: var(--espacio-md);
+}
+
+
+/* =============================================================================
+   5. TIPOGRAFÍA Y JERARQUÍA DE ENCABEZADOS
+   =============================================================================
+   REGLA DE SAVALL: Jerarquía estricta sin saltos (h1 > h2 > h3).
+   Un solo <h1> en todo el documento.
+   ============================================================================= */
+
+h1, h2, h3, h4 {
+    font-family: var(--fuente-titulos);
+    color: var(--color-texto);
+    line-height: 1.25;
+    font-weight: 700;
+}
+
+/* Encabezado genérico para cada sección temática */
+.seccion-encabezado {
+    text-align: center;
+    margin-bottom: var(--espacio-2xl);
+}
+
+.seccion-encabezado h2 {
+    font-size: 2rem;
+    margin-bottom: var(--espacio-xs);
+    position: relative;
+    display: inline-block;
+}
+
+/* Icono o imagen pequeña que acompaña a cualquier título (h1, h2, h3) */
+.icono-titulo {
+    display: inline-block;
+    width: 2rem;
+    height: 2rem;
+    vertical-align: middle;
+    margin-right: var(--espacio-xs);
+    object-fit: contain;
+}
+
+/* Línea decorativa inferior bajo los títulos h2 */
+.seccion-encabezado h2::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 4px;
+    background: var(--color-primario);
+    border-radius: var(--radio-pill);
+    margin: var(--espacio-xs) auto 0;
+}
+
+/* Selector hermano adyacente (h2 + p): párrafo de subtítulo */
+.seccion-encabezado h2 + p {
+    font-size: 1.1rem;
+    color: var(--color-texto-suave);
+    max-width: 680px;
+    margin: var(--espacio-sm) auto 0;
+}
+
+/* Separación entre secciones temáticas */
+section {
+    padding-top: var(--espacio-2xl);
+    padding-bottom: var(--espacio-2xl);
+}
+
+
+/* =============================================================================
+   6. CABECERA (HEADER) Y NAVEGACIÓN RESPONSIVE CON FLEXBOX
+   ============================================================================= */
+
+.cabecera-sitio {
+    background-color: var(--color-fondo-tarjeta);
+    border-bottom: 1px solid var(--color-borde);
+    box-shadow: var(--sombra-sm);
+    position: sticky;
+    top: 0;
+    z-index: 100; /* Asegura que la cabecera quede siempre por encima al hacer scroll */
+}
+
+/* Contenedor flexible de la cabecera */
+.nav-contenedor {
+    display: flex;
+    flex-direction: column; /* Mobile: En columna para pantallas estrechas */
+    align-items: center;
+    gap: var(--espacio-md);
+    padding-top: var(--espacio-sm);
+    padding-bottom: var(--espacio-sm);
+}
+
+/* Logotipo de la marca */
+.logo-marca {
+    font-family: var(--fuente-titulos);
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: var(--color-primario);
+    display: flex;
+    align-items: center;
+    gap: var(--espacio-xs);
+    text-decoration: none !important;
+}
+
+.logo-icono {
+    font-size: 1.4rem;
+}
+
+/* Imagen gráfica para logotipo en cabecera (descomentar si te dan imagen de logo) */
+.logo-img {
+    max-height: 42px;
+    width: auto;
+    object-fit: contain;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+/* Lista de enlaces de navegación (ul > li > a) */
+.nav-enlaces {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap; /* Permite saltar de línea en móviles */
+    justify-content: center;
+    gap: var(--espacio-xs) var(--espacio-md);
+}
+
+.nav-enlaces a {
+    color: var(--color-texto);
+    font-weight: 500;
+    font-size: 0.95rem;
+    padding: var(--espacio-xs) var(--espacio-sm);
+    border-radius: var(--radio-sm);
+    transition: background-color var(--transicion-rapida), color var(--transicion-rapida);
+}
+
+.nav-enlaces a:hover {
+    background-color: var(--color-primario-claro);
+    color: var(--color-primario-oscuro);
+    text-decoration: none;
+}
+
+
+/* =============================================================================
+   7. SECCIÓN HERO / PORTADA
+   =============================================================================
+   Contiene el único <h1>, degradado visual y llamadas a la acción (CTA).
+   ============================================================================= */
+
+.hero {
+    background: var(--gradiente-hero);
+    color: #ffffff;
+    padding: var(--espacio-2xl) 0;
+    text-align: center;
+}
+
+/* Variante: Portada con imagen de fondo fotográfica + capa oscura */
+.hero-con-imagen {
+    background-image: linear-gradient(rgba(15, 23, 42, 0.75), rgba(15, 23, 42, 0.75)), url("../img/hero-bg.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.hero-contenido {
+    max-width: 800px;
+}
+
+.hero-titulo {
+    color: #ffffff;
+    font-size: 2.25rem;
+    letter-spacing: -0.02em;
+    margin-bottom: var(--espacio-md);
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+}
+
+.hero-subtitulo {
+    font-size: 1.15rem;
+    color: #e0e7ff;
+    margin-bottom: var(--espacio-xl);
+    line-height: 1.6;
+}
+
+.hero-botones {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: var(--espacio-md);
+}
+
+
+/* =============================================================================
+   8. COMPONENTE BOTONES (.btn y sus variantes)
+   ============================================================================= */
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: var(--espacio-sm) var(--espacio-lg);
+    font-family: var(--fuente-cuerpo);
+    font-size: 0.95rem;
+    font-weight: 600;
+    border-radius: var(--radio-pill);
+    border: 2px solid transparent;
+    cursor: pointer;
+    text-decoration: none !important;
+    transition: transform var(--transicion-rapida), box-shadow var(--transicion-rapida), background-color var(--transicion-rapida);
+}
+
+.btn:hover {
+    transform: translateY(-2px); /* Microanimación de elevación al posar el ratón */
+    box-shadow: var(--sombra-md);
+}
+
+.btn:active {
+    transform: translateY(0);
+}
+
+/* Botón Primario: Fondo azul */
+.btn-primary {
+    background: var(--gradiente-boton);
+    color: #ffffff;
+    box-shadow: var(--sombra-sm);
+}
+
+.btn-primary:hover {
+    color: #ffffff;
+    box-shadow: var(--sombra-elevada);
+}
+
+/* Botón Secundario: Gris neutro */
+.btn-secondary {
+    background-color: var(--color-fondo-suave);
+    color: var(--color-texto);
+    border-color: var(--color-borde);
+}
+
+.btn-secondary:hover {
+    background-color: var(--color-borde);
+    color: var(--color-texto);
+}
+
+/* Botón Outline: Borde blanco o coloreado transparente */
+.btn-outline {
+    background-color: transparent;
+    color: #ffffff;
+    border-color: #ffffff;
+}
+
+.btn-outline:hover {
+    background-color: #ffffff;
+    color: var(--color-primario-oscuro);
+}
+
+/* Si el botón outline está fuera de la sección hero (sobre fondo claro) */
+main section:not(.hero) .btn-outline {
+    color: var(--color-primario);
+    border-color: var(--color-primario);
+}
+
+main section:not(.hero) .btn-outline:hover {
+    background-color: var(--color-primario);
+    color: #ffffff;
+}
+
+/* Modificadores de tamaño */
+.btn-sm {
+    padding: var(--espacio-xs) var(--espacio-md);
+    font-size: 0.85rem;
+}
+
+.btn-block {
+    display: block;
+    width: 100%;
+    text-align: center;
+}
+
+
+/* =============================================================================
+   9. SECCIÓN SERVICIOS / CSS GRID DE TARJETAS (.card)
+   =============================================================================
+   CSS Grid moderno: Las tarjetas se reorganizan solas según el espacio disponible.
+   ============================================================================= */
+
+.seccion-servicios {
+    background-color: var(--color-fondo-app);
+}
+
+.grid-cards {
+    display: grid;
+    /* REGLA DE ORO DE GRID: Responsive automático sin media queries */
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: var(--espacio-xl);
+}
+
+/* Tarjeta individual */
+.card {
+    background-color: var(--color-fondo-tarjeta);
+    border-radius: var(--radio-lg);
+    border: 1px solid var(--color-borde);
+    box-shadow: var(--sombra-sm);
+    overflow: hidden; /* Corta bordes para respetar el border-radius de la imagen */
+    display: flex;
+    flex-direction: column;
+    position: relative; /* Contexto de posicionamiento para la etiqueta badge */
+    transition: transform var(--transicion-media), box-shadow var(--transicion-media);
+}
+
+.card:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--sombra-lg);
+}
+
+/* Etiqueta flotante Badge (Position Absolute respecto a .card) */
+.card-badge {
+    position: absolute;
+    top: var(--espacio-md);
+    right: var(--espacio-md);
+    background: var(--gradiente-badge);
+    color: #ffffff;
+    font-size: 0.75rem;
+    font-weight: 700;
+    padding: var(--espacio-2xs) var(--espacio-sm);
+    border-radius: var(--radio-pill);
+    box-shadow: var(--sombra-sm);
+    z-index: 2;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.card-badge-nuevo {
+    background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+}
+
+.card-imagen-caja {
+    width: 100%;
+    background-color: var(--color-fondo-suave);
+    border-bottom: 1px solid var(--color-borde);
+}
+
+.card-svg {
+    width: 100%;
+    height: auto;
+}
+
+/* Imagen real dentro de la tarjeta (sustituto del SVG) */
+.card-img {
+    width: 100%;
+    height: 190px;
+    object-fit: cover;
+    display: block;
+}
+
+/* Variante: Tarjeta con cabecera de fondo decorativo con imagen */
+.card-header-bg {
+    height: 140px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    border-bottom: 1px solid var(--color-borde);
+}
+
+.card-cuerpo {
+    padding: var(--espacio-lg);
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1; /* Para que el botón inferior se alinee abajo del todo en todas las cards */
+}
+
+.card-cuerpo h3 {
+    font-size: 1.3rem;
+    margin-bottom: var(--espacio-xs);
+    color: var(--color-texto);
+}
+
+.card-cuerpo p {
+    color: var(--color-texto-suave);
+    font-size: 0.95rem;
+    margin-bottom: var(--espacio-md);
+}
+
+/* Lista de características con viñetas estilizadas */
+.lista-detalles {
+    list-style: none;
+    margin-bottom: var(--espacio-lg);
+    margin-top: auto; /* Empuja la lista hacia abajo */
+}
+
+.lista-detalles li {
+    font-size: 0.875rem;
+    color: var(--color-texto);
+    padding: var(--espacio-2xs) 0;
+    position: relative;
+    padding-left: var(--espacio-lg);
+}
+
+/* Pseudoelemento para viñeta personalizada */
+.lista-detalles li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: var(--color-exito);
+    font-weight: 700;
+}
+
+
+/* =============================================================================
+   10. SECCIÓN PRECIOS / TABLA DE DATOS SEMÁNTICA Y ACCESIBLE
+   =============================================================================
+   REGLAS W3C / SAVALL PARA TABLAS:
+   - Solo usar <table> para datos tabulares, NUNCA para maquetación.
+   - Requiere <caption>, <thead>, <tbody>, <tfoot>.
+   - Encabezados con <th scope="col"> o <th scope="row">.
+   ============================================================================= */
+
+.seccion-precios {
+    background-color: var(--color-fondo-tarjeta);
+    border-top: 1px solid var(--color-borde);
+    border-bottom: 1px solid var(--color-borde);
+}
+
+/* Contenedor con scroll horizontal automático para pantallas móviles */
+.tabla-contenedor {
+    width: 100%;
+    overflow-x: auto;
+    border-radius: var(--radio-md);
+    box-shadow: var(--sombra-sm);
+    border: 1px solid var(--color-borde);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse; /* Colapsa los bordes dobles por defecto */
+    text-align: left;
+    font-size: 0.95rem;
+    background-color: #ffffff;
+}
+
+/* Título accesible de la tabla */
+caption {
+    font-family: var(--fuente-titulos);
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--color-texto);
+    padding: var(--espacio-md);
+    background-color: var(--color-fondo-suave);
+    border-bottom: 1px solid var(--color-borde);
+    text-align: left;
+}
+
+th, td {
+    padding: var(--espacio-sm) var(--espacio-md);
+    border-bottom: 1px solid var(--color-borde);
+    vertical-align: middle;
+}
+
+/* Cabecera de la tabla (thead) */
+thead th {
+    background-color: var(--color-primario-claro);
+    color: var(--color-primario-oscuro);
+    font-family: var(--fuente-titulos);
+    font-weight: 700;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+/* Encabezados de fila dentro del tbody */
+tbody th[scope="row"] {
+    font-weight: 600;
+    color: var(--color-texto);
+    background-color: #ffffff;
+}
+
+/* Pseudoclase :nth-child(even) para crear efecto Cebra (Zebra striping) */
+tbody tr:nth-child(even) {
+    background-color: var(--color-fondo-app);
+}
+
+/* Efecto hover al pasar el ratón por la fila */
+tbody tr:hover {
+    background-color: #eef2ff;
+}
+
+/* Pie de la tabla (tfoot) */
+tfoot td {
+    background-color: var(--color-fondo-suave);
+    color: var(--color-texto-suave);
+    font-style: italic;
+    font-size: 0.85rem;
+}
+
+
+/* =============================================================================
+   11. SECCIÓN CONTACTO / FORMULARIO COMPLETO Y ACCESIBLE
+   =============================================================================
+   Cubre TODOS los tipos de input pedidos en las rúbricas de Savall:
+   text, email, tel, date, select, radio, checkbox, range, textarea, submit, reset.
+   ============================================================================= */
+
+.seccion-contacto {
+    background-color: var(--color-fondo-app);
+}
+
+.form-contenedor {
+    max-width: 780px;
+    margin: 0 auto;
+    background-color: var(--color-fondo-tarjeta);
+    border: 1px solid var(--color-borde);
+    border-radius: var(--radio-lg);
+    box-shadow: var(--sombra-md);
+    padding: var(--espacio-xl);
+}
+
+/* Agrupaciones temáticas con fieldset */
+fieldset {
+    border: 1px solid var(--color-borde);
+    border-radius: var(--radio-md);
+    padding: var(--espacio-lg);
+    margin-bottom: var(--espacio-xl);
+    background-color: #ffffff;
+}
+
+/* Leyenda del fieldset */
+legend {
+    font-family: var(--fuente-titulos);
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--color-primario);
+    padding: 0 var(--espacio-sm);
+    border-radius: var(--radio-sm);
+    background-color: var(--color-primario-claro);
+}
+
+/* Estructura a 2 columnas para campos dobles en pantallas medianas */
+.fila-doble {
+    display: flex;
+    flex-direction: column;
+    gap: var(--espacio-md);
+    margin-bottom: var(--espacio-md);
+}
+
+/* Grupos de campo (label + control) */
+.form-grupo {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: var(--espacio-md);
+}
+
+.form-grupo:last-child {
+    margin-bottom: 0;
+}
+
+/* Etiquetas del formulario */
+label, .label-titulo {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--color-texto);
+    margin-bottom: var(--espacio-2xs);
+    display: inline-block;
+}
+
+/* Asterisco rojo para campos obligatorios */
+.obligatorio {
+    color: var(--color-peligro);
+    font-weight: 700;
+}
+
+/* Estilo unificado para inputs de texto, emails, teléfonos, fechas, selects y textarea */
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="date"],
+select,
+textarea {
+    width: 100%;
+    padding: var(--espacio-sm) var(--espacio-md);
+    font-family: var(--fuente-cuerpo);
+    font-size: 0.95rem;
+    color: var(--color-texto);
+    background-color: #ffffff;
+    border: 1.5px solid var(--color-borde);
+    border-radius: var(--radio-sm);
+    transition: border-color var(--transicion-rapida), box-shadow var(--transicion-rapida);
+}
+
+/* Pseudoclase :focus para accesibilidad con teclado (anillo de foco visible) */
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus,
+input[type="date"]:focus,
+select:focus,
+textarea:focus {
+    outline: none;
+    border-color: var(--color-borde-foco);
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.2);
+}
+
+/* Pseudoelemento ::placeholder */
+input::placeholder,
+textarea::placeholder {
+    color: #94a3b8;
+    font-style: italic;
+}
+
+/* Pseudoclase de atributo required */
+input[required] {
+    border-left: 3px solid var(--color-primario);
+}
+
+/* Desplegables select */
+select {
+    cursor: pointer;
+}
+
+/* Textarea redimensionable solo en vertical */
+textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+/* Opciones Inline para Radios y Checkboxes */
+.opciones-inline {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--espacio-md);
+    margin-top: var(--espacio-2xs);
+}
+
+.opcion-control {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--espacio-xs);
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--color-texto);
+    cursor: pointer;
+}
+
+.opcion-control input[type="radio"],
+.opcion-control input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    accent-color: var(--color-primario); /* Da color nativo moderno al radio/check */
+    cursor: pointer;
+}
+
+/* Selector de Rango (Range Slider) */
+.rango-contenedor {
+    display: flex;
+    align-items: center;
+    gap: var(--espacio-md);
+}
+
+input[type="range"] {
+    flex-grow: 1;
+    height: 6px;
+    accent-color: var(--color-primario);
+    cursor: pointer;
+}
+
+output {
+    font-weight: 700;
+    color: var(--color-primario);
+    min-width: 65px;
+    text-align: right;
+    font-family: var(--fuente-titulos);
+}
+
+/* Casilla de verificación de privacidad */
+.form-grupo-check {
+    margin-top: var(--espacio-md);
+    padding: var(--espacio-sm);
+    background-color: var(--color-fondo-suave);
+    border-radius: var(--radio-sm);
+}
+
+/* Botones de acción del formulario */
+.form-botones {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--espacio-md);
+    justify-content: flex-start;
+    margin-top: var(--espacio-lg);
+}
+
+
+/* =============================================================================
+   12. SECCIÓN MULTIMEDIA, FIGURE Y BLOCKQUOTE
+   ============================================================================= */
+
+.seccion-multimedia {
+    background-color: var(--color-fondo-tarjeta);
+}
+
+.multimedia-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--espacio-xl);
+    align-items: center;
+}
+
+/* Figura estilizada */
+.figura-estilizada {
+    background-color: #ffffff;
+    border: 1px solid var(--color-borde);
+    border-radius: var(--radio-md);
+    overflow: hidden;
+    box-shadow: var(--sombra-sm);
+}
+
+figcaption {
+    padding: var(--espacio-sm) var(--espacio-md);
+    font-size: 0.85rem;
+    color: var(--color-texto-suave);
+    background-color: var(--color-fondo-suave);
+    border-top: 1px solid var(--color-borde);
+    font-style: italic;
+}
+
+/* Bloque de cita con barra lateral destacada */
+.cita-contenedor {
+    padding: var(--espacio-lg);
+    background-color: var(--color-fondo-app);
+    border-radius: var(--radio-md);
+    border-left: 5px solid var(--color-primario);
+}
+
+blockquote {
+    font-family: var(--fuente-titulos);
+    font-size: 1.15rem;
+    font-style: italic;
+    color: var(--color-texto);
+    line-height: 1.6;
+    margin-bottom: var(--espacio-sm);
+}
+
+.cita-autor {
+    font-size: 0.9rem;
+    color: var(--color-texto-suave);
+}
+
+
+/* =============================================================================
+   13. PIE DE PÁGINA (FOOTER) MULTICOLUMNA
+   ============================================================================= */
+
+.pie-sitio {
+    background-color: #0f172a; /* Fondo gris pizarra oscuro contrastado */
+    color: #94a3b8;
+    margin-top: var(--espacio-2xl);
+    border-top: 1px solid #1e293b;
+}
+
+.pie-contenedor {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--espacio-xl);
+    padding-top: var(--espacio-2xl);
+    padding-bottom: var(--espacio-2xl);
+}
+
+.pie-marca strong {
+    font-family: var(--fuente-titulos);
+    font-size: 1.3rem;
+    color: #ffffff;
+}
+
+.pie-titulo-col strong {
+    font-size: 1rem;
+    color: #ffffff;
+    display: block;
+    margin-bottom: var(--espacio-sm);
+}
+
+.pie-lista {
+    list-style: none;
+}
+
+.pie-lista li {
+    margin-bottom: var(--espacio-xs);
+}
+
+.pie-lista a {
+    color: #94a3b8;
+    font-size: 0.9rem;
+    transition: color var(--transicion-rapida), padding-left var(--transicion-rapida);
+}
+
+.pie-lista a:hover {
+    color: #ffffff;
+    padding-left: var(--espacio-2xs);
+    text-decoration: none;
+}
+
+.pie-copyright {
+    background-color: #020617;
+    padding: var(--espacio-md) 0;
+    border-top: 1px solid #1e293b;
+    text-align: center;
+    font-size: 0.85rem;
+    color: #64748b;
+}
+
+
+/* =============================================================================
+   14. DEMOSTRACIÓN DE SELECTORES AVANZADOS Y PSEUDOCLASES
+   =============================================================================
+   Preguntas típicas de examen de Quique Savall:
+   - Selectores de atributo (^=, $=, *=)
+   - Pseudoclases estructurales (:first-child, :last-child, :not, :is)
+   ============================================================================= */
+
+/* 1. Selector de atributo con prefijo (^=): Enlaces externos que empiezan por http */
+a[href^="http"]::after {
+    content: " ↗";
+    font-size: 0.8em;
+    font-weight: bold;
+    color: var(--color-primario);
+}
+
+/* 2. Selector de atributo con sufijo ($=): Enlaces que apunten a PDF */
+a[href$=".pdf"]::before {
+    content: "📄 ";
+}
+
+/* 3. Pseudoclase :not() para aplicar estilo a todos los artículos salvo el primero */
+.grid-cards article:not(:first-child) {
+    opacity: 0.98;
+}
+
+/* 4. Pseudoclase :is() para aplicar estilos compactos a varios contenedores */
+:is(section, footer) h2 {
+    letter-spacing: -0.01em;
+}
+
+/* 5. Pseudoclase :checked para destacar la opción seleccionada */
+input[type="radio"]:checked + label,
+.opcion-control input:checked {
+    font-weight: 700;
+}
+
+
+/* =============================================================================
+   15. MEDIA QUERIES (ENFOQUE MOBILE FIRST)
+   =============================================================================
+   Base: Móvil (<768px)
+   Breakpoint 1 (min-width: 768px): Tabletas y pantallas intermedias
+   Breakpoint 2 (min-width: 1024px): Escritorio y portátiles
+   ============================================================================= */
+
+/* --- TABLETA (Mínimo 768px) --- */
+@media (min-width: 768px) {
+    /* Cabecera en fila horizontal con espacio entre logo y navegación */
+    .nav-contenedor {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .hero-titulo {
+        font-size: 3rem;
+    }
+
+    .fila-doble {
+        flex-direction: row;
+    }
+
+    .fila-doble .form-grupo {
+        flex: 1; /* Ambas columnas ocupan el 50% exacto */
+    }
+
+    .multimedia-grid {
+        grid-template-columns: 1.2fr 1fr;
+    }
+
+    .pie-contenedor {
+        grid-template-columns: 2fr 1fr 1fr;
+    }
+}
+
+/* --- ESCRITORIO (Mínimo 1024px) --- */
+@media (min-width: 1024px) {
+    .contenedor {
+        padding-left: var(--espacio-lg);
+        padding-right: var(--espacio-lg);
+    }
+
+    .seccion-encabezado h2 {
+        font-size: 2.4rem;
+    }
+
+    .grid-cards {
+        gap: var(--espacio-2xl);
+    }
+
+    .card-cuerpo {
+        padding: var(--espacio-xl);
+    }
+}
+
+
+/* =============================================================================
+   16. REGLAS DE IMPRESIÓN (@media print)
+   =============================================================================
+   Buenas prácticas DIW: Si el usuario imprime la web, ocultar menús y fondos.
+   ============================================================================= */
+@media print {
+    body {
+        background: none !important;
+        color: #000000 !important;
+        font-size: 12pt;
+    }
+
+    .cabecera-sitio,
+    .hero-botones,
+    .form-botones,
+    .pie-sitio,
+    .card-badge {
+        display: none !important;
+    }
+
+    .card, fieldset, table {
+        box-shadow: none !important;
+        border: 1px solid #000000 !important;
+        page-break-inside: avoid;
+    }
+
+    a[href^="http"]::after {
+        content: " (" attr(href) ")"; /* Imprime la URL completa al lado del enlace */
+        font-size: 0.8em;
+    }
+}

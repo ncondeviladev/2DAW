@@ -1,7 +1,7 @@
 # 📘 DIARI DE SEGUIMENT — 2n DAW (Semipresencial)
 > **Alumne:** Noé Conde Vila  
 > **Centre:** IES Maria Enríquez (Gandia) — Curs 2026/2027  
-> **Última actualització:** 27 d'octubre de 2026  
+> **Última actualització:** 28 d'octubre de 2026  
 
 ---
 
@@ -36,7 +36,7 @@
 | **DWES** | `Exercicis U3` (PHP Avançat) | ✅ **Fet** | Continu | Fets del bloc 1 al 8 (1.1 a 8.3 complets) i pujats a GitHub |
 | **DWES** | `U3_P1 Exercicis PHP Avançat` | ✅ **Entregat** | Venciment: 21/11/2026 08:16 | Pràctica avaluable de la Unitat 3 (Blocs 1-8 enllestits) |
 | **DWES** | `Autoavaluació U3` (PHP Avançat) | ✅ **Fet** | Obert a Aules | Test superat a Aules |
-| **DWES** | `U3_P2 Miniprojecte` (TechLeads) | ✅ **Entregat** | Venciment: 28/11/2026 09:56 | Miniprojecte PHP complet: formulari públic, panell intern, sessions, classes, pujada fitxers (`DWES/U3/projecte-final-techleads/`). Tramesa a Aules completada. |
+| **DWES** | `U3_P2 Miniprojecte` (TechLeads) | ✅ **Entregat (100%)** | Venciment: 28/11/2026 09:56 | Qualificat: 100% (Superat). Feedback: revisar cookies recorda'm i sticky form serveis. |
 | **DWES** | `U4_P1 Exercicis` (Accés a dades) | ✅ **Entregat** | Venciment: 21/11/2026 08:16 | Pràctica avaluable U4 enllestida al 100%. Codi complet (Docker, MySQL 8.4, DAOs, PDO, patró PRG, CRUD complet, login BBDD), 9 captures oficials a `capturas/`, 2 diagrames a `diagrames/` i memòria maquetada a `U4_P1_CondeNoe/memoria.md`. |
 | **DWES** | `U4_P2 TechLeads amb notes` | ⏳ **Pendent** | Venciment: 21/11/2026 08:16 | Pràctica avaluable U4.2: relació 1:N `notes`, nou model `Nota`, `NotaDAO` amb consultes preparades PDO i `PDO::FETCH_KEY_PAIR` (sense problema N+1), control de permisos (autor / admin) i vistes. Enunciat a [`DWES/U4/U4_P2_CondeNoe/ENUNCIAT.md`](file:///f:/OneDrive%20-%20Conselleria%20d%27Educaci%C3%B3/2DAW/DWES/U4/U4_P2_CondeNoe/ENUNCIAT.md). |
 | **DWES** | `Autoavaluació U4` (Accés a dades) | ✅ **Fet** | Fet el 27/10/2026 | Test superat a Aules |
@@ -155,9 +155,9 @@
   - **Venciment PEC2 (Docker):** **25 d'Octubre de 2026, 23:59**.
   - **Venciment PEC3 (Docker avançat):** **8 de Novembre de 2026, 23:59**.
 * **DIW (Disseny d'Interfícies):**
-  - **Venciment S03_PR1 (Formularis):** **17 d'Octubre de 2026, 23:59**.
-  - **Venciment S04_PR1 (CafeNet Multimedia):** **24 d'Octubre de 2026, 21:36**.
-  - **S05 Playground1 (Voluntari):** ✅ **Completat** (Autoaprenentatge realitzat).
+  - **Examen 1a Avaluació:** **Divendres, 20 de Novembre de 2026, de 12:00 a 15:00 (durada: 2,5h a 3h)** (Presencial). Quique Savall publicarà orientacions detallades a Aules.
+  - **Venciment S06_PR1 (CV CSS):** **2 de Novembre de 2026, 23:59** (✅ Entregat).
+  - 🔄 **Tasca de repàs intensiu:** Practicar maquetació àgil des de zero amb HTML5 semàntic estricte, CSS Flexbox/Grid, Mobile First i selectors avançats.
 * **PIM (Projecte Intermodular):**
   - **Sprint 0 - Reto 1B (Entrevista Teams):** **14 d'Octubre de 2026 al migdia**.
   - **Venciment Reto 1C (Specs):** **20 d'Octubre de 2026, 23:59** (✅ Entregat).
@@ -213,6 +213,9 @@
   - **Pràctica avaluable `U3_P2. Miniprojecte` (TechLeads)** ✅ **Entregat**:
     - Recursos a Aules: `U3_P2. Miniprojecte Fitxer` i `U3_P2. Miniprojecte [Solució] Fitxer`.
     - Bústia de lliurament: `Lliurament U3_P2. Miniprojecte Tasca` (Obert el 28/09/2026 09:56, Venciment: dissabte, 28 de novembre 2026, 09:56).
+    - 🔄 **Tasca de repàs i millora per a examen (Feedback professor Eloy Gutiérrez):**
+      1. *Gestió de cookies:* Revisar per què en tancar el navegador amb la casella "Recorda'm" marcada no manté la sessió i redirigeix al login.
+      2. *Sticky form en serveis (checkboxes):* Afegir la comprovació `checked` en els serveis seleccionats al formulari públic quan falla la validació per a mantenir les opcions marcades.
     - Codi del projecte a [`DWES/U3/projecte-final-techleads/`](file:///f:/OneDrive%20-%20Conselleria%20d%27Educaci%C3%B3/2DAW/DWES/U3/projecte-final-techleads/ENUNCIAT.md). Inclou formulari públic (index.php + processar_lead.php), panell intern amb login/logout/leads, classe `Lead`, gestor de sessions, pujada de fitxers i patró PRG.
 * **Unitat 4 — Accés a dades (Nova Unitat):**
   - **Recursos i enllaços oficials d'Aules:**
@@ -293,6 +296,7 @@
   - **S05 (Intro CSS i Selectors):** Apunts `S05 APUNTES CSS Intro Selectores1`, Presentació `S05 PRESENT CSS Intro Selectores Propiedades`, enllaços W3Schools i chuletes.
   - `Playground1`: ✅ **Completat** (Exercici d'autoaprenentatge voluntari realitzat).
   - **Pràctica `S06_PR1. Maquetació de CV amb HTML5/CSS3`:** ✅ **Entregat** (Venciment: 02/11/2026 23:59). Desenvolupament a `DIW/UD2/S06/S06_PR1_CVcssCondeNoe/`: pàgina única `S06_PR1_CVCondeNoe.html`, conmutador dinàmic `formal.css` / `diver.css`, Google Fonts Poppins, font local Righteous .ttf amb `@font-face`, pattern.png amb `background-attachment: fixed`, degradats CSS3, sombras box/text-shadow i checklist complet de selectors avançats.
+  - **Preparació Examen Presencial (20/11/2026):** ✅ **Plantilla Maestra Creada** a [`DIW/plantilla_examen/`](file:///f:/OneDrive%20-%20Conselleria%20d'Educaci%C3%B3/2DAW/DIW/plantilla_examen/). Estructura modular "Navaja Suiza" en dues versions: [`index.html`](file:///f:/OneDrive%20-%20Conselleria%20d'Educaci%C3%B3/2DAW/DIW/plantilla_examen/index.html) (demo completa amb contingut) i [`esqueleto.html`](file:///f:/OneDrive%20-%20Conselleria%20d'Educaci%C3%B3/2DAW/DIW/plantilla_examen/esqueleto.html) (versió neta amb etiquetes i slots llestos per a omplir a l'examen). CSS3 compartit a [`css/estilos.css`](file:///f:/OneDrive%20-%20Conselleria%20d'Educaci%C3%B3/2DAW/DIW/plantilla_examen/css/estilos.css) comentat exhaustivament (16 blocs), validació W3C estricta, sistema de variables a `:root` per a canvi ràpid de paleta/tema en 5 segons, Mobile First real, Flexbox, CSS Grid amb `repeat(auto-fit, minmax(...))`, taula de dades completa amb `caption`/`thead`/`tbody`/`tfoot` i zebrat, formulari complet amb tots els tipus d'input (range, date, select, custom radios/checks, fieldsets), figure/blockquote, i guia d'examen amb tècnica de poda a [`README.md`](file:///f:/OneDrive%20-%20Conselleria%20d'Educaci%C3%B3/2DAW/DIW/plantilla_examen/README.md).
 
 ### 5. PIM — Projecte Intermodular (2n DAW)
 * **General:** `Guia didactica 2 DAWsemi - PIM (beta)`.
