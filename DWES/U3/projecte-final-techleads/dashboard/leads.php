@@ -116,7 +116,8 @@ foreach ($leads as $l) {
                 <div
                     class="flex items-center gap-2 px-3 py-1.5 rounded-xl bg-slate-100/80 border border-slate-200 text-xs font-semibold text-slate-700">
                     <span class="h-2 w-2 rounded-full bg-emerald-500 animate-pulse"></span>
-                    <span>Benvinguda, <strong class="text-indigo-600"><?= htmlspecialchars($usuariActual) ?></strong></span>
+                    <span>Benvinguda, <strong
+                            class="text-indigo-600"><?= htmlspecialchars($usuariActual) ?></strong></span>
                 </div>
                 <a href="logout.php"
                     class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-xl text-xs font-semibold text-rose-600 hover:text-rose-700 bg-rose-50/60 hover:bg-rose-100/70 border border-rose-200/70 transition-colors">
@@ -170,128 +171,146 @@ foreach ($leads as $l) {
         </div>
 
         <?php if (!empty($leads)): ?>
-        <!-- Taula de Leads -->
-        <div class="bg-white rounded-2xl shadow-xl shadow-slate-200/60 border border-slate-200/80 overflow-hidden">
-            <div class="overflow-x-auto">
-                <table class="w-full text-left border-collapse">
-                    <thead>
-                        <tr
-                            class="bg-slate-50/80 border-b border-slate-200 text-[11px] font-bold text-slate-500 uppercase tracking-wider">
-                            <th class="py-3.5 px-4">Id</th>
-                            <th class="py-3.5 px-4">Nom / Contacte</th>
-                            <th class="py-3.5 px-4">Empresa</th>
-                            <th class="py-3.5 px-4">Serveis</th>
-                            <th class="py-3.5 px-4 text-right">Pressupost</th>
-                            <th class="py-3.5 px-4">Document</th>
-                            <th class="py-3.5 px-4 text-center">Estat</th>
-                            <th class="py-3.5 px-4 text-right">Accions</th>
-                        </tr>
-                    </thead>
-                    <tbody class="divide-y divide-slate-100 text-sm">
-                        <?php foreach ($leads as $lead): ?>
-                            <?php if ($lead instanceof Lead): ?>
-                            <tr class="hover:bg-slate-50/70 transition-colors">
-                                <td class="py-3.5 px-4 font-mono font-semibold text-slate-500 text-xs">#<?= $lead->getId() ?></td>
-                                <td class="py-3.5 px-4">
-                                    <div class="font-semibold text-slate-800"><?= htmlspecialchars($lead->getNom()) ?></div>
-                                    <a href="mailto:<?= htmlspecialchars($lead->getEmail()) ?>" class="text-xs text-slate-400 block hover:text-indigo-600"><?= htmlspecialchars($lead->getEmail()) ?></a>
-                                    <?php if ($lead->getTelefon()): ?>
-                                        <div class="text-xs text-slate-400"><?= htmlspecialchars($lead->getTelefon()) ?></div>
-                                    <?php endif; ?>
-                                </td>
-                                <td class="py-3.5 px-4 text-slate-600">
-                                    <?= !empty($lead->getEmpresa()) ? htmlspecialchars($lead->getEmpresa()) : '<span class="text-slate-400 text-xs">—</span>' ?>
-                                </td>
-                                <td class="py-3.5 px-4">
-                                    <div class="flex flex-wrap gap-1">
-                                        <?php foreach ($lead->getServeis() as $servei): ?>
-                                            <span class="px-2 py-0.5 rounded-md bg-slate-100 text-slate-700 text-xs font-medium"><?= htmlspecialchars($servei) ?></span>
-                                        <?php endforeach; ?>
-                                    </div>
-                                </td>
-                                <td class="py-3.5 px-4 text-right font-bold text-slate-800">
-                                    <?= number_format($lead->getPressupost(), 2, ',', '.') ?> €
-                                </td>
-                                <td class="py-3.5 px-4">
-                                    <?php if ($lead->getDocument()): ?>
-                                        <a href="../pujades/<?= htmlspecialchars($lead->getDocument()) ?>" target="_blank" class="inline-flex items-center gap-1.5 text-xs font-semibold text-indigo-600 hover:text-indigo-800 hover:underline">
-                                            <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
-                                            </svg>
-                                            <span class="max-w-[120px] truncate" title="<?= htmlspecialchars($lead->getDocument()) ?>"><?= htmlspecialchars($lead->getDocument()) ?></span>
-                                        </a>
-                                    <?php else: ?>
-                                        <span class="text-slate-400 text-xs">—</span>
-                                    <?php endif; ?>
-                                </td>
-                                <td class="py-3.5 px-4 text-center">
-                                    <?php if ($lead->getEstat() === Lead::ESTAT_NOU): ?>
-                                        <span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full text-xs font-semibold bg-sky-50 text-sky-700 border border-sky-200">
-                                            <span class="h-1.5 w-1.5 rounded-full bg-sky-500"></span>
-                                            nou
-                                        </span>
-                                    <?php elseif ($lead->getEstat() === Lead::ESTAT_CONTACTAT): ?>
-                                        <span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full text-xs font-semibold bg-amber-50 text-amber-700 border border-amber-200">
-                                            <span class="h-1.5 w-1.5 rounded-full bg-amber-500"></span>
-                                            contactat
-                                        </span>
-                                    <?php else: ?>
-                                        <span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full text-xs font-semibold bg-emerald-50 text-emerald-700 border border-emerald-200">
-                                            <span class="h-1.5 w-1.5 rounded-full bg-emerald-500"></span>
-                                            tancat
-                                        </span>
-                                    <?php endif; ?>
-                                </td>
-                                <td class="py-3.5 px-4 text-right">
-                                    <?php if ($lead->getEstat() === Lead::ESTAT_TANCAT): ?>
-                                        <button type="button" disabled
-                                                class="inline-flex items-center gap-1 px-3 py-1.5 rounded-lg text-xs font-medium bg-slate-100 text-slate-400 border border-slate-200 cursor-not-allowed">
-                                            <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                                            </svg>
-                                            <span>Completat</span>
-                                        </button>
-                                    <?php else: ?>
-                                        <form method="POST" action="leads.php">
-                                            <input type="hidden" name="id" value="<?= $lead->getId() ?>">
-                                            <button type="submit" name="accio" value="avancar"
-                                                    class="inline-flex items-center gap-1 px-3 py-1.5 rounded-lg text-xs font-semibold bg-indigo-50 hover:bg-indigo-100 text-indigo-700 border border-indigo-200 transition-colors">
-                                                <span>Avança estat</span>
-                                                <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
-                                                </svg>
-                                            </button>
-                                        </form>
-                                    <?php endif; ?>
-                                </td>
+            <!-- Taula de Leads -->
+            <div class="bg-white rounded-2xl shadow-xl shadow-slate-200/60 border border-slate-200/80 overflow-hidden">
+                <div class="overflow-x-auto">
+                    <table class="w-full text-left border-collapse">
+                        <thead>
+                            <tr
+                                class="bg-slate-50/80 border-b border-slate-200 text-[11px] font-bold text-slate-500 uppercase tracking-wider">
+                                <th class="py-3.5 px-4">Id</th>
+                                <th class="py-3.5 px-4">Nom / Contacte</th>
+                                <th class="py-3.5 px-4">Empresa</th>
+                                <th class="py-3.5 px-4">Serveis</th>
+                                <th class="py-3.5 px-4 text-right">Pressupost</th>
+                                <th class="py-3.5 px-4">Document</th>
+                                <th class="py-3.5 px-4 text-center">Estat</th>
+                                <th class="py-3.5 px-4 text-right">Accions</th>
                             </tr>
-                            <?php endif; ?>
-                        <?php endforeach; ?>
-                    </tbody>
-                </table>
+                        </thead>
+                        <tbody class="divide-y divide-slate-100 text-sm">
+                            <?php foreach ($leads as $lead): ?>
+                                <?php if ($lead instanceof Lead): ?>
+                                    <tr class="hover:bg-slate-50/70 transition-colors">
+                                        <td class="py-3.5 px-4 font-mono font-semibold text-slate-500 text-xs">
+                                            #<?= $lead->getId() ?></td>
+                                        <td class="py-3.5 px-4">
+                                            <div class="font-semibold text-slate-800"><?= htmlspecialchars($lead->getNom()) ?></div>
+                                            <a href="mailto:<?= htmlspecialchars($lead->getEmail()) ?>"
+                                                class="text-xs text-slate-400 block hover:text-indigo-600"><?= htmlspecialchars($lead->getEmail()) ?></a>
+                                            <?php if ($lead->getTelefon()): ?>
+                                                <div class="text-xs text-slate-400"><?= htmlspecialchars($lead->getTelefon()) ?></div>
+                                            <?php endif; ?>
+                                        </td>
+                                        <td class="py-3.5 px-4 text-slate-600">
+                                            <?= !empty($lead->getEmpresa()) ? htmlspecialchars($lead->getEmpresa()) : '<span class="text-slate-400 text-xs">—</span>' ?>
+                                        </td>
+                                        <td class="py-3.5 px-4">
+                                            <div class="flex flex-wrap gap-1">
+                                                <?php foreach ($lead->getServeis() as $servei): ?>
+                                                    <span
+                                                        class="px-2 py-0.5 rounded-md bg-slate-100 text-slate-700 text-xs font-medium"><?= htmlspecialchars($servei) ?></span>
+                                                <?php endforeach; ?>
+                                            </div>
+                                        </td>
+                                        <td class="py-3.5 px-4 text-right font-bold text-slate-800">
+                                            <?= number_format($lead->getPressupost(), 2, ',', '.') ?> €
+                                        </td>
+                                        <td class="py-3.5 px-4">
+                                            <?php if ($lead->getDocument()): ?>
+                                                <a href="../pujades/<?= htmlspecialchars($lead->getDocument()) ?>" target="_blank"
+                                                    class="inline-flex items-center gap-1.5 text-xs font-semibold text-indigo-600 hover:text-indigo-800 hover:underline">
+                                                    <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                            d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z">
+                                                        </path>
+                                                    </svg>
+                                                    <span class="max-w-[120px] truncate"
+                                                        title="<?= htmlspecialchars($lead->getDocument()) ?>"><?= htmlspecialchars($lead->getDocument()) ?></span>
+                                                </a>
+                                            <?php else: ?>
+                                                <span class="text-slate-400 text-xs">—</span>
+                                            <?php endif; ?>
+                                        </td>
+                                        <td class="py-3.5 px-4 text-center">
+                                            <?php if ($lead->getEstat() === Lead::ESTAT_NOU): ?>
+                                                <span
+                                                    class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full text-xs font-semibold bg-sky-50 text-sky-700 border border-sky-200">
+                                                    <span class="h-1.5 w-1.5 rounded-full bg-sky-500"></span>
+                                                    nou
+                                                </span>
+                                            <?php elseif ($lead->getEstat() === Lead::ESTAT_CONTACTAT): ?>
+                                                <span
+                                                    class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full text-xs font-semibold bg-amber-50 text-amber-700 border border-amber-200">
+                                                    <span class="h-1.5 w-1.5 rounded-full bg-amber-500"></span>
+                                                    contactat
+                                                </span>
+                                            <?php else: ?>
+                                                <span
+                                                    class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full text-xs font-semibold bg-emerald-50 text-emerald-700 border border-emerald-200">
+                                                    <span class="h-1.5 w-1.5 rounded-full bg-emerald-500"></span>
+                                                    tancat
+                                                </span>
+                                            <?php endif; ?>
+                                        </td>
+                                        <td class="py-3.5 px-4 text-right">
+                                            <?php if ($lead->getEstat() === Lead::ESTAT_TANCAT): ?>
+                                                <button type="button" disabled
+                                                    class="inline-flex items-center gap-1 px-3 py-1.5 rounded-lg text-xs font-medium bg-slate-100 text-slate-400 border border-slate-200 cursor-not-allowed">
+                                                    <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                            d="M5 13l4 4L19 7"></path>
+                                                    </svg>
+                                                    <span>Completat</span>
+                                                </button>
+                                            <?php else: ?>
+                                                <form method="POST" action="leads.php">
+                                                    <input type="hidden" name="id" value="<?= $lead->getId() ?>">
+                                                    <button type="submit" name="accio" value="avancar"
+                                                        class="inline-flex items-center gap-1 px-3 py-1.5 rounded-lg text-xs font-semibold bg-indigo-50 hover:bg-indigo-100 text-indigo-700 border border-indigo-200 transition-colors">
+                                                        <span>Avança estat</span>
+                                                        <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                                d="M9 5l7 7-7 7"></path>
+                                                        </svg>
+                                                    </button>
+                                                </form>
+                                            <?php endif; ?>
+                                        </td>
+                                    </tr>
+                                <?php endif; ?>
+                            <?php endforeach; ?>
+                        </tbody>
+                    </table>
+                </div>
             </div>
-        </div>
         <?php else: ?>
-        <!-- Vista quan encara no hi ha cap lead -->
-        <div class="bg-white p-12 rounded-2xl shadow-xl shadow-slate-200/50 border border-slate-200/80 text-center space-y-4">
-            <div class="w-14 h-14 mx-auto rounded-2xl bg-indigo-50 flex items-center justify-center text-indigo-600">
-                <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M20 13V6a2 2 0 00-2-2H6a2 2 0 00-2 2v7m16 0v5a2 2 0 01-2 2H6a2 2 0 01-2-2v-5m16 0h-2.586a1 1 0 00-.707.293l-2.414 2.414a1 1 0 01-.707.293h-3.172a1 1 0 01-.707-.293l-2.414-2.414A1 1 0 006.586 13H4"></path>
-                </svg>
-            </div>
-            <div>
-                <h3 class="text-base font-bold text-slate-800">Encara no hi ha cap sol·licitud</h3>
-                <p class="text-xs text-slate-500 max-w-sm mx-auto mt-1">Quan els clients envien el formulari de contacte públic, apareixeran ací per al seu seguiment comercial.</p>
-            </div>
-            <div>
-                <a href="../index.php" class="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl bg-indigo-600 hover:bg-indigo-700 text-white text-xs font-semibold shadow-md shadow-indigo-500/20 transition-all">
-                    <span>Obrir formulari públic</span>
-                    <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+            <!-- Vista quan encara no hi ha cap lead -->
+            <div
+                class="bg-white p-12 rounded-2xl shadow-xl shadow-slate-200/50 border border-slate-200/80 text-center space-y-4">
+                <div class="w-14 h-14 mx-auto rounded-2xl bg-indigo-50 flex items-center justify-center text-indigo-600">
+                    <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                            d="M20 13V6a2 2 0 00-2-2H6a2 2 0 00-2 2v7m16 0v5a2 2 0 01-2 2H6a2 2 0 01-2-2v-5m16 0h-2.586a1 1 0 00-.707.293l-2.414 2.414a1 1 0 01-.707.293h-3.172a1 1 0 01-.707-.293l-2.414-2.414A1 1 0 006.586 13H4">
+                        </path>
                     </svg>
-                </a>
+                </div>
+                <div>
+                    <h3 class="text-base font-bold text-slate-800">Encara no hi ha cap sol·licitud</h3>
+                    <p class="text-xs text-slate-500 max-w-sm mx-auto mt-1">Quan els clients envien el formulari de contacte
+                        públic, apareixeran ací per al seu seguiment comercial.</p>
+                </div>
+                <div>
+                    <a href="../index.php"
+                        class="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl bg-indigo-600 hover:bg-indigo-700 text-white text-xs font-semibold shadow-md shadow-indigo-500/20 transition-all">
+                        <span>Obrir formulari públic</span>
+                        <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                        </svg>
+                    </a>
+                </div>
             </div>
-        </div>
         <?php endif; ?>
 
     </main>

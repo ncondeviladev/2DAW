@@ -108,16 +108,16 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
         <!-- Exemple d'error de login: només ha d'aparéixer quan les dades no són correctes -->
         <?php if ($errorLogin): ?>
-        <div class="flex items-start gap-3 p-4 rounded-xl bg-rose-50 border border-rose-200 text-rose-900 shadow-sm">
-            <div class="p-1 rounded-lg bg-rose-100 text-rose-600 shrink-0">
-                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"
-                        d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z">
-                    </path>
-                </svg>
+            <div class="flex items-start gap-3 p-4 rounded-xl bg-rose-50 border border-rose-200 text-rose-900 shadow-sm">
+                <div class="p-1 rounded-lg bg-rose-100 text-rose-600 shrink-0">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"
+                            d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z">
+                        </path>
+                    </svg>
+                </div>
+                <p class="text-sm font-semibold text-rose-800 self-center">Usuari o contrasenya incorrectes.</p>
             </div>
-            <p class="text-sm font-semibold text-rose-800 self-center">Usuari o contrasenya incorrectes.</p>
-        </div>
         <?php endif; ?>
 
         <!-- Targeta de Formulari -->
@@ -147,7 +147,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                                     d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path>
                             </svg>
                         </span>
-                        <input type="text" id="usuari" name="usuari" value="<?= htmlspecialchars($usuariPrevi) ?>" placeholder="Nom d'usuari" required
+                        <input type="text" id="usuari" name="usuari" value="<?= htmlspecialchars($usuariPrevi) ?>"
+                            placeholder="Nom d'usuari" required
                             class="w-full bg-slate-50/70 border border-slate-300 focus:border-indigo-600 focus:ring-4 focus:ring-indigo-500/10 focus:bg-white rounded-xl pl-10 pr-3.5 py-2.5 text-slate-800 text-sm placeholder-slate-400 transition-all outline-none">
                     </div>
                 </div>

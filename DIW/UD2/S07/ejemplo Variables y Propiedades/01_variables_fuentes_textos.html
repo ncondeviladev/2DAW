@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Variables. Propiedades Fuentes y Textos</title>
+  <meta name="author" content="E.Savall">
+  <style type="text/css">
+    /*** DECLARACIONES: directivas varias (empiezan con @) ****/
+    @charset "utf-8";
+    @import url('https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300..800&display=swap');
+    @font-face {
+      font-family: "vargas";
+      src: url('./ttf/vargas.ttf');
+    }
+
+    /** INICIALIZACIONES ***/
+    *{ /* Esta inicialización, sí o sí la pondremos siempre en nuestros ejemplos */
+      margin: 0; padding: 0;
+      text-decoration: none;
+      box-sizing: border-box;
+    }
+
+    :root{   /* En HTML equivale a etiqueta html, que es el container raíz */
+      --back-color: bisque;
+      --main-color:  darkred;
+      --fuente-ppal:Arial, Helvetica, sans-serif; /* Variables pueden tomar listas */
+      --borde-normal: 1px solid black;
+
+      /** Fuente Principal, siempre la declaro en :root **/
+      font-family: var(--fuente-ppal);  
+      font-size: 15px; /* A partir de ahora: 1rem = 15px */
+      
+      /** Si és el caso Color/Patron de fondo,que esté por detrás del body **/
+      /*background-color: blue;*/
+      background-image: url(./img/pattern.png);
+      background-repeat: repeat; /* Esto es por defecto*/
+      /* Si ponemos no-repeat, le podemos dar bg-position y bg-size */
+      
+    } 
+
+    /** SELECTORES y EMPEZAMOS A MAQUETAR ***/
+    body{
+      width: calc(100% - 10rem + 2px); /* Ejemplo de Calc, permite mezclar unidades */
+      margin: 0 auto;
+      padding: 1rem;
+      background-color: var(--back-color);
+    }
+
+   
+    h1{
+      font-family: "Funnel Display", "Tahoma", sans-serif;
+      font-size: 2rem; /*  2*15px= 30px  */
+      letter-spacing: 0.2em; /* em se refiere a su propio tamaño: 0.2*30px=6px */
+      font-style: italic;
+      font-weight: 700;
+      color: var(--main-color);
+      text-shadow: red 0.2em 0.2em 5px;
+      /* Propiedades de caja */
+      margin-bottom: 0.5em;
+      padding: 0.5em;
+      outline: 5px solid green;
+      border-radius: 0.5em;
+    }
+
+    h2{
+      font-family: Arial, sans-serif;
+      font-size: 1.2rem;
+      color: var(--main-color);
+      margin-bottom: 0.5em;
+      -webkit-text-stroke: 1px black ;
+    }
+
+    p{
+      font-weight: lighter;
+    }
+    /* Etc. etc. */
+
+  </style>
+</head>
+
+<body>
+	<main>
+    <h1 id="titul1">Ejemplo <span><strong>selectores</strong></span> complejos </h1>
+    <p>Vamos a ver ejemplos de <strong><em>selectores</em></strong></p>
+    <p>También veremos  <strong>pseudo-clases</strong> ,
+         <em>pseudo-elementos</em> 
+       y <em>pseudo-estados</em> bla, bla, bla, bla
+    </p>
+    <a href="http://www.w3schools.com/cssref/css_selectors.asp" class="rojo">MÁS INFO</a>
+    <hr/>
+    <h2 id="titul2">Tabla</h2>
+    <table width="400" border="1">
+      <tr>
+        <th class="rojo">Clasificacion</th>
+        <th>Puntos</th>
+        <th>+info</th>
+      </tr>
+      <tr>
+        <td class="rojo">Alcoyano</td> <td>13</td>
+        <td><a href="http://cdalcoyano.com">web</a></td>
+      </tr>
+      <tr>
+        <td class="rojo">Elche</td> <td>10</td>
+        <td><a href="http://www.elchecf.es">web</a></td>
+      </tr>
+      <tr>
+        <td class="rojo">Alcoyano</td> <td>13</td>
+        <td><a href="http://cdalcoyano.com">web</a></td>
+      </tr>border: 5px solid red;
+      <tr>
+        <td class="rojo">Elche</td> <td>10</td>
+        <td><a href="http://www.elchecf.es">web</a></td>
+      </tr>
+    </table>
+    <hr/>
+    <h1 id="titul3">Formulario</h1>
+    <form name="frmdatos">
+   		<input type="text" name="nombre" /><br/>
+        <input type="text" name="apellido" /><br/>
+        <select name="sexo">
+			<option value="h">hombre</option>
+            <option value="m">mujer</option>
+        </select><br/>
+        <select name="nacionalidad" disabled>
+			     <option value="ue" >Europeo</option>
+           <option value="no">No Europeo</option>
+        </select><br/>
+        <input type="checkbox" id="s1" name="sexo[]" value="h"/><label for="s1">Home</label>
+        &nbsp;&nbsp;&nbsp;
+        <input type="checkbox" id="s2" name="sexo[]" value="d"/><label for="s2">Dona</label> <br/>
+        <input type="button" value="Enviar" />
+        <input type="button" value="Cancelar" />
+	</form> 
+	</main>  
+</body>
+</html>

@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Ejemplos TRANSFORMACIONES (transform)</title>
+    <style>
+         /* DIRECTIVAS */
+         @charset "utf-8";
+        /* aquí arriba irían todas: @font-face   @import  ... */
+
+        /* SELECTORES */
+        *{  /* Inicialización */
+            padding: 0; margin: 0; 
+            box-sizing: border-box;
+            text-decoration: none;
+            
+        }
+
+        :root{
+            /* VARIABLES: custom properties */
+            /* COLORES BASE */
+            --main-color: #ff4400; 
+            --sec-color: #372e86; 
+            /* PALETA a.p de COLORES BASE */
+            --backg-color: color-mix(in srgb-linear, var(--main-color), white 90%);
+            --h1-color: color-mix(in srgb-linear, var(--sec-color), var(--main-color) 60%);
+            --h2-color: color-mix(in srgb-linear, var(--sec-color), var(--main-color) 30%);
+            --h3-color: color-mix(in srgb-linear, var(--sec-color), var(--main-color) 20%);
+            --hx-backg: color-mix(in srgb-linear, var(--sec-color), white 60%);
+            --html-color: color-mix(in srgb-linear,var(--main-color),black 80%);    
+            /* Fuente principal */
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 16px; /* 1rem= 16px */
+            background-color: var(--html-color);
+        }
+
+        body { 
+            transform: rotate(1deg);
+            width: calc(100% - 4rem); /* Calculado en tpo ejecución el propio Navegador */
+            margin: 0 auto; /* Centrado */
+            padding: 1em;
+            background-color: var(--backg-color);
+        }
+
+        /* Formatos Letras cabeceras */
+        main :is(h1,h2,h3){ 
+            letter-spacing: calc(1em/4);
+            margin: 0 0.2em 0.5em 0;/* shorthand */
+            padding: 0.5em; /* short-hand, las 4 propiedades toman mismo valor */
+            background-color: var(--hx-backg);
+            border-radius: 0.5em; /* shorthand */
+        }
+
+        main h1{ 
+            transform: scale(1.2,1.2) translate(4em,0);
+            color: var(--h1-color);
+        }
+        main h2{ 
+            color: var(--h2-color);
+        }
+        main h3{ 
+            color: var(--h3-color);
+        }
+        
+        main p{ 
+            color: var(--main-color);
+            margin-bottom: 1em;
+        }
+        main strong{ color: color-mix(in srgb, var(--main-color), black 50%)}
+
+        /* Galería Imágenes */
+        section#galeria img{
+            width: calc(100%/3 - 2em);
+            margin-right: 1em;
+        }
+        section#galeria img:nth-child(1){
+            transform: skewX(-4deg);
+            filter: blur(3px);
+        }
+
+        section#galeria img:nth-child(2){
+            transform: rotate(-3deg);
+            filter: sepia(100%);
+         }
+
+        section#galeria img:nth-child(3){
+            transform: translate(2em, 2em);
+            filter: contrast(200%) grayscale(90%) blur(1px);
+         }
+        
+        section#galeria img:hover{
+            transform: skew(0) rotate(0) translate(0,0);
+            filter: none;
+        }
+        /* Formulario */
+        form input{ 
+            border:2px solid var(--sec-color);
+            accent-color: var(--sec-color); /* Colores para radio, checkbox, progress */
+        }
+        form input[type="text"]{
+            outline-color: var(--sec-color);
+        }
+        form input[type="button"]{
+            padding: 0.5em;
+            border-radius: 0.5em;
+            font-weight: bold;
+        }
+        form input[type="button"]:hover{
+            background-color: var(--sec-color);
+            color: var(--backg-color);
+        }
+
+  </style>
+</head>
+<body>
+    <nav></nav>
+    <main>
+        <section id="noticias">   
+            <h1>Ejemplo 1</h1>
+            <h2>Cabecera 2</h2>
+            <h3>Cabecera 3</h2>
+            
+            <p> <strong>Lorem ipsum</strong> dolor sit amet consectetur adipisicing elit. Provident reiciendis aspernatur dolores maiores</p></pa>
+        </section>
+        <section id="galeria">
+            <h1>Galeria</h1>
+            <p> <img src="img1.jpg" alt="cañon" >
+                <img src="img1.jpg" alt="cañon" >
+                <img src="img1.jpg" alt="cañon" >
+            </p>
+        </section>
+        <section id="formulari">
+            <form action="">
+                <p><label for="nom">Nombre</label>
+                <input type="text" id="nom" name="nom"></p>
+                <p><label for="socio">¿Socio?</label>
+                    <input type="checkbox" id="socio" name="socio" checked> &nbsp;
+                    <input type="radio" name="issocio"> &nbsp;
+                    <input type="radio" name="issocio">
+                </p>
+                    
+                <p><input type="button" value="Enviar"></p>
+            </form>
+
+        </section>    
+    </main>
+</body>
+</html>
