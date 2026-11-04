@@ -1,0 +1,771 @@
+@charset "utf-8";
+
+/* ==========================================================================
+   HOJA DE ESTILOS MODULAR — FLEXBOX MOBILE FIRST (100% CERO GRID)
+   ========================================================================== */
+
+/* 1. FUENTES */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@600;700;800&display=swap');
+
+@font-face {
+    font-family: 'RighteousLocal';
+    src: url('../fonts/Righteous-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* 2. RESET UNIVERSAL & BOX MODELING */
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 100%; /* 16px base */
+}
+
+body {
+    font-family: var(--f-base);
+    color: var(--c-txt);
+    background-color: var(--c-fondo);
+    line-height: 1.6;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* 3. VARIABLES GLOBALES (:ROOT) */
+:root {
+    --c-ppal: #2563eb;
+    --c-ppal-hover: #1d4ed8;
+    --c-ppal-suave: #dbeafe;
+    --c-sec: #0ea5e9;
+    --c-acento: #f59e0b;
+    --c-fondo: #f8fafc;
+    --c-tarjeta: #ffffff;
+    --c-txt: #0f172a;
+    --c-txt-muted: #64748b;
+    --c-borde: #cbd5e1;
+    --f-base: 'Inter', system-ui, -apple-system, sans-serif;
+    --f-titulos: 'Outfit', var(--f-base);
+    --f-destacada: 'RighteousLocal', cursive, sans-serif;
+    --radio-sm: 4px;
+    --radio-md: 8px;
+    --radio-lg: 14px;
+    --sombra-sm: 0 1px 3px rgba(0, 0, 0, 0.08);
+    --sombra-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    --sombra-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    --transicion: all 0.25s ease;
+}
+
+/* 4. ELEMENTOS TIPOGRAFICOS */
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--f-titulos);
+    color: var(--c-txt);
+    line-height: 1.25;
+    margin-bottom: 0.6rem;
+}
+
+h1 { font-size: clamp(1.8rem, 4vw, 2.6rem); }
+h2 { font-size: clamp(1.4rem, 3vw, 1.9rem); }
+h3 { font-size: 1.25rem; }
+h4 { font-size: 1.1rem; }
+
+p {
+    margin-bottom: 0.9rem;
+}
+
+a {
+    color: var(--c-ppal);
+    text-decoration: none;
+    transition: var(--transicion);
+}
+
+a:hover {
+    color: var(--c-ppal-hover);
+}
+
+img, picture, video, iframe {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* 5. CONTENEDOR BASE */
+.contenedor {
+    width: 100%;
+    max-width: 1100px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+main {
+    flex: 1 0 auto;
+}
+
+/* 6. BANNER DE COOKIES (POSITION: FIXED) */
+aside.cookies, aside.banner-cookies {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #0f172a;
+    color: #f8fafc;
+    padding: 0.75rem 1rem;
+    z-index: 1000;
+    box-shadow: 0 -4px 10px rgba(0,0,0,0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+    font-size: 0.9rem;
+}
+
+aside.cookies p, aside.banner-cookies p {
+    margin-bottom: 0;
+}
+
+/* 7. CABECERA & NAVEGACION (POSITION: STICKY) */
+header {
+    background-color: #ffffff;
+    border-bottom: 1px solid var(--c-borde);
+    position: sticky;
+    top: 0;
+    z-index: 500;
+    box-shadow: var(--sombra-sm);
+}
+
+header .contenedor {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+    gap: 1rem;
+}
+
+header a.logo, header a.logo-marca {
+    font-family: var(--f-destacada);
+    font-size: 1.4rem;
+    color: var(--c-ppal);
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+}
+
+header nav ul {
+    display: flex;
+    list-style: none;
+    gap: 0.75rem;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+header nav a {
+    font-weight: 500;
+    color: var(--c-txt);
+    padding: 0.35rem 0.6rem;
+    border-radius: var(--radio-sm);
+}
+
+header nav a:hover,
+header nav a.activo {
+    color: var(--c-ppal);
+    background-color: var(--c-ppal-suave);
+}
+
+header .nav-acciones {
+    display: flex;
+    gap: 0.5rem;
+}
+
+/* 8. MIGAS DE PAN (BREADCRUMBS) */
+nav.migas {
+    padding: 0.8rem 0;
+    font-size: 0.88rem;
+}
+
+nav.migas ol {
+    display: flex;
+    list-style: none;
+    gap: 0.5rem;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+nav.migas ol li+li::before {
+    content: "›";
+    color: var(--c-txt-muted);
+    margin-right: 0.5rem;
+}
+
+nav.migas ol li span {
+    color: var(--c-txt-muted);
+}
+
+/* 9. HERO / PORTADA */
+section.hero {
+    background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%);
+    border-bottom: 1px solid var(--c-borde);
+    padding: 3rem 0;
+    text-align: center;
+}
+
+section.hero h1.hero-titulo {
+    font-size: clamp(2rem, 5vw, 3rem);
+    color: #1e3a8a;
+    margin-bottom: 0.8rem;
+}
+
+section.hero p.hero-subtitulo {
+    font-size: 1.15rem;
+    color: #334155;
+    max-width: 680px;
+    margin: 0 auto 1.5rem auto;
+}
+
+section.hero .hero-botones {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+/* 10. MAQUETACION 2 COLUMNAS FLEXBOX (PRINCIPAL 68% + ASIDE 28%) */
+.layout-2cols {
+    display: flex;
+    flex-direction: column;
+    gap: 1.8rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.layout-2cols section.col-principal {
+    flex: 1 1 100%;
+}
+
+.layout-2cols aside.col-lateral {
+    flex: 1 1 100%;
+    background-color: var(--c-tarjeta);
+    border: 1px solid var(--c-borde);
+    border-radius: var(--radio-md);
+    padding: 1.2rem;
+    box-shadow: var(--sombra-sm);
+}
+
+/* En escritorio: 2 columnas alineadas arriba */
+@media (min-width: 768px) {
+    .layout-2cols {
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: space-between;
+    }
+    .layout-2cols section.col-principal {
+        flex: 0 0 68%;
+    }
+    .layout-2cols aside.col-lateral {
+        flex: 0 0 28%;
+    }
+}
+
+/* Articulos en col-principal */
+section.col-principal article.articulo {
+    background-color: var(--c-tarjeta);
+    border: 1px solid var(--c-borde);
+    border-radius: var(--radio-md);
+    padding: 1.4rem;
+    margin-bottom: 1.2rem;
+    box-shadow: var(--sombra-sm);
+}
+
+section.col-principal article.articulo header {
+    margin-bottom: 0.8rem;
+    border-bottom: 1px solid var(--c-borde);
+    padding-bottom: 0.5rem;
+}
+
+section.col-principal article.articulo time {
+    font-size: 0.85rem;
+    color: var(--c-txt-muted);
+}
+
+/* Barra lateral */
+aside.col-lateral .widget {
+    margin-bottom: 1.2rem;
+}
+
+aside.col-lateral .widget:last-child {
+    margin-bottom: 0;
+}
+
+aside.col-lateral ul.lista-lateral {
+    list-style: none;
+    margin-top: 0.5rem;
+}
+
+aside.col-lateral ul.lista-lateral li {
+    padding: 0.4rem 0;
+    border-bottom: 1px dashed var(--c-borde);
+}
+
+aside.col-lateral ul.lista-lateral li:last-child {
+    border-bottom: none;
+}
+
+/* 11. FILA DE TARJETAS (CARDS FLEXBOX — CERO GRID) */
+.cards-flex {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    margin-top: 1.2rem;
+    margin-bottom: 1.2rem;
+}
+
+/* En tablet: 2 tarjetas por fila */
+@media (min-width: 600px) {
+    .cards-flex {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    .cards-flex article.card {
+        flex: 1 1 calc(50% - 1.2rem);
+    }
+}
+
+/* En escritorio: 3 tarjetas por fila */
+@media (min-width: 900px) {
+    .cards-flex article.card {
+        flex: 1 1 calc(33.333% - 1.2rem);
+    }
+}
+
+/* Estilo individual de Tarjeta */
+article.card {
+    background-color: var(--c-tarjeta);
+    border: 1px solid var(--c-borde);
+    border-radius: var(--radio-md);
+    box-shadow: var(--sombra-sm);
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    transition: var(--transicion);
+}
+
+article.card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--sombra-lg);
+    border-color: var(--c-ppal);
+}
+
+article.card .badge,
+article.card .card-badge {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: var(--c-acento);
+    color: #ffffff;
+    font-size: 0.75rem;
+    font-weight: 700;
+    padding: 0.25rem 0.6rem;
+    border-radius: var(--radio-sm);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    z-index: 2;
+}
+
+article.card figure,
+article.card figure.card-figura {
+    position: relative;
+    overflow: hidden;
+}
+
+article.card figure img,
+article.card figure.card-figura img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+article.card:hover figure img,
+article.card:hover figure.card-figura img {
+    transform: scale(1.05);
+}
+
+article.card figure figcaption,
+article.card figure.card-figura figcaption {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.8rem;
+    color: var(--c-txt-muted);
+    background-color: #f1f5f9;
+}
+
+article.card .card-body,
+article.card .card-cuerpo {
+    padding: 1.2rem;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+article.card .card-body p,
+article.card .card-cuerpo p {
+    color: var(--c-txt-muted);
+    flex-grow: 1;
+}
+
+/* 12. TABLAS ACCESIBLES Y RESPONSIVE */
+.seccion-tabla {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.tabla-scroll {
+    overflow-x: auto;
+    background-color: var(--c-tarjeta);
+    border: 1px solid var(--c-borde);
+    border-radius: var(--radio-md);
+    box-shadow: var(--sombra-sm);
+    margin-top: 1rem;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    font-size: 0.95rem;
+}
+
+table caption {
+    padding: 0.75rem 1rem;
+    font-weight: 700;
+    font-size: 1.1rem;
+    text-align: left;
+    color: var(--c-txt);
+    background-color: #f8fafc;
+    border-bottom: 2px solid var(--c-borde);
+}
+
+table th, table td {
+    padding: 0.75rem 1rem;
+    border-bottom: 1px solid var(--c-borde);
+}
+
+table thead th {
+    background-color: #f1f5f9;
+    color: #1e293b;
+    font-weight: 600;
+    border-bottom: 2px solid var(--c-borde);
+}
+
+table tbody tr:nth-child(even) {
+    background-color: #f8fafc;
+}
+
+table tbody tr:hover {
+    background-color: #eff6ff;
+}
+
+table tfoot th, table tfoot td {
+    background-color: #e2e8f0;
+    font-weight: 700;
+    color: #0f172a;
+    border-top: 2px solid var(--c-borde);
+}
+
+table td.precio,
+table td.destacado {
+    color: var(--c-ppal);
+    font-weight: 700;
+}
+
+/* 13. FORMULARIOS COMPLETOS Y ACCESIBLES */
+section.seccion-formulario {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+form fieldset {
+    border: 1px solid var(--c-borde);
+    border-radius: var(--radio-md);
+    background-color: var(--c-tarjeta);
+    padding: 1.5rem;
+    box-shadow: var(--sombra-sm);
+    margin-bottom: 1.5rem;
+}
+
+form legend {
+    font-family: var(--f-titulos);
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: var(--c-ppal);
+    padding: 0 0.5rem;
+}
+
+form .campo {
+    margin-bottom: 1.1rem;
+    display: flex;
+    flex-direction: column;
+}
+
+form .campo label {
+    font-weight: 600;
+    font-size: 0.9rem;
+    margin-bottom: 0.35rem;
+    color: var(--c-txt);
+}
+
+form .campo input,
+form .campo select,
+form .campo textarea {
+    padding: 0.6rem 0.75rem;
+    border: 1px solid var(--c-borde);
+    border-radius: var(--radio-sm);
+    font-family: inherit;
+    font-size: 0.95rem;
+    background-color: #ffffff;
+    transition: var(--transicion);
+}
+
+form .campo input:focus,
+form .campo select:focus,
+form .campo textarea:focus {
+    outline: none;
+    border-color: var(--c-ppal);
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.2);
+}
+
+form .campo-rad,
+form .campo-grupo-radio,
+form .campo-chk,
+form .campo-grupo-check {
+    margin-bottom: 1.1rem;
+    display: flex;
+    gap: 1.2rem;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+form .campo-rad label,
+form .campo-grupo-radio label,
+form .campo-chk label,
+form .campo-grupo-check label {
+    font-weight: 500;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+}
+
+form .form-btns,
+form .form-botones {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-top: 1rem;
+}
+
+/* 14. SECCION MULTIMEDIA (PICTURE, VIDEO, AUDIO, IFRAME CON FLEXBOX) */
+section.seccion-multimedia {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.multimedia-flex {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+@media (min-width: 768px) {
+    .multimedia-flex {
+        flex-direction: row;
+        align-items: stretch;
+    }
+    .multimedia-flex .multi-col {
+        flex: 1 1 50%;
+    }
+}
+
+.multi-caja {
+    background-color: var(--c-tarjeta);
+    border: 1px solid var(--c-borde);
+    border-radius: var(--radio-md);
+    overflow: hidden;
+    box-shadow: var(--sombra-sm);
+    padding: 1rem;
+}
+
+.multi-caja video, .multi-caja audio {
+    width: 100%;
+    border-radius: var(--radio-sm);
+}
+
+.mapa-responsive {
+    position: relative;
+    padding-bottom: 56.25%; /* Relacion aspecto 16:9 */
+    height: 0;
+    overflow: hidden;
+    border-radius: var(--radio-sm);
+}
+
+.mapa-responsive iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+/* 15. ACORDEON FAQ (DETAILS + SUMMARY) */
+details.faq-item {
+    background-color: var(--c-tarjeta);
+    border: 1px solid var(--c-borde);
+    border-radius: var(--radio-md);
+    margin-bottom: 0.8rem;
+    padding: 0.75rem 1rem;
+    box-shadow: var(--sombra-sm);
+    transition: var(--transicion);
+}
+
+details.faq-item[open] {
+    border-color: var(--c-ppal);
+}
+
+details.faq-item summary {
+    font-weight: 600;
+    cursor: pointer;
+    color: var(--c-txt);
+    outline: none;
+}
+
+details.faq-item summary:hover {
+    color: var(--c-ppal);
+}
+
+details.faq-item p {
+    margin-top: 0.75rem;
+    margin-bottom: 0;
+    color: var(--c-txt-muted);
+}
+
+/* 16. BOTONES REUTILIZABLES */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.6rem 1.2rem;
+    border-radius: var(--radio-sm);
+    font-weight: 600;
+    font-size: 0.95rem;
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: var(--transicion);
+    text-align: center;
+    gap: 0.4rem;
+}
+
+.btn-primary {
+    background-color: var(--c-ppal);
+    color: #ffffff;
+}
+
+.btn-primary:hover {
+    background-color: var(--c-ppal-hover);
+    color: #ffffff;
+    transform: translateY(-2px);
+    box-shadow: var(--sombra-md);
+}
+
+.btn-outline {
+    background-color: transparent;
+    border-color: var(--c-ppal);
+    color: var(--c-ppal);
+}
+
+.btn-outline:hover {
+    background-color: var(--c-ppal);
+    color: #ffffff;
+    transform: translateY(-2px);
+}
+
+.btn-sm {
+    padding: 0.35rem 0.75rem;
+    font-size: 0.85rem;
+}
+
+.btn-block {
+    width: 100%;
+}
+
+/* 17. PIE DE PAGINA (FOOTER CON FLEXBOX) */
+footer,
+footer.pie-sitio {
+    background-color: #0f172a;
+    color: #94a3b8;
+    margin-top: 3rem;
+    border-top: 1px solid #1e293b;
+    padding: 2rem 0;
+}
+
+footer .footer-wrap,
+footer.pie-sitio .pie-wrap {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    align-items: center;
+    text-align: center;
+}
+
+@media (min-width: 600px) {
+    footer .footer-wrap,
+    footer.pie-sitio .pie-wrap {
+        flex-direction: row;
+        justify-content: space-between;
+        text-align: left;
+    }
+}
+
+footer ul,
+footer.pie-sitio ul.pie-links {
+    display: flex;
+    list-style: none;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+footer ul a,
+footer.pie-sitio ul.pie-links a {
+    color: #cbd5e1;
+    font-size: 0.9rem;
+}
+
+footer ul a:hover,
+footer.pie-sitio ul.pie-links a:hover {
+    color: #ffffff;
+}
+
+/* 18. ANIMACIONES Y KEYFRAMES (S08) */
+@keyframes aparecerSuave {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animar-entrada {
+    animation: aparecerSuave 0.6s ease-out forwards;
+}

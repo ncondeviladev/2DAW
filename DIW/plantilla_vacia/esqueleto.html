@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Noé Conde Vila">
+    <meta name="description" content="[Descripción breve del sitio]">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#2563eb">
+    <title>[Título de la Web]</title>
+    <!-- Icono de pestaña (si lo facilitan en el examen): -->
+    <link rel="icon" type="image/x-icon" href="[ruta/favicon.ico]">
+    <!-- Google Fonts: sustituir 'Inter' por la fuente solicitada (ej. Roboto, Montserrat) -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+
+    <!-- Banner Cookies Flotante (Fixed Abajo) -->
+    <aside class="cookies">
+        <p>[Texto aviso cookies] <a href="#" class="btn btn-sm btn-outline">Aceptar</a></p>
+    </aside>
+
+    <!-- Cabecera del Sitio (Sticky Top) -->
+    <header>
+        <div class="contenedor">
+            <a href="index.html" class="logo">
+                <span>⚡</span> [Marca]
+            </a>
+            <nav aria-label="Navegación principal">
+                <ul>
+                    <li><a href="index.html" class="activo">Inicio</a></li>
+                    <li><a href="servicios.html">Servicios</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                    <li><a href="https://validator.w3.org" target="_blank" rel="noopener">W3C ↗</a></li>
+                </ul>
+            </nav>
+            <div class="nav-acciones">
+                <a href="contacto.html" class="btn btn-sm btn-primary">[Acción]</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Contenido Principal (Unico) -->
+    <main>
+
+        <!-- Migas de Pan (Opcional en secundarias) -->
+        <nav class="contenedor migas" aria-label="Breadcrumbs">
+            <ol>
+                <li><a href="index.html">Inicio</a></li>
+                <li><span>[Página Actual]</span></li>
+            </ol>
+        </nav>
+
+        <!-- Seccion Hero / Portada (Unico H1 de la pagina) -->
+        <section class="hero">
+            <div class="contenedor hero-contenido">
+                <h1 class="hero-titulo">[Título Principal H1]</h1>
+                <p class="hero-subtitulo">[Subtítulo con propuesta de valor clara y concisa.]</p>
+                <div class="hero-botones">
+                    <a href="#servicios" class="btn btn-primary">[Botón Principal]</a>
+                    <a href="contacto.html" class="btn btn-outline">[Botón Secundario]</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Maquetacion 2 Columnas Flexbox (Principal 68% + Aside 28%) -->
+        <div class="contenedor layout-2cols">
+            <section class="col-principal">
+                <h2>[Título Sección Principal H2]</h2>
+                <article class="articulo">
+                    <header>
+                        <h3>[Título de Artículo H3]</h3>
+                        <time datetime="2026-11-20">20/11/2026</time>
+                    </header>
+                    <p>[Contenido descriptivo semántico].</p>
+                </article>
+                <details class="faq-item">
+                    <summary>[Pregunta frecuente desplegable]</summary>
+                    <p>[Respuesta técnica desplegable con details/summary].</p>
+                </details>
+            </section>
+
+            <aside class="col-lateral">
+                <div class="widget">
+                    <h2>[Barra Lateral H2]</h2>
+                    <p>[Información complementaria, horario o notas].</p>
+                    <ul class="lista-lateral">
+                        <li><a href="#">[Enlace 1]</a></li>
+                        <li><a href="#">[Enlace 2]</a></li>
+                    </ul>
+                </div>
+            </aside>
+        </div>
+
+        <!-- Seccion Tarjetas Flexbox (Cero Grid) -->
+        <section id="servicios" class="contenedor">
+            <h2>[Catálogo de Tarjetas H2]</h2>
+            <div class="cards-flex">
+                <article class="card">
+                    <span class="badge">[Badge]</span>
+                    <figure>
+                        <img src="img/pattern.png" alt="[Descripción]" width="300" height="180" loading="lazy">
+                        <figcaption>[Pie de foto]</figcaption>
+                    </figure>
+                    <div class="card-body">
+                        <h3>[Título Tarjeta 1]</h3>
+                        <p>[Descripción del elemento o servicio].</p>
+                        <a href="contacto.html" class="btn btn-primary btn-block">[Acción]</a>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <figure>
+                        <img src="img/pattern.png" alt="[Descripción]" width="300" height="180" loading="lazy">
+                        <figcaption>[Pie de foto]</figcaption>
+                    </figure>
+                    <div class="card-body">
+                        <h3>[Título Tarjeta 2]</h3>
+                        <p>[Descripción del elemento o servicio].</p>
+                        <a href="contacto.html" class="btn btn-outline btn-block">[Acción]</a>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- Seccion Tabla Accesible con Scroll Responsive -->
+        <section class="contenedor seccion-tabla">
+            <h2>[Tabla de Datos H2]</h2>
+            <div class="tabla-scroll">
+                <table>
+                    <caption>[Título explicativo de la tabla]</caption>
+                    <thead>
+                        <tr>
+                            <th scope="col">[Columna 1]</th>
+                            <th scope="col">[Columna 2]</th>
+                            <th scope="col">[Columna 3]</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">[Fila 1]</th>
+                            <td>[Dato A]</td>
+                            <td class="precio">[Dato B]</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">[Fila 2]</th>
+                            <td>[Dato C]</td>
+                            <td class="precio">[Dato D]</td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <th scope="row" colspan="2">[Total / Resumen]</th>
+                            <td class="precio">[Valor Final]</td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+        </section>
+
+        <!-- Seccion Formulario Completo -->
+        <section class="contenedor seccion-formulario">
+            <h2>[Formulario de Contacto H2]</h2>
+            <form action="#" method="post">
+                <fieldset>
+                    <legend>[Leyenda del Formulario]</legend>
+                    <div class="campo">
+                        <label for="eq-nom">Nombre:*</label>
+                        <input type="text" id="eq-nom" name="nombre" placeholder="Nombre completo" required autofocus>
+                    </div>
+                    <div class="campo">
+                        <label for="eq-email">Email:*</label>
+                        <input type="email" id="eq-email" name="email" placeholder="correo@ejemplo.com" required>
+                    </div>
+                    <div class="campo">
+                        <label for="eq-tel">Teléfono (9 dig):</label>
+                        <input type="tel" id="eq-tel" name="telefono" pattern="[0-9]{9}" placeholder="612345678">
+                    </div>
+                    <div class="campo">
+                        <label for="eq-fecha">Fecha:</label>
+                        <input type="date" id="eq-fecha" name="fecha">
+                    </div>
+                    <div class="campo">
+                        <label for="eq-ciudad">Ciudad (Datalist):</label>
+                        <input list="eq-ciudades" id="eq-ciudad" name="ciudad">
+                        <datalist id="eq-ciudades">
+                            <option value="Gandia">
+                            <option value="Valencia">
+                        </datalist>
+                    </div>
+                    <div class="campo">
+                        <label for="eq-sel">Selector:*</label>
+                        <select id="eq-sel" name="selector" required>
+                            <option value="" disabled selected>Selecciona opción...</option>
+                            <option value="1">Opción 1</option>
+                            <option value="2">Opción 2</option>
+                        </select>
+                    </div>
+                    <div class="campo-rad">
+                        <span>Modalidad:</span>
+                        <label><input type="radio" name="eq-mod" value="1" checked> Opción A</label>
+                        <label><input type="radio" name="eq-mod" value="2"> Opción B</label>
+                    </div>
+                    <div class="campo">
+                        <label for="eq-msg">Mensaje:</label>
+                        <textarea id="eq-msg" name="mensaje" rows="3"></textarea>
+                    </div>
+                    <div class="campo-chk">
+                        <label><input type="checkbox" name="privacidad" required> Acepto términos y privacidad*</label>
+                    </div>
+                    <div class="form-btns">
+                        <button type="submit" class="btn btn-primary">[Enviar]</button>
+                        <button type="reset" class="btn btn-outline">[Borrar]</button>
+                    </div>
+                </fieldset>
+            </form>
+        </section>
+
+        <!-- Seccion Multimedia Flexbox -->
+        <section class="contenedor seccion-multimedia">
+            <h2>[Multimedia H2]</h2>
+            <div class="multimedia-flex">
+                <div class="multi-col">
+                    <div class="multi-caja">
+                        <h3>[Vídeo / Audio HTML5]</h3>
+                        <video controls poster="img/pattern.png" preload="metadata">
+                            <source src="video/video.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                </div>
+                <div class="multi-col">
+                    <div class="multi-caja">
+                        <h3>[Mapa o Contenido Iframe]</h3>
+                        <div class="mapa-responsive">
+                            <iframe src="https://maps.google.com" title="Mapa" loading="lazy"></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Pie de Pagina -->
+    <footer>
+        <div class="contenedor footer-wrap">
+            <p><small>&copy; 2026 [Tu Nombre] — IES Maria Enríquez</small></p>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="#">Aviso Legal</a></li>
+                <li><a href="#">Contacto</a></li>
+            </ul>
+        </div>
+    </footer>
+
+</body>
+</html>

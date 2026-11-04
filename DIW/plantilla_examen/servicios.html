@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Noé Conde Vila">
+    <meta name="description" content="Catálogo detallado de servicios y tabla comparativa de tarifas">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#2563eb">
+    <title>Servicios y Tarifas — TechNova</title>
+    <!-- Icono de pestaña (si lo facilitan en el examen): -->
+    <link rel="icon" type="image/x-icon" href="[ruta/favicon.ico]">
+    <!-- Google Fonts: sustituir 'Inter' por la fuente solicitada (ej. Roboto, Montserrat) -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+
+    <!-- Cabecera del Sitio (Sticky Top) -->
+    <header>
+        <div class="contenedor">
+            <a href="index.html" class="logo">
+                <span>⚡</span> TechNova
+            </a>
+            <nav aria-label="Navegación principal">
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="servicios.html" class="activo">Servicios</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                    <li><a href="https://validator.w3.org" target="_blank" rel="noopener">Validador W3C ↗</a></li>
+                </ul>
+            </nav>
+            <div class="nav-acciones">
+                <a href="contacto.html" class="btn btn-sm btn-primary">Pedir Cita</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Contenido Principal -->
+    <main>
+
+        <!-- Migas de Pan (Breadcrumbs) -->
+        <nav class="contenedor migas" aria-label="Ruta de exploración">
+            <ol>
+                <li><a href="index.html">Inicio</a></li>
+                <li><span>Servicios y Tarifas</span></li>
+            </ol>
+        </nav>
+
+        <!-- Cabecera de Seccion (Unico H1 de la pagina) -->
+        <section class="contenedor">
+            <h1>Nuestros Servicios y Tarifas</h1>
+            <p>Descubre nuestros paquetes de desarrollo frontend y comparativa de cuotas para el curso 2026.</p>
+
+            <!-- Cards Flexbox de Servicios -->
+            <div class="cards-flex">
+                <article class="card">
+                    <span class="badge">Más Demandado</span>
+                    <figure>
+                        <img src="img/pattern.png" alt="Servicio Web Responsive" width="300" height="180" loading="lazy">
+                        <figcaption>Flexbox Mobile First</figcaption>
+                    </figure>
+                    <div class="card-body">
+                        <h3>Sitio Web Corporativo</h3>
+                        <p>Diseño de 3 a 5 páginas enlazadas con navegación responsive, menú sticky y validación W3C.</p>
+                        <a href="contacto.html" class="btn btn-primary btn-block">Solicitar</a>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <figure>
+                        <img src="img/pattern.png" alt="Servicio Landing Page" width="300" height="180" loading="lazy">
+                        <figcaption>Conversión directa</figcaption>
+                    </figure>
+                    <div class="card-body">
+                        <h3>Landing Promocional</h3>
+                        <p>Página única con sección hero impactante, llamada a la acción y formulario interactivo.</p>
+                        <a href="contacto.html" class="btn btn-outline btn-block">Solicitar</a>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <figure>
+                        <img src="img/pattern.png" alt="Servicio Auditoría" width="300" height="180" loading="lazy">
+                        <figcaption>Control de calidad</figcaption>
+                    </figure>
+                    <div class="card-body">
+                        <h3>Auditoría de Accesibilidad</h3>
+                        <p>Inspección completa de contraste de color, marcado semántico y compatibilidad con lectores.</p>
+                        <a href="contacto.html" class="btn btn-outline btn-block">Solicitar</a>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- Tabla Accesible con Scroll Responsive (Savall Checklist) -->
+        <section class="contenedor seccion-tabla">
+            <h2>Comparativa Detallada de Tarifas</h2>
+            <div class="tabla-scroll">
+                <table>
+                    <caption>Tarifas oficiales de desarrollo front-end 2026</caption>
+                    <thead>
+                        <tr>
+                            <th scope="col">Plan</th>
+                            <th scope="col">Páginas</th>
+                            <th scope="col">Soporte Técnico</th>
+                            <th scope="col">Entrega</th>
+                            <th scope="col">Precio Estimado</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">Landing Básica</th>
+                            <td>1 página</td>
+                            <td>1 mes</td>
+                            <td>3 días</td>
+                            <td class="precio">150 €</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Corporativo Pro</th>
+                            <td>3 a 5 páginas</td>
+                            <td>3 meses</td>
+                            <td>7 días</td>
+                            <td class="precio">350 €</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Auditoría W3C</th>
+                            <td>Sitio completo</td>
+                            <td>Puntual</td>
+                            <td>24 horas</td>
+                            <td class="precio">90 €</td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <th scope="row" colspan="4">Cuota Base de Arranque</th>
+                            <td class="precio">90 €</td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Pie de Pagina (Footer con Flexbox) -->
+    <footer>
+        <div class="contenedor footer-wrap">
+            <p><small>&copy; 2026 TechNova — Noé Conde Vila — IES Maria Enríquez</small></p>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="#">Aviso Legal</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </div>
+    </footer>
+
+</body>
+</html>
+

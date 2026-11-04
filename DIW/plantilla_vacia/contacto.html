@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Noé Conde Vila">
+    <meta name="description" content="[Formulario de contacto]">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#2563eb">
+    <title>Contacto — [Nombre Marca]</title>
+    <link rel="icon" type="image/x-icon" href="img/favicon.ico">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+
+    <!-- BANNER DE COOKIES (INFERIOR FIJO) -->
+    <aside class="cookies">
+        <p>Este sitio utiliza cookies técnicas. <a href="#" class="btn btn-sm btn-outline">Aceptar</a></p>
+    </aside>
+
+    <!-- CABECERA PRINCIPAL (FIJADA TOP) -->
+    <header>
+        <div class="contenedor">
+            <a href="index.html" class="logo">
+                <span>⚡</span> [Marca]
+            </a>
+            <nav aria-label="Navegación principal">
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="servicios.html">Servicios</a></li>
+                    <li><a href="contacto.html" class="activo">Contacto</a></li>
+                    <li><a href="https://validator.w3.org" target="_blank" rel="noopener">W3C ↗</a></li>
+                </ul>
+            </nav>
+            <div class="nav-acciones">
+                <a href="contacto.html" class="btn btn-sm btn-primary">[Acción]</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <main>
+
+        <!-- MIGAS DE PAN -->
+        <nav class="contenedor migas" aria-label="Migas de pan">
+            <ol>
+                <li><a href="index.html">Inicio</a></li>
+                <li><span>Contacto</span></li>
+            </ol>
+        </nav>
+
+        <!-- LAYOUT 2 COLUMNAS: FORMULARIO (68%) + ASIDE MULTIMEDIA/DATOS (28%) -->
+        <div class="contenedor layout-2cols">
+
+            <!-- COLUMNA PRINCIPAL: FORMULARIO ACCESIBLE (S03) -->
+            <section class="col-principal">
+                <h1>Formulario de Contacto</h1>
+                <p>[Rellena el formulario para solicitar información.]</p>
+
+                <form action="#" method="post" class="form-contacto" novalidate>
+                    
+                    <fieldset>
+                        <legend>Datos Personales</legend>
+
+                        <div class="campo">
+                            <label for="nombre">Nombre completo *</label>
+                            <input type="text" id="nombre" name="nombre" placeholder="Ej. Juan Pérez" required autofocus>
+                        </div>
+
+                        <div class="campo">
+                            <label for="email">Correo electrónico *</label>
+                            <input type="email" id="email" name="email" placeholder="usuario@dominio.com" required>
+                        </div>
+
+                        <div class="campo">
+                            <label for="telefono">Teléfono</label>
+                            <input type="tel" id="telefono" name="telefono" placeholder="600 000 000" pattern="[0-9]{9}">
+                        </div>
+
+                        <div class="campo">
+                            <label for="asunto">Motivo de consulta</label>
+                            <select id="asunto" name="asunto" required>
+                                <option value="" disabled selected>-- Selecciona una opción --</option>
+                                <option value="info">Información general</option>
+                                <option value="presupuesto">Presupuesto</option>
+                                <option value="soporte">Soporte técnico</option>
+                            </select>
+                        </div>
+
+                        <div class="campo">
+                            <label for="mensaje">Mensaje *</label>
+                            <textarea id="mensaje" name="mensaje" rows="4" placeholder="Escribe tu consulta aquí..." required></textarea>
+                        </div>
+
+                        <div class="campo-chk">
+                            <label>
+                                <input type="checkbox" name="privacidad" required>
+                                He leído y acepto la política de privacidad *
+                            </label>
+                        </div>
+
+                        <div class="form-btns">
+                            <button type="submit" class="btn btn-primary">Enviar mensaje</button>
+                            <button type="reset" class="btn btn-outline">Restablecer</button>
+                        </div>
+
+                    </fieldset>
+
+                </form>
+            </section>
+
+            <!-- COLUMNA LATERAL: MULTIMEDIA E INFORMACIÓN (S04) -->
+            <aside class="col-lateral">
+                <h2>Información de Contacto</h2>
+                
+                <address>
+                    <p><strong>Ubicación:</strong> [Gandia, Valencia]</p>
+                    <p><strong>Email:</strong> <a href="mailto:info@ejemplo.com">info@ejemplo.com</a></p>
+                    <p><strong>Horario:</strong> Lunes a Viernes 9:00 - 18:00</p>
+                </address>
+
+                <!-- EJEMPLO IFRAME CON SANDBOX (S04) -->
+                <h3>Localización</h3>
+                <iframe src="about:blank" title="Mapa de ubicación" sandbox="allow-scripts allow-same-origin" loading="lazy"></iframe>
+
+                <!-- EJEMPLO VÍDEO CON ATRIBUTOS CLAVE (S04) -->
+                <h3>Vídeo corporativo</h3>
+                <video controls preload="metadata" poster="img/card1.jpg">
+                    <source src="video/spot.mp4" type="video/mp4">
+                    Tu navegador no soporta vídeo HTML5.
+                </video>
+
+            </aside>
+
+        </div>
+
+    </main>
+
+    <!-- PIE DE PÁGINA -->
+    <footer>
+        <div class="contenedor footer-wrap">
+            <p><small>&copy; 2026 Noé Conde Vila — IES Maria Enríquez</small></p>
+            <ul>
+                <li><a href="#">Aviso Legal</a></li>
+                <li><a href="#">Privacidad</a></li>
+                <li><a href="#">Accesibilidad</a></li>
+            </ul>
+        </div>
+    </footer>
+
+</body>
+</html>
+

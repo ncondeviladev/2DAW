@@ -14,9 +14,11 @@
    - Mai editar fitxers existents en silenci sense explicar abans el motiu i els canvis exactes.
    - Proposar sempre canvis quirúrgics i guiats pas a pas.
 3. **PAS A PAS REAL (PACTE PEDAGÒGIC):**
-   - No llançar blocs de 200 línies de codi de colp.
-   - Explicar **primer el concepte**, després l'estructura i finalment el codi concret.
-   - Deixar que l'alumne assimile, prove o pregunte abans de saltar a la següent funció o pantalla.
+   - El codi el programa Noé per a aprendre: MAI avançar exercicis ni crear fitxers de tasques senceres pel nostre compte.
+   - No llançar blocs de codi sense demanar-ho. Explicar primer el concepte, estructurar i deixar que l'alumne avance al seu ritme.
+4. **ESTALVI DE TOKENS I RESPOSTES AL GRA:**
+   - Respostes breus, concises i directes.
+   - Els canvis s'apliquen quirúrgicament en els fitxers; NO cal pegar diffs gegants ni repetir codi al xat si no es demana.
 
 ---
 

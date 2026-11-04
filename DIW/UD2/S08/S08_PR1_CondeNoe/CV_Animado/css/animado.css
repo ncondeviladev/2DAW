@@ -1,0 +1,498 @@
+@charset "utf-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;700&display=swap');
+
+@font-face {
+    font-family: 'fun';
+    src: url(../fonts/Righteous-Regular.ttf) format('truetype');
+}
+
+/* Inicialización universal */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/*Custom properties*/
+:root {
+    --fuente-principal: 'Plus Jakarta Sans', -apple-system, sans-serif;
+    --fuente-titulos: 'Space Grotesk', 'fun', sans-serif;
+    --tamano-base: 16px;
+
+    --color-fondo-app: #f8fafc;
+    --color-fondo-tarjeta: #ffffff;
+    --color-primario: #0284c7;
+    --color-secundario: #7c3aed;
+    --color-acento: #ec4899;
+    --color-texto: #0f172a;
+    --color-texto-suave: #64748b;
+    --color-borde: #cbd5e1;
+
+    /*Degradados y sombras dinámicas*/
+    --gradiente-fondo: linear-gradient(135deg, #0284c7 0%, #7c3aed 100%);
+    --gradiente-boton: linear-gradient(135deg, #7c3aed 0%, #ec4899 100%);
+    --sombra-tarjeta: 0 8px 24px rgba(2, 132, 199, 0.12);
+    --sombra-boton: 0 4px 14px rgba(236, 72, 153, 0.35);
+
+    /*Para separaciones*/
+    --espacio-2xs: 2px;
+    --espacio-xs: 0.25rem;
+    --espacio-sm: 0.5rem;
+    --espacio-md: 1rem;
+    --espacio-lg: 1.5rem;
+
+    /*Para tablas y notas*/
+    --tamano-sm: 0.875rem;
+    --tamano-xs: 0.75rem;
+
+    /*Radios de bordes*/
+    --radio-sm: 6px;
+    --radio-md: 14px;
+    --radio-pill: 50px;
+}
+
+/*Body contenedor principal*/
+body {
+    font-family: var(--fuente-principal);
+    font-size: var(--tamano-base);
+    line-height: 1.6;
+    color: var(--color-texto);
+    background-color: var(--color-fondo-app);
+    background-image: url("../img/pattern.png");
+    background-repeat: repeat;
+    background-attachment: fixed;
+
+    width: 100%;
+    max-width: 650px;
+    margin: 0 auto;
+    padding: var(--espacio-md);
+}
+
+header {
+    text-align: center;
+    margin-bottom: var(--espacio-md);
+}
+
+/*Contenedor de botones*/
+header .conmutador-estilos {
+    margin-bottom: var(--espacio-md);
+    text-align: right;
+}
+
+/*Botones conmutador con gradiente y sombra*/
+header .conmutador-estilos button.btn-estilo {
+    background: var(--gradiente-boton);
+    color: #ffffff;
+    border: none;
+    padding: var(--espacio-xs) var(--espacio-sm);
+    font-size: 0.8rem;
+    font-weight: 600;
+    cursor: pointer;
+    border-radius: var(--radio-pill);
+    box-shadow: var(--sombra-boton);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+/*Separacion entre botones*/
+header .conmutador-estilos button.btn-estilo:first-child {
+    margin-right: var(--espacio-xs);
+
+    transition: transform .15s ease, background-color .2s ease;
+
+}
+
+/*Hover botones conmutador*/
+header .conmutador-estilos button.btn-estilo:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(79, 70, 229, 0.4);
+
+    transform: translateY(-2px) scale(1.05);
+}
+
+/*Efecto pulsado*/
+header .conmutador-estilos button.btn-estilo:active {
+    transform: scale(.95);
+}
+
+/*Título principal con fuente local y sombra de texto*/
+header>h1 {
+    font-family: var(--fuente-titulos);
+    font-size: 1.7rem;
+    color: var(--color-primario);
+    margin-top: var(--espacio-xs);
+    text-shadow: 2px 2px 0px rgba(99, 102, 241, 0.25);
+    letter-spacing: 0.5px;
+
+    transition: all .4s ease;
+}
+
+header>h1:hover {
+    font-family: var(--fuente-titulos);
+    font-size: 1.7rem;
+    color: var(--color-primario);
+    margin-top: var(--espacio-xs);
+    text-shadow: 2px 2px 0px rgba(99, 102, 241, 0.25);
+    letter-spacing: 0.5px;
+
+    transform: rotate(2deg) scale(1.1);
+}
+
+/*Línea separadora con degradado*/
+hr {
+    border: 0;
+    height: 2px;
+    background: linear-gradient(to right, transparent, var(--color-borde), transparent);
+    margin: var(--espacio-md) 0;
+}
+
+nav {
+    text-align: center;
+    margin-bottom: var(--espacio-md);
+    line-height: 2.2;
+}
+
+/*Enlaces del nav*/
+nav a[href^="#"] {
+    display: inline-block;
+    padding: var(--espacio-xs) var(--espacio-sm);
+    margin: var(--espacio-2xs);
+    background-color: var(--color-fondo-tarjeta);
+    color: var(--color-primario);
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: 600;
+    border: 1px solid var(--color-borde);
+    border-radius: var(--radio-pill);
+    box-shadow: 0 2px 6px rgba(79, 70, 229, 0.08);
+    transition: all 0.2s;
+
+    transition: transform .25 ease;
+}
+
+/*Hover enlaces nav con degradado*/
+nav a[href^="#"]:hover {
+    background: var(--gradiente-boton);
+    color: #ffffff;
+    border-color: transparent;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(79, 70, 229, 0.3);
+
+    transform: translateY(-3px) scale(1.05);
+}
+
+/*Contenedores tarjeta con sombra flotante*/
+:is(section, aside).tarjeta {
+    background-color: var(--color-fondo-tarjeta);
+    border: 1px solid var(--color-borde);
+    border-radius: var(--radio-md);
+    padding: var(--espacio-md);
+    margin-bottom: var(--espacio-md);
+    box-shadow: var(--sombra-tarjeta);
+
+    transition: transform .3s ease, box-shadow .3s ease, border-color .3s ease;
+    /*Animación para cv animado*/
+}
+
+:is(section, aside).tarjeta:hover {
+    background-color: var(--color-fondo-tarjeta);
+    border: 1px solid var(--color-borde);
+    border-radius: var(--radio-md);
+    padding: var(--espacio-md);
+    margin-bottom: var(--espacio-md);
+    box-shadow: var(--sombra-tarjeta);
+
+    transform: translateY(-6px);
+    /*Animación para cv animado*/
+    box-shadow: 0 12px 24px rgba(79, 70, 230, .25);
+    border-color: var(--color-primario);
+}
+
+/*Títulos H2 con fuente local*/
+main .tarjeta>h2 {
+    font-family: var(--fuente-titulos);
+    color: var(--color-primario);
+    font-size: 1.3rem;
+    padding-bottom: var(--espacio-xs);
+    border-bottom: 2px solid var(--color-borde);
+    margin-bottom: var(--espacio-sm);
+    letter-spacing: 0.5px;
+
+    transition: all .4s ease;
+}
+
+/*Iconos dentro de los H2*/
+main .tarjeta>h2>img {
+    vertical-align: middle;
+    margin-right: var(--espacio-xs);
+
+    transition:  all .3s ease;
+}
+
+/*Títulos H2 con fuente local*/
+main .tarjeta>h2:hover {
+    font-family: var(--fuente-titulos);
+    color: var(--color-primario);
+    font-size: 1.3rem;
+    padding-bottom: var(--espacio-xs);
+    border-bottom: 2px solid var(--color-borde);
+    margin-bottom: var(--espacio-sm);
+    letter-spacing: 0.5px;
+
+    transform: translateX(8px);
+}
+
+/*Iconos dentro de los H2*/
+main .tarjeta>h2>img:hover {
+    vertical-align: middle;
+    margin-right: var(--espacio-xs);
+
+    transform: translateX(8px) rotate(15deg) scale(1.15);
+
+}
+
+/* --- SECCIÓN 1: DATOS PERSONALES (TABLA) --- */
+#datosPersonales table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: var(--tamano-sm);
+}
+
+/*Fondo suave alterno en filas pares*/
+#datosPersonales table tr:nth-child(even) {
+    background-color: #d9d4f7;
+}
+
+/*Espaciado y alineación de celdas*/
+#datosPersonales table th,
+#datosPersonales table td {
+    padding: var(--espacio-xs);
+    text-align: left;
+    vertical-align: middle;
+}
+
+/*Animaciones de las filas de la tabla*/
+#datosPersonales table tr {
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+
+#datosPersonales table tr:hover {
+    background-color: rgba(2, 132, 199, 0.12);
+
+}
+
+/* Animacion desplazamiento SOLO a los textos, excluyendo la foto */
+#datosPersonales table th,
+#datosPersonales table td:not(.celda-foto) {
+    transition: transform 0.2s ease;
+}
+
+#datosPersonales table tr:hover th,
+#datosPersonales table tr:hover td:not(.celda-foto) {
+    transform: translateX(6px);
+}
+
+/*Cabeceras de la tabla*/
+#datosPersonales table th {
+    color: var(--color-primario);
+    font-weight: 600;
+    width: 32%;
+}
+
+/*Columna de la fotografía*/
+#datosPersonales table td.celda-foto {
+    width: 85px;
+    padding-right: var(--espacio-xs);
+    text-align: center;
+}
+
+/*Imagen de la fotografía con borde y sombra*/
+#datosPersonales table td.celda-foto img {
+    border-radius: var(--radio-md);
+    border: 2px solid var(--color-secundario);
+    box-shadow: 0 4px 8px rgba(79, 70, 229, 0.2);
+    max-width: 75px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+
+    transition: all .3s ease;
+    /*Animación para cv animado*/
+}
+
+#datosPersonales table td.celda-foto img:hover {
+    border-radius: var(--radio-md);
+    border: 2px solid var(--color-secundario);
+    box-shadow: 0 4px 8px rgba(79, 70, 229, 0.2);
+    max-width: 75px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+
+    transform: translateY(-4px) scale(1.03) rotate(-1deg);
+    /*Animación para cv animado*/
+}
+
+/* --- SECCIÓN 2: FORMACIÓN Y EXPERIENCIA (LISTAS) --- */
+/*Lista principal*/
+.tarjeta ul {
+    list-style-position: inside;
+    padding-left: var(--espacio-xs);
+}
+
+/*Separador entre bloques de experiencia o estudio*/
+.tarjeta>ul>li+li {
+    margin-top: var(--espacio-md);
+    padding-top: var(--espacio-sm);
+    border-top: 2px dotted var(--color-borde);
+}
+
+/*Título del puesto o titulación*/
+.tarjeta>ul>li>strong {
+    color: var(--color-primario);
+    font-size: var(--tamano-base);
+}
+
+/*Empresa o centro y fechas*/
+.tarjeta>ul>li>em {
+    color: var(--color-secundario);
+    font-size: var(--tamano-sm);
+    display: block;
+    margin-bottom: var(--espacio-xs);
+    font-style: normal;
+    font-weight: 500;
+}
+
+/*Sublista para las funciones*/
+.tarjeta ul ul {
+    padding-left: var(--espacio-md);
+    margin-top: var(--espacio-xs);
+}
+
+/*Puntos de detalle de las tareas*/
+.tarjeta ul ul li {
+    font-size: var(--tamano-sm);
+    color: var(--color-texto);
+    margin-bottom: var(--espacio-xs);
+}
+
+/* Animacion de las listas */
+.tarjeta ul li {
+    transition: transform 0.2s ease, color 0.2s ease;
+}
+
+
+.tarjeta ul li:hover {
+    transform: translateX(6px);
+}
+
+/* --- SECCIÓN 3: COMPETENCIAS Y HABILIDADES --- */
+/*Párrafos de categorías*/
+#habilidades p {
+    margin-bottom: var(--espacio-sm);
+    font-size: var(--tamano-sm);
+}
+
+/*Pastillas para cada tecnología*/
+#habilidades code {
+    font-family: inherit;
+    background-color: #eef2ff;
+    color: var(--color-primario);
+    border: 1px solid var(--color-borde);
+    border-radius: var(--radio-pill);
+    padding: var(--espacio-2xs) var(--espacio-sm);
+    font-size: var(--tamano-xs);
+    font-weight: 600;
+    display: inline-block;
+    margin-top: var(--espacio-xs);
+    box-shadow: 0 1px 3px rgba(79, 70, 229, 0.1);
+}
+
+/*Separación entre pastillas consecutivas*/
+#habilidades code:not(:last-child) {
+    margin-right: var(--espacio-xs);
+}
+
+/* --- SECCIÓN 4: INTERESES Y AFICIONES --- */
+/*Párrafo descriptivo*/
+aside#intereses p {
+    font-size: var(--tamano-sm);
+    line-height: 1.7;
+    color: var(--color-texto);
+}
+
+/*Letra capital con fuente local*/
+aside#intereses p::first-letter {
+    font-family: var(--fuente-titulos);
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: var(--color-primario);
+    float: left;
+    margin-right: var(--espacio-xs);
+    line-height: 1;
+    text-shadow: 1px 1px 0px rgba(99, 102, 241, 0.3);
+}
+
+/* --- SECCIÓN 5: CONTACTO --- */
+/*Bloque de dirección y datos*/
+#contacto address {
+    font-style: normal;
+    font-size: var(--tamano-sm);
+    line-height: 1.8;
+}
+
+/*Enlaces de contacto*/
+#contacto a {
+    color: var(--color-acento);
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.2s;
+}
+
+/*Hover enlaces contacto*/
+#contacto a:hover {
+    text-decoration: underline;
+    color: var(--color-primario);
+}
+
+/*Efecto al pulsar enlace*/
+#contacto a:active {
+    color: var(--color-secundario);
+}
+
+/*Enlaces a correo y teléfono destacados*/
+#contacto a[href^="mailto:"],
+#contacto a[href^="tel:"] {
+    font-weight: 700;
+}
+
+/* --- SECCIÓN 6: ENLACE VOLVER ARRIBA --- */
+/*Posición y tipografía del enlace*/
+a.enlace-volver-arriba {
+    display: block;
+    text-align: right;
+    font-size: var(--tamano-xs);
+    font-weight: 600;
+    color: var(--color-secundario);
+    text-decoration: none;
+    margin: var(--espacio-xs) 0;
+    padding-right: var(--espacio-xs);
+    transition: color 0.2s;
+}
+
+/*Flecha antes del texto*/
+a.enlace-volver-arriba::before {
+    content: "▲ ";
+    font-size: 0.65rem;
+}
+
+/*Hover volver arriba*/
+a.enlace-volver-arriba:hover {
+    color: var(--color-primario);
+    text-decoration: underline;
+}

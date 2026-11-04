@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Noé Conde Vila">
+    <meta name="description" content="[Descripción de servicios]">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#2563eb">
+    <title>Servicios — [Nombre Marca]</title>
+    <link rel="icon" type="image/x-icon" href="img/favicon.ico">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+
+    <!-- BANNER DE COOKIES (INFERIOR FIJO) -->
+    <aside class="cookies">
+        <p>Este sitio utiliza cookies técnicas. <a href="#" class="btn btn-sm btn-outline">Aceptar</a></p>
+    </aside>
+
+    <!-- CABECERA PRINCIPAL (FIJADA TOP) -->
+    <header>
+        <div class="contenedor">
+            <a href="index.html" class="logo">
+                <span>⚡</span> [Marca]
+            </a>
+            <nav aria-label="Navegación principal">
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="servicios.html" class="activo">Servicios</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                    <li><a href="https://validator.w3.org" target="_blank" rel="noopener">W3C ↗</a></li>
+                </ul>
+            </nav>
+            <div class="nav-acciones">
+                <a href="contacto.html" class="btn btn-sm btn-primary">[Acción]</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <main>
+
+        <!-- MIGAS DE PAN -->
+        <nav class="contenedor migas" aria-label="Migas de pan">
+            <ol>
+                <li><a href="index.html">Inicio</a></li>
+                <li><span>Servicios</span></li>
+            </ol>
+        </nav>
+
+        <!-- SECCIÓN 1: TARJETAS EN FILA FLEXBOX (RESPONSIVE) -->
+        <section class="contenedor">
+            <h1>Catálogo de [Servicios / Productos]</h1>
+            <p>[Introducción explicativa del catálogo.]</p>
+
+            <div class="cards-flex">
+
+                <!-- TARJETA 1 -->
+                <article class="card">
+                    <span class="badge">[Etiqueta]</span>
+                    <figure>
+                        <picture>
+                            <source srcset="img/card1.webp" type="image/webp">
+                            <img src="img/card1.jpg" alt="[Descripción tarjeta 1]" loading="lazy">
+                        </picture>
+                        <figcaption>[Pie de foto opcional]</figcaption>
+                    </figure>
+                    <div class="card-body">
+                        <h2>[Título Tarjeta 1]</h2>
+                        <p>[Descripción del servicio o producto 1.]</p>
+                        <a href="contacto.html" class="btn btn-sm btn-primary">[Ver más]</a>
+                    </div>
+                </article>
+
+                <!-- TARJETA 2 -->
+                <article class="card">
+                    <figure>
+                        <picture>
+                            <source srcset="img/card2.webp" type="image/webp">
+                            <img src="img/card2.jpg" alt="[Descripción tarjeta 2]" loading="lazy">
+                        </picture>
+                        <figcaption>[Pie de foto opcional]</figcaption>
+                    </figure>
+                    <div class="card-body">
+                        <h2>[Título Tarjeta 2]</h2>
+                        <p>[Descripción del servicio o producto 2.]</p>
+                        <a href="contacto.html" class="btn btn-sm btn-primary">[Ver más]</a>
+                    </div>
+                </article>
+
+                <!-- TARJETA 3 -->
+                <article class="card">
+                    <figure>
+                        <picture>
+                            <source srcset="img/card3.webp" type="image/webp">
+                            <img src="img/card3.jpg" alt="[Descripción tarjeta 3]" loading="lazy">
+                        </picture>
+                        <figcaption>[Pie de foto opcional]</figcaption>
+                    </figure>
+                    <div class="card-body">
+                        <h2>[Título Tarjeta 3]</h2>
+                        <p>[Descripción del servicio o producto 3.]</p>
+                        <a href="contacto.html" class="btn btn-sm btn-primary">[Ver más]</a>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- SECCIÓN 2: TABLA SEMÁNTICA ACCESIBLE -->
+        <section class="contenedor">
+            <h2>Comparativa de [Planes / Precios]</h2>
+            <div class="tabla-scroll">
+                <table>
+                    <caption>[Título descriptivo de la tabla]</caption>
+                    <thead>
+                        <tr>
+                            <th scope="col">[Concepto]</th>
+                            <th scope="col">[Detalle]</th>
+                            <th scope="col">[Precio]</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">[Fila 1]</th>
+                            <td>[Dato 1]</td>
+                            <td class="precio">[100€]</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">[Fila 2]</th>
+                            <td>[Dato 2]</td>
+                            <td class="precio">[200€]</td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <th scope="row" colspan="2">[Total / Mínimo]</th>
+                            <td class="precio">[100€]</td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- PIE DE PÁGINA -->
+    <footer>
+        <div class="contenedor footer-wrap">
+            <p><small>&copy; 2026 Noé Conde Vila — IES Maria Enríquez</small></p>
+            <ul>
+                <li><a href="#">Aviso Legal</a></li>
+                <li><a href="#">Privacidad</a></li>
+                <li><a href="#">Accesibilidad</a></li>
+            </ul>
+        </div>
+    </footer>
+
+</body>
+</html>
+

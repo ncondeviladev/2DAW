@@ -1,428 +1,172 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <!-- ==========================================================================
-         PLANTILLA MAESTRA DE EXAMEN DIW — Quique Savall
-         Autor: Noé Conde Vila | 2º DAW Semipresencial | IES Maria Enríquez
-         ========================================================================== -->
-    
-    <!-- 1. CODIFICACIÓN Y VIEWPORT (OBLIGATORIOS PARA VALIDACIÓN W3C Y RESPONSIVE) -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <!-- 2. TÍTULO DESCRIPTIVO ÚNICO -->
-    <title>TechNova Solutions — Plantilla Maestra de Examen DIW</title>
-    
-    <!-- 3. METADATOS DE AUTORÍA Y SEO (Checklist estricto de Savall) -->
     <meta name="author" content="Noé Conde Vila">
-    <meta name="description" content="Plantilla modular de diseño web en HTML5 y CSS3 para el examen de DIW">
-    <meta name="keywords" content="html5, css3, diseño web, responsive, mobile first, diw">
+    <meta name="description" content="Sitio corporativo responsive con Flexbox Mobile First y estándares W3C">
     <meta name="robots" content="index, follow">
     <meta name="theme-color" content="#2563eb">
-    
-    <!-- 4. FUENTES DE GOOGLE FONTS (Preconnect para rendimiento óptimo) -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@600;700;800&display=swap" rel="stylesheet">
-    
-    <!-- 5. HOJA DE ESTILOS EXTERNA -->
+    <title>TechNova — Soluciones Digitales</title>
+    <!-- Icono de pestaña (si lo facilitan en el examen): -->
+    <link rel="icon" type="image/x-icon" href="[ruta/favicon.ico]">
+    <!-- Google Fonts: sustituir 'Inter' por la fuente solicitada (ej. Roboto, Montserrat) -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
     <link rel="stylesheet" href="css/estilos.css">
 </head>
 <body>
 
-    <!-- ==========================================================================
-         CABECERA DEL SITIO (HEADER) + NAVEGACIÓN (NAV CON FLEXBOX)
-         ========================================================================== -->
-    <header class="cabecera-sitio">
-        <div class="contenedor nav-contenedor">
-            <!-- Logotipo o Título de Marca (Usando clase para tipografía destacada) -->
-            <a href="#inicio" class="logo-marca">
-                <span class="logo-icono">⚡</span> TechNova
-            </a>
+    <!-- Banner Cookies Flotante (Fixed Abajo) -->
+    <aside class="cookies">
+        <p>Utilizamos cookies técnicas para garantizar la mejor experiencia. <a href="#" class="btn btn-sm btn-outline">Aceptar</a></p>
+    </aside>
 
-            <!-- Menú de Navegación Principal (Siempre ul > li > a para accesibilidad) -->
-            <nav class="navbar" aria-label="Navegación principal">
-                <ul class="nav-enlaces">
-                    <li><a href="#inicio">Inicio</a></li>
-                    <li><a href="#servicios">Servicios</a></li>
-                    <li><a href="#precios">Tarifas</a></li>
-                    <li><a href="#contacto">Contacto</a></li>
-                    <!-- Enlace externo para demostrar el selector de atributo a[href^="http"] -->
-                    <li><a href="https://validator.w3.org" target="_blank" rel="noopener">Validador W3C</a></li>
+    <!-- Cabecera del Sitio (Sticky Top) -->
+    <header>
+        <div class="contenedor">
+            <a href="index.html" class="logo">
+                <span>⚡</span> TechNova
+            </a>
+            <nav aria-label="Navegación principal">
+                <ul>
+                    <li><a href="index.html" class="activo">Inicio</a></li>
+                    <li><a href="servicios.html">Servicios</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                    <li><a href="https://validator.w3.org" target="_blank" rel="noopener">Validador W3C ↗</a></li>
                 </ul>
             </nav>
-
-            <!-- Botón de Acción Rápida (Call to Action en la cabecera) -->
             <div class="nav-acciones">
-                <a href="#contacto" class="btn btn-sm btn-primary">Pedir Cita</a>
+                <a href="contacto.html" class="btn btn-sm btn-primary">Pedir Cita</a>
             </div>
         </div>
     </header>
 
-    <!-- ==========================================================================
-         CONTENIDO PRINCIPAL (MAIN — Solo debe existir UN único <main> por página)
-         ========================================================================== -->
+    <!-- Contenido Principal (Unico <main> del documento) -->
     <main>
 
-        <!-- ======================================================================
-             SECCIÓN HERO / PORTADA (Con el único <h1> del documento y degradado)
-             ====================================================================== -->
-        <section id="inicio" class="hero">
+        <!-- Seccion Hero / Portada (Unico H1 de la pagina) -->
+        <section class="hero">
             <div class="contenedor hero-contenido">
-                <!-- REGLA DE ORO: Solo 1 H1 en todo el HTML -->
-                <h1 class="hero-titulo">Desarrollo Web &amp; Diseño de Interfaces Modernas</h1>
+                <h1 class="hero-titulo">Desarrollo Web &amp; Interfaces Modernas</h1>
                 <p class="hero-subtitulo">
-                    Creamos experiencias digitales accesibles, fluidas y optimizadas con <strong>filosofía Mobile First</strong> bajo estándares estrictos del W3C.
+                    Creamos experiencias accesibles, fluidas y optimizadas con <strong>Flexbox Mobile First</strong> bajo estándares estrictos W3C.
                 </p>
                 <div class="hero-botones">
-                    <a href="#servicios" class="btn btn-primary">Ver Servicios</a>
-                    <a href="#contacto" class="btn btn-outline">Contactar Ahora</a>
+                    <a href="servicios.html" class="btn btn-primary">Ver Servicios</a>
+                    <a href="contacto.html" class="btn btn-outline">Contactar Ahora</a>
                 </div>
             </div>
         </section>
 
-        <!-- ======================================================================
-             SECCIÓN 1: GRID DE TARJETAS / SERVICIOS (CSS GRID RESPONSIVE)
-             ====================================================================== -->
-        <section id="servicios" class="seccion-servicios">
-            <div class="contenedor">
-                <div class="seccion-encabezado">
-                    <h2>Nuestros Servicios Especializados</h2>
-                    <!-- Hermano adyacente (h2 + p) para aplicar estilos especiales en CSS -->
-                    <p>Soluciones a medida para proyectos web escalables y de alto impacto visual.</p>
+        <!-- Maquetacion 2 Columnas Flexbox (Principal 68% + Aside 28%) -->
+        <div class="contenedor layout-2cols">
+            
+            <!-- Columna Principal (68%) -->
+            <section class="col-principal">
+                <h2>Soluciones a tu Medida</h2>
+                
+                <article class="articulo animar-entrada">
+                    <header>
+                        <h3>Arquitectura Web Limpia y Escalable</h3>
+                        <time datetime="2026-11-20">20 de noviembre de 2026</time>
+                    </header>
+                    <p>Diseño basado en componentes reutilizables sin dependencias externas ni sobrecarga innecesaria.</p>
+                </article>
+
+                <article class="articulo">
+                    <header>
+                        <h3>Optimización de Rendimiento y Accesibilidad</h3>
+                        <time datetime="2026-11-20">20 de noviembre de 2026</time>
+                    </header>
+                    <p>Garantizamos compatibilidad multiplataforma, carga ultrarrápida y cumplimiento de estándares de accesibilidad.</p>
+                </article>
+
+                <!-- Acordeon Desplegable FAQ (Details + Summary) -->
+                <details class="faq-item">
+                    <summary>¿Qué tecnologías se emplean en cada entrega?</summary>
+                    <p>Únicamente HTML5 semántico puro y CSS3 nativo avanzado con metodología Mobile First sin dependencias.</p>
+                </details>
+                <details class="faq-item">
+                    <summary>¿El diseño está preparado para cualquier dispositivo?</summary>
+                    <p>Sí, la interfaz se adapta fluidamente desde teléfonos móviles hasta pantallas de gran formato.</p>
+                </details>
+            </section>
+
+            <!-- Columna Lateral (Aside 28%) -->
+            <aside class="col-lateral">
+                <div class="widget">
+                    <h2>Horario de Atención</h2>
+                    <p>Lunes a Viernes: 09:00 - 18:00</p>
+                    <p>Atención continua para soporte técnico y presupuestos.</p>
                 </div>
-
-                <!-- Contenedor Grid (CSS Grid con repeat(auto-fit, minmax(...))) -->
-                <div class="grid-cards">
-                    
-                    <!-- Tarjeta 1: Con etiqueta badge -->
-                    <article class="card">
-                        <div class="card-badge">Más Popular</div>
-                        <div class="card-imagen-caja">
-                            <!-- SVG simulando imagen de prueba sin dependencias externas -->
-                            <svg class="card-svg" viewBox="0 0 400 220" role="img" aria-label="Icono Diseño Responsive">
-                                <rect width="100%" height="100%" fill="#e0e7ff"/>
-                                <text x="50%" y="50%" font-size="20" font-family="'Outfit', sans-serif" font-weight="700" fill="#3730a3" text-anchor="middle" dominant-baseline="middle">📱 Diseño Mobile First</text>
-                            </svg>
-                        </div>
-                        <div class="card-cuerpo">
-                            <h3>Maquetación Web Responsive</h3>
-                            <p>Estructuración semántica en HTML5, Flexbox y CSS Grid adaptada a smartphones, tabletas y monitores ultrapanorámicos.</p>
-                            <ul class="lista-detalles">
-                                <li>Validación W3C estricta sin errores</li>
-                                <li>Velocidad de carga optimizada</li>
-                                <li>Tipografía fluida con unidades rem</li>
-                            </ul>
-                            <a href="#contacto" class="btn btn-block btn-outline">Solicitar Info</a>
-                        </div>
-                    </article>
-
-                    <!-- Tarjeta 2: -->
-                    <article class="card">
-                        <div class="card-imagen-caja">
-                            <svg class="card-svg" viewBox="0 0 400 220" role="img" aria-label="Icono UI/UX y Accesibilidad">
-                                <rect width="100%" height="100%" fill="#ccfbf1"/>
-                                <text x="50%" y="50%" font-size="20" font-family="'Outfit', sans-serif" font-weight="700" fill="#115e59" text-anchor="middle" dominant-baseline="middle">🎨 UI / UX &amp; Accesibilidad</text>
-                            </svg>
-                        </div>
-                        <div class="card-cuerpo">
-                            <h3>Sistemas de Diseño UI/UX</h3>
-                            <p>Interfaces limpias basadas en contraste visual accesible (WCAG AAA), variables CSS dinámicas y microanimaciones suaves.</p>
-                            <ul class="lista-detalles">
-                                <li>Modos claro y oscuro nativos</li>
-                                <li>Paletas de colores contrastadas</li>
-                                <li>Iconografía vectorial escalable</li>
-                            </ul>
-                            <a href="#contacto" class="btn btn-block btn-outline">Solicitar Info</a>
-                        </div>
-                    </article>
-
-                    <!-- Tarjeta 3: -->
-                    <article class="card">
-                        <div class="card-badge card-badge-nuevo">Nuevo</div>
-                        <div class="card-imagen-caja">
-                            <svg class="card-svg" viewBox="0 0 400 220" role="img" aria-label="Icono Auditoría y Optimización">
-                                <rect width="100%" height="100%" fill="#fef3c7"/>
-                                <text x="50%" y="50%" font-size="20" font-family="'Outfit', sans-serif" font-weight="700" fill="#92400e" text-anchor="middle" dominant-baseline="middle">🚀 Auditoría Web Completa</text>
-                            </svg>
-                        </div>
-                        <div class="card-cuerpo">
-                            <h3>Auditoría de Rendimiento</h3>
-                            <p>Revisión exhaustiva de código CSS/HTML, eliminación de selectores redundantes y optimización para buscadores (SEO).</p>
-                            <ul class="lista-detalles">
-                                <li>Informe técnico de mejoras</li>
-                                <li>Diagnóstico de especificidad CSS</li>
-                                <li>Reducción de peso de assets</li>
-                            </ul>
-                            <a href="#contacto" class="btn btn-block btn-outline">Solicitar Info</a>
-                        </div>
-                    </article>
-
+                
+                <div class="widget">
+                    <h2>Enlaces Rápidos</h2>
+                    <ul class="lista-lateral">
+                        <li><a href="servicios.html">Tarifas y Planes</a></li>
+                        <li><a href="contacto.html">Formulario de Contacto</a></li>
+                        <li><a href="https://w3.org" target="_blank" rel="noopener">Estándares W3C</a></li>
+                    </ul>
                 </div>
-            </div>
-        </section>
+            </aside>
+        </div>
 
-        <!-- ======================================================================
-             SECCIÓN 2: TABLA DE DATOS SEMÁNTICA (Tablas bien hechas según Savall)
-             ====================================================================== -->
-        <section id="precios" class="seccion-precios">
-            <div class="contenedor">
-                <div class="seccion-encabezado">
-                    <h2>Planes y Tarifas del Servicio</h2>
-                    <p>Precios transparentes y sin costes ocultos para cada necesidad de proyecto.</p>
-                </div>
-
-                <div class="tabla-contenedor">
-                    <!-- REGLA W3C: Las tablas deben incluir caption y thead/tbody/tfoot -->
-                    <table>
-                        <caption>Comparativa de Tarifas de Desarrollo Web (Tarifas 2026/2027)</caption>
-                        <thead>
-                            <tr>
-                                <th scope="col">Característica</th>
-                                <th scope="col">Plan Básico</th>
-                                <th scope="col">Plan Profesional</th>
-                                <th scope="col">Plan Enterprise</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <th scope="row">Páginas incluidas</th>
-                                <td>Hasta 3 secciones</td>
-                                <td>Hasta 8 secciones</td>
-                                <td>Ilimitadas</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">Diseño Mobile First</th>
-                                <td>Sí (Estándar)</td>
-                                <td>Sí (Avanzado)</td>
-                                <td>Sí (A medida)</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">Validación W3C</th>
-                                <td>Cero errores</td>
-                                <td>Cero errores + WCAG AA</td>
-                                <td>Cero errores + WCAG AAA</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">Formulario con validación</th>
-                                <td>1 formulario básico</td>
-                                <td>2 formularios completos</td>
-                                <td>Formularios ilimitados</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">Precio Estimado</th>
-                                <td><strong>350 €</strong></td>
-                                <td><strong>750 €</strong></td>
-                                <td><strong>1.500 €</strong></td>
-                            </tr>
-                        </tbody>
-                        <tfoot>
-                            <tr>
-                                <td colspan="4"><small>* Todos los planes incluyen 1 año de mantenimiento técnico básico y soporte por email.</small></td>
-                            </tr>
-                        </tfoot>
-                    </table>
-                </div>
-            </div>
-        </section>
-
-        <!-- ======================================================================
-             SECCIÓN 3: FORMULARIO COMPLETO Y ACCESIBLE (Todos los tipos de input)
-             ====================================================================== -->
-        <section id="contacto" class="seccion-contacto">
-            <div class="contenedor">
-                <div class="seccion-encabezado">
-                    <h2>Formulario de Contacto y Presupuesto</h2>
-                    <p>Completa el siguiente formulario para recibir una propuesta personalizada en menos de 24 horas.</p>
-                </div>
-
-                <div class="form-contenedor">
-                    <!-- Formulario con action y method correctos -->
-                    <form action="#" method="post" class="formulario-estilizado" novalidate>
-                        
-                        <!-- BLOQUE 1: Datos de Contacto -->
-                        <fieldset>
-                            <legend>1. Datos Personales y de Contacto</legend>
-                            
-                            <!-- Contenedor responsive a 2 columnas para campos dobles -->
-                            <div class="fila-doble">
-                                <div class="form-grupo">
-                                    <label for="campo-nombre">Nombre y Apellidos <span class="obligatorio">*</span>:</label>
-                                    <input type="text" id="campo-nombre" name="nombre" required placeholder="Ej: Noé Conde Vila" autocomplete="name">
-                                </div>
-                                <div class="form-grupo">
-                                    <label for="campo-email">Correo Electrónico <span class="obligatorio">*</span>:</label>
-                                    <input type="email" id="campo-email" name="email" required placeholder="correo@ejemplo.com" autocomplete="email">
-                                </div>
-                            </div>
-
-                            <div class="fila-doble">
-                                <div class="form-grupo">
-                                    <label for="campo-telefono">Teléfono de Contacto:</label>
-                                    <input type="tel" id="campo-telefono" name="telefono" pattern="[0-9]{9}" placeholder="Ej: 612345678" autocomplete="tel">
-                                </div>
-                                <div class="form-grupo">
-                                    <label for="campo-fecha">Fecha deseada de inicio:</label>
-                                    <input type="date" id="campo-fecha" name="fecha_inicio">
-                                </div>
-                            </div>
-                        </fieldset>
-
-                        <!-- BLOQUE 2: Opciones y Preferencias de Proyecto -->
-                        <fieldset>
-                            <legend>2. Detalles del Proyecto</legend>
-
-                            <div class="form-grupo">
-                                <label for="campo-tipo">Tipo de Proyecto Web:</label>
-                                <select id="campo-tipo" name="tipo_proyecto" required>
-                                    <option value="" disabled selected>Selecciona una opción...</option>
-                                    <option value="landing">Landing Page corporativa</option>
-                                    <option value="corporativa">Sitio Web Multipágina</option>
-                                    <option value="tienda">Tienda Online / E-commerce</option>
-                                    <option value="auditoria">Auditoría y Rediseño CSS</option>
-                                </select>
-                            </div>
-
-                            <!-- Opciones tipo RADIO (Todos comparten el mismo 'name') -->
-                            <div class="form-grupo">
-                                <span class="label-titulo">Modalidad de Entrega:</span>
-                                <div class="opciones-inline">
-                                    <label class="opcion-control" for="mod-estandar">
-                                        <input type="radio" id="mod-estandar" name="modalidad" value="estandar" checked>
-                                        Estándar (3-4 semanas)
-                                    </label>
-                                    <label class="opcion-control" for="mod-urgente">
-                                        <input type="radio" id="mod-urgente" name="modalidad" value="urgente">
-                                        Urgente (1 semana)
-                                    </label>
-                                </div>
-                            </div>
-
-                            <!-- Opciones tipo CHECKBOX (Para selecciones múltiples) -->
-                            <div class="form-grupo">
-                                <span class="label-titulo">Servicios Opcionales Requeridos:</span>
-                                <div class="opciones-inline">
-                                    <label class="opcion-control" for="chk-seo">
-                                        <input type="checkbox" id="chk-seo" name="servicios[]" value="seo" checked>
-                                        Optimización SEO
-                                    </label>
-                                    <label class="opcion-control" for="chk-dark">
-                                        <input type="checkbox" id="chk-dark" name="servicios[]" value="darkmode">
-                                        Tema Oscuro (Dark Mode)
-                                    </label>
-                                    <label class="opcion-control" for="chk-multilingue">
-                                        <input type="checkbox" id="chk-multilingue" name="servicios[]" value="multilingue">
-                                        Soporte Multilingüe (Valencià / Castellano)
-                                    </label>
-                                </div>
-                            </div>
-
-                            <!-- Control tipo RANGO (Slider con output visual) -->
-                            <div class="form-grupo">
-                                <label for="campo-presupuesto">Presupuesto Estimado (€):</label>
-                                <div class="rango-contenedor">
-                                    <input type="range" id="campo-presupuesto" name="presupuesto" min="300" max="3000" step="100" value="750" oninput="this.nextElementSibling.value = this.value + ' €'">
-                                    <output>750 €</output>
-                                </div>
-                            </div>
-                        </fieldset>
-
-                        <!-- BLOQUE 3: Mensaje y Consentimiento -->
-                        <fieldset>
-                            <legend>3. Mensaje y Términos Legales</legend>
-
-                            <div class="form-grupo">
-                                <label for="campo-mensaje">Descripción o detalles adicionales:</label>
-                                <textarea id="campo-mensaje" name="mensaje" rows="4" placeholder="Explica brevemente los objetivos de tu web..."></textarea>
-                            </div>
-
-                            <div class="form-grupo-check">
-                                <label class="opcion-control" for="chk-privacidad">
-                                    <input type="checkbox" id="chk-privacidad" name="privacidad" required>
-                                    He leído y acepto la <a href="#privacidad">política de privacidad</a> y el tratamiento de mis datos personales. <span class="obligatorio">*</span>
-                                </label>
-                            </div>
-                        </fieldset>
-
-                        <!-- Botones de Enviar y Reset -->
-                        <div class="form-botones">
-                            <button type="submit" class="btn btn-primary">Enviar Solicitud</button>
-                            <button type="reset" class="btn btn-secondary">Restablecer Campos</button>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </section>
-
-        <!-- ======================================================================
-             SECCIÓN 4: MULTIMEDIA Y CITAS (Figure, Figcaption, Blockquote)
-             ====================================================================== -->
-        <section id="multimedia" class="seccion-multimedia">
-            <div class="contenedor">
-                <div class="seccion-encabezado">
-                    <h2>Recursos Visuales y Filosofía</h2>
-                    <p>Contenido multimedia estructurado con etiquetas HTML5 nativas.</p>
-                </div>
-
-                <div class="multimedia-grid">
-                    <!-- Figura con imagen y figcaption accesible -->
-                    <figure class="figura-estilizada">
-                        <svg class="multimedia-svg" viewBox="0 0 600 350" role="img" aria-label="Espacio de trabajo moderno con ordenadores y código">
-                            <rect width="100%" height="100%" fill="#1e293b"/>
-                            <circle cx="300" cy="175" r="80" fill="#2563eb" opacity="0.3"/>
-                            <text x="50%" y="45%" font-size="24" font-family="'Outfit', sans-serif" font-weight="700" fill="#ffffff" text-anchor="middle">💻 Entorno de Desarrollo</text>
-                            <text x="50%" y="60%" font-size="14" font-family="'Inter', sans-serif" fill="#94a3b8" text-anchor="middle">HTML5 Semántico + CSS3 Avanzado + Mobile First</text>
-                        </svg>
-                        <figcaption>Figura 1: Estación de trabajo optimizada para desarrollo responsive y depuración con DevTools.</figcaption>
+        <!-- Seccion Tarjetas Destacadas (Flexbox Cero Grid) -->
+        <section class="contenedor">
+            <h2>Planes Destacados</h2>
+            <div class="cards-flex">
+                
+                <article class="card">
+                    <span class="badge">Más Popular</span>
+                    <figure>
+                        <img src="img/pattern.png" alt="Diseño Web Profesional" width="300" height="180" loading="lazy">
+                        <figcaption>Maquetación fluida y adaptativa</figcaption>
                     </figure>
-
-                    <!-- Bloque de Cita Semántica (Blockquote con cite) -->
-                    <div class="cita-contenedor">
-                        <blockquote cite="https://www.w3.org/WAI/">
-                            «El diseño web no consiste únicamente en hacer que las cosas se vean bonitas, sino en estructurarlas de tal modo que cualquier usuario, en cualquier dispositivo, pueda acceder a la información sin barreras.»
-                        </blockquote>
-                        <p class="cita-autor">— <strong>Iniciativa de Accesibilidad Web (WAI)</strong>, Consorcio W3C</p>
+                    <div class="card-body">
+                        <h3>Plan Profesional</h3>
+                        <p>Diseño web corporativo completo de hasta 5 secciones con maquetación Flexbox.</p>
+                        <a href="contacto.html" class="btn btn-primary btn-block">Contratar</a>
                     </div>
-                </div>
+                </article>
+
+                <article class="card">
+                    <figure>
+                        <img src="img/pattern.png" alt="Landing Page Rápida" width="300" height="180" loading="lazy">
+                        <figcaption>Carga optimizada</figcaption>
+                    </figure>
+                    <div class="card-body">
+                        <h3>Plan Básico</h3>
+                        <p>Landing page enfocada a conversión directa con formulario integrado y alta velocidad.</p>
+                        <a href="contacto.html" class="btn btn-outline btn-block">Solicitar Info</a>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <figure>
+                        <img src="img/pattern.png" alt="Consultoría Técnica" width="300" height="180" loading="lazy">
+                        <figcaption>Auditoría y soporte continuo</figcaption>
+                    </figure>
+                    <div class="card-body">
+                        <h3>Consultoría Frontend</h3>
+                        <p>Revisión técnica de accesibilidad, validación W3C y auditoría de código CSS.</p>
+                        <a href="contacto.html" class="btn btn-outline btn-block">Consultar</a>
+                    </div>
+                </article>
+
             </div>
         </section>
 
     </main>
 
-    <!-- ==========================================================================
-         PIE DE PÁGINA (FOOTER — Con copyright, enlaces legales y redes)
-         ========================================================================== -->
-    <footer class="pie-sitio">
-        <div class="contenedor pie-contenedor">
-            <div class="pie-columna">
-                <p class="pie-marca"><strong>TechNova Solutions</strong></p>
-                <p><small>Centro Integrado de Desarrollo Web &amp; Diseño de Interfaces Multidispositivo.</small></p>
-            </div>
-            
-            <div class="pie-columna">
-                <p class="pie-titulo-col"><strong>Navegación Rápida</strong></p>
-                <ul class="pie-lista">
-                    <li><a href="#inicio">Volver Arriba</a></li>
-                    <li><a href="#servicios">Servicios</a></li>
-                    <li><a href="#precios">Tarifas</a></li>
-                    <li><a href="#contacto">Contacto</a></li>
-                </ul>
-            </div>
-
-            <div class="pie-columna">
-                <p class="pie-titulo-col"><strong>Aviso Legal &amp; Normativa</strong></p>
-                <ul class="pie-lista">
-                    <li><a href="#privacidad">Política de Privacidad</a></li>
-                    <li><a href="#cookies">Política de Cookies</a></li>
-                    <li><a href="#accesibilidad">Declaración de Accesibilidad</a></li>
-                </ul>
-            </div>
-        </div>
-
-        <div class="pie-copyright">
-            <div class="contenedor">
-                <p><small>&copy; 2026 Noé Conde Vila — IES Maria Enríquez (Gandia). Proyecto Académico DIW.</small></p>
-            </div>
+    <!-- Pie de Pagina (Footer con Flexbox) -->
+    <footer>
+        <div class="contenedor footer-wrap">
+            <p><small>&copy; 2026 TechNova — Noé Conde Vila — IES Maria Enríquez</small></p>
+            <ul>
+                <li><a href="#">Aviso Legal</a></li>
+                <li><a href="#">Política de Privacidad</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
         </div>
     </footer>
 

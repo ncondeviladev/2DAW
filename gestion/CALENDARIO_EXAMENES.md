@@ -8,18 +8,19 @@
 ## 🚨 1. Exàmens Presencials Confirmats
 
 ### 🎨 DIW — Disseny d'Interfícies Web (Prof. Quique Savall)
-* **Data i Hora:** **Divendres, 20 de novembre de 2026, de 12:00 a 15:00** (Durada: **3 hores**).
-* **Format Oficial:**
-  1. **Part Teòrica (Escrita):** Test o preguntes curtes sobre conceptes del mòdul (UI design, accessibilitat, usabilitat, selectores, propietats).
-  2. **Part Pràctica (PC):** **Maquetar una petita web en versió mòbil (Mobile First)** a partir d'un mockup/disseny facilitat en el moment.
-     - S'ha de programar en **HTML5 i CSS natiu** (sense frameworks).
-     - Respectar rigorosament la semàntica, accessibilitat i validació W3C (0 errors).
-* **Modificació de Temari (Comunicat del 29/10/2026):**
+* **Data i Hora:** **Divendres, 20 de novembre de 2026, de 12:00 a 15:15** (Durada: **3 hores i 15 minuts**).
+* **Format Oficial (Actualitzat 02/11/2026):**
+  1. **Part Teòrica (Escrita, 20 min, 2,5 punts):** Test o omplir buits de codi HTML/CSS (UI/UX, usabilitat, accessibilitat, IPO, components, selectors per pesos, pseudoclasses, calc, color-mix). **Sense apunts ni chuletes**.
+  2. **Part Pràctica (PC de l'aula, 2h 10min, 7,5 punts):** **Maquetar un lloc web menut (2 o 3 pàgines)** en HTML5 i CSS3 natiu a partir d'un mockup visual en VS Code/Codium. Maquetació amb Flexbox (Mobile First, botonera, secció a 2 columnes), formularis complets, multimedia i interactivitat bàsica (`transform`, `transition`, `sticky`).
+  3. **Chuletes autoritzades per al Pràctic:** Chuleta oficial de propietats CSS (Manz/Emezeta) + **Chuleta pròpia en 1 full A4** d'anotacions.
+* **Modificació de Temari:**
   - ❌ **S'eliminen les Animacions CSS3** de la 1a avaluació (passen a la 2a aval / FE).
   - 🔄 **Entra UD3 Maquetació:** Conceptes inicials de **Flexbox** i `display: table`.
   - ⏳ **Grid Layout:** Pospilat per a la 2a avaluació.
-* **Exempció d'altres proves:** En aquest bloc de 3 hores **no** hi haurà exàmens de Sostenibilitat, Digitalització ni PIM.
-* **Recurs d'èxit preparat:** [Plantilla Examen Modular](file:///f:/OneDrive%20-%20Conselleria%20d'Educaci%C3%B3/2DAW/DIW/plantilla_examen/) amb `esqueleto.html`, `estilos.css` modular i guia de poda ràpida.
+* **Exempció d'altres proves:** En aquest bloc de 3h 15m **no** hi haurà exàmens de Sostenibilitat, Digitalització ni PIM.
+* **Recursos d'èxit preparats:**
+  - 📄 [Full Imprimible A4 d'Examen (Esquelet HTML5 + CSS3)](file:///f:/OneDrive%20-%20Conselleria%20d'Educaci%C3%B3/2DAW/DIW/CHULETA_EXAMEN_IMPRIMIBLE.md) per a imprimir davant i darrere.
+  - 📁 [Plantilla Examen Modular](file:///f:/OneDrive%20-%20Conselleria%20d'Educaci%C3%B3/2DAW/DIW/plantilla_examen/) amb `esqueleto.html`, `estilos.css` modular i guia de poda ràpida.
 
 ---
 
@@ -49,7 +50,9 @@
 | **21/11/2026 08:16** | **DWES** | `U2_P1` (PHP Bàsic) | ✅ **Fet i Lliurat** |
 | **21/11/2026 08:16** | **DWES** | `U3_P1` (PHP Avançat) | ✅ **Fet i Lliurat** |
 | **21/11/2026 08:16** | **DWES** | `U4_P1` (Accés a dades BBDD) | ✅ **Fet i Lliurat** |
-| **21/11/2026 08:16** | **DWES** | `U4_P2` (TechLeads amb Notes) | 🔄 **En curs (50%)** |
+| **21/11/2026 08:16** | **DWES** | `U4_P2` (TechLeads amb Notes) | ✅ **Fet i Lliurat** |
 | **28/11/2026 09:56** | **DWES** | `U2_P2` (Problemes PHP) | ✅ **Fet i Lliurat** |
 | **28/11/2026 09:56** | **DWES** | `U3_P2` (TechLeads Miniprojecte) | ✅ **Fet i Lliurat** (100%) |
 | **30/11/2026 12:04** | **DWES** | `U1_P1` (Docker LAMP) | ✅ **Fet i Lliurat** |
+| **21/01/2027 23:59** | **DWES** | `U5_P1` (Laravel Sail Bloc 1) | ⏳ **Pendent (2a Aval)** |
+| **21/01/2027 23:59** | **DWES** | `U5_P2` (Rutes i Blade Bloc 2) | ⏳ **Pendent (2a Aval)** |

@@ -62,6 +62,7 @@ Abans de generar el PDF o empaquetar el ZIP:
 
 ## ⚙️ 3. Criteris Tècnics de DWES (Prof. Eloy Gutiérrez)
 
+### Unitats 1 a 4 (PHP Pur, Docker LAMP i PDO)
 - [ ] **Docker LAMP integrat:** Verificació de contenidors en marxa (`web`, `db`, `phpmyadmin`).
 - [ ] **Composer i PSR-4:** Mapeig estricte de namespaces (`App\` $\to$ `src/`).
 - [ ] **Consultes PDO preparades:** Ús sistemàtic de `$stmt->prepare()` i marcadors `:nom` en totes les operacions SQL amb dades d'usuari.
@@ -69,3 +70,12 @@ Abans de generar el PDF o empaquetar el ZIP:
 - [ ] **Seguretat de sessions:** Comprovació amb `requereixLogin()` en totes les rutes privades de `/dashboard/`.
 - [ ] **Escapament XSS:** Neteja de sortides HTML mitjançant la funció helper `e($variable)`.
 - [ ] **Neteja d'arxius:** Si falla l'actualització d'un registre que inclou un fitxer pujat, esborrar el fitxer físic per a no deixar brossa orfena al servidor.
+
+### Unitat 5 i 6 (Frameworks: Laravel 13 & Sail)
+- [ ] **Versió oficial estricta:** Laravel 13 sobre PHP 8.5 dins del contenidor `laravel.test`.
+- [ ] **WSL2 i contenidors:** Execució dins de WSL (`~/projects/etiquetes`), contenidors amb Sail (`sail up -d`) i Vite en marxa (`sail npm run dev`).
+- [ ] **Convencions d'idioma:** Tot el codi de Laravel (models, migracions, controladors, mètodes) **en anglés** (`Label`, `labels`, `product`, `author`).
+- [ ] **Rutes sempre amb nom:** Enllaços en Blade generats sempre amb la funció helper `route('nom.ruta')`, mai URLs a mà.
+- [ ] **Components Blade:** Vistes estructurades amb components `<x-layout>`, `<x-button>`, etc. i valors dinàmics precedits de dos punts (`:href="..."`).
+- [ ] **Integritat de dades de Sail:** Mai executar `sail down -v` llevat que es vulga destruir deliberadament el volum de MySQL.
+- [ ] **Format de lliurament U5_P1 / U5_P2:** Document en PDF amb les captures de pantalla específiques sol·licitades a l'apartat d'exercicis.

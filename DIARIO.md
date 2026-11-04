@@ -1,7 +1,7 @@
 # 📘 QUADRE DE COMANDAMENT — 2n DAW (Semipresencial)
 > **Alumne:** Noé Conde Vila  
 > **Centre:** IES Maria Enríquez (Gandia) — Curs 2026/2027  
-> **Última actualització:** 30 d'octubre de 2026  
+> **Última actualització:** 4 de novembre de 2026  
 
 ---
 
@@ -28,7 +28,7 @@ Per a mantindre el diari àgil i no sobrecarregar memòria, la informació detal
 | :--- | :--- | :---: | :---: | :--- |
 | **DIW** | `S01_PR1` a `S04_PR1` | ✅ **Entregat** | Octubre | Validades W3C i entregades a Aules |
 | **DIW** | `S06_PR1` (CV CSS3 Avançat) | ✅ **Entregat** | 02/11/2026 | Maquetació Mobile First, conmutador formal/divertit |
-| **DIW** | `S08_PR1` (Transform & Transition) | ⏳ **Pendent** | 15/11/2026 | Enunciat en esborrany (Animacions retirades pel professor) |
+| **DIW** | `S08_PR1` (Transform & Transition) | ✅ **Completat** | 15/11/2026 | Part 1 (CV Animat `animado.css`) i Part 2 (Botonera) enllestides |
 | **DaW** | `PEC1` (Apache, Nginx, SSH) | ✅ **Entregat** | 18/10/2026 | **Qualificat: 8,00 / 10,00** |
 | **DaW** | `PEC2` (Docker local) | ✅ **Entregat** | 25/10/2026 | Tramesa a Aules |
 | **DaW** | `PEC3` (Docker Compose + K8s) | ✅ **Entregat** | 08/11/2026 | PDF llest per a Aules (Compose + K8s 3 rèpliques) |
@@ -39,12 +39,17 @@ Per a mantindre el diari àgil i no sobrecarregar memòria, la informació detal
 | **DWES** | `U1_P1` a `U3_P2` (Exercicis + Tests) | ✅ **Entregat** | Varis | U3_P2 TechLeads superat (100%) |
 | **DWES** | `U4_P1 Exercicis` (Accés a BBDD) | ✅ **Entregat** | 21/11/2026 | Docker, MySQL 8.4, DAOs, PDO, PRG i 9 captures |
 | **DWES** | `Autoavaluació U4` | ✅ **Fet** | 27/10/2026 | Superat a Aules |
-| `DWES` | `U4_P2 TechLeads amb Notes` | ✅ **Completat (100%)** | 21/11/2026 | BBDD, Model, DAO, Controladors i Vistes enllestits |
+| **DWES** | `U4_P2 TechLeads amb Notes` | ✅ **Entregat** | 21/11/2026 | Lliurament completat (BBDD, Model, DAO, Vistes) |
+| **DWES** | `U5_P1 Laravel Sail (Bloc 1)` | ⏳ **Pendent (2a Aval)** | 21/01/2027 | Entorn Sail, Docker, artisan, Vite i 4 captures |
+| **DWES** | `U5_P2 Rutes i Blade (Bloc 2)` | ⏳ **Pendent (2a Aval)** | 21/01/2027 | Rutes amb nom, components Blade i captures 6.4 |
 | **PIM** | `Sprint 0` (Retos 1A, 1B, 1C, 2, 3, 4) | ✅ **Entregat** | Octubre | Entrevista Teams, Specs, Repo Git, UI Web i BBDD |
 | **PIM** | `Sprint 0 - Entrega Final` | ✅ **Entregat** | 07/11/2026 | Memòria consolidada de 14 pàgines en PDF tramessa |
 
 ---
 
-## 🚨 Fites Immediates i Prioritats d'Avui
-1. **DWES (U4_P2):** Comprimir el projecte en `.zip` i lliurar a Aules (`Lliurament U4_P2 Tasca` id: 3676641).
-2. **DIW (Examen 20/11):** Recordar que l'examen pràctic de 3h serà maquetar una web mòbil en HTML/CSS natiu des d'un mockup. Plantilla llesta a [DIW/plantilla_examen/](file:///f:/OneDrive%20-%20Conselleria%20d'Educaci%C3%B3/2DAW/DIW/plantilla_examen/).
+## 🚨 Fites Immediates i Prioritats Actuals
+1. **Fase d'Estudi i Repàs d'Exàmens (1a Avaluació):**
+   - **DIW (20/11):** Repàs de la chuleta A4 i agilitat amb la plantilla d'examen (HTML5 semàntic + Flexbox 2 cols/cards + Formularis).
+   - **DWEC (19-20/11):** Repàs dels 7 blocs clau (POO, Arrays, Closures, DOM/Events) i simulacres.
+   - **DaW (Examen 1a Aval):** Repàs de comandes clau de Docker, Dockerfiles, Compose i Kubernetes.
+2. **Post-Exàmens (2a Avaluació):** Arrancar DWES Unitats 5 i 6 (*Laravel Sail*).

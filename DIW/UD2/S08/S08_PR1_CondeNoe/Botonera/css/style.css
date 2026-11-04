@@ -1,0 +1,86 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Quantico:ital,wght@0,400;0,700;1,400;1,700&family=Righteous&display=swap');
+
+@font-face {
+    font-family: 'syncopate';
+    src: url(../ttf/syncopate.ttf) format('truetype');
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+:root {
+    /* Variables para la PALETA DE COLORES */
+    --color-html: grey;
+    --color-body: white;
+    --boton-reposo: #F54927;
+    --boton-letra: white;
+    --boton-hover: color-mix(in srgb, var(--boton-reposo), white 20%);
+    --boton-active: color-mix(in srgb, var(--boton-reposo), black 20%);
+    background-color: var(--color-html);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+}
+
+body{
+    width: calc(100% - 4rem);
+    margin: 0 auto;
+    background-color: var(--color-body);
+    padding: 1rem;
+}
+header h1{
+    text-align: center;
+    font-family: 'syncopate';
+    font-size: 1.5rem; /*Espaciado sobre root*/
+    letter-spacing: .2em; /*Espaciado sobre contenedor*/
+    text-shadow: 2px 2px 3px grey;
+
+    transition: all .5s ease;
+}
+nav{
+    width: 10rem;
+    text-align: center;
+    margin: auto;
+}
+nav ul {
+    list-style: none;
+}
+nav ul li a{
+    font-family: 'Quantico', sans-serif;
+    font-weight: bold;
+    text-align: center;
+    color: var(--boton-reposo);
+    background-color: var(--color-body);
+    display: block;
+    width: 10rem;
+    border: 2px black solid;
+    border-radius: 2em;
+    padding: .5em;
+    margin: 1rem 0 1rem 0;
+    box-shadow: grey 0 0 5px;
+
+    transition: all .1s ease-in;
+
+}
+nav ul li a:hover{
+    color: var(--boton-active);
+    background-color: var(--boton-hover);
+
+}
+nav ul li a:active{
+    color: white;
+    background-color: var(--boton-active);
+    transform: scale(.95);
+    box-shadow: black 0 0 2.5px;
+
+
+}
+header:hover h1{ /*"Nota para mi" - Actua sobre el h1 pasando por cualquier parte del header aunque no sea el h1*/
+    color: blue;
+    font-size: 1.7rem;
+    letter-spacing: .3em;
+}

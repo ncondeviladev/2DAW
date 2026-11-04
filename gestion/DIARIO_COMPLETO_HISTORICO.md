@@ -333,3 +333,17 @@
   - **Sprint 1 (S09 a S12):** Estudi complet de la nova App (*No disponible encara*).
   - **Sprint 2 (S14 a S23):** Inici del desenvolupament d'App AgriVall (*No disponible encara*).
   - **Sprint Final (S25 a S40):** Entrega final de l'App (*No disponible encara*).
+
+---
+
+### 6. Actualització del 30/10/2026 al 02/11/2026 (Transició 1a a 2a Avaluació)
+* **DWES (Final 1a Avaluació):**
+  - ✅ **Pràctica `U4_P2` (Notes per Lead):** Desenvolupament completat (taula `notes` a SQL amb `ON DELETE CASCADE`, model `Nota.php`, `NotaDAO.php` amb PDO preparat, controladors `afegir_nota.php` i `eliminar_nota.php` amb permisos per sessió d'autor/admin, vistes `lead.php` i `leads.php` amb badge i botons nets). Comprimit i lliurat a Aules el 30/10/2026.
+  - 🏆 **1a Avaluació de DWES tancada al 100%:** U1, U2, U3 i U4 completades i entregades.
+* **DWES (Inici 2a Avaluació - Unitat 5: Frameworks Laravel):**
+  - 📢 **Comunicat oficial d'Eloy (02/11/2026):** Laravel NO s'avalua en la 1a avaluació. Entra a la 2a aval (tasques `U5_P1` i `U5_P2` per al 21/01/2027).
+  - 📥 **Apunts descarregats a `DWES/U5/`:** `U5_Index_Frameworks_Laravel.md`, `U5_Bloc1_Introduccio_i_Sail.md`, `U5_Bloc2_Rutes_i_Vistes.md`, `U5_Bloc3_Controladors.md` i diagrames a `media/`.
+* **DIW (Prioritat Màxima 1a Avaluació):**
+  - 📥 **S07 & S08 descarregats:** Resum consolidat a `DIW/UD2/S08/resumen_S07_S08.md` i xulla principal mantinguda concisa a `DIW/chuleta_DIW.md`.
+  - ⏳ **Pràctica `S08_PR1` (Venciment 15/11):** Part 1 CV Animat (`animado.css`) a partir de S06; Part 2 Botonera pendent d'enunciat.
+  - 📅 **Examen Presencial PC (20/11, 3h):** Maquetació Mobile First en HTML5/CSS natiu des de mockup. Plantilla llesta a `DIW/plantilla_examen/`.
