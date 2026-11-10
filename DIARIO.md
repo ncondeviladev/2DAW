@@ -1,7 +1,7 @@
 # 📘 QUADRE DE COMANDAMENT — 2n DAW (Semipresencial)
 > **Alumne:** Noé Conde Vila  
 > **Centre:** IES Maria Enríquez (Gandia) — Curs 2026/2027  
-> **Última actualització:** 4 de novembre de 2026  
+> **Última actualització:** 6 de novembre de 2026  
 
 ---
 
@@ -31,7 +31,9 @@ Per a mantindre el diari àgil i no sobrecarregar memòria, la informació detal
 | **DIW** | `S08_PR1` (Transform & Transition) | ✅ **Completat** | 15/11/2026 | Part 1 (CV Animat `animado.css`) i Part 2 (Botonera) enllestides |
 | **DaW** | `PEC1` (Apache, Nginx, SSH) | ✅ **Entregat** | 18/10/2026 | **Qualificat: 8,00 / 10,00** |
 | **DaW** | `PEC2` (Docker local) | ✅ **Entregat** | 25/10/2026 | Tramesa a Aules |
-| **DaW** | `PEC3` (Docker Compose + K8s) | ✅ **Entregat** | 08/11/2026 | PDF llest per a Aules (Compose + K8s 3 rèpliques) |
+| **DaW** | `PEC3` (Docker Compose + K8s) | ✅ **Qualificat (9,5/10)** | 08/11/2026 | Qualificat 9,50/10 per Juanra Collado (10/11). Feedback: "1. La explicación es muy escasa. El enunciado indica que expliques punto por punto y lo haces de forma genérica." |
+| **DaW** | `Material Examen 1a Eval` | 📝 **Llest (34 pàgs)** | 13/11/2026 | PDF únic consolidat definitiu: `cheatsheetNoeConde.pdf` |
+| **DaW** | `Simulacre Examen 1a Eval` | 🔄 **1a Volta Feta** | En curs | 3 exercicis completats (Apache/Nginx 4 vhosts, Dockerfile, Compose). Pendent 2a volta a cegues |
 | **DWEC** | `UD1` a `UD3` (Activitats + Tests) | ✅ **Entregat** | Octubre | Totes superades (UD3 test: 10/10) |
 | **DWEC** | `UD4 Activitat` (`Libro.js` POO) | ✅ **Entregat** | 27/10/2026 | Tramesa a Aules realitzada |
 | **DWEC** | `UD4 Qüestionari` | ✅ **Fet** | 27/10/2026 | **10 / 10** a Aules |
@@ -49,7 +51,7 @@ Per a mantindre el diari àgil i no sobrecarregar memòria, la informació detal
 
 ## 🚨 Fites Immediates i Prioritats Actuals
 1. **Fase d'Estudi i Repàs d'Exàmens (1a Avaluació):**
+   - **DaW (Examen 1a Aval):** Pujar a Aules `Material_Examen_1Eval_CondeNoe.pdf` abans del 13/11. Simulacre d'examen en curs a `DaW/Simulacro_Examen/` (E1 Multilloc Apache+Nginx, E2 Dockerfile, E3 Compose).
    - **DIW (20/11):** Repàs de la chuleta A4 i agilitat amb la plantilla d'examen (HTML5 semàntic + Flexbox 2 cols/cards + Formularis).
    - **DWEC (19-20/11):** Repàs dels 7 blocs clau (POO, Arrays, Closures, DOM/Events) i simulacres.
-   - **DaW (Examen 1a Aval):** Repàs de comandes clau de Docker, Dockerfiles, Compose i Kubernetes.
 2. **Post-Exàmens (2a Avaluació):** Arrancar DWES Unitats 5 i 6 (*Laravel Sail*).

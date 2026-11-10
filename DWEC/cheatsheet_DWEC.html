@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <title>DWEC — Chuleta Oficial de Métodos y Clases JavaScript — Noé Conde Vila</title>
+    <style>
+        @page {
+            size: A4 portrait;
+            margin: 5mm 6mm;
+        }
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+            font-size: 7.2pt;
+            line-height: 1.15;
+            color: #0f172a;
+            background: #fff;
+            width: 198mm;
+            margin: 0 auto;
+        }
+        .header {
+            border-bottom: 2px solid #2563eb;
+            padding-bottom: 2px;
+            margin-bottom: 4px;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            width: 100%;
+        }
+        .header h1 {
+            font-size: 9.8pt;
+            color: #0f172a;
+            font-weight: 800;
+            letter-spacing: -0.2px;
+        }
+        .header .sub {
+            font-size: 7pt;
+            color: #64748b;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: 97mm 97mm;
+            gap: 4mm;
+            width: 100%;
+        }
+        .card {
+            border: 1px solid #cbd5e1;
+            border-radius: 3px;
+            padding: 3px 5px;
+            margin-bottom: 3.5px;
+            break-inside: avoid;
+            background: #fff;
+        }
+        .card-header {
+            font-size: 7.8pt;
+            font-weight: 700;
+            color: #1d4ed8;
+            border-bottom: 1px solid #e2e8f0;
+            padding-bottom: 1px;
+            margin-bottom: 2px;
+            text-transform: uppercase;
+            letter-spacing: 0.1px;
+        }
+        .card-sub {
+            font-weight: 700;
+            color: #334155;
+            margin-top: 2px;
+            margin-bottom: 1px;
+            font-size: 6.8pt;
+        }
+        code, pre {
+            font-family: "Cascadia Code", "Consolas", monospace;
+            font-size: 6.3pt;
+        }
+        pre {
+            background: #f8fafc;
+            border: 1px solid #e2e8f0;
+            border-radius: 2px;
+            padding: 2px 4px;
+            line-height: 1.14;
+            white-space: pre;
+            overflow: hidden;
+            margin-bottom: 2px;
+            color: #0f172a;
+        }
+        .c-cmd { color: #2563eb; font-weight: bold; }
+        .c-fn  { color: #0284c7; font-weight: 600; }
+        .c-comm { color: #64748b; font-style: italic; display: block; margin-left: 6px; }
+        .c-comm-inline { color: #64748b; font-style: italic; }
+        .c-var { color: #d97706; font-weight: 600; }
+        .c-str { color: #16a34a; }
+        .c-num { color: #9333ea; }
+        .c-key { color: #e11d48; font-weight: bold; }
+        .page-break {
+            page-break-after: always;
+            break-after: always;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ==================== PÁGINA 1: RA2 (BÁSICOS, STRING, MATH, DATE) + RA3 (ARRAY METHODS, FUNCIONES) ==================== -->
+    <div class="header">
+        <div>
+            <h1>DESENVOLUPAMENT WEB EN ENTORN CLIENT — GUIA DE MÈTODES I SINTAXI</h1>
+            <div class="sub">Chuleta Oficial de JavaScript (RA2, RA3, RA4: Sintaxi, Objectes Natius, Mètodes i POO ES6)</div>
+        </div>
+        <div style="text-align: right;">
+            <div style="font-weight: bold; color: #0f172a;">Noé Conde Vila — 2º DAW</div>
+            <div class="sub">IES Maria Enríquez — Curs 2025/2026</div>
+        </div>
+    </div>
+
+    <div class="grid">
+
+        <!-- COLUMNA IZQ PÁG 1: RA2 SINTAXIS BÁSICA, STRING, MATH, DATES -->
+        <div>
+            <div class="card">
+                <div class="card-header">1. Sintaxis Básica y Tipos (RA2)</div>
+                <div class="card-sub">Variables, Operadores y Comparaciones</div>
+                <pre><span class="c-key">const</span> <span class="c-var">PI</span> = <span class="c-num">3.1416</span>;          <span class="c-comm-inline">// Inmutable en primitiva; muta interior de obj/array</span>
+<span class="c-key">let</span> <span class="c-var">contador</span> = <span class="c-num">0</span>;           <span class="c-comm-inline">// Reasignable; ámbito de bloque { }</span>
+<span class="c-key">typeof</span> <span class="c-num">42</span>;                  <span class="c-comm-inline">// "number" | typeof "a": "string" | typeof true: "boolean"</span>
+<span class="c-key">typeof</span> <span class="c-key">null</span>;                <span class="c-comm-inline">// "object" (curiosidad de examen) | typeof undefined: "undefined"</span>
+<span class="c-num">5</span> === <span class="c-str">"5"</span>;                  <span class="c-comm-inline">// false (compara valor Y tipo; USAR SIEMPRE ===)</span>
+Number.isNaN(<span class="c-var">val</span>);          <span class="c-comm-inline">// Comprueba si es NaN estricto (Number("abc") -> NaN)</span>
+parseInt(<span class="c-str">"42px"</span>, <span class="c-num">10</span>);       <span class="c-comm-inline">// 42 (base 10) | parseFloat("3.14m") -> 3.14</span>
+<span class="c-comm-inline">// Template Literals:</span> `<span class="c-str">Hola </span>${<span class="c-var">nombre</span>}<span class="c-str">, total: </span>${<span class="c-num">2</span> + <span class="c-num">2</span>}`;</pre>
+
+                <div class="card-sub">Control de Flujo Rápido</div>
+                <pre><span class="c-comm-inline">// Operador Ternario:</span> <span class="c-key">const</span> <span class="c-var">estado</span> = (<span class="c-var">edad</span> &gt;= <span class="c-num">18</span>) ? <span class="c-str">"Mayor"</span> : <span class="c-str">"Menor"</span>;
+<span class="c-comm-inline">// Nullish Coalescing (??):</span> <span class="c-key">const</span> <span class="c-var">x</span> = <span class="c-var">val</span> ?? <span class="c-str">"defecto"</span>; <span class="c-comm-inline">// Solo si es null o undefined</span>
+<span class="c-comm-inline">// Optional Chaining (?.):</span> <span class="c-key">const</span> <span class="c-var">calle</span> = <span class="c-var">user</span>?.<span class="c-var">direccion</span>?.<span class="c-var">calle</span>; <span class="c-comm-inline">// Evita TypeError</span>
+<span class="c-key">for</span> (<span class="c-key">const</span> <span class="c-var">elem</span> <span class="c-key">of</span> <span class="c-var">array</span>) { }    <span class="c-comm-inline">// Itera VALORES de arrays/iterables</span>
+<span class="c-key">for</span> (<span class="c-key">const</span> <span class="c-var">clave</span> <span class="c-key">in</span> <span class="c-var">objeto</span>) { }  <span class="c-comm-inline">// Itera CLAVES de objetos</span></pre>
+            </div>
+
+            <div class="card">
+                <div class="card-header">2. Clase String (Métodos Clave — RA2)</div>
+                <div class="card-sub">Búsqueda, Extracción y Transformación</div>
+                <pre><span class="c-key">const</span> <span class="c-var">s</span> = <span class="c-str">"  Desarrollo Web en Cliente  "</span>;
+<span class="c-var">s</span>.length;                   <span class="c-comm-inline">// Longitud total de la cadena</span>
+<span class="c-var">s</span>.trim();                   <span class="c-comm-inline">// Quita espacios inicio/fin (trimStart/trimEnd)</span>
+<span class="c-var">s</span>.toLowerCase();            <span class="c-comm-inline">// Todo minúsculas | s.toUpperCase() Todo mayúsculas</span>
+<span class="c-var">s</span>.includes(<span class="c-str">"Web"</span>);          <span class="c-comm-inline">// true si contiene el substring (case-sensitive)</span>
+<span class="c-var">s</span>.startsWith(<span class="c-str">"Des"</span>);        <span class="c-comm-inline">// true si empieza por "Des" | s.endsWith(".es")</span>
+<span class="c-var">s</span>.indexOf(<span class="c-str">"Web"</span>);           <span class="c-comm-inline">// Índice de la primera coincidencia o -1</span>
+<span class="c-var">s</span>.slice(<span class="c-var">ini</span>, <span class="c-var">fin</span>);          <span class="c-comm-inline">// Extrae de ini a fin (acepta negativos desde el final)</span>
+<span class="c-var">s</span>.substring(<span class="c-var">ini</span>, <span class="c-var">fin</span>);      <span class="c-comm-inline">// Extrae entre dos índices (no negativos)</span>
+<span class="c-var">s</span>.replace(<span class="c-str">"a"</span>, <span class="c-str">"e"</span>);        <span class="c-comm-inline">// Reemplaza la 1ª ocurrencia | replaceAll("a", "e") todas</span>
+<span class="c-var">s</span>.split(<span class="c-str">" "</span>);               <span class="c-comm-inline">// Convierte cadena a Array separando por delimitador</span>
+<span class="c-var">s</span>.charAt(<span class="c-num">0</span>) || <span class="c-var">s</span>[<span class="c-num">0</span>];        <span class="c-comm-inline">// Carácter en posición 0</span>
+<span class="c-var">s</span>.padStart(<span class="c-num">5</span>, <span class="c-str">"0"</span>);         <span class="c-comm-inline">// Rellena por la izquierda (ej. "7" -> "00007")</span>
+<span class="c-var">s</span>.repeat(<span class="c-num">3</span>);                <span class="c-comm-inline">// Repite la cadena 3 veces</span></pre>
+            </div>
+
+            <div class="card">
+                <div class="card-header">3. Clases Math y Date (RA2)</div>
+                <div class="card-sub">Cálculos Numéricos y Aleatorios (Math)</div>
+                <pre>Math.round(<span class="c-num">4.6</span>);            <span class="c-comm-inline">// 5 (redondeo estándar) | Math.floor(4.9) -> 4 (abajo)</span>
+Math.ceil(<span class="c-num">4.1</span>);             <span class="c-comm-inline">// 5 (arriba) | Math.trunc(4.9) -> 4 (elimina decimales)</span>
+Math.max(...<span class="c-var">numeros</span>);       <span class="c-comm-inline">// Mayor de los valores (usar spread ...)</span>
+Math.min(...<span class="c-var">numeros</span>);       <span class="c-comm-inline">// Menor de los valores</span>
+Math.abs(-<span class="c-num">15</span>);              <span class="c-comm-inline">// 15 (valor absoluto) | Math.pow(2, 3) -> 8</span>
+<span class="c-comm-inline">// Aleatorio entre min y max (ambos incluidos):</span>
+<span class="c-key">const</span> <span class="c-var">randInt</span> = (<span class="c-var">min</span>, <span class="c-var">max</span>) =&gt; Math.floor(Math.random() * (<span class="c-var">max</span> - <span class="c-var">min</span> + <span class="c-num">1</span>)) + <span class="c-var">min</span>;
+<span class="c-var">num</span>.toFixed(<span class="c-num">2</span>);             <span class="c-comm-inline">// Devuelve String formateado a 2 decimales (ej. "12.50")</span></pre>
+
+                <div class="card-sub">Manejo de Fechas (Date)</div>
+                <pre><span class="c-key">const</span> <span class="c-var">ahora</span> = <span class="c-key">new</span> Date();   <span class="c-comm-inline">// Fecha y hora actual</span>
+<span class="c-key">const</span> <span class="c-var">d</span> = <span class="c-key">new</span> Date(<span class="c-str">"2026-11-18T16:00:00"</span>); <span class="c-comm-inline">// ISO String</span>
+<span class="c-var">d</span>.getFullYear();            <span class="c-comm-inline">// Año de 4 dígitos (ej. 2026)</span>
+<span class="c-var">d</span>.getMonth();               <span class="c-comm-inline">// Mes (0 = Enero, 10 = Noviembre, 11 = Diciembre) ⚠️</span>
+<span class="c-var">d</span>.getDate();                <span class="c-comm-inline">// Día del mes (1 a 31) | d.getDay() Día semana (0=Dom, 6=Sáb)</span>
+<span class="c-var">d</span>.getHours(); <span class="c-var">d</span>.getMinutes(); <span class="c-var">d</span>.getSeconds(); <span class="c-comm-inline">// Horas, minutos, segundos</span>
+<span class="c-var">d</span>.setDate(<span class="c-var">d</span>.getDate() + <span class="c-num">7</span>);  <span class="c-comm-inline">// Sumar 7 días automáticamente</span>
+<span class="c-comm-inline">// Diferencia en días entre dos fechas:</span>
+<span class="c-key">const</span> <span class="c-var">dias</span> = Math.floor((<span class="c-var">fecha2</span> - <span class="c-var">fecha1</span>) / (<span class="c-num">1000</span> * <span class="c-num">60</span> * <span class="c-num">60</span> * <span class="c-num">24</span>));
+<span class="c-var">d</span>.toLocaleDateString(<span class="c-str">"es-ES"</span>); <span class="c-comm-inline">// Formato español "18/11/2026"</span></pre>
+            </div>
+        </div>
+
+        <!-- COLUMNA DER PÁG 1: RA3 ARRAYS Y MÉTODOS FUNCIONALES, FUNCIONES -->
+        <div>
+            <div class="card">
+                <div class="card-header">4. Funciones, Parámetros y Closures (RA3)</div>
+                <div class="card-sub">Declaración, Flecha, Rest y Spread</div>
+                <pre><span class="c-comm-inline">// Función Tradicional vs Flecha (Arrow function):</span>
+<span class="c-key">function</span> <span class="c-fn">sumar</span>(<span class="c-var">a</span>, <span class="c-var">b</span> = <span class="c-num">0</span>) { <span class="c-key">return</span> <span class="c-var">a</span> + <span class="c-var">b</span>; }  <span class="c-comm-inline">// Tiene hoisting y propio `this`</span>
+<span class="c-key">const</span> <span class="c-fn">multiplicar</span> = (<span class="c-var">a</span>, <span class="c-var">b</span>) =&gt; <span class="c-var">a</span> * <span class="c-var">b</span>;        <span class="c-comm-inline">// Retorno implícito si es 1 línea</span>
+<span class="c-comm-inline">// Rest (...args): agrupa argumentos en Array | Spread (...arr): expande elementos</span>
+<span class="c-key">const</span> <span class="c-fn">sumarTodo</span> = (...<span class="c-var">numeros</span>) =&gt; <span class="c-var">numeros</span>.reduce((<span class="c-var">acc</span>, <span class="c-var">n</span>) =&gt; <span class="c-var">acc</span> + <span class="c-var">n</span>, <span class="c-num">0</span>);
+<span class="c-key">const</span> <span class="c-var">copiaArray</span> = [...<span class="c-var">original</span>, <span class="c-num">99</span>];        <span class="c-comm-inline">// Copia superficial sin mutar</span>
+<span class="c-comm-inline">// Closure (Función que recuerda el ámbito léxico donde se creó):</span>
+<span class="c-key">function</span> <span class="c-fn">crearContador</span>(<span class="c-var">inicial</span> = <span class="c-num">0</span>) {
+    <span class="c-key">let</span> <span class="c-var">c</span> = <span class="c-var">inicial</span>;
+    <span class="c-key">return</span> () =&gt; ++<span class="c-var">c</span>;
+}
+<span class="c-key">const</span> <span class="c-var">cont</span> = <span class="c-fn">crearContador</span>(<span class="c-num">10</span>); <span class="c-var">cont</span>(); <span class="c-comm-inline">// 11</span> | <span class="c-var">cont</span>(); <span class="c-comm-inline">// 12</span></pre>
+            </div>
+
+            <div class="card">
+                <div class="card-header">5. Array: Métodos Esenciales y Mutación (RA3)</div>
+                <div class="card-sub">Manipulación Básica de Pilas y Colas</div>
+                <pre><span class="c-key">const</span> <span class="c-var">arr</span> = [<span class="c-num">1</span>, <span class="c-num">2</span>, <span class="c-num">3</span>];
+<span class="c-var">arr</span>.push(<span class="c-num">4</span>);                <span class="c-comm-inline">// Añade al FINAL (muta; devuelve nueva longitud)</span>
+<span class="c-var">arr</span>.pop();                  <span class="c-comm-inline">// Extrae del FINAL (muta; devuelve elemento eliminado)</span>
+<span class="c-var">arr</span>.unshift(<span class="c-num">0</span>);             <span class="c-comm-inline">// Añade al INICIO (muta; devuelve nueva longitud)</span>
+<span class="c-var">arr</span>.shift();                <span class="c-comm-inline">// Extrae del INICIO (muta; devuelve elemento eliminado)</span>
+<span class="c-var">arr</span>.includes(<span class="c-num">2</span>);            <span class="c-comm-inline">// true/false si existe el valor</span>
+<span class="c-var">arr</span>.indexOf(<span class="c-num">2</span>);             <span class="c-comm-inline">// Posición del valor o -1</span>
+<span class="c-var">arr</span>.join(<span class="c-str">", "</span>);             <span class="c-comm-inline">// Une todos los elementos en un String</span>
+<span class="c-var">arr</span>.concat([<span class="c-num">4</span>, <span class="c-num">5</span>]);         <span class="c-comm-inline">// Combina sin mutar (o usar [...arr, 4, 5])</span>
+<span class="c-var">arr</span>.reverse();              <span class="c-comm-inline">// Invierte el array (muta; usar toReversed() no muta)</span>
+<span class="c-comm-inline">// Splice (MUTA array): arr.splice(inicio, cuantosBorrar, ...nuevosElementos)</span>
+<span class="c-var">arr</span>.splice(<span class="c-num">1</span>, <span class="c-num">2</span>);           <span class="c-comm-inline">// Elimina 2 elementos a partir del índice 1</span>
+<span class="c-comm-inline">// Slice (NO MUTA): arr.slice(inicio, fin) -> copia superficial</span>
+<span class="c-key">const</span> <span class="c-var">sub</span> = <span class="c-var">arr</span>.slice(<span class="c-num">0</span>, <span class="c-num">3</span>);</pre>
+
+                <div class="card-sub">Métodos Funcionales de Iteración (IMPRESCINDIBLES)</div>
+                <pre><span class="c-comm-inline">// forEach: Ejecuta acción sin retornar nada</span>
+<span class="c-var">arr</span>.forEach((<span class="c-var">item</span>, <span class="c-var">idx</span>) =&gt; console.log(<span class="c-str">`#</span>${<span class="c-var">idx</span>}<span class="c-str">: </span>${<span class="c-var">item</span>}<span class="c-str">`</span>));
+
+<span class="c-comm-inline">// map: Transforma cada elemento a un nuevo array (mismo tamaño)</span>
+<span class="c-key">const</span> <span class="c-var">dobles</span> = <span class="c-var">arr</span>.map(<span class="c-var">x</span> =&gt; <span class="c-var">x</span> * <span class="c-num">2</span>);
+
+<span class="c-comm-inline">// filter: Selecciona elementos que cumplen condición (devuelve subarray)</span>
+<span class="c-key">const</span> <span class="c-var">pares</span> = <span class="c-var">arr</span>.filter(<span class="c-var">x</span> =&gt; <span class="c-var">x</span> % <span class="c-num">2</span> === <span class="c-num">0</span>);
+
+<span class="c-comm-inline">// reduce: Acumula elementos a un único valor (suma, conteo, agrupar)</span>
+<span class="c-key">const</span> <span class="c-var">suma</span> = <span class="c-var">arr</span>.reduce((<span class="c-var">acum</span>, <span class="c-var">x</span>) =&gt; <span class="c-var">acum</span> + <span class="c-var">x</span>, <span class="c-num">0</span>);
+
+<span class="c-comm-inline">// find: Devuelve el PRIMER elemento que cumple condición (o undefined)</span>
+<span class="c-key">const</span> <span class="c-var">primero</span> = <span class="c-var">users</span>.find(<span class="c-var">u</span> =&gt; <span class="c-var">u</span>.<span class="c-var">id</span> === <span class="c-num">3</span>);
+
+<span class="c-comm-inline">// findIndex: Devuelve índice del primer match (o -1)</span>
+<span class="c-key">const</span> <span class="c-var">idx</span> = <span class="c-var">users</span>.findIndex(<span class="c-var">u</span> =&gt; <span class="c-var">u</span>.<span class="c-var">id</span> === <span class="c-num">3</span>);
+
+<span class="c-comm-inline">// some / every: Comprobación booleana</span>
+<span class="c-var">arr</span>.some(<span class="c-var">x</span> =&gt; <span class="c-var">x</span> &gt; <span class="c-num">10</span>);        <span class="c-comm-inline">// true si AL MENOS UNO cumple</span>
+<span class="c-var">arr</span>.every(<span class="c-var">x</span> =&gt; <span class="c-var">x</span> &gt; <span class="c-num">0</span>);       <span class="c-comm-inline">// true si TODOS cumplen</span>
+
+<span class="c-comm-inline">// sort: Ordenación (⚠️ MUTA el array original; usar toSorted() o [...arr].sort)</span>
+<span class="c-var">numeros</span>.sort((<span class="c-var">a</span>, <span class="c-var">b</span>) =&gt; <span class="c-var">a</span> - <span class="c-var">b</span>); <span class="c-comm-inline">// Ascendente (a - b) | Descendente (b - a)</span>
+<span class="c-var">palabras</span>.sort((<span class="c-var">a</span>, <span class="c-var">b</span>) =&gt; <span class="c-var">a</span>.localeCompare(<span class="c-var">b</span>, <span class="c-str">"es"</span>)); <span class="c-comm-inline">// Texto alfabético correcto con acentos</span></pre>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="page-break"></div>
+
+    <!-- ==================== PÁGINA 2: RA4 (POO ES6, CLASES, GET/SET, HERENCIA, JSON, REGEX, JSDOC) ==================== -->
+    <div class="header">
+        <div>
+            <h1>DESENVOLUPAMENT WEB EN ENTORN CLIENT — GUIA DE MÈTODES I SINTAXI</h1>
+            <div class="sub">Chuleta Oficial de JavaScript (RA4: POO ES6, Encapsulació Privada #, Herència, JSON i Regex)</div>
+        </div>
+        <div style="text-align: right;">
+            <div style="font-weight: bold; color: #0f172a;">Noé Conde Vila — 2º DAW</div>
+            <div class="sub">IES Maria Enríquez — Curs 2025/2026</div>
+        </div>
+    </div>
+
+    <div class="grid">
+
+        <!-- COLUMNA IZQ PÁG 2: CLASES ES6 COMPLETAS CON PRIVADOS Y GETTERS/SETTERS -->
+        <div>
+            <div class="card">
+                <div class="card-header">6. POO en ES6: Clases, Campos Privados (#) y Getters (RA4)</div>
+                <div class="card-sub">Estructura Canónica Exigida por Migueles</div>
+                <pre><span class="c-key">class</span> <span class="c-var">Producto</span> {
+    <span class="c-comm-inline">// 1. Campos privados nativos (declarados obligatoriamente con #):</span>
+    #id;
+    #nombre;
+    #precio;
+    <span class="c-key">static</span> <span class="c-var">totalCreados</span> = <span class="c-num">0</span>; <span class="c-comm-inline">// Propiedad estática de clase</span>
+
+    <span class="c-comm-inline">// 2. Constructor:</span>
+    <span class="c-key">constructor</span>(<span class="c-var">id</span>, <span class="c-var">nombre</span>, <span class="c-var">precio</span>) {
+        <span class="c-key">this</span>.#id = <span class="c-var">id</span>;
+        <span class="c-key">this</span>.<span class="c-var">nombre</span> = <span class="c-var">nombre</span>; <span class="c-comm-inline">// Invoca al setter para validar</span>
+        <span class="c-key">this</span>.<span class="c-var">precio</span> = <span class="c-var">precio</span>;
+        <span class="c-var">Producto</span>.<span class="c-var">totalCreados</span>++;
+    }
+
+    <span class="c-comm-inline">// 3. Getters y Setters:</span>
+    <span class="c-key">get</span> <span class="c-var">id</span>() { <span class="c-key">return</span> <span class="c-key">this</span>.#id; } <span class="c-comm-inline">// Solo lectura (sin setter)</span>
+
+    <span class="c-key">get</span> <span class="c-var">nombre</span>() { <span class="c-key">return</span> <span class="c-key">this</span>.#nombre; }
+    <span class="c-key">set</span> <span class="c-var">nombre</span>(<span class="c-var">val</span>) {
+        <span class="c-key">if</span> (!<span class="c-var">val</span> || <span class="c-key">typeof</span> <span class="c-var">val</span> !== <span class="c-str">"string"</span>) {
+            <span class="c-key">throw new</span> Error(<span class="c-str">"Nombre no válido"</span>);
+        }
+        <span class="c-key">this</span>.#nombre = <span class="c-var">val</span>.trim();
+    }
+
+    <span class="c-key">get</span> <span class="c-var">precio</span>() { <span class="c-key">return</span> <span class="c-key">this</span>.#precio; }
+    <span class="c-key">set</span> <span class="c-var">precio</span>(<span class="c-var">val</span>) {
+        <span class="c-key">if</span> (<span class="c-key">typeof</span> <span class="c-var">val</span> !== <span class="c-str">"number"</span> || <span class="c-var">val</span> &lt; <span class="c-num">0</span>) {
+            <span class="c-key">throw new</span> RangeError(<span class="c-str">"El precio debe ser >= 0"</span>);
+        }
+        <span class="c-key">this</span>.#precio = <span class="c-var">val</span>;
+    }
+
+    <span class="c-comm-inline">// 4. Métodos de instancia:</span>
+    <span class="c-fn">aplicarDescuento</span>(<span class="c-var">porcentaje</span>) {
+        <span class="c-key">this</span>.#precio -= (<span class="c-key">this</span>.#precio * <span class="c-var">porcentaje</span>) / <span class="c-num">100</span>;
+    }
+
+    <span class="c-fn">toString</span>() {
+        <span class="c-key">return</span> `<span class="c-str">[</span>${<span class="c-key">this</span>.#id}<span class="c-str">] </span>${<span class="c-key">this</span>.#nombre}<span class="c-str"> - </span>${<span class="c-key">this</span>.#precio}€`;
+    }
+
+    <span class="c-comm-inline">// 5. Método estático:</span>
+    <span class="c-key">static</span> <span class="c-fn">mostrarTotal</span>() {
+        <span class="c-key">return</span> `<span class="c-str">Total productos: </span>${<span class="c-var">Producto</span>.<span class="c-var">totalCreados</span>}`;
+    }
+}</pre>
+
+                <div class="card-sub">Herencia con `extends` y llamada `super()`</div>
+                <pre><span class="c-key">class</span> <span class="c-var">Libro</span> <span class="c-key">extends</span> <span class="c-var">Producto</span> {
+    #isbn;
+    #paginas;
+
+    <span class="c-key">constructor</span>(<span class="c-var">id</span>, <span class="c-var">nombre</span>, <span class="c-var">precio</span>, <span class="c-var">isbn</span>, <span class="c-var">paginas</span>) {
+        <span class="c-key">super</span>(<span class="c-var">id</span>, <span class="c-var">nombre</span>, <span class="c-var">precio</span>); <span class="c-comm-inline">// OBLIGATORIO super() antes de usar this</span>
+        <span class="c-key">this</span>.#isbn = <span class="c-var">isbn</span>;
+        <span class="c-key">this</span>.#paginas = <span class="c-var">paginas</span>;
+    }
+
+    <span class="c-key">get</span> <span class="c-var">isbn</span>() { <span class="c-key">return</span> <span class="c-key">this</span>.#isbn; }
+    <span class="c-key">get</span> <span class="c-var">paginas</span>() { <span class="c-key">return</span> <span class="c-key">this</span>.#paginas; }
+
+    <span class="c-comm-inline">// Sobrescritura polimórfica de método:</span>
+    <span class="c-fn">toString</span>() {
+        <span class="c-key">return</span> `<span class="c-str">Libro: </span>${<span class="c-key">super</span>.toString()}<span class="c-str"> (ISBN: </span>${<span class="c-key">this</span>.#isbn}<span class="c-str">, </span>${<span class="c-key">this</span>.#paginas}<span class="c-str"> págs)</span>`;
+    }
+}</pre>
+            </div>
+        </div>
+
+        <!-- COLUMNA DER PÁG 2: OBJETOS LITERALES, JSON, REGEX, JSDOC, DEBUG -->
+        <div>
+            <div class="card">
+                <div class="card-header">7. Objetos Literales, Desestructuración y JSON</div>
+                <div class="card-sub">Métodos de Object y Copia Inmutable</div>
+                <pre><span class="c-key">const</span> <span class="c-var">p</span> = { <span class="c-var">nombre</span>: <span class="c-str">"Teclado"</span>, <span class="c-var">precio</span>: <span class="c-num">45</span>, <span class="c-var">stock</span>: <span class="c-num">10</span> };
+Object.keys(<span class="c-var">p</span>);             <span class="c-comm-inline">// ["nombre", "precio", "stock"] (array de claves)</span>
+Object.values(<span class="c-var">p</span>);           <span class="c-comm-inline">// ["Teclado", 45, 10] (array de valores)</span>
+Object.entries(<span class="c-var">p</span>);          <span class="c-comm-inline">// [["nombre", "Teclado"], ["precio", 45], ...]</span>
+<span class="c-comm-inline">// Desestructuración de Objetos y Arrays:</span>
+<span class="c-key">const</span> { <span class="c-var">nombre</span>, <span class="c-var">precio</span>, <span class="c-var">descuento</span> = <span class="c-num">0</span> } = <span class="c-var">p</span>;
+<span class="c-key">const</span> [<span class="c-var">primero</span>, , <span class="c-var">tercero</span>] = [<span class="c-num">10</span>, <span class="c-num">20</span>, <span class="c-num">30</span>];
+<span class="c-comm-inline">// Clonado profundo vs superficial:</span>
+<span class="c-key">const</span> <span class="c-var">copiaSuperficial</span> = { ...<span class="c-var">p</span>, <span class="c-var">stock</span>: <span class="c-num">25</span> }; <span class="c-comm-inline">// Añade/sobrescribe</span>
+<span class="c-key">const</span> <span class="c-var">copiaProfunda</span> = structuredClone(<span class="c-var">p</span>);    <span class="c-comm-inline">// API moderna (o JSON.parse(JSON.stringify(p)))</span></pre>
+
+                <div class="card-sub">Serialización JSON</div>
+                <pre><span class="c-key">const</span> <span class="c-var">jsonStr</span> = JSON.stringify(<span class="c-var">p</span>, <span class="c-key">null</span>, <span class="c-num">2</span>);  <span class="c-comm-inline">// Convierte Objeto -> String JSON</span>
+<span class="c-key">const</span> <span class="c-var">obj</span> = JSON.parse(<span class="c-var">jsonStr</span>);            <span class="c-comm-inline">// Convierte String JSON -> Objeto JS</span>
+<span class="c-comm-inline">// ⚠️ Los campos privados (#) NO se serializan con JSON.stringify.</span>
+<span class="c-comm-inline">// Para serializar clases con #, implementar método toJSON():</span>
+<span class="c-fn">toJSON</span>() { <span class="c-key">return</span> { <span class="c-var">id</span>: <span class="c-key">this</span>.#id, <span class="c-var">nombre</span>: <span class="c-key">this</span>.#nombre, <span class="c-var">precio</span>: <span class="c-key">this</span>.#precio }; }</pre>
+            </div>
+
+            <div class="card">
+                <div class="card-header">8. Expresiones Regulares (RegExp) & Validación</div>
+                <div class="card-sub">Patrones Frecuentes de Examen</div>
+                <pre><span class="c-key">const</span> <span class="c-var">regexDNI</span> = <span class="c-str">/^[0-9]{8}[A-Za-z]$/</span>;          <span class="c-comm-inline">// 8 dígitos y letra</span>
+<span class="c-key">const</span> <span class="c-var">regexEmail</span> = <span class="c-str">/^[\w.-]+@[\w.-]+\.[a-zA-Z]{2,}$/</span>; <span class="c-comm-inline">// Email genérico</span>
+<span class="c-key">const</span> <span class="c-var">regexCP</span> = <span class="c-str">/^[0-9]{5}$/</span>;                   <span class="c-comm-inline">// Código postal 5 dígitos</span>
+<span class="c-key">const</span> <span class="c-var">regexTlf</span> = <span class="c-str">/^[6789]\d{8}$/</span>;                <span class="c-comm-inline">// Teléfono 9 dígitos</span>
+<span class="c-comm-inline">// Métodos:</span>
+<span class="c-var">regexDNI</span>.test(<span class="c-str">"12345678Z"</span>);                     <span class="c-comm-inline">// Devuelve true / false (¡el más rápido!)</span>
+<span class="c-str">"Texto 123"</span>.match(<span class="c-str">/\d+/g</span>);                      <span class="c-comm-inline">// Devuelve array de coincidencias o null</span>
+<span class="c-str">"uno,dos;tres"</span>.split(<span class="c-str">/[,;]/</span>);                   <span class="c-comm-inline">// Divide por múltiples separadores</span></pre>
+            </div>
+
+            <div class="card">
+                <div class="card-header">9. Documentación JSDoc y Manejo de Errores</div>
+                <div class="card-sub">Plantilla JSDoc Exigida por Migueles</div>
+                <pre><span class="c-comm-inline">/**
+ * Calcula el importe total con IVA y descuento opcional.
+ * @param {number} subtotal - Importe base antes de impuestos.
+ * @param {number} [iva=21] - Porcentaje de IVA aplicable (por defecto 21).
+ * @returns {number} Importe final con dos decimales.
+ * @throws {TypeError} Si los parámetros no son números válidos.
+ */</span>
+<span class="c-key">function</span> <span class="c-fn">calcularTotal</span>(<span class="c-var">subtotal</span>, <span class="c-var">iva</span> = <span class="c-num">21</span>) {
+    <span class="c-key">try</span> {
+        <span class="c-key">if</span> (<span class="c-key">typeof</span> <span class="c-var">subtotal</span> !== <span class="c-str">"number"</span>) <span class="c-key">throw new</span> TypeError(<span class="c-str">"Subtotal numérico"</span>);
+        <span class="c-key">return</span> parseFloat((<span class="c-var">subtotal</span> * (<span class="c-num">1</span> + <span class="c-var">iva</span> / <span class="c-num">100</span>)).toFixed(<span class="c-num">2</span>));
+    } <span class="c-key">catch</span> (<span class="c-var">err</span>) {
+        console.error(<span class="c-str">"[ERROR]"</span>, <span class="c-var">err</span>.message);
+        <span class="c-key">throw</span> <span class="c-var">err</span>;
+    } <span class="c-key">finally</span> {
+        <span class="c-comm-inline">// Se ejecuta SIEMPRE (limpieza de recursos)</span>
+    }
+}</pre>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>
+

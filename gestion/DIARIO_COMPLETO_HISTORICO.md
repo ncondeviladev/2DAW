@@ -26,10 +26,10 @@
 | **DIW** | `S04_PR1` (CafeNet_Pico_FA) | ✅ **Entregat** | Venciment: 24/10/2026 21:36 | 4 pàgines HTML5, Pico.css, FA, validat W3C |
 | **DIW** | `Playground1` (Selectores Simples) | ✅ **Fet** | Venciment: 15/10/2026 23:37 | Voluntari completat |
 | **DIW** | `S06_PR1` (CV CSS) | ✅ **Entregat** | Venciment: 02/11/2026 23:59 | Maquetació Mobile First, conmutador formal.css / diver.css, Google Fonts (@import), @font-face local (Righteous), pattern amb background-attachment: fixed, checklist complet de selectors avançats i validació W3C |
-| **DIW** | `S08_PR1` (Transform & Transition) | ⏳ **Pendent** | Venciment: 15/11/2026 23:59 | Pràctica S08 CSS3 Transform & Transition (enunciat en esborrany a Aules; animacions retirades del temari d'examen per Quique Savall). |
+| **DIW** | `S08_PR1` (Transform & Transition) | ✅ **Entregat** | Venciment: 15/11/2026 23:59 | Lliurat el 04/11/2026. Pràctica S08 CSS3 Transform & Transition completada. |
 | **DaW** | `PEC1` (Apache, Nginx, SSH, U1) | ✅ **Entregat (8/10)** | Venciment: 18/10/2026 23:59 | Qualificat: 8,00/10. Feedback: P4 configuració de ports dels vhosts |
 | **DaW** | `PEC2` (Docker i desplegaments, U2) | ✅ **Entregat** | Venciment: 25/10/2026 23:59 | Tramesa a Aules |
-| **DaW** | `PEC3` (Docker avançat, U3) | ✅ **Entregat** | Venciment: 08/11/2026 23:59 | PDF generat i llest per a Aules (Compose + K8s 3 rèpliques) |
+| **DaW** | `PEC3` (Docker avançat, U3) | ✅ **Qualificat (9,5/10)** | Venciment: 08/11/2026 23:59 | Qualificat el 10/11 per Juanra Collado: 9,50/10,00. Feedback: "1. La explicación es muy escasa. El enunciado indica que expliques punto por punto y lo haces de forma genérica." |
 | **DWEC** | `UD1 Activitat` (Arquitectura Web) | ✅ **Entregat** | Obert: 14/09/2026 | Tramesa a Aules |
 | **DWEC** | `UD1 Qüestionari` | ✅ **Fet** | Obert: 17/09/2026 | Test superat a Aules |
 | **DWEC** | `UD2 Activitat puntuable` | ✅ **Entregat** | Obert: 28/09/2026 | Tramesa a Aules |
@@ -347,3 +347,135 @@
   - 📥 **S07 & S08 descarregats:** Resum consolidat a `DIW/UD2/S08/resumen_S07_S08.md` i xulla principal mantinguda concisa a `DIW/chuleta_DIW.md`.
   - ⏳ **Pràctica `S08_PR1` (Venciment 15/11):** Part 1 CV Animat (`animado.css`) a partir de S06; Part 2 Botonera pendent d'enunciat.
   - 📅 **Examen Presencial PC (20/11, 3h):** Maquetació Mobile First en HTML5/CSS natiu des de mockup. Plantilla llesta a `DIW/plantilla_examen/`.
+
+---
+
+## 📅 Sessió del 06 de Novembre de 2026: DaW (Simulacre d'Examen 1a Avaluació i Consolidació de Comandaments)
+
+### 1. Fites Assolides
+- **Document de Comandaments i Material Oficial d'Examen (`Material_Examen_1Eval_CondeNoe.pdf`):**
+  - Redissenyat i ajustat a **estrictament 2 pàgines** inicials de resum de comandaments acadèmic (sense tutorial ni "pas a pas").
+  - Cada comanda amb el seu comentari sagnat en línia pròpia per a evitar truncats visuals.
+  - Sintaxi 100% genèrica amb variables (`<sitio>`, `<puerto>`, `<dominio>`).
+  - Afegits comandos de rescat clau: `docker exec -it <cont> docker-php-ext-install mysqli` (resolució error `mysqli not found`) i instal·lació de ping (`iputils-ping`).
+  - Recompilat en PDF únic consolidat de **35 pàgines** amb marcadors estructurats per seccions (Resum + PEC 1 + PEC 2 + PEC 3 + Cheat Sheet oficial).
+- **1a Volta del Simulacre d'Examen Completada (`DaW/Simulacro_Examen/`):**
+  - **Exercici 1 (Servidors Web en Contenidor Ubuntu):** Multilloc real amb 4 llocs web en 2 ports (Apache en 8080 amb `sitio1.daw` i `sitio2.daw`, Nginx en 80 amb `sitio1.daw` i `sitio2.daw`, pàgines 404 personalitzades i resolució local a `/etc/hosts`).
+  - **Exercici 2 (Dockerfile Propi en Alpine):** Portal corporatiu complet amb Nginx sobre Alpine (`nginx:alpine`), subcarpeta `static`, directiva `EXPOSE 80`, `docker build -t portal-web:2.0 .`, `docker run -d -p 8888:80 --name mi_portal`, inspecció interna amb `sh` i neteja.
+  - **Exercici 3 (Docker Compose Multicontenidor):** Pila completa `app` (`php:8.3-apache`) + `db` (`mysql:8.0`) amb persistència nombrada `datos_examen` i script PHP de connexió provat amb èxit.
+
+### 2. Lliçons Tècniques i Trampes d'Examen Identificades
+1. `/etc/hosts` és plural i a nivell de SO: una única línia (`127.0.0.1 sitio1.daw sitio2.daw`) serveix per a Apache i Nginx a la vegada.
+2. `service <servei> restart` sempre: `reload` només funciona si el dimoni ja estava actiu; si estava parat, no fa res.
+3. La directiva `root` en Nginx i `DocumentRoot` en Apache ha de coincidir exactament amb la carpeta creada a `/var/www/`.
+4. En Windows PowerShell, la comprovació de xarxa es fa amb `curl.exe` (per a no invocar l'àlies d'Invoke-WebRequest).
+5. En imatges Alpine no existeix `bash`, cal utilitzar sempre `sh` en `docker exec -it <cont> sh`.
+6. En `Dockerfile`, si s'utilitza `WORKDIR`, el destí del `COPY` és el punt `.`. Si no s'usa, s'especifica la ruta absoluta de destí.
+7. En `compose.yml`, la secció arrel `volumes:` requereix els dos punts finals obligatòriament (`nom_volum:`).
+8. A la imatge oficial de PHP, el controlador `mysqli` no ve habilitat: es resol comprovant connexió de socket o instal·lant amb `docker-php-ext-install mysqli`.
+
+### 3. Estat Actual i Proper Pas
+- Tot el repositori i la documentació de gestió estan completament sincronitzats.
+
+---
+
+## 📅 Sessió del 07 de Novembre de 2026: DaW (Consolidació de Cheat Sheet Oficial i Resolució Compose)
+
+### 1. Fites Assolides
+- **Document Oficial de Comandaments i PECs (`cheatsheetNoeConde.pdf`):**
+  - Generat el document mestre final de **34 pàgines** amb marcadors estructurats:
+    1. Cheat Sheet Tècnica (Pàgs 1-2): Maquetació en amplada fixa A4 (198 mm), 2 columnes de 97 mm, comentaris nets sense trencament de línia.
+    2. PEC 1 (Apache & Nginx multisitio).
+    3. PEC 2 (Dockerfile Octopus, xarxa bridge i volum nombrat per CLI).
+    4. PEC 3 (Docker Compose multicontenidor i Kubernetes 3 rèpliques).
+  - Eliminat el cheat sheet extern de Docker del final per mantenir estricta conformitat amb el requeriment del professor.
+  - Totes les ordres auditades i amb traçabilitat 100% oficial de les pràctiques entregades.
+- **Correccions Clau Realitzades a la Cheat Sheet:**
+  - Eliminats tots els `sudo` (innecessaris en contenidors Docker ja que s'opera com a `root`).
+  - Substituït `systemctl` per `service <nom> start|restart` (directe a l'entorn de contenidor).
+  - Reorganització lògica: Fila superior (1. Linux i 2. Docker CLI & Redes), Fila inferior (3. Apache2 i 4. Nginx costat a costat).
+  - Bloque 5 Dockerfile unificat en un únic snippet net (`httpd:alpine` base amb rutes alternatives d'Nginx en comentaris).
+  - Recuperats tots els flags essencials (`-d`, `-it`, `-p`, `-t`, `.`, `-v`, `--name`, `-f`, `-ai`).
+- **Resolució de l'Exercici 3 (Docker Compose):**
+  - Identificada i corregida la sintaxi de llista requerida per Docker Compose en `depends_on: [db]`.
+  - Fixats els dos punts obligatoris en la declaració de volum de nivell arrel (`volumes: datos_examen:`).
+  - Verificada la connexió PHP -> MySQL amb script `index.php` i activació del driver amb `docker-php-ext-install mysqli`.
+
+### 2. Estat de Situació General del Curs
+- **PIM:** Sprint 0 tramitat i completat amb èxit (sense examen presencial).
+- **DWES:** 1a Avaluació tancada al 100% (U1 a U4 entregades). Pendent preparar simulacre de cara a l'examen del 19-20 nov (patró PRG, sticky forms, sessions/cookies i PDO/DAOs).
+- **DIW:** 1a Avaluació tancada al 100% amb `S08_PR1` lliurada. Pendent simulacres de maquetació Mobile First en 45 min.
+- **DWEC:** Temari i 21 exercicis llestos a `temario_resumido.md`. Pendent simulacres de reptes JS en viu.
+
+### 3. Proper Pas
+- Decidir a la propera sessió si continuar consolidant simulacres de DaW o arrancar amb els entrenaments pràctics de **DIW** (maquetació cronometrada) o **DWEC** (resolució de reptes JS ES6+).
+
+---
+
+## 📅 Sessió del 09 de Novembre de 2026: DWEC (Chuleta A4 Oficial) i DWES (Simulacre TechLeads - Mòdul Tasques)
+
+### 1. Fites Assolides
+- **Auditoria de Documentació DaW:**
+  - Analitzats els 4 PDFs de `DaW`: confirmat que `cheatsheetNoeConde.pdf` (34 pàgines) és el document mestre i definitiu (chuleta de 2 pàgines corregida + memòries íntegres de les PEC 1, 2 i 3).
+- **DWEC — Chuleta Oficial de Métodes i Classes JavaScript:**
+  - Dissenyada i compilada a `DWEC/cheatsheet_DWEC.pdf` (2 pàgines A4 exactes, maquetada a 2 columnes de 97 mm).
+  - Inclou: Sintaxi bàsica i tipus primitius (RA2), Mètodes natius de String, Math i Date, Funcions, rest/spread i closures (RA3), Mètodes funcionals d'Array (`map`, `filter`, `reduce`, `find`, `sort`), POO ES6 canònica amb camps privats natius `#`, getters/setters, herència `extends`/`super()`, JSON, patrons RegExp essencials i plantilla JSDoc.
+- **DWES — Disseny i Desenvolupament del Simulacre d'Examen (`tasques` sobre TechLeads):**
+  - Redactat l'enunciat oficial d'examen a `DWES/Simulacro_Examen/ENUNCIAT_SIMULACRE.md`.
+  - **Base de Dades (`base-de-dades.sql`):** Creada la taula `tasques` amb clau primària, claus foranes cap a `leads` (`ON DELETE CASCADE`) i `usuaris`, camps `data_limit` (DATE) i `completada` (TINYINT), més registres de prova.
+  - **Model (`src/Model/Tasca.php`):** Constructor PHP 8 amb promoció de propietats, getters corresponents i mètode de negoci `estaVencuda(): bool` comparant amb `date('Y-m-d')`.
+  - **DAO (`src/DAO/TascaDAO.php`):** Implementats `insert()`, `findByLead()` amb JOIN cap a `usuaris`, `findById()`, `marcarCompletada()` (sentència UPDATE) i `comptarPendentsPerLead()` amb `WHERE completada = 0`, `GROUP BY` i `PDO::FETCH_KEY_PAIR`.
+  - **Configuració (`config/bootstrap.php`):** Registrat `$tascaDAO = new TascaDAO($connexio)`.
+  - **Controlador 1 (`public/dashboard/afegir_tasca.php`):** Validació de camps, assignació d'autor per sessió segura, inserció i missatges flash.
+  - **Controlador 2 (`public/dashboard/completar_tasca.php`):** Control d'autorització (només autor o admin, amb resposta 403), canvi d'estat a completada i redirecció.
+  - **Vista (`public/dashboard/lead.php`):** Carregat `$tasques` des del DAO; pendent inserir el bloc de presentació visual.
+
+### 2. Estat del Projecte i Proper Pas
+- **DWES:** Resta enganxar el bloc HTML a `lead.php` i provar el flux complet amb Docker Compose.
+- **Següent sessió:** Decidir si provar aquest simulacre en local o alternar cap a simulacres de **DIW** (maquetació cronometrada CSS) o **DWEC**.
+
+---
+
+## 📅 Sessió del 10 de Novembre de 2026: Actualització de Qualificacions (DaW PEC3: 9,50) i Traspàs de Context a Portàtil
+
+### 1. Fites i Actualitzacions Clau
+- **Qualificació DaW PEC3:**
+  - Qualificada el dimarts 10 de novembre a les 10:56 per Juan Ramón Collado Esteve.
+  - **Nota:** **9,50 / 10,00**.
+  - **Feedback:** *"1. La explicación es muy escasa. El enunciado indica que expliques punto por punto y lo haces de forma genérica."*
+  - **Lliçó per a l'examen presencial:** Davant qualsevol exercici teòric o pràctic de DaW, redactar i justificar detalladament pas a pas cada comanda i directiva, evitant resums massa concisos.
+- **Estat del Repositori i Traspàs:**
+  - L'usuari realitza `git commit` i `git push` des de la màquina de sobretaula per sincronitzar el repositori amb GitHub.
+  - En clonar/actualitzar al portàtil (`git pull`), el nou agent disposarà de tota la informació necessària per a reprendre el treball exactament des d'aquest punt.
+
+### 2. Mapa de Situació Ràpid per al Proper Agent (Continuïtat en Portàtil)
+
+1. **DWES — Estat de `DWES/Simulacro_Examen`:**
+   - **Backend 100% completat:**
+     - `databases/base-de-dades.sql`: Taula `tasques` amb claus foranes (`ON DELETE CASCADE`), tipus `DATE` i inserts de prova.
+     - `src/Model/Tasca.php`: Model PHP 8 amb constructor promogut i helper `estaVencuda(): bool`.
+     - `src/DAO/TascaDAO.php`: Mètodes `insert`, `findByLead`, `findById`, `marcarCompletada` (UPDATE) i `comptarPendentsPerLead` (GROUP BY amb `WHERE completada = 0`).
+     - `config/bootstrap.php`: Registrat `$tascaDAO`.
+     - `public/dashboard/afegir_tasca.php`: Controlador de creació amb validacions, seguretat de sessió i missatges flash.
+     - `public/dashboard/completar_tasca.php`: Controlador de canvi d'estat amb control de rols (autor o administrador, resposta 403).
+   - **Pendent per tancar el simulacre:**
+     - Enganxar el bloc HTML de la targeta de tasques a `public/dashboard/lead.php` (just abans de la targeta de notes, línia ~124).
+     - Provar la interfície i funcionament aixecant Docker (`docker compose up`).
+
+2. **DWEC:**
+   - Document oficial llest per a imprimir en paper: [DWEC/cheatsheet_DWEC.pdf](file:///f:/OneDrive%20-%20Conselleria%20d'Educaci%C3%B3/2DAW/DWEC/cheatsheet_DWEC.pdf) (2 pàgines A4 exactes).
+   - Pendents: Exercicis pràctics tipus script (`ejRA2.js`, `ejRA3.js`, `ejRA4.js`).
+
+3. **DIW:**
+   - Lliurada `S08_PR1`.
+   - Recursos d'examen llestos a `DIW/` (full imprimible A4 i plantilla modular).
+   - Pendent: Simulacre de maquetació ràpida Mobile First amb Flexbox (2 hores en PC de l'aula).
+
+4. **DaW:**
+   - PEC 1 (8,00), PEC 2 (lliurada), PEC 3 (9,50).
+   - Dossier oficial consolidat per a l'examen: [DaW/cheatsheetNoeConde.pdf](file:///f:/OneDrive%20-%20Conselleria%20d'Educaci%C3%B3/2DAW/DaW/cheatsheetNoeConde.pdf) (34 pàgines).
+
+5. **Exempcions Confirmades:**
+   - Sostenibilitat i Digitalització: Convalidades (sense feina).
+   - PIM: Sprint 0 lliurat. Reptes de l'Sprint 1 es defensen després d'exàmens (24 nov revisió, 2 des defensa final).
+   - DWES U5 (Laravel): Posposat per a després d'exàmens per indicació del professor Eloy.
