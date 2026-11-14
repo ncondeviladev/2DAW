@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="es">
+  <head>
+	<title>Ejemplo Form maquetado con CSS</title>
+	<meta charset="utf-8"/>
+	<style type="text/css">
+		/*********DECLARACIONES *************/
+        @charset "utf-8";
+    
+        /*********SELECTORES *************/
+        * { padding: 0; margin: 0;
+            box-sizing: border-box;
+        }
+        
+        :root{
+            font-family: Arial, Helvetica, sans-serif; 
+            font-size: 12px;
+        }
+		
+		body{
+			padding: 3rem;
+		}
+		
+        form legend{
+            font-family: "Tahoma", "Verdana", sans-serif;
+            font-size: 2rem;
+            color: darkblue;
+            text-align: center;
+            text-transform: uppercase;
+            letter-spacing: 0.2em;
+			padding: 0 1em;
+        }
+        
+        form fieldset{
+            display: table; /* EL FIELDEST ES LA TABLA*/
+            border: 1em ridge grey;
+            width: 50rem;
+            margin: 0 auto;
+            border-radius: 3em;
+            padding: 3em;
+        }
+        
+        form fieldset>p{  /* CADA PÁRRAFO HIJO ES UNA FILA DE LA TABLA */
+            display: table-row;
+        }
+        
+        form fieldset>p>*{ /* LOS HIJOS DE CADA PÁRRAFO SON CELDAS */
+            display: table-cell;
+            margin: 0.5em 0;
+            vertical-align:middle;
+            padding: 0 1em;
+        }
+
+		form fieldset>p>input{
+			width: 100%;
+		}
+        
+        
+	</style>
+  </head>
+  <body>
+    <main>
+	  <form name="datos" action="procesa.php" method="post">
+	    <fieldset>
+		  <legend>Datos personales</legend>
+		  <!-- 1a linea -->
+		  <p>
+			<label for="nom">Nombre</label>
+			<input type="text" name="nombre" id="nom"  /> <!--TO DO -->
+		  </p>
+		  <!-- 2a linea -->
+		  <p>
+			<label for="pwd">Password</label>
+			<input type="password" name="pwd" id="pwd" />
+		  </p>	
+		  <!-- 3a linea -->
+		  <p>	
+			<label>Sexo:</label>
+				<span><input type="radio" name="sexo" id="home" /><!--TO DO -->
+					 <label for="home">Hombre</label>&nbsp;&nbsp;
+					 <input type="radio" name="sexo" id="dona"/>
+					 <label for="dona">Mujer</label> 
+				</span>
+		  </p>	
+		  <!-- 4a linea -->
+		  <p>	
+			<label>Carnet conducir:</label>
+				<span><input type="checkbox" name="carnet[]" id="cA"/>
+					 <label for="cA"> A </label>
+					 <input type="checkbox" name="carnet[]" id="cB"/>
+					 <label for="cB"> B </label>
+				</span>
+		  </p>
+		  <!-- 5a linea -->
+		  <p>
+			<label for="info">Otra información</label>
+			<textarea name="info" id="info" cols="70" rows="7"></textarea> 
+				<!--entre etiqueta de apertura y cerrado no poner nada que no se desee-->
+		  </p>
+		  <!-- 6a linea -->
+		  <p>	
+			<span></span>
+			<input type="reset" value="Borrar"/>
+		  </p>
+		  <!-- 7a linea -->
+		  <p>	
+			<span></span>
+			<input type="submit" value="Enviar"/>
+		  </p>
+		  			
+	    </fieldset>	
+	  </form>	
+    </main>
+  </body>
+</html>

@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        @charset "utf-8";
+
+        *{
+            margin: 0; padding: 0;
+            text-decoration: none;
+            box-sizing: border-box;
+         }
+
+         :root{
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 16px;
+            background-color: grey;
+         }
+
+         body{
+            width: 80%;
+            max-width: 1900px; /* buena práctica poner max y min */
+            min-width:760px; 
+            margin: 0 auto;
+            background-color: bisque;
+         }
+         /** CABECERA **/
+         header{
+            padding: 1rem;
+            background-color: chocolate;
+         }
+         header h1{
+            color: white;
+         }
+
+         /*** NAV HORIZONTAL: sticky **/
+         nav#primario{
+            background-color: bisque;
+            position: sticky;
+            top: 0;
+         }
+
+         nav#primario ul{
+            list-style: none;/* quitar picos */
+         }
+
+         nav#primario ul li{
+            display: inline-block;/* li al lado de li */
+         }
+
+         nav#primario ul li a{
+            display: block; /* que coja todo lo disponible */
+            margin: 0.5em;
+            padding: 0.5em;
+            border: 1px solid chocolate;
+            background-color: chocolate;
+            color: white;
+            font-weight: bold;
+            text-align: center;
+            border-radius: 0.5em;
+            transition: all 0.5s ease;
+         }
+
+         nav#primario ul li a:hover{
+            background-color: white;
+            color:chocolate;
+         }
+         
+         /** LAYOUT 2 COL ***/
+         div#tabular{
+            display: table;
+         }
+
+         /** Nav secundario **/
+         /*** NOTA: Lo he hecho con notacion CSS NESTING, que es una FORMA NUEVA
+         de codificar CSS. Está soportada desde hace bien poco. Desaconsejo su uso
+         de momento **/
+         nav#secundario{
+            display: table-cell;
+            width:20%;
+            background-color: color-mix(in srgb, bisque, white);
+            padding: 1.5em;
+            ul {
+                list-style: none;
+                font-size: 0.8rem;
+                li{
+                    a{  
+                        color: red;
+                        background-color: white;
+                        border: 1px solid red;
+                        text-align: center;
+                        font-weight: bold;
+                        display: block;
+                        margin: 1em auto;
+                        padding: 0.5em;
+                        border-radius: 0.5em 0 0.5em 0;
+                        transition: all 0.5s ease;
+                        &:hover{
+                          color: white;
+                          background-color: red;          
+                        }    
+                    }
+                    
+                }
+            }
+        }/*** Fin del ejemplo de CSS NESTING ***/
+
+        /* MAIN */
+        main{
+            display: table-cell;
+            width: 80%;
+            background-color: white;
+            padding: 1.5em;
+            /** Prueba del Column-gap: escribe el texto a 2 columnas **/
+            column-count: 2;
+            column-gap: 2rem;
+            column-rule: 2px solid red;
+        }
+
+        /* FOOTER */
+        footer{
+            height: 5rem; /** Nota: si a container le pongo height, 
+                              mejor darle overflow: auto, para que
+                              ponga barra de scroll si hace falta **/
+            overflow: auto;
+            background-color: chocolate;
+            padding: 1em;
+        }
+        /*** BANNER DE COOKIES ***/
+        aside#cookies{
+            position:fixed;
+            z-index: 1;
+            bottom: 0; left: 0;
+            width: 100%;
+            background-color: black;
+            color: white;
+            font-weight: bold;
+            padding: 2rem;
+            text-align: center;
+        }
+
+    </style>
+</head>
+<body>
+   <header>
+    <h1>Cabecera de página</h1>
+   </header>
+   <nav id="primario">
+    <p><small><em> ^^ Este nav es "Sticky": si haces scroll de página, el nav se quedará pegado arriba ^^</em>  </small></p>
+    <ul>
+        <li><a href="http://google.es">Google</a></li>
+        <li><a href="http://google.es">Outlook</a></li>
+        <li><a href="http://google.es">Wikipedia</a></li>
+    </ul>
+   </nav>
+   <div id="tabular">    
+    <nav id="secundario">
+        <ul>
+            <li><a href="http://google.es">Google</a></li>
+            <li><a href="http://google.es">Outlook</a></li>
+            <li><a href="http://google.es">Wikipedia</a></li>
+        </ul>
+    </nav>
+    <main>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus, iusto laboriosam. Rerum aperiam eos minima deleniti voluptas ipsa culpa perferendis modi nam corrupti? Doloribus omnis unde provident blanditiis, tenetur sapiente.</p>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus, iusto laboriosam. Rerum aperiam eos minima deleniti voluptas ipsa culpa perferendis modi nam corrupti? Doloribus omnis unde provident blanditiis, tenetur sapiente.</p>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus, iusto laboriosam. Rerum aperiam eos minima deleniti voluptas ipsa culpa perferendis modi nam corrupti? Doloribus omnis unde provident blanditiis, tenetur sapiente.</p>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus, iusto laboriosam. Rerum aperiam eos minima deleniti voluptas ipsa culpa perferendis modi nam corrupti? Doloribus omnis unde provident blanditiis, tenetur sapiente.</p>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus, iusto laboriosam. Rerum aperiam eos minima deleniti voluptas ipsa culpa perferendis modi nam corrupti? Doloribus omnis unde provident blanditiis, tenetur sapiente.</p>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus, iusto laboriosam. Rerum aperiam eos minima deleniti voluptas ipsa culpa perferendis modi nam corrupti? Doloribus omnis unde provident blanditiis, tenetur sapiente.</p>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus, iusto laboriosam. Rerum aperiam eos minima deleniti voluptas ipsa culpa perferendis modi nam corrupti? Doloribus omnis unde provident blanditiis, tenetur sapiente.</p>
+      
+
+    </main>
+   </div> <!-- de tabular -->
+  <footer>
+      <p><small>copyright 2025</small></p>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus, iusto laboriosam. Rerum aperiam eos minima deleniti voluptas ipsa culpa perferendis modi nam corrupti? Doloribus omnis unde provident blanditiis, tenetur sapiente.</p>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus, iusto laboriosam. Rerum aperiam eos minima deleniti voluptas ipsa culpa perferendis modi nam corrupti? Doloribus omnis unde provident blanditiis, tenetur sapiente.</p>
+   </footer>
+   <aside id="cookies"><p>Banner de cookies</p>
+        <p><small><em> Lo hemos hecho con position:fixed; bottom:0; left:0</em> </small></p>
+        <p><small><em> El efecto de Cerrar lo hacemos con un javascript que hace un transition</em> </small></p>
+        <p><input type="button" value="Aceptar" onclick="cerrarCookies()"></p>
+   </aside>
+   <script>
+        function cerrarCookies(){
+            document.getElementById("cookies").style="transform:translateY(100%); transition: transform 0.5s ease;";
+        }
+   </script>
+</body>
+</html>

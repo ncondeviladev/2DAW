@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>S10 Actividad 1 - Capturas Flexbox Froggy - Noé Conde Vila</title>
+<style>
+
+@page {
+  size: A4 portrait;
+  margin: 10mm 14mm 8mm 14mm;
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+  color: #1e293b;
+  background: #ffffff;
+}
+.pagina {
+  page-break-after: always;
+  height: 275mm;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.pagina:last-child {
+  page-break-after: avoid;
+}
+.header-doc {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid #0f172a;
+  padding-bottom: 6px;
+  margin-bottom: 12px;
+}
+.header-doc h1 {
+  font-size: 13pt;
+  font-weight: 800;
+  color: #0f172a;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+.header-doc .sub {
+  font-size: 8.5pt;
+  color: #64748b;
+  font-weight: 600;
+}
+.header-doc .autor {
+  font-size: 9.5pt;
+  font-weight: 700;
+  text-align: right;
+  color: #0f172a;
+}
+.header-doc .autor span {
+  font-weight: 400;
+  font-size: 8.5pt;
+  color: #64748b;
+}
+.header-mini {
+  border-bottom: 1px solid #cbd5e1;
+  padding-bottom: 4px;
+  margin-bottom: 14px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 8pt;
+  font-weight: 600;
+  color: #64748b;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+.item-captura {
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  overflow: hidden;
+  margin-bottom: 14px;
+  background: #f8fafc;
+}
+.item-header {
+  background: #1e293b;
+  color: #ffffff;
+  padding: 5px 12px;
+  font-size: 9.5pt;
+  font-weight: 700;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.item-header span.sec {
+  font-size: 8pt;
+  color: #94a3b8;
+  font-weight: 400;
+}
+.item-img {
+  padding: 6px;
+  text-align: center;
+  background: #ffffff;
+}
+.item-img img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 4px;
+  border: 1px solid #e2e8f0;
+}
+.footer-doc {
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid #e2e8f0;
+  padding-top: 4px;
+  font-size: 8pt;
+  color: #64748b;
+  margin-top: auto;
+}
+
+</style>
+</head>
+<body>
+
+<div class="pagina">
+  <div>
+    
+    <div class="header-doc">
+      <div>
+        <h1>DIW — Actividad 1: Flexbox Froggy</h1>
+        <div class="sub">Resolución de los 24 niveles interactivos de maquetación Flexbox</div>
+      </div>
+      <div class="autor">
+        Alumno: <strong>Noé Conde Vila</strong><br>
+        <span>2º DAW — IES</span>
+      </div>
+    </div>
+
+
+    <div class="item-captura">
+      <div class="item-header">
+        <span>Nivel 01 / 24</span>
+        <span class="sec">Flexbox Froggy</span>
+      </div>
+      <div class="item-img">
+        <img src="capturas/Nivel_01.png" alt="Nivel 1">
+      </div>
+    </div>
+
+    <div class="item-captura">
+      <div class="item-header">
+        <span>Nivel 02 / 24</span>
+        <span class="sec">Flexbox Froggy</span>
+      </div>
+      <div class="item-img">
+        <img src="capturas/Nivel_02.png" alt="Nivel 2">
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-doc">
+    <span>S10_PR1_Flexbox — Actividad 1</span>
+    <span>Página 1 de 12</span>
+  </div>
+</div>
+
+<div class="pagina">
+  <div>
+    
+    <div class="header-mini">
+      <span>DIW — Flexbox Froggy</span>
+      <span>Noé Conde Vila</span>
+    </div>
+
+
+    <div class="item-captura">
+      <div class="item-header">
+        <span>Nivel 03 / 24</span>
+        <span class="sec">Flexbox Froggy</span>
+      </div>
+      <div class="item-img">
+        <img src="capturas/Nivel_03.png" alt="Nivel 3">
+      </div>
+    </div>
+
+    <div class="item-captura">
+      <div class="item-header">
+        <span>Nivel 04 / 24</span>
+        <span class="sec">Flexbox Froggy</span>
+      </div>
+      <div class="item-img">
+        <img src="capturas/Nivel_04.png" alt="Nivel 4">
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-doc">
+    <span>S10_PR1_Flexbox — Actividad 1</span>
+    <span>Página 2 de 12</span>
+  </div>
+</div>
+
+<div class="pagina">
+  <div>
+    
+    <div class="header-mini">
+      <span>DIW — Flexbox Froggy</span>
+      <span>Noé Conde Vila</span>
+    </div>
+
+
+    <div class="item-captura">
+      <div class="item-header">
+        <span>Nivel 05 / 24</span>
+        <span class="sec">Flexbox Froggy</span>
+      </div>
+      <div class="item-img">
+        <img src="capturas/Nivel_05.png" alt="Nivel 5">
+      </div>
+    </div>
+
+    <div class="item-captura">
+      <div class="item-header">
+        <span>Nivel 06 / 24</span>
+        <span class="sec">Flexbox Froggy</span>
+      </div>
+      <div class="item-img">
+        <img src="capturas/Nivel_06.png" alt="Nivel 6">
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-doc">
+    <span>S10_PR1_Flexbox — Actividad 1</span>
+    <span>Página 3 de 12</span>
+  </div>
+</div>
+
+<div class="pagina">
+  <div>
+    
+    <div class="header-mini">
+      <span>DIW — Flexbox Froggy</span>
+      <span>Noé Conde Vila</span>
+    </div>
+
+
+    <div class="item-captura">
+      <div class="item-header">
+        <span>Nivel 07 / 24</span>
+        <span class="sec">Flexbox Froggy</span>
+      </div>
+      <div class="item-img">
+        <img src="capturas/Nivel_07.png" alt="Nivel 7">
+      </div>
+    </div>
+
+    <div class="item-captura">
+      <div class="item-header">
+        <span>Nivel 08 / 24</span>
+        <span class="sec">Flexbox Froggy</span>
+      </div>
+      <div class="item-img">
+        <img src="capturas/Nivel_08.png" alt="Nivel 8">
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-doc">
+    <span>S10_PR1_Flexbox — Actividad 1</span>
+    <span>Página 4 de 12</span>
+  </div>
+</div>
+
+<div class="pagina">
+  <div>
+    
+    <div class="header-mini">
+      <span>DIW — Flexbox Froggy</span>
+      <span>Noé Conde Vila</span>
+    </div>
+
+
+    <div class="item-captura">
+      <div class="item-header">
+        <span>Nivel 09 / 24</span>
+        <span class="sec">Flexbox Froggy</span>
+      </div>
+      <div class="item-img">
+        <img src="capturas/Nivel_09.png" alt="Nivel 9">
+      </div>
+    </div>
+
+    <div class="item-captura">
+      <div class="item-header">
+        <span>Nivel 10 / 24</span>
+        <span class="sec">Flexbox Froggy</span>
+      </div>
+      <div class="item-img">
+        <img src="capturas/Nivel_10.png" alt="Nivel 10">
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-doc">
+    <span>S10_PR1_Flexbox — Actividad 1</span>
+    <span>Página 5 de 12</span>
+  </div>
+</div>
+
+<div class="pagina">
+  <div>
+    
+    <div class="header-mini">
+      <span>DIW — Flexbox Froggy</span>
+      <span>Noé Conde Vila</span>
+    </div>
+
+
+    <div class="item-captura">
+      <div class="item-header">
+        <span>Nivel 11 / 24</span>
+        <span class="sec">Flexbox Froggy</span>
+      </div>
+      <div class="item-img">
+        <img src="capturas/Nivel_11.png" alt="Nivel 11">
+      </div>
+    </div>
+
+    <div class="item-captura">
+      <div class="item-header">
+        <span>Nivel 12 / 24</span>
+        <span class="sec">Flexbox Froggy</span>
+      </div>
+      <div class="item-img">
+        <img src="capturas/Nivel_12.png" alt="Nivel 12">
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-doc">
+    <span>S10_PR1_Flexbox — Actividad 1</span>
+    <span>Página 6 de 12</span>
+  </div>
+</div>
+
+<div class="pagina">
+  <div>
+    
+    <div class="header-mini">
+      <span>DIW — Flexbox Froggy</span>
+      <span>Noé Conde Vila</span>
+    </div>
+
+
+    <div class="item-captura">
+      <div class="item-header">
+        <span>Nivel 13 / 24</span>
+        <span class="sec">Flexbox Froggy</span>
+      </div>
+      <div class="item-img">
+        <img src="capturas/Nivel_13.png" alt="Nivel 13">
+      </div>
+    </div>
+
+    <div class="item-captura">
+      <div class="item-header">
+        <span>Nivel 14 / 24</span>
+        <span class="sec">Flexbox Froggy</span>
+      </div>
+      <div class="item-img">
+        <img src="capturas/Nivel_14.png" alt="Nivel 14">
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-doc">
+    <span>S10_PR1_Flexbox — Actividad 1</span>
+    <span>Página 7 de 12</span>
+  </div>
+</div>
+
+<div class="pagina">
+  <div>
+    
+    <div class="header-mini">
+      <span>DIW — Flexbox Froggy</span>
+      <span>Noé Conde Vila</span>
+    </div>
+
+
+    <div class="item-captura">
+      <div class="item-header">
+        <span>Nivel 15 / 24</span>
+        <span class="sec">Flexbox Froggy</span>
+      </div>
+      <div class="item-img">
+        <img src="capturas/Nivel_15.png" alt="Nivel 15">
+      </div>
+    </div>
+
+    <div class="item-captura">
+      <div class="item-header">
+        <span>Nivel 16 / 24</span>
+        <span class="sec">Flexbox Froggy</span>
+      </div>
+      <div class="item-img">
+        <img src="capturas/Nivel_16.png" alt="Nivel 16">
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-doc">
+    <span>S10_PR1_Flexbox — Actividad 1</span>
+    <span>Página 8 de 12</span>
+  </div>
+</div>
+
+<div class="pagina">
+  <div>
+    
+    <div class="header-mini">
+      <span>DIW — Flexbox Froggy</span>
+      <span>Noé Conde Vila</span>
+    </div>
+
+
+    <div class="item-captura">
+      <div class="item-header">
+        <span>Nivel 17 / 24</span>
+        <span class="sec">Flexbox Froggy</span>
+      </div>
+      <div class="item-img">
+        <img src="capturas/Nivel_17.png" alt="Nivel 17">
+      </div>
+    </div>
+
+    <div class="item-captura">
+      <div class="item-header">
+        <span>Nivel 18 / 24</span>
+        <span class="sec">Flexbox Froggy</span>
+      </div>
+      <div class="item-img">
+        <img src="capturas/Nivel_18.png" alt="Nivel 18">
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-doc">
+    <span>S10_PR1_Flexbox — Actividad 1</span>
+    <span>Página 9 de 12</span>
+  </div>
+</div>
+
+<div class="pagina">
+  <div>
+    
+    <div class="header-mini">
+      <span>DIW — Flexbox Froggy</span>
+      <span>Noé Conde Vila</span>
+    </div>
+
+
+    <div class="item-captura">
+      <div class="item-header">
+        <span>Nivel 19 / 24</span>
+        <span class="sec">Flexbox Froggy</span>
+      </div>
+      <div class="item-img">
+        <img src="capturas/Nivel_19.png" alt="Nivel 19">
+      </div>
+    </div>
+
+    <div class="item-captura">
+      <div class="item-header">
+        <span>Nivel 20 / 24</span>
+        <span class="sec">Flexbox Froggy</span>
+      </div>
+      <div class="item-img">
+        <img src="capturas/Nivel_20.png" alt="Nivel 20">
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-doc">
+    <span>S10_PR1_Flexbox — Actividad 1</span>
+    <span>Página 10 de 12</span>
+  </div>
+</div>
+
+<div class="pagina">
+  <div>
+    
+    <div class="header-mini">
+      <span>DIW — Flexbox Froggy</span>
+      <span>Noé Conde Vila</span>
+    </div>
+
+
+    <div class="item-captura">
+      <div class="item-header">
+        <span>Nivel 21 / 24</span>
+        <span class="sec">Flexbox Froggy</span>
+      </div>
+      <div class="item-img">
+        <img src="capturas/Nivel_21.png" alt="Nivel 21">
+      </div>
+    </div>
+
+    <div class="item-captura">
+      <div class="item-header">
+        <span>Nivel 22 / 24</span>
+        <span class="sec">Flexbox Froggy</span>
+      </div>
+      <div class="item-img">
+        <img src="capturas/Nivel_22.png" alt="Nivel 22">
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-doc">
+    <span>S10_PR1_Flexbox — Actividad 1</span>
+    <span>Página 11 de 12</span>
+  </div>
+</div>
+
+<div class="pagina">
+  <div>
+    
+    <div class="header-mini">
+      <span>DIW — Flexbox Froggy</span>
+      <span>Noé Conde Vila</span>
+    </div>
+
+
+    <div class="item-captura">
+      <div class="item-header">
+        <span>Nivel 23 / 24</span>
+        <span class="sec">Flexbox Froggy</span>
+      </div>
+      <div class="item-img">
+        <img src="capturas/Nivel_23.png" alt="Nivel 23">
+      </div>
+    </div>
+
+    <div class="item-captura">
+      <div class="item-header">
+        <span>Nivel 24 / 24</span>
+        <span class="sec">Flexbox Froggy</span>
+      </div>
+      <div class="item-img">
+        <img src="capturas/Nivel_24.png" alt="Nivel 24">
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-doc">
+    <span>S10_PR1_Flexbox — Actividad 1</span>
+    <span>Página 12 de 12</span>
+  </div>
+</div>
+
+</body>
+</html>

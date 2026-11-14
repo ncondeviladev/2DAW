@@ -1,0 +1,144 @@
+@charset "utf-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Quantico:ital,wght@0,400;0,700;1,400;1,700&family=Righteous&display=swap');
+
+@font-face {
+    font-family: 'gone';
+    src: url(../assets/Fuente\ youreGone.ttf) format('truetype');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --red: #d32f2f;
+    --green: #2e7d32;
+    --blue: #1976d2;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+}
+
+header #redes {
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    gap: 1rem;
+    justify-content: space-around;
+    padding: .5rem 1rem;
+}
+
+header #redes i {
+    font-size: 2rem;
+    color: white;
+}
+
+header #logo {
+    background: url("../assets/background\ foto\ Oliva.jpg") no-repeat center / cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2.5rem 1rem;
+    min-height: 5rem;
+}
+
+header #logo img {
+    max-width: 80%;
+    height: auto;
+
+}
+
+nav {
+    position: sticky;
+    background-color: lightblue;
+    top: 0;
+}
+
+nav a {
+    background-color: lightblue;
+    border: solid 1px var(--red);
+    transition: all .5s ease;
+    color: black;
+    text-decoration: none;
+    padding: .5rem;
+    border-radius: .5rem;
+}
+
+nav a:hover {
+    background-color: var(--red);
+    color: white;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    gap: 1rem;
+    padding: 1rem;
+
+    font-weight: bold;
+}
+
+section.breadcrumb {
+    padding: .5rem;
+    border-bottom: 3px solid var(--green);
+}
+
+section.breadcrumb h2 {
+    font-family: "Quantico";
+    color: var(--green);
+}
+
+main h1 {
+
+    margin: 1rem;
+    font-family: Gone;
+    color: var(--blue);
+    letter-spacing: .1em;
+}
+
+main article {
+    display: flex;
+    flex-flow: row wrap;
+    gap: 1em;
+    justify-content: center;
+}
+
+main article table {
+    width: 95vmin;
+    padding: .1em;
+}
+main article table th, 
+main article table td {
+    border: 1px dotted var(--red);
+    padding: .1em;
+}
+
+main article div {
+    width: 95vmin;
+    border: solid 1px var(--blue);
+    
+}
+main article div img{
+    max-width: 100%;
+    height: auto;
+    padding: .5em;
+    filter: grayscale(100%);
+    transition: filter .5s ease-in;
+}
+main article div img:hover{
+    filter: none;
+
+}
+footer {
+    height: 5rem;
+    background-color: grey;
+    background-image: url(../assets/silueta\ de\ oliva.png);
+    background-size: cover;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    margin-top: 1em;
+}

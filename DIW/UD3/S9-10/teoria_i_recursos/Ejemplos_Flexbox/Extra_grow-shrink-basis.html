@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Propiedades de Flex</title>
+    <style type="text/css">
+        *{  margin: 0; padding: 0;
+            box-sizing: border-box;  
+        }
+        
+        html{ 
+            font-family: "Arial", sans-serif;
+            font-size: 16px;
+            background-color: grey;
+        }
+        
+        body{
+            width: 80%;
+            margin: 0 auto;
+            background-color: white;
+        }
+        
+        header h1, header h2{ display: inline; }
+        
+        main>p{
+            font-size: 0.7rem;
+        }
+        
+        main>h4{ 
+            color:red;
+            margin-top: 1rem;
+        }
+        
+        section div{ 
+            border: 1px solid grey;
+            background-color:  yellow;
+        }
+        
+        /********** CASO 1 ************/
+        section#s1{
+            display: flex;
+            flex-flow: row nowrap;
+        }
+        
+        section#s1 div:nth-child(1){
+            width: 200px;  /* O flex-basis, es lo mismo (cuando dirección del Flexbox es row) */
+        }
+        
+        section#s1 div:nth-child(2){
+            flex-basis: 200px; /* O width, es lo mismo */
+        }
+        
+        section#s1 div:nth-child(3){
+            flex-basis: 200px;
+        }
+        /********** CASO 2 ***********/
+        section#s2{
+            display: flex;
+            flex-flow: row nowrap;
+        }
+        
+        section#s2 div:nth-child(1){
+            flex-basis: 200px;
+            flex-grow: 1;
+        }
+        
+        section#s2 div:nth-child(2){
+            flex-basis: 200px;
+            flex-grow: 0;
+        }
+        
+        section#s2 div:nth-child(3){
+            flex-basis: 200px;
+            flex-grow: 2;
+        }
+        
+        /********** CASO 3 ************/
+        section#s3{
+            display: flex;
+            flex-flow: row nowrap;
+        }
+        
+        section#s3 div:nth-child(1){
+            flex-basis: 200px;
+            flex-grow: 6;
+        }
+        
+        section#s3 div:nth-child(2){
+            flex-basis: 200px;
+            flex-grow: 1;
+        }
+        
+        section#s3 div:nth-child(3){
+            flex-basis: 200px;
+            flex-grow: 1;
+        }
+        /********** CASO 4 ************/
+        section#s4{
+            display: flex;
+            flex-flow: row nowrap;
+        }
+        
+        section#s4 div:nth-child(1){
+            flex-basis: 200px;
+            flex-grow: 1;
+            /* flex-shrink: 1; por defecto */
+        }
+        
+        section#s4 div:nth-child(2){
+            flex-basis: 200px;
+            flex-grow: 1;
+            /* flex-shrink: 1; por defecto */
+        }
+        
+        section#s4 div:nth-child(3){
+            flex-basis: 200px;
+            flex-grow: 1;
+            /* flex-shrink: 1; por defecto */
+            
+        }
+        
+         /********** CASO 5 ************/
+        section#s5{
+            display: flex;
+            flex-flow: row nowrap;
+        }
+        
+        section#s5 div:nth-child(1){
+            flex-basis: 200px;
+            flex-grow: 1;
+            flex-shrink: 1;
+        }
+        
+        section#s5 div:nth-child(2){
+            flex-basis: 200px;
+            flex-grow: 1;
+            flex-shrink: 4; 
+        }
+        
+        section#s5 div:nth-child(3){
+            flex-basis: 200px;
+            flex-grow: 1;
+            flex-shrink: 1;
+        }
+        
+        
+        
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Flex Boxes: </h1><h2>grow y shrink flexibilidad de las cajas</h2>
+    </header>
+    <main>
+        <p> <strong>flex</strong> shorthand de <strong>flex-grow, flex-shrink y flex-basis</strong> </p>
+        <p> Valores por defecto son <strong>&nbsp;&nbsp;0&nbsp;&nbsp;&nbsp;&nbsp;1&nbsp;&nbsp;&nbsp;&nbsp;auto</strong> </p>
+      
+        <h4>flex-basis: 200px </h4>
+        <section id="s1">
+            <div>200px</div>
+            <div>200px</div>
+            <div>200px</div>
+        </section>
+        <p>Da igual poner flex-basis, que width<br/>
+        Pero <strong>flex-basis</strong> será width o height, dependiendo de eje primario</p>
+        
+        <h4>flex-basis: 200px pero flex-grow</h4>
+        <section id="s2">
+            <div>200px y flex-grow:1</div>
+            <div>200px y flex-grow:0</div>
+            <div>200px y flex-grow:1</div>
+        </section>
+        <p>El espacio sobrante, se reparte entre los que tienen grow<br/>
+        En este caso el 3º toma el doble del sobrante que el 1º</p>
+        
+        <h4>flex-basis: 200px flex-grow:6 </h4>
+        <section id="s3">
+            <div>flex-grow:6</div>
+            <div>flex-grow:1</div>
+            <div>flex-grow:1</div>
+        </section>
+        <p>El espacio sobrante, se reparte entre los 3<br/>
+        En este caso el 1º toma seis veces más que los otros </p>
+        
+       
+        <h4>Todos con flex-grow 1 y shrink por defecto</h4>
+        <section id="s4">
+            <div>grow:1 shrink:1</div>
+            <div>grow:1 shrink:1</div>
+            <div>grow:1 shrink:1</div>
+        </section>
+        <p>Todos decrecen igual</p>
+        
+        <h4>flex-shrink:4 (decrecer rápido)</h4>
+        <section id="s5">
+            <div>grow:1 shrink:2</div>
+            <div>grow:1 shrink:4</div>
+            <div>grow:1 shrink:1</div>
+        </section>
+        <p>El segundo decrece 4 veces más que el resto </p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+   
+        
+    </main>
+</body>
+</html>

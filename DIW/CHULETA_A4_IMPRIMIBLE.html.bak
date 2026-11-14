@@ -1,0 +1,704 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <title>CHULETA EXAMEN DIW — A4 UNA CARA</title>
+    <style>
+        @page {
+            size: A4 portrait;
+            margin: 2.5mm 3.0mm;
+        }
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: "Cascadia Code", "Consolas", "Courier New", monospace;
+            font-size: 4.5pt;
+            line-height: 1.05;
+            color: #000;
+            background: #fff;
+        }
+        .hoja {
+            width: 100%;
+        }
+        .cols {
+            display: flex;
+            gap: 2.8mm;
+        }
+        .col {
+            flex: 1;
+            width: 33.333%;
+            min-width: 0;
+        }
+        .caja {
+            border: 1px solid #333;
+            margin-bottom: 1.2px;
+            padding: 0.5px 2.0px;
+            background: #fff;
+            overflow: hidden;
+        }
+        .caja-t {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+            font-size: 5.6pt;
+            font-weight: 900;
+            background: #cbd5e1;
+            margin: -0.5px -2.0px 0.5px -2.0px;
+            padding: 0.2px 2.0px;
+            border-bottom: 1px solid #64748b;
+            text-transform: uppercase;
+            letter-spacing: 0.1px;
+            color: #0f172a;
+        }
+        pre {
+            font-family: inherit;
+            font-size: 4.5pt;
+            line-height: 1.05;
+            white-space: pre-wrap;
+            word-break: normal;
+            overflow-wrap: break-word;
+        }
+        .c {
+            color: #b91c1c;
+            font-weight: 800;
+        }
+        @media screen {
+            body { background: #64748b; padding: 15px; }
+            .hoja { width: 210mm; min-height: 297mm; margin: 0 auto; background: #fff; padding: 4mm; box-shadow: 0 4px 15px rgba(0,0,0,0.4); }
+        }
+    </style>
+</head>
+<body>
+
+<div class="hoja">
+    <div class="cols">
+        <div class="col">
+<div class="caja">
+
+
+
+
+
+
+                <div class="caja-t">1. ESTRUCTURA BÁSICA HTML5 (S02)</div>
+<pre>&lt;!DOCTYPE html&gt;
+&lt;html lang="es"&gt;
+&lt;head&gt;
+  <span class="c">&lt;!-- 1. METAS: CHARSET 1º, LUEGO SEO --&gt;</span>
+  &lt;meta charset="utf-8"&gt;
+  &lt;meta name="viewport"
+    content="width=device-width, initial-scale=1.0"&gt;
+  &lt;meta name="author" content="Noé Conde Vila"&gt;
+  &lt;meta name="description"
+    content="Sitio examen DIW"&gt;
+  &lt;meta name="robots" content="index, follow"&gt;
+  &lt;meta name="theme-color" content="#2563eb"&gt;
+  <span class="c">&lt;!-- 2. TÍTULO PESTAÑA --&gt;</span>
+  &lt;title&gt;Título Web Examen&lt;/title&gt;
+  <span class="c">&lt;!-- 3. ENLACES A RECURSOS --&gt;</span>
+  &lt;link rel="icon" href="[ruta/favicon.ico]"&gt;
+  &lt;link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&amp;display=swap"&gt;
+  &lt;link rel="stylesheet" href="css/estilos.css"&gt;
+&lt;/head&gt;
+&lt;body&gt;</pre>
+            </div>
+<div class="caja">
+
+
+
+
+
+
+                <div class="caja-t">2. HEADER Y NAVEGACIÓN + BANNER (S02, UF3)</div>
+<pre>&lt;header&gt; <span class="c">&lt;!-- CABECERA SUPERIOR --&gt;</span>
+  &lt;div class="contenedor"&gt;
+    &lt;a href="index.html" class="logo"&gt;
+      ⚡ &lt;span&gt;Marca&lt;/span&gt;
+    &lt;/a&gt;
+    &lt;nav&gt;
+      &lt;ul&gt;
+        &lt;li&gt;&lt;a href="index.html" class="activo"&gt;Inicio&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="servicios.html"&gt;Servicios&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="contacto.html"&gt;Contacto&lt;/a&gt;&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/nav&gt;
+  &lt;/div&gt;
+&lt;/header&gt;
+<span class="c">&lt;!-- BANNER DE COOKIES INFERIOR: --&gt;</span>
+&lt;aside class="cookies"&gt;
+  &lt;p&gt;Aviso cookies &lt;a href="#" class="btn btn-sm"&gt;OK&lt;/a&gt;&lt;/p&gt;
+&lt;/aside&gt;</pre>
+            </div>
+<div class="caja">
+
+
+
+
+
+
+                <div class="caja-t">3. MAIN ÚNICO + MIGAS + HERO H1 (S01, S02)</div>
+<pre>&lt;main&gt; <span class="c">&lt;!-- SOLO 1 &lt;MAIN&gt; POR PÁGINA --&gt;</span>
+  <span class="c">&lt;!-- MIGAS DE PAN (BREADCRUMBS S01): --&gt;</span>
+  &lt;nav class="migas" aria-label="Ruta"&gt;
+    &lt;ol&gt;
+      &lt;li&gt;&lt;a href="index.html"&gt;Inicio&lt;/a&gt; &amp;gt;&lt;/li&gt;
+      &lt;li&gt;&lt;span&gt;Servicios&lt;/span&gt;&lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;/nav&gt;
+  <span class="c">&lt;!-- HERO BANNER (ÚNICO H1 DEL DOCUMENTO): --&gt;</span>
+  &lt;section class="hero"&gt;
+    &lt;div class="contenedor"&gt;
+      &lt;h1&gt;Título Principal H1 del Sitio&lt;/h1&gt;
+      &lt;p class="hero-sub"&gt;Propuesta de valor.&lt;/p&gt;
+      &lt;div class="hero-btns"&gt;
+        &lt;a href="contacto.html" class="btn btn-primary"&gt;Contacto&lt;/a&gt;
+        &lt;a href="#servicios" class="btn btn-outline"&gt;Servicios&lt;/a&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/section&gt;</pre>
+            </div>
+<div class="caja">
+
+
+
+
+
+
+                <div class="caja-t">4. MAQUETACIÓN 2 COLS FLEXBOX (UF3)</div>
+<pre>  &lt;div class="contenedor layout-2cols"&gt;
+    <span class="c">&lt;!-- COLUMNA PRINCIPAL DE CONTENIDO --&gt;</span>
+    &lt;section class="col-principal"&gt;
+      &lt;h2&gt;Nuestros Servicios&lt;/h2&gt;
+      &lt;article&gt;
+        &lt;header&gt;
+          &lt;h3&gt;Desarrollo Web Semántico&lt;/h3&gt;
+          &lt;time datetime="2026-11-20"&gt;20/11/2026&lt;/time&gt;
+        &lt;/header&gt;
+        &lt;p&gt;Maquetación Mobile First con Flexbox.&lt;/p&gt;
+      &lt;/article&gt;
+      <span class="c">&lt;!-- ACORDEÓN DESPLEGABLE FAQ: --&gt;</span>
+      &lt;details&gt;
+        &lt;summary&gt;¿Incluye soporte técnico?&lt;/summary&gt;
+        &lt;p&gt;Sí, incluye 3 meses de mantenimiento.&lt;/p&gt;
+      &lt;/details&gt;
+    &lt;/section&gt;
+    <span class="c">&lt;!-- BARRA LATERAL (ASIDE) --&gt;</span>
+    &lt;aside class="col-lateral"&gt;
+      &lt;h2&gt;Enlaces de Interés&lt;/h2&gt;
+      &lt;div class="widget"&gt;
+        &lt;h3&gt;Horario Atención&lt;/h3&gt;
+        &lt;p&gt;Lunes a Viernes: 09:00 - 18:00&lt;/p&gt;
+        &lt;ul&gt;
+          &lt;li&gt;&lt;a href="#"&gt;Catálogo PDF&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href="#"&gt;Preguntas Frecuentes&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/div&gt;
+    &lt;/aside&gt;
+  &lt;/div&gt;</pre>
+            </div>
+<div class="caja">
+
+
+
+
+
+
+                <div class="caja-t">7. [CARDS FLEX]: FILA RESPONSIVE [ ] [ ] [ ]</div>
+<pre>  &lt;div class="contenedor cards-flex"&gt;
+    &lt;article class="card"&gt;
+      &lt;span class="badge"&gt;Popular&lt;/span&gt;
+      &lt;figure&gt;
+        &lt;img src="img/f1.jpg" alt="Foto"
+          width="300" height="180" loading="lazy"&gt;
+        &lt;figcaption&gt;Pie de foto&lt;/figcaption&gt;
+      &lt;/figure&gt;
+      &lt;div class="card-body"&gt;
+        &lt;h3&gt;Plan Pro&lt;/h3&gt;
+        &lt;p&gt;Maquetación fluida y limpia.&lt;/p&gt;
+        &lt;a href="contacto.html"
+          class="btn btn-sm btn-primary"&gt;Contratar&lt;/a&gt;
+      &lt;/div&gt;
+    &lt;/article&gt;
+    &lt;article class="card"&gt;
+      &lt;div class="card-body"&gt;
+        &lt;h3&gt;Plan Básico&lt;/h3&gt;
+        &lt;p&gt;Web optimizada y accesible.&lt;/p&gt;
+        &lt;a href="contacto.html"
+          class="btn btn-sm btn-outline"&gt;Info&lt;/a&gt;
+      &lt;/div&gt;
+    &lt;/article&gt;
+  &lt;/div&gt;</pre>
+            </div>
+<div class="caja">
+
+
+
+
+
+
+                <div class="caja-t">10. TABLA ACCESIBLE (S02) + FOOTER</div>
+<pre>&lt;div class="tabla-scroll"&gt; <span class="c">&lt;!-- SCROLL EN MÓVIL --&gt;</span>
+  &lt;table&gt;
+    &lt;caption&gt;Tarifas oficiales de servicios 2026&lt;/caption&gt;
+    &lt;thead&gt;
+      &lt;tr&gt;
+        &lt;th scope="col"&gt;Plan&lt;/th&gt;
+        &lt;th scope="col"&gt;Págs&lt;/th&gt;
+        &lt;th scope="col"&gt;Precio&lt;/th&gt;
+      &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+      &lt;tr&gt;
+        &lt;th scope="row"&gt;Landing&lt;/th&gt;
+        &lt;td&gt;1&lt;/td&gt;
+        &lt;td class="precio"&gt;150€&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+        &lt;th scope="row"&gt;Corporativo&lt;/th&gt;
+        &lt;td&gt;3-5&lt;/td&gt;
+        &lt;td class="precio"&gt;350€&lt;/td&gt;
+      &lt;/tr&gt;
+    &lt;/tbody&gt;
+    &lt;tfoot&gt;
+      &lt;tr&gt;
+        &lt;th scope="row" colspan="2"&gt;Cuota Mínima&lt;/th&gt;
+        &lt;td class="precio"&gt;150€&lt;/td&gt;
+      &lt;/tr&gt;
+    &lt;/tfoot&gt;
+  &lt;/table&gt;
+&lt;/div&gt;
+&lt;/main&gt;
+<span class="c">&lt;!-- FOOTER SEMÁNTICO CON ENLACES: --&gt;</span>
+&lt;footer&gt;
+  &lt;div class="contenedor footer-wrap"&gt;
+    &lt;p&gt;&lt;small&gt;&amp;copy; 2026 Noé Conde Vila — IES Maria Enríquez&lt;/small&gt;&lt;/p&gt;
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href="#"&gt;Aviso Legal&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href="#"&gt;Privacidad&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/div&gt;
+&lt;/footer&gt;
+&lt;/body&gt;&lt;/html&gt;</pre>
+            </div>
+        </div>
+        <div class="col">
+<div class="caja">
+
+
+
+
+
+
+                <div class="caja-t">8. FORMULARIOS: CONTROLES &amp; ATRIBUTOS (S03)</div>
+<pre>&lt;form name="f1" action="#" method="post"&gt;
+  &lt;fieldset&gt;
+    &lt;legend&gt;Contacto y Presupuesto&lt;/legend&gt;
+    &lt;div class="campo"&gt;
+      &lt;label for="nom"&gt;Nombre:*&lt;/label&gt;
+      &lt;input type="text" id="nom" name="nom"
+        required autofocus placeholder="Tu nombre"&gt;
+    &lt;/div&gt;
+    &lt;div class="campo"&gt;
+      &lt;label for="em"&gt;Email:*&lt;/label&gt;
+      &lt;input type="email" id="em" name="em"
+        required placeholder="correo@alu.edu.gva.es"&gt;
+    &lt;/div&gt;
+    &lt;div class="campo"&gt;
+      &lt;label for="tel"&gt;Teléfono (9 dig):&lt;/label&gt;
+      &lt;input type="tel" id="tel" name="tel"
+        pattern="[0-9]{9}" placeholder="612345678"&gt;
+    &lt;/div&gt;
+    &lt;div class="campo"&gt;
+      &lt;label for="num"&gt;Cantidad (min 1, max 10):&lt;/label&gt;
+      &lt;input type="number" id="num" name="num"
+        min="1" max="10" value="1"&gt;
+    &lt;/div&gt;
+    &lt;div class="campo"&gt;
+      &lt;label for="fec"&gt;Fecha:&lt;/label&gt;
+      &lt;input type="date" id="fec" name="fec"&gt;
+    &lt;/div&gt;
+    <span class="c">&lt;!-- ATRIBUTO LIST CON DATALIST: --&gt;</span>
+    &lt;div class="campo"&gt;
+      &lt;label for="cd"&gt;Ciudad (Datalist):&lt;/label&gt;
+      &lt;input list="ciudades" id="cd" name="cd"
+        placeholder="Escribe ciudad"&gt;
+      &lt;datalist id="ciudades"&gt;
+        &lt;option value="Gandia"&gt;
+        &lt;option value="Valencia"&gt;
+      &lt;/datalist&gt;
+    &lt;/div&gt;
+    &lt;div class="campo"&gt;
+      &lt;label for="sel"&gt;Tipo de Plan:*&lt;/label&gt;
+      &lt;select id="sel" name="sel" required&gt;
+        &lt;option value="" disabled selected&gt;Elige...&lt;/option&gt;
+        &lt;option value="web"&gt;Web Pro&lt;/option&gt;
+      &lt;/select&gt;
+    &lt;/div&gt;
+    <span class="c">&lt;!-- RADIO Y CHECKBOX: --&gt;</span>
+    &lt;div class="campo-rad"&gt;
+      &lt;span&gt;Modalidad:&lt;/span&gt;
+      &lt;label&gt;&lt;input type="radio" name="mod"
+        value="on" checked&gt; Online&lt;/label&gt;
+      &lt;label&gt;&lt;input type="radio" name="mod"
+        value="pre"&gt; Presencial&lt;/label&gt;
+    &lt;/div&gt;
+    &lt;div class="campo"&gt;
+      &lt;label for="msg"&gt;Mensaje:&lt;/label&gt;
+      &lt;textarea id="msg" name="msg" rows="2"
+        maxlength="300"&gt;&lt;/textarea&gt;
+    &lt;/div&gt;
+    &lt;div class="campo-chk"&gt;
+      &lt;label&gt;&lt;input type="checkbox" name="priv"
+        required&gt; Acepto privacidad*&lt;/label&gt;
+    &lt;/div&gt;
+    &lt;div class="form-btns"&gt;
+      &lt;button type="submit"
+        class="btn btn-primary"&gt;Enviar&lt;/button&gt;
+      &lt;button type="reset"
+        class="btn btn-outline"&gt;Borrar&lt;/button&gt;
+    &lt;/div&gt;
+  &lt;/fieldset&gt;
+&lt;/form&gt;</pre>
+            </div>
+<div class="caja">
+
+
+
+
+
+
+                <div class="caja-t">9. MULTIMEDIA: PICTURE, SVG, VIDEO, IFRAME (S04)</div>
+<pre><span class="c">&lt;!-- 1. PICTURE RESPONSIVE (DIRECCIÓN ARTE): --&gt;</span>
+&lt;picture&gt;
+  &lt;source media="(min-width: 768px)"
+    srcset="img/pc.jpg"&gt;
+  &lt;img src="img/movil.jpg" alt="Sede" loading="lazy"&gt;
+&lt;/picture&gt;
+<span class="c">&lt;!-- 2. LAS 2 FORMAS DE INSERTAR SVG EN HTML: --&gt;</span>
+&lt;svg width="24" height="24"&gt;&lt;circle cx="12" cy="12" r="10"/&gt;&lt;/svg&gt;
+&lt;img src="img/logo.svg" alt="Logo"&gt;
+<span class="c">&lt;!-- 3. ICONO FONTAWESOME: --&gt;</span>
+&lt;i class="fa-solid fa-house"&gt;&lt;/i&gt;
+<span class="c">&lt;!-- 4. AUDIO Y VIDEO HTML5 NATIVO: --&gt;</span>
+&lt;audio controls loop src="audio/clip.mp3"&gt;No soportado&lt;/audio&gt;
+&lt;video controls poster="img/poster.jpg"
+  preload="metadata" width="300"&gt;
+  &lt;source src="video/spot.mp4" type="video/mp4"&gt;No soportado
+&lt;/video&gt;
+<span class="c">&lt;!-- 5. IFRAME CON SANDBOX Y TARGET A MARCO: --&gt;</span>
+&lt;a href="info.html" target="marco1"&gt;Abrir en marco&lt;/a&gt;
+&lt;iframe src="https://maps.google.com/..."
+  name="marco1" title="Mapa" loading="lazy"
+  sandbox="allow-scripts allow-same-origin"&gt;&lt;/iframe&gt;</pre>
+            </div>
+<div class="caja">
+
+
+
+
+
+
+                <div class="caja-t">6. CONCEPTOS CLAVE INTERFACES (S01 EXAMEN)</div>
+<pre><span class="c">/* CONCEPTOS S01 TEORÍA: */</span>
+IPO: Interacción Persona-Ordenador
+Usabilidad: Facilidad, rapidez y satisfacción
+Accesibilidad: Acceso para cualquier usuario
+Breadcrumbs: Migas de pan (&lt;nav aria-label&gt;)
+Tooltip: Mensaje emergente de ayuda al hover
+Carousel: Carrusel deslizable de tarjetas/fotos
+Tabs: Pestañas de contenido intercambiable
+Modal/Popup: Ventana emergente superpuesta
+Spinner: Indicador circular animado de carga
+Card: Tarjeta con contenido agrupado</pre>
+            </div>
+<div class="caja">
+
+
+
+
+
+
+                <div class="caja-t">5. SELECTORES, AGRUPADORES Y PESOS (S05-S06)</div>
+<pre><span class="c">/* SELECTORES BÁSICOS: */</span>
+* { }           <span class="c">/* UNIVERSAL */</span>
+div { }         <span class="c">/* ELEMENTO / ETIQUETA */</span>
+.clase { }      <span class="c">/* CLASE */</span>
+#ident { }      <span class="c">/* ID */</span>
+<span class="c">/* AGRUPADORES: */</span>
+h1, h2, h3 { }  <span class="c">/* COMA: AGRUPACIÓN MÚLTIPLE */</span>
+div p { }       <span class="c">/* ESPACIO: HIJO CUALQUIER NIVEL */</span>
+div &gt; p { }     <span class="c">/* MAYOR: HIJO DIRECTO 1ER NIVEL */</span>
+h2 + p { }      <span class="c">/* MÁS: HERMANO ADYACENTE */</span>
+h2 ~ p { }      <span class="c">/* VIRGULILLA: HERMANO GENERAL */</span>
+<span class="c">/* SELECTORES POR ATRIBUTO: */</span>
+input[type="text"] { }   <span class="c">/* VALOR EXACTO */</span>
+input[name^="txt"] { }   <span class="c">/* EMPIEZA POR "txt" */</span>
+input[name$="id"] { }    <span class="c">/* TERMINA POR "id" */</span>
+input[name*="val"] { }   <span class="c">/* CONTIENE "val" */</span>
+<span class="c">/* PSEUDO-CLASES Y PSEUDO-ELEMENTOS: */</span>
+:root { }  a:hover { }  a:active { }
+input:focus { }
+li:first-child { }  li:last-child { }
+tr:nth-child(even) { }   <span class="c">/* FILAS PARES */</span>
+tr:nth-child(odd) { }    <span class="c">/* FILAS IMPARES */</span>
+h1::before { content: "★ "; }
+h1::after { content: " ↗"; }
+:not(.activo) { }  :is(h1,h2) { }  :has(img) { }
+<span class="c">/* PESO: !important &gt; style &gt; #id &gt; .clase &gt; tag */</span></pre>
+            </div>
+<div class="caja">
+
+
+
+
+
+
+                <div class="caja-t">13. TRANSFORM, TRANSITION &amp; @KEYFRAMES (S08)</div>
+<pre><span class="c">/* 1. TRANSFORM (3 FUNCIONES BÁSICAS): */</span>
+transform: translate(10px, -5px)
+  rotate(5deg) scale(1.05);
+<span class="c">/* 2. TRANSICIÓN: prop duracion timing delay */</span>
+transition: transform 0.3s ease,
+  background-color 0.2s;
+<span class="c">/* 3. ANIMACIÓN SHORTHAND: */</span>
+@keyframes entrada {
+  0%   { opacity: 0; transform: translateY(15px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+.animado {
+  animation: entrada 0.6s ease-out forwards;
+  transform-origin: center center;
+}
+<span class="c">/* forwards: mantiene final | infinite: bucle */</span></pre>
+            </div>
+<div class="caja">
+
+
+
+
+
+
+                <div class="caja-t">15. FLEXBOX GUÍA RÁPIDA (EJES X / Y) (UF3)</div>
+<pre><span class="c">/* CONTENEDOR PADRE: */</span>
+display: flex; flex-direction: row | column;
+flex-wrap: nowrap | wrap;
+justify-content: flex-start | center |
+  space-between | space-around;
+align-items: stretch | flex-start |
+  flex-end | center;
+gap: 1rem; <span class="c">/* row-gap column-gap */</span>
+<span class="c">/* ELEMENTOS HIJOS (ITEMS): */</span>
+flex: 1 1 200px; <span class="c">/* grow shrink basis */</span>
+flex-grow: 1;    <span class="c">/* expandir si sobra espacio */</span>
+flex-shrink: 0;  <span class="c">/* no encoger bajo basis */</span>
+flex-basis: auto;<span class="c">/* tamaño base ideal */</span>
+align-self: flex-start | center | flex-end;
+order: 1;        <span class="c">/* reordenar sin tocar DOM */</span></pre>
+            </div>
+        </div>
+        <div class="col">
+<div class="caja">
+
+
+
+
+
+
+                <div class="caja-t">11. INICIALIZACIONES + TOKENS + @FONT-FACE (S07)</div>
+<pre>@charset "utf-8";
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0; padding: 0;
+}
+html { scroll-behavior: smooth; font-size: 16px; }
+img, picture, video, iframe {
+  max-width: 100%; height: auto; display: block;
+}
+:root {
+  --c-ppal: #2563eb;       --c-hover: #1d4ed8;
+  --c-fondo: #f8fafc;      --c-card: #ffffff;
+  --c-txt: #0f172a;        --c-borde: #cbd5e1;
+  --f-ppal: 'Inter', system-ui, sans-serif;
+  --radio: 6px;            --sombra: 0 4px 6px rgba(0,0,0,0.08);
+}
+@font-face {
+  font-family: 'MiFuente';
+  src: url('../fonts/fuente.ttf') format('truetype');
+}</pre>
+            </div>
+<div class="caja">
+
+
+
+
+
+
+                <div class="caja-t">12. FUNCIONES CSS3 &amp; REM VS EM (S07-S08)</div>
+<pre>body {
+  font-family: var(--f-ppal); color: var(--c-txt);
+  background: var(--c-fondo); line-height: 1.5;
+}
+.contenedor {
+  width: 100%; max-width: 1050px;
+  margin: 0 auto; padding: 0 1rem;
+}
+<span class="c">/* DIFERENCIA REM VS EM: */</span>
+<span class="c">/* rem = relativo a :root (16px base predecible) */</span>
+<span class="c">/* em  = relativo al font-size del padre (cascada) */</span>
+<span class="c">/* FUNCIONES CLAVE EXAMEN: */</span>
+width: calc(100% - 2rem);
+background: color-mix(in srgb,
+  var(--c-ppal) 70%, white 30%);
+font-size: clamp(1rem, 2.5vw, 1.8rem);
+<span class="c">/* FILTROS CSS3 (S07): */</span>
+filter: blur(4px) grayscale(80%)
+  drop-shadow(0 4px 6px rgba(0,0,0,0.15));
+<span class="c">/* FOCO ACCESIBLE: */</span>
+:focus-visible {
+  outline: 2px solid var(--c-ppal);
+  outline-offset: 2px;
+}</pre>
+            </div>
+<div class="caja">
+
+
+
+
+
+
+                <div class="caja-t">14. HEADER STICKY + BANNER FIXED + BOTONES (UF3)</div>
+<pre>header {
+  position: sticky; top: 0; z-index: 100;
+  background: #fff;
+  border-bottom: 1px solid var(--c-borde);
+}
+header .contenedor {
+  display: flex; justify-content: space-between;
+  align-items: center; padding: 0.5rem 1rem;
+}
+header nav ul {
+  display: flex; list-style: none; gap: 0.8rem;
+}
+header nav a {
+  text-decoration: none; color: var(--c-txt);
+  font-weight: 500;
+}
+header nav a:hover, header nav a.activo {
+  color: var(--c-ppal);
+  border-bottom: 2px solid var(--c-ppal);
+}
+<span class="c">/* BANNER COOKIES FIXED: */</span>
+aside.cookies {
+  position: fixed; bottom: 0; left: 0;
+  width: 100%; background: #0f172a;
+  color: #fff; text-align: center;
+  padding: 0.4rem; z-index: 999;
+}
+<span class="c">/* BOTONERA: */</span>
+.btn {
+  display: inline-block; padding: 0.35rem 0.7rem;
+  border-radius: var(--radio); font-weight: 600;
+  text-decoration: none; cursor: pointer;
+  border: 2px solid transparent;
+}
+.btn-primary { background: var(--c-ppal); color: #fff; }
+.btn-primary:hover { background: var(--c-hover); }
+.btn-outline { border-color: var(--c-ppal); color: var(--c-ppal); }
+.btn-outline:hover { background: var(--c-ppal); color: #fff; }</pre>
+            </div>
+<div class="caja">
+
+
+
+
+
+
+                <div class="caja-t">16. FLEXBOX 2 COLS &amp; CARDS (UF3 - CERO GRID)</div>
+<pre><span class="c">/* 2 COLS (MÓVIL 1 COL -&gt; DESKTOP 2 COLS): */</span>
+.layout-2cols {
+  display: flex; flex-direction: column;
+  gap: 1.2rem; margin: 1.2rem auto;
+}
+.col-principal { flex: 1; }
+.col-lateral {
+  background: var(--c-card);
+  border: 1px solid var(--c-borde);
+  border-radius: var(--radio); padding: 0.8rem;
+}
+@media (min-width: 768px) {
+  .layout-2cols {
+    flex-direction: row; align-items: flex-start;
+  }
+  .col-principal { flex: 0 0 68%; }
+  .col-lateral { flex: 0 0 28%; }
+}
+<span class="c">/* CARDS FLEXIBLES: */</span>
+.cards-flex {
+  display: flex; flex-direction: column;
+  gap: 0.8rem;
+}
+@media (min-width: 600px) {
+  .cards-flex { flex-direction: row; flex-wrap: wrap; }
+  .card { flex: 1 1 calc(50% - 0.8rem); }
+}
+@media (min-width: 900px) {
+  .card { flex: 1 1 calc(33.333% - 0.8rem); }
+}
+.card {
+  background: var(--c-card);
+  border: 1px solid var(--c-borde);
+  border-radius: var(--radio);
+  box-shadow: var(--sombra); padding: 0.7rem;
+}</pre>
+            </div>
+<div class="caja">
+
+
+
+
+
+
+                <div class="caja-t">17. TABLA ZEBRADA + FORMULARIO ESTILIZADO (UF2)</div>
+<pre><span class="c">/* TABLA ZEBRADA CON HOVER: */</span>
+.tabla-scroll { overflow-x: auto; margin: 0.6rem 0; }
+table {
+  width: 100%; border-collapse: collapse;
+  background: var(--c-card);
+  border: 1px solid var(--c-borde);
+}
+caption { font-weight: 700; text-align: left; padding: 0.25rem 0; }
+th, td {
+  padding: 0.3rem 0.5rem;
+  border: 1px solid var(--c-borde); text-align: left;
+}
+thead th { background: #f1f5f9; font-weight: 600; }
+tbody tr:nth-child(even) { background: #f8fafc; }
+tbody tr:hover { background: #eff6ff; }
+tfoot td, tfoot th { font-weight: 700; background: #e2e8f0; }
+<span class="c">/* FORMULARIO ESTILIZADO CON FOCUS RING: */</span>
+fieldset {
+  border: 1px solid var(--c-borde);
+  border-radius: var(--radio);
+  padding: 0.6rem; background: var(--c-card);
+}
+legend { font-weight: 700; color: var(--c-ppal); padding: 0 0.25rem; }
+.campo { margin-bottom: 0.35rem; display: flex; flex-direction: column; }
+.campo label { font-weight: 600; margin-bottom: 0.1rem; font-size: 0.85rem; }
+.campo input, .campo select, .campo textarea {
+  padding: 0.25rem; border: 1px solid var(--c-borde);
+  border-radius: 4px; font-family: inherit; font-size: 0.88rem;
+}
+.campo input:focus, .campo select:focus {
+  outline: none; border-color: var(--c-ppal);
+  box-shadow: 0 0 0 2px rgba(37,99,235,0.25);
+}
+.form-btns { display: flex; gap: 0.5rem; margin-top: 0.3rem; }</pre>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

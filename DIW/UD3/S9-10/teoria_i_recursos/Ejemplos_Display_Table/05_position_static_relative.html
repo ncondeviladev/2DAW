@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <title>Position Static y Relative</title>
+    <style type="text/css">
+        *{  /* INICIALIZAMOS */
+            margin: 0; padding: 0;
+            text-decoration: none;
+            box-sizing: border-box; /* IMPORTANTE */
+            /* etc, etc */
+            
+        }
+    
+        :root{ /* FIJAMOS BGROUND, Y FUENTE BASE */
+            font-family: "Arial","Verdana",sans-serif;
+            font-size: 16px; /* ahora 1rem=16px */
+            background-color: grey;
+        }
+        
+        body{ /* CONTAINER PRIMARIO */
+            background-color: white;
+            width: 90%;
+            padding: 1rem;
+            margin: 0 auto; /* AUTOCENTRADO */
+        }
+        
+        div#capa1{
+            position:  static; /* Valor por defecto */
+            border: 5px solid blue;
+            width: 10rem;
+            height: 10rem;
+            top: 10rem; /* No va a hacerle caso, al ser static */
+            left:  5rem;
+        }
+        
+        div#capa2{
+            position: relative;
+            border: 5px solid green;
+            width: 10rem;
+            height: 10rem;
+            left: 1rem;/*Se moverá respecto a donde le tocaba caer, al ser relative */
+            top:  3rem;
+        }
+        
+        div#capa3{
+            position:  relative;
+            border: 5px solid purple;
+            width: 5rem;
+            height: 5rem;
+            left: 1rem;/*Se moverá respecto a donde le tocaba caer, al ser relative */
+            top:  1rem;
+            /*** PODEMOS USAR DE FORMA ANÁLOGA 
+             * transform: translate(1rem, 1rem)
+             * o margin-left y margin-top 
+             * ***/
+        }
+        
+        
+    </style>
+    
+    
+</head>
+<body>
+    <header>
+        <h1>Position STATIC y RELATIVE</h1>
+    </header>
+    <main>
+        <div id="capa1"></div>
+        <p>Texto de ejemplo</p>
+        <div id="capa2">
+            <div id="capa3">ss
+            </div>
+        </div>    
+        <p>Texto de ejemplo</p>
+    </main>
+</body>

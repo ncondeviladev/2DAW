@@ -1,7 +1,7 @@
 # 📘 QUADRE DE COMANDAMENT — 2n DAW (Semipresencial)
 > **Alumne:** Noé Conde Vila  
 > **Centre:** IES Maria Enríquez (Gandia) — Curs 2026/2027  
-> **Última actualització:** 6 de novembre de 2026  
+> **Última actualització:** 14 de novembre de 2026  
 
 ---
 
@@ -26,32 +26,39 @@ Per a mantindre el diari àgil i no sobrecarregar memòria, la informació detal
 
 | Assignatura | Tasca / Activitat | Estat | Venciment | Notes Clau |
 | :--- | :--- | :---: | :---: | :--- |
-| **DIW** | `S01_PR1` a `S04_PR1` | ✅ **Entregat** | Octubre | Validades W3C i entregades a Aules |
+| **DIW** | `S01_PR1` | ✅ **Entregat** | Octubre | Validada W3C |
+| **DIW** | `S02_PR1 CV HTML5` | ✅ **Qualificat (8,89/10)** | 10/10/2026 | Correcció Excel Savall (Molt net, 7 imgs, falta caption/thead a taula) |
+| **DIW** | `S03_PR1 Formularis`| ✅ **Qualificat (9,36/10)** | 17/10/2026 | Correcció Excel Savall (7 fieldset, 40 labels - 39 for, 11 types) |
+| **DIW** | `S04_PR1 CafeNet` | ✅ **Qualificat (9,63/10)** | 24/10/2026 | Correcció Excel Savall (4 pàgs Pico.css, Aspecte visual: 10) |
 | **DIW** | `S06_PR1` (CV CSS3 Avançat) | ✅ **Entregat** | 02/11/2026 | Maquetació Mobile First, conmutador formal/divertit |
 | **DIW** | `S08_PR1` (Transform & Transition) | ✅ **Completat** | 15/11/2026 | Part 1 (CV Animat `animado.css`) i Part 2 (Botonera) enllestides |
+| **DIW** | `S10_PR1` (FlexFroggy Maquetar) | ✅ **Fet i Lliurat (13/11)** | 27/11/2026 | Web PC Flexbox + PDF 24 captures `S10_Actividad1_FlexboxFroggy.pdf` |
+| **DIW** | `Chuleta A4 Examen` | 📄 **Llest (1 pàg A4)** | 14/11/2026 | `CHULETA_A4_DEFINITIVA.pdf` (11 blocs, arbre Flexbox, taules, transform) |
 | **DaW** | `PEC1` (Apache, Nginx, SSH) | ✅ **Entregat** | 18/10/2026 | **Qualificat: 8,00 / 10,00** |
 | **DaW** | `PEC2` (Docker local) | ✅ **Entregat** | 25/10/2026 | Tramesa a Aules |
-| **DaW** | `PEC3` (Docker Compose + K8s) | ✅ **Qualificat (9,5/10)** | 08/11/2026 | Qualificat 9,50/10 per Juanra Collado (10/11). Feedback: "1. La explicación es muy escasa. El enunciado indica que expliques punto por punto y lo haces de forma genérica." |
+| **DaW** | `PEC3` (Docker Compose + K8s) | ✅ **Qualificat (9,5/10)** | 08/11/2026 | Qualificat 9,50/10 per Juanra Collado (10/11) |
 | **DaW** | `Material Examen 1a Eval` | 📝 **Llest (34 pàgs)** | 13/11/2026 | PDF únic consolidat definitiu: `cheatsheetNoeConde.pdf` |
-| **DaW** | `Simulacre Examen 1a Eval` | 🔄 **1a Volta Feta** | En curs | 3 exercicis completats (Apache/Nginx 4 vhosts, Dockerfile, Compose). Pendent 2a volta a cegues |
 | **DWEC** | `UD1` a `UD3` (Activitats + Tests) | ✅ **Entregat** | Octubre | Totes superades (UD3 test: 10/10) |
 | **DWEC** | `UD4 Activitat` (`Libro.js` POO) | ✅ **Entregat** | 27/10/2026 | Tramesa a Aules realitzada |
 | **DWEC** | `UD4 Qüestionari` | ✅ **Fet** | 27/10/2026 | **10 / 10** a Aules |
-| **DWEC** | `Repàs Integral 1a Avaluació` | ✅ **Completat** | Llest | 7 de 7 blocs amb 21 exercicis a `temario_resumido.md` |
+| **DWEC** | `Guia d'Examen DWEC` | 📘 **Llest (Estil Eloy)** | 14/11/2026 | `guia_dwec.md` (Test 15q + ejRA2 + ejRA3 + ejRA4 + plantilles) |
 | **DWES** | `U1_P1` a `U3_P2` (Exercicis + Tests) | ✅ **Entregat** | Varis | U3_P2 TechLeads superat (100%) |
 | **DWES** | `U4_P1 Exercicis` (Accés a BBDD) | ✅ **Entregat** | 21/11/2026 | Docker, MySQL 8.4, DAOs, PDO, PRG i 9 captures |
 | **DWES** | `Autoavaluació U4` | ✅ **Fet** | 27/10/2026 | Superat a Aules |
 | **DWES** | `U4_P2 TechLeads amb Notes` | ✅ **Entregat** | 21/11/2026 | Lliurament completat (BBDD, Model, DAO, Vistes) |
-| **DWES** | `U5_P1 Laravel Sail (Bloc 1)` | ⏳ **Pendent (2a Aval)** | 21/01/2027 | Entorn Sail, Docker, artisan, Vite i 4 captures |
-| **DWES** | `U5_P2 Rutes i Blade (Bloc 2)` | ⏳ **Pendent (2a Aval)** | 21/01/2027 | Rutes amb nom, components Blade i captures 6.4 |
 | **PIM** | `Sprint 0` (Retos 1A, 1B, 1C, 2, 3, 4) | ✅ **Entregat** | Octubre | Entrevista Teams, Specs, Repo Git, UI Web i BBDD |
 | **PIM** | `Sprint 0 - Entrega Final` | ✅ **Entregat** | 07/11/2026 | Memòria consolidada de 14 pàgines en PDF tramessa |
 
 ---
 
-## 🚨 Fites Immediates i Prioritats Actuals
-1. **Fase d'Estudi i Repàs d'Exàmens (1a Avaluació):**
-   - **DaW (Examen 1a Aval):** Pujar a Aules `Material_Examen_1Eval_CondeNoe.pdf` abans del 13/11. Simulacre d'examen en curs a `DaW/Simulacro_Examen/` (E1 Multilloc Apache+Nginx, E2 Dockerfile, E3 Compose).
-   - **DIW (20/11):** Repàs de la chuleta A4 i agilitat amb la plantilla d'examen (HTML5 semàntic + Flexbox 2 cols/cards + Formularis).
-   - **DWEC (19-20/11):** Repàs dels 7 blocs clau (POO, Arrays, Closures, DOM/Events) i simulacres.
-2. **Post-Exàmens (2a Avaluació):** Arrancar DWES Unitats 5 i 6 (*Laravel Sail*).
+## 🚨 Fites Immediates i Horaris d'Exàmens Oficials (1a Avaluació)
+1. **Dimecres 18/11 (16:00 - 17:50) — DWEC (Client):**
+   - 10 preguntes test + 3 exercicis pràctics (`ejRA2.js`, `ejRA3.js`, `ejRA4.js`).
+   - Material preparat: `DWEC/guia_dwec.md` i chuleta oficial permesa.
+2. **Dijous 19/11 (12:00 o 18:00) — DaW i DWES:**
+   - **DaW (12:00 a 13:50, Opció A recomanada):** Portar imprès `DaW/cheatsheetNoeConde.pdf` (34 pàgines).
+   - **DWES (18:00 a 19:50, Vesprada):** Projecte pràctic PHP (Ruta -> Controlador -> DAO).
+3. **Divendres 20/11 (12:00 a 15:50, 3h 10min) — DIW (Disseny):**
+   - Teòric (20 min sense apunts) + Pràctic PC (2h 10min, 2-3 pàgines Flexbox).
+   - Material imprès autoritzat: `DIW/CHULETA_A4_DEFINITIVA.pdf` (1 pàgina A4).
+4. **Dilluns 23/11 — Tut. PIM-DIG:** Aula 202 (si aplica).

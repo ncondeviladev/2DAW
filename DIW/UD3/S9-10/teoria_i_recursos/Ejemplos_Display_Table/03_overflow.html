@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <title>Overflow</title>
+    <style type="text/css">
+        *{  margin: 0; padding: 0;
+            text-decoration: none;
+            /* etc, etc */
+            box-sizing: border-box; /* Ni padding, ni border, afectaran a amplaria de las Cajas */
+            border: 1px dotted green;
+        }
+    
+        :root{
+            font-family: "Arial","Verdana",sans-serif;
+            font-size: 16px; /* ahora 1rem=16px */
+            background-color: grey;
+        }
+        
+        body{
+            width:calc(100% - 5rem);/* Ojo con los espacios */
+            margin:0 auto;
+            background-color: white;
+            max-width: 400rem;
+            min-width: 40rem;
+        }
+        
+        header h1, header h2{
+          display: inline-block;
+          width: 20rem;
+        }
+        
+        main div{
+            
+            border: 1px solid red;
+            margin-bottom: 2rem;
+        }
+        
+        main div#d0{
+            column-count: 3;
+            column-gap: 2rem;
+            column-rule: 2px solid rgb(38, 0, 255);
+            text-align: justify;
+        }
+
+        main div#d1{
+            
+            height: 3rem;
+            overflow: hidden;
+        }
+         
+        main div#d2{
+            height: 8rem;
+            overflow: auto; /* se hara scroll solo si es necesario */
+        }
+
+        main div#d3{
+        /* comportamiento por defecto=> overflow:visible */
+           height: 3rem;
+        }       
+    </style>
+</head>
+<body>
+    <header>
+       <h1>Título h1</h1>
+       <h2>Título h2</h2>
+     </header>
+     <main>
+         <h3> Sin height, crece automatic.</h3>
+         <div id="d0">¿Qué es Lorem Ipsum?
+Lorem Ipsum es simplemente texto de relleno de la industria de la impresión y la composición tipográfica. Lorem Ipsum ha sido el texto de relleno estándar de la industria desde el año 1500, cuando un impresor desconocido tomó una galera de tipos y la mezcló para hacer un libro de muestras tipográfico. Ha sobrevivido no solo a cinco siglos, sino también al salto a la composición tipográfica electrónica, permaneciendo esencialmente sin cambios. Se popularizó en la década de 1960 con el lanzamiento de hojas de Letraset que contienen pasajes de Lorem Ipsum y, más recientemente, con software de autoedición como Aldus PageMaker que incluye versiones de Lorem Ipsum.</div>
+         
+         <h3> Con height, overflow: hidden</h3>
+         <div id="d1">¿Qué es Lorem Ipsum?
+Lorem Ipsum es simplemente texto de relleno de la industria de la impresión y la composición tipográfica. Lorem Ipsum ha sido el texto de relleno estándar de la industria desde el año 1500, cuando un impresor desconocido tomó una galera de tipos y la mezcló para hacer un libro de muestras tipográfico. Ha sobrevivido no solo a cinco siglos, sino también al salto a la composición tipográfica electrónica, permaneciendo esencialmente sin cambios. Se popularizó en la década de 1960 con el lanzamiento de hojas de Letraset que contienen pasajes de Lorem Ipsum y, más recientemente, con software de autoedición como Aldus PageMaker que incluye versiones de Lorem Ipsum.</div>
+         
+         <h3> Con height, overflow: auto</h3>
+         <div id="d2">¿Qué es Lorem Ipsum?
+Lorem Ipsum es simplemente texto de relleno de la industria de la impresión y la composición tipográfica. Lorem Ipsum ha sido el texto de relleno estándar de la industria desde el año 1500, cuando un impresor desconocido tomó una galera de tipos y la mezcló para hacer un libro de muestras tipográfico. Ha sobrevivido no solo a cinco siglos, sino también al salto a la composición tipográfica electrónica, permaneciendo esencialmente sin cambios. Se popularizó en la década de 1960 con el lanzamiento de hojas de Letraset que contienen pasajes de Lorem Ipsum y, más recientemente, con software de autoedición como Aldus PageMaker que incluye versiones de Lorem Ipsum.</div>
+         
+        <h3> Con height, overflow: visible /*defecto*/</h3>
+        <div id="d3">¿Qué es Lorem Ipsum?
+Lorem Ipsum es simplemente texto de relleno de la industria de la impresión y la composición tipográfica. Lorem Ipsum ha sido el texto de relleno estándar de la industria desde el año 1500, cuando un impresor desconocido tomó una galera de tipos y la mezcló para hacer un libro de muestras tipográfico. Ha sobrevivido no solo a cinco siglos, sino también al salto a la composición tipográfica electrónica, permaneciendo esencialmente sin cambios. Se popularizó en la década de 1960 con el lanzamiento de hojas de Letraset que contienen pasajes de Lorem Ipsum y, más recientemente, con software de autoedición como Aldus PageMaker que incluye versiones de Lorem Ipsum.</div>
+     </main>
+</body>
+</html>
