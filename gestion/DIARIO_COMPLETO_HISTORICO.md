@@ -479,3 +479,55 @@
    - Sostenibilitat i Digitalització: Convalidades (sense feina).
    - PIM: Sprint 0 lliurat. Reptes de l'Sprint 1 es defensen després d'exàmens (24 nov revisió, 2 des defensa final).
    - DWES U5 (Laravel): Posposat per a després d'exàmens per indicació del professor Eloy.
+
+---
+
+## 📅 Sessió del 14 de Novembre de 2026: DIW (Finalització S10_PR1, Criteris Savall i Chuleta A4) i DWEC (Pla de Rescat Integral, Guia Eloy, Chuleta 2 Pàgs i Banc de Codi)
+
+### 1. Fites Assolides
+
+#### 🎨 DIW (Disseny d'Interfícies Web):
+- **Entrega `S10_PR1_Flexbox` completada:**
+  - Maquetació web responsive en HTML5 i CSS3 natiu (`index.html`, `css/style.css`): barra de navegació superior `position: sticky`, botons tipus càpsula amb `border-radius: 9999px`, article de 2 columnes amb Flexbox (`flex: 1 1 300px`), graella de targetes amb `flex-wrap: wrap`, i banner flotant de cookies `<aside id="cookies">` tancable mitjançant funció JS `cerrarCookies()` (`transform: translateY(-100%)`).
+  - Activitat 1 Flexbox Froggy: recopilades les 24 captures retallades a `DWEC/UD3/S9-10/S10_PR1_Flexbox/FlexboxFroggy/capturas/` i compilat el PDF net de 12 pàgines sense capçaleres de navegador: `S10_Actividad1_FlexboxFroggy.pdf`.
+  - Estat: **Fet i Lliurat (13/11)** a la bústia d'Aules.
+- **Auditoria de Criteris de Correcció IA de Quique Savall (Excels U01):**
+  - Descarregats i examinats els fitxers oficials d'avaluació amb rúbriques detallades:
+    - `S02_PR1 CV HTML5`: **8,89 / 10** (penalització per absència de `<caption>` i `<thead>`/`<tbody>` a la taula).
+    - `S03_PR1 Formularis`: **9,36 / 10** (penalització mínima per 1 sol control sense `label for` associat sobre 40).
+    - `S04_PR1 CafeNet`: **9,63 / 10** (aspecte visual 10/10 amb Pico.css v2 i FontAwesome).
+  - Lliçons per a l'examen presencial: semàntica estricta (contingut principal en `<section>` dins de `<main>`), taules sempre completes, `label for="id"` al 100% i metadades `og:` al `<head>`.
+- **Chuleta Definitiva A4 d'Examen (`CHULETA_A4_DEFINITIVA.pdf`):**
+  - Ajustada estrictament a 1 sola pàgina A4 (3 columnes, B/N, 11 blocs modulars).
+  - Incorporades les alertes clau: `transform` requereix elements en bloc o `inline-block`, i diferenciació entre `:pseudoclasses` (estats) i `::pseudoelements` (`::before`/`::after` amb `content:""`).
+
+#### ⚡ DWEC (Desenvolupament Web en Entorn Client):
+- **Pla de Rescat i Manual d'Estudi (`DWEC/guia_dwec.md`):**
+  - Dissenyat i redactat un manual complet seguint l'estil directe i pedagògic d'Eloy (DWES).
+  - 5 Blocs estructurats:
+    - *Bloc 1:* Fonaments i teoria de tipus (`typeof null`, mutabilitat de `const`, closures, comparadors) + **Simulacre de 15 preguntes test resoltes i raonades pas a pas**.
+    - *Bloc 2:* RA2 (Cadenes, Math, Dates) amb exercici guiat i exercici d'examen resolt (`analizarMatricula`).
+    - *Bloc 3:* RA3 (Funcions d'Array: `filter`, `map`, `reduce`, `sort` numèric) amb exercici guiat i enunciat d'examen (`analizarInventario`).
+    - *Bloc 4:* RA4 (Classes ES6 amb camps privats `#`, getters/setters amb validació) amb exercici guiat (`Alumno`) i exercici d'examen (`Tarea`).
+    - *Bloc 5:* Plantilles canòniques per a començar a codificar ràpidament durant l'examen.
+- **Chuleta Oficial Imprimible de 2 Pàgines A4 (`DWEC/cheatsheet_DWEC.pdf`):**
+  - Verificada i ajustada a exactament dues cares A4 (1 full davant i darrere), 2 columnes amples de 97 mm.
+  - Paleta suau blau fosc, comentaris en línia pròpia per evitar trencaments lletjos.
+- **Banc de Pràctica de Codi d'Examen (`DWEC/practicaExamen/`):**
+  - ✅ `guiado_RA2.js`: Resolt i validat amb Node.js.
+  - ✅ `guiado_RA3.js`: Resolt i validat amb Node.js.
+  - ✅ `guiado_RA4.js`: Resolt i validat amb Node.js (classe `Alumno` amb mètodes de negoci i `.join(", ")`).
+  - ✅ `examen_RA2.js`: Resolt i validat amb Node.js (`analizarMatricula(texto)` amb neteja, majúscules, `padStart(5, '0')`, capitalització de noms complets i diferència en dies amb `new Date()`).
+  - ⏳ `examen_RA3.js`: Plantilla preparada amb dades reals d'inventari per resoldre dilluns.
+  - ⏳ `examen_RA4.js`: Plantilla preparada per implementar la classe `Tarea` dilluns.
+
+### 2. Estat General i Calendari d'Exàmens
+- **Dimecres 18/11 (16:00 - 17:50):** DWEC presencial (10 test + 3 reptes de codi en ordinador; portar `cheatsheet_DWEC.pdf` imprès).
+- **Dijous 19/11 (12:00 - 13:50):** DaW presencial torn de matí (Opció A triada; portar `cheatsheetNoeConde.pdf` de 34 pàgs imprès).
+- **Dijous 19/11 (18:00 - 19:50):** DWES presencial torn de vesprada (Aula 213, ordinador aula amb `examen.sh`, projecte PHP pur sense apunts).
+- **Divendres 20/11 (12:00 - 15:15 / 15:50):** DIW presencial torn matí (Aula 204; 20 min teòric sense apunts + 2h 10min pràctic PC; portar `CHULETA_A4_DEFINITIVA.pdf` imprès).
+
+### 3. Proper Pas (Dilluns al matí)
+- Resolució dels exercicis pendents de DWEC: `examen_RA3.js` i `examen_RA4.js`.
+- Repàs actiu de les 15 preguntes de test de DWEC.
+- Impressió en paper de les chuletes de DIW, DWEC i DaW.

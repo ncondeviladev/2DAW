@@ -42,6 +42,7 @@ Per a mantindre el diari àgil i no sobrecarregar memòria, la informació detal
 | **DWEC** | `UD4 Activitat` (`Libro.js` POO) | ✅ **Entregat** | 27/10/2026 | Tramesa a Aules realitzada |
 | **DWEC** | `UD4 Qüestionari` | ✅ **Fet** | 27/10/2026 | **10 / 10** a Aules |
 | **DWEC** | `Guia d'Examen DWEC` | 📘 **Llest (Estil Eloy)** | 14/11/2026 | `guia_dwec.md` (Test 15q + ejRA2 + ejRA3 + ejRA4 + plantilles) |
+| **DWEC** | `Pràctica Examen (Codi)` | 🔄 **En curs (4 de 6)** | 14/11/2026 | `guiado_RA2`, `guiado_RA3`, `guiado_RA4` i `examen_RA2` fets. Pendents: `examen_RA3` i `examen_RA4` |
 | **DWES** | `U1_P1` a `U3_P2` (Exercicis + Tests) | ✅ **Entregat** | Varis | U3_P2 TechLeads superat (100%) |
 | **DWES** | `U4_P1 Exercicis` (Accés a BBDD) | ✅ **Entregat** | 21/11/2026 | Docker, MySQL 8.4, DAOs, PDO, PRG i 9 captures |
 | **DWES** | `Autoavaluació U4` | ✅ **Fet** | 27/10/2026 | Superat a Aules |
@@ -53,12 +54,28 @@ Per a mantindre el diari àgil i no sobrecarregar memòria, la informació detal
 
 ## 🚨 Fites Immediates i Horaris d'Exàmens Oficials (1a Avaluació)
 1. **Dimecres 18/11 (16:00 - 17:50) — DWEC (Client):**
-   - 10 preguntes test + 3 exercicis pràctics (`ejRA2.js`, `ejRA3.js`, `ejRA4.js`).
-   - Material preparat: `DWEC/guia_dwec.md` i chuleta oficial permesa.
-2. **Dijous 19/11 (12:00 o 18:00) — DaW i DWES:**
-   - **DaW (12:00 a 13:50, Opció A recomanada):** Portar imprès `DaW/cheatsheetNoeConde.pdf` (34 pàgines).
-   - **DWES (18:00 a 19:50, Vesprada):** Projecte pràctic PHP (Ruta -> Controlador -> DAO).
-3. **Divendres 20/11 (12:00 a 15:50, 3h 10min) — DIW (Disseny):**
-   - Teòric (20 min sense apunts) + Pràctic PC (2h 10min, 2-3 pàgines Flexbox).
-   - Material imprès autoritzat: `DIW/CHULETA_A4_DEFINITIVA.pdf` (1 pàgina A4).
+   - 10 preguntes test a l'ordinador + 3 exercicis pràctics (`ejRA2.js`, `ejRA3.js`, `ejRA4.js`).
+   - Material preparat: `DWEC/guia_dwec.md` i chuleta autoritzada de 2 pàgs (`DWEC/cheatsheet_DWEC.pdf`).
+2. **Dijous 19/11 — DaW i DWES:**
+   - **DaW (12:00 a 13:50 — Opció A Recomanada):** Torn de matí seleccionat per alliberar el divendres. Portar imprès `DaW/cheatsheetNoeConde.pdf` (34 pàgines).
+   - **DWES (18:00 a 19:50 — Vesprada, Aula 213):** Projecte pràctic d'ampliació PHP en PC d'aula amb `examen.sh` (Ruta -> Controlador -> DAO).
+3. **Divendres 20/11 (12:00 a 15:15 / 15:50) — DIW (Disseny, Aula 204):**
+   - Teòric (20 min sense apunts) + Pràctic PC (2h 10min, 2-3 pàgines Flexbox). Arribar a les 11:50 per provar compte d'accés.
+   - Material imprès autoritzat: Chuleta oficial Manz + `DIW/CHULETA_A4_DEFINITIVA.pdf` (1 pàgina A4).
 4. **Dilluns 23/11 — Tut. PIM-DIG:** Aula 202 (si aplica).
+
+---
+
+## 📌 Resum Executiu de la Sessió d'Hui (14/11/2026)
+- **🎨 DIW:**
+  - `S10_PR1_Flexbox` entregat a Aules (web HTML5/CSS3 natiu amb banner cookies + PDF 12 pàgs amb 24 captures retallades).
+  - Notes i criteris de Quique Savall integrats: S02 (8,89), S03 (9,36), S04 (9,63). Claus: taules amb `caption`/`thead`/`tbody`, formularis amb tots els `label for`, semàntica estricta.
+  - Chuleta d'examen actualitzada i compilada a `DIW/CHULETA_A4_DEFINITIVA.pdf` (1 pàg A4, 3 columnes, B/N, incloent `transform` en bloc/inline-block i pseudoclasses vs pseudoelements).
+- **⚡ DWEC:**
+  - Creat el manual integral `DWEC/guia_dwec.md` (estil didàctic Eloy amb teoria, 15 preguntes test explicades, 3 exercicis guiats, 3 d'examen i plantilles).
+  - Maquetada i compilada la chuleta oficial permesa a `DWEC/cheatsheet_DWEC.pdf` (estrictament 2 pàgines A4 a 2 columnes amples de 97 mm).
+  - Banc de codi pràctic en marxa a `DWEC/practicaExamen/`: 4 exercicis resolts i testejats amb Node (`guiado_RA2.js`, `guiado_RA3.js`, `guiado_RA4.js` i `examen_RA2.js`).
+- **📋 Full de Ruta per a Dilluns al Matí:**
+  1. Completar `examen_RA3.js` (inventari: filter, map, reduce, sort) i `examen_RA4.js` (classe `Tarea` amb camps privats `#`).
+  2. Bateria de repàs de les 15 preguntes test raonades.
+  3. Impressió física de les chuletes en paper (`cheatsheet_DWEC.pdf`, `CHULETA_A4_DEFINITIVA.pdf` i `cheatsheetNoeConde.pdf`).

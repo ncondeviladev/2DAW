@@ -45,13 +45,17 @@
 ## 🏗️ 3. Preparació de l'Examen Presencial (Viernes 20/11/2026)
 
 ### Informació Oficial del Professor (Orientacions 02/11/2026):
-* **Horari Oficial:** **Divendres, 20 de novembre de 2026, de 12:00 a 15:15** (Durada total: **3 hores i 15 minuts**).
+* **Horari Oficial:** **Divendres, 20 de novembre de 2026, de 12:00 a 15:15** (Franja d'aula reservada fins a les 15:50; arribar a les 11:50 a l'Aula 204 per a validar compte `@alu.edu.gva.es`).
 * **Format Oficial:**
   1. **Part Teòrica / Escrita (20 min, 2,5 punts):** Test o rellenar buits de codi HTML/CSS (UI/UX, usabilitat, accessibilitat, IPO, components, selectors per pesos, pseudoclasses, calc, color-mix). **Sense chuletes ni apunts**.
   2. **Part Pràctica PC (2h 10min, 7,5 punts):** Desenvolupar un lloc web menut (**2 o 3 pàgines**) a partir d'un mockup visual en VS Code/Codium. Maquetació amb Flexbox (Mobile First, botonera, secció a 2 columnes), formularis, multimedia i interactivitat bàsica (`transform`, `transition`, `sticky`).
 * **Chuletes permeses en paper per al Pràctic:**
   - Chuleta oficial de propietats CSS (Manz / Emezeta).
   - **Chuleta pròpia autoritzada:** 1 full A4 d'anotacions pròpies.
+* **Recursos d'Èxit Consolidats (Sessió 14/11):**
+  - 📄 **[Chuleta Definitiva d'Examen DIW (1 Pàgina A4)](file:///f:/OneDrive%20-%20Conselleria%20d'Educaci%C3%B3/2DAW/DIW/CHULETA_A4_DEFINITIVA.pdf):** 11 blocs modulars [HTML]/[CSS] amb alt contrast B/N, arbre Flexbox, 3 patrons de taules, formularis complets, diferenciació clara entre `:pseudoclasses` (estats) i `::pseudoelements` (parts visuals com `::before`/`::after` que requereixen `content:""`), i advertència que `transform` requereix elements en bloc o `display: inline-block`.
+  - 🐸 **`S10_PR1 Flexbox` Fet i Lliurat:** Projecte web amb botonera càpsula, estructura 2 columnes, banner de cookies i dossier de 24 captures en PDF (`S10_Actividad1_FlexboxFroggy.pdf`).
+  - 📊 **Criteris IA de Savall Integrats:** Taules amb `caption`/`thead`/`tbody`, associació estricta de tots els `label for`, i etiquetatge semàntic net.
 
 ### Recursos d'Èxit Desenvolupats:
 - 📄 **[Full Imprimible A4 d'Examen (Esquelet HTML5 + CSS3 Flexbox)](file:///f:/OneDrive%20-%20Conselleria%20d'Educaci%C3%B3/2DAW/DIW/CHULETA_EXAMEN_IMPRIMIBLE.md):** Cara 1 (Esquelet semàntic amb mapa de posició d'elements) i Cara 2 (CSS3 complet amb tokens, reset, Flexbox 1-2 cols, formularis i taules).

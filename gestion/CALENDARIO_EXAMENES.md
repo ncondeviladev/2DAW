@@ -28,17 +28,22 @@
 ---
 
 ### 🎨 DIW — Disseny d'Interfícies Web (Prof. Quique Savall)
-* **Data i Hora:** **Divendres, 20 de novembre de 2026, de 12:00 a 15:50** (Durada: **3 hores i 10 minuts**).
+* **Data i Hora:** **Divendres, 20 de novembre de 2026, de 12:00 a 15:15** (Franja d'aula reservada fins a les 15:50; estar a l'Aula 204 a les 11:50 per provar compte d'accés).
 * **Format Oficial:**
   1. **Part Teòrica (Escrita, 20 min, 2,5 punts):** Test o omplir buits HTML/CSS (UI/UX, usabilitat, accessibilitat, IPO, components, selectors per pesos, pseudoclasses, calc, color-mix). Sense apunts.
   2. **Part Pràctica (PC de l'aula, 2h 10min, 7,5 punts):** Maquetació d'un lloc web menut (2 o 3 pàgines) en HTML5 i CSS3 natiu a partir de mockup visual amb Flexbox.
-* **Material autoritzat per a la part pràctica:** Chuleta oficial Manz + **1 full A4 imprès**.
+* **Material autoritzat per a la part pràctica:** Chuleta oficial Manz + **1 full A4 imprès d'anotacions pròpies**.
 * **Recurs preparat i definitiu:** 📄 [CHULETA_A4_DEFINITIVA.pdf](file:///f:/OneDrive%20-%20Conselleria%20d'Educaci%C3%B3/2DAW/DIW/CHULETA_A4_DEFINITIVA.pdf) (1 sola pàgina A4, 3 columnes, B/N, 11 blocs modulars [HTML]/[CSS], arbre Flexbox i taules).
 
 ---
 
 ### 🚢 DaW — Desplegament d'Aplicacions Web (Prof. Juanra Collado)
-* **Estat:** Documentació completa consolidada per a portar al seu examen presencial.
+* **Data i Horari Seleccionat:**
+  - **Opció A (Recomanada i Triada):** **Dijous, 19 de novembre de 2026, de 12:00 a 13:50** (Torn de matí).
+  - *Opció B alternativa:* Divendres, 20 de novembre de 2026, de 18:00 a 19:50 (Desaconsellada per sobrecàrrega després del pràctic de DIW).
+* **Estratègia de calendari:** Fer DaW dijous al matí permet dinar amb calma, repassar la "guia dels 3 passos" de DWES per a la vesprada (18:00), i deixar el divendres 20/11 amb el cap fresc per a l'examen intensiu de DIW.
+* **Format Oficial:** Desenvolupament pràctic en ordinador (vhosts Apache/Nginx, Dockerfile, Compose o clúster Kubernetes).
+* **Material autoritzat:** Dossier imprès de pràctiques i apunts (fins a 35 pàgines).
 * **Recurs preparat i definitiu:** 📄 [cheatsheetNoeConde.pdf](file:///f:/OneDrive%20-%20Conselleria%20d'Educaci%C3%B3/2DAW/DaW/cheatsheetNoeConde.pdf) (34 pàgines: 2 pàgines de sintaxi unificada de comandos + PEC 1 + PEC 2 + PEC 3 completes).
 
 ---

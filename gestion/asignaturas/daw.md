@@ -65,4 +65,14 @@
   - Prova i validació del comandament de rescat `docker exec -it <app> docker-php-ext-install mysqli`.
   - Reorganització lògica de la Cheat Sheet: Fila superior (Linux + Docker CLI), Fila inferior (Apache + Nginx), Dockerfile unificat i recuperació íntegra de tots els flags i comandaments.
 - **Objectiu Propera Sessió:**
-  - Decidir si continuar polint simulacres pràctics de DaW o passar als simulacres de **DIW** (maquetació Mobile First en 45 min) o **DWEC** (3 reptes JS en viu).
+  - Repàs ràpid de comandes de rescat i Dockerfile abans de dijous.
+
+---
+
+## 🚨 4. Fites i Horari Oficial d'Examen Presencial
+- **Opcions d'Horari Oficial:**
+  - **Opció A (Recomanada i Seleccionada):** **Dijous, 19 de novembre de 2026, de 12:00 a 13:50**. Permet fer DaW al matí, descansar o repassar DWES per a la vesprada (18:00), i deixar el divendres 20/11 100% net i enfocat a l'examen llarg de DIW (12:00 a 15:50).
+  - **Opció B:** Divendres, 20 de novembre de 2026, de 18:00 a 19:50 (Desaconsellada per sobrecàrrega immediatament després de DIW).
+- **Format:** Examen pràctic en ordinador (Apache/Nginx vhosts, Dockerfile, Docker Compose o Kubernetes).
+- **Material Autoritzat:** Dossier imprès propi de fins a 35 pàgines.
+- **Recurs Preparat:** 📄 [cheatsheetNoeConde.pdf](file:///f:/OneDrive%20-%20Conselleria%20d'Educaci%C3%B3/2DAW/DaW/cheatsheetNoeConde.pdf) (34 pàgines completes: chuleta tècnica de 2 pàgines + memòries íntegres de PEC1, PEC2 i PEC3).
