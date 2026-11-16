@@ -531,3 +531,52 @@
 - Resolució dels exercicis pendents de DWEC: `examen_RA3.js` i `examen_RA4.js`.
 - Repàs actiu de les 15 preguntes de test de DWEC.
 - Impressió en paper de les chuletes de DIW, DWEC i DaW.
+
+---
+
+## 📅 Sessió del 16 de Novembre de 2026: Tancament 100% de DWEC (6 de 6), Gestió de Correus Oficials d'Examen i Laboratori Real DaW Coexistència Servidors
+
+### 1. Fites Assolides
+
+#### ⚡ DWEC (Desenvolupament Web en Entorn Client) — 100% Completat:
+- **Resolució de `examen_RA3.js` (RA3 Arrays i Programació Funcional):**
+  - Implementat `analizarInventario(articulos)` resolent `disponibles` (`filter` per `unidades > 0`, `map` de `ref` i ordenació alfabètica amb `sort()`).
+  - `valorTotalStock`: càlcul acumulador amb `reduce((acc, n) => acc + n.precio * n.unidades, 0)` amb format numèric `toFixed(2)`.
+  - `articulosHardwareCaros`: filtrat combinat amb condició booleana `n.categoria === "hardware" && n.precio > 50`.
+  - `todoConStock`: validació global amb el mètode d'array `.every(n => n.unidades > 0)`.
+  - Retorn net en sintaxi d'objecte ES6 i comprovat amb Node.js.
+- **Resolució de `examen_RA4.js` (RA4 POO ES6 amb Atributs Privats `#`):**
+  - Disseny de la classe `Tarea` amb camps privats `#id` i `#tiempoEstimadoMinutos`.
+  - Constructor amb crida automàtica al setter (`this.tiempoEstimadoMinutos = ...` sense almohadilla) per evitar que l'objecte nasca amb dades invàlides.
+  - Getter de lectura per a `id` i getter/setter per a `tiempoEstimadoMinutos` validant amb `Number.isInteger(minutos) && minutos > 0` i aplicant 30 minuts per defecte davant valors invàlids o negatius.
+  - Mètodes de negoci `completar()`, `tiempoEnHoras()` (`toFixed(2)` dividint entre 60) i `resumen()` amb operador ternari per a l'estat.
+  - Tots els casos de prova verificats amb Node.js.
+- **Actualització de la Chuleta d'Examen (`cheatsheet_DWEC.pdf`):**
+  - Incorporat el mètode `Number.isInteger(num)` al bloc de manipulació numèrica de la Cara 1.
+  - Recompilat el PDF amb Microsoft Edge headless i verificat que manté estrictament 2 pàgines A4 exactes.
+
+#### 🚢 DaW (Desplegament d'Aplicacions Web):
+- **Avaluació del Correu Oficial de Juanra Collado:**
+  - El professor va comunicar que les 2 primeres pàgines de comandaments en brut van ser retirades del document d'examen perquè la normativa només permet un recull literal de les pràctiques lliurades (PECs 1, 2 i 3).
+  - Avantatge logístic clau: el professor portarà i lliurarà directament el dossier modificat de 32 pàgines imprès a la taula de l'examen (estalvi de cost i temps d'impressió). A més, es facilitarà a l'aula la chuleta oficial de Docker d'Aules.
+- **Sanejament del Directori i Nova Chuleta Canònica en Markdown:**
+  - Eliminats tots els esborranys i PDFs duplicats o antics de la carpeta `DaW/`.
+  - Creat el document mestre d'estudi i cerca ràpida [**`DaW/CHULETA_RAPIDA_DaW.md`**](file:///f:/OneDrive%20-%20Conselleria%20d'Educaci%C3%B3/2DAW/DaW/CHULETA_RAPIDA_DaW.md) estructurat en 10 seccions clares (Linux, Apache, Nginx, Hosts, Docker CLI, Dockerfile, Compose, Kubernetes, Comandes de Rescat i Taula localitzadora de pàgines del dossier).
+- **Entrenament Pràctic en Calent (Laboratori Docker `labpec1`):**
+  - Desplegat un contenidor Ubuntu 22.04 amb ports 80 i 8080.
+  - Superat el repte de la coexistència de servidors (Exercici 4 de la PEC 1):
+    - Configurat Nginx al port 80 amb 2 llocs independents (`nginxS1.daw` i `nginxS2.daw`), eliminant el conflicte de `default_server` duplicat i fixant enllaços simbòlics absoluts `/etc/nginx/sites-available/...` cap a `sites-enabled/`.
+    - Configurat Apache al port 8080 en `ports.conf` (`Listen 8080`), assignada la directiva `ServerName` a `apacheS1.conf` i `apacheS2.conf`, deshabilitat `000-default.conf` i afegits els noms a `/etc/hosts`.
+    - Provat i verificat el correcte funcionament dels 4 llocs web responent cadascun el seu HTML independent mitjançant `curl`.
+
+#### 🐘 DWES (Desenvolupament Web en Entorn Servidor):
+- **Confirmació Oficial d'Eloy Gutiérrez:**
+  - Examen confirmat per a dijous 19/11 a les 18:00 a l'Aula 213.
+  - La prova serà semblant a la pràctica `U4_P2` (TechLeads amb notes / entitat vinculada 1:N seguint el patró Ruta -> Controlador -> DAO -> Vista).
+  - Els apunts complets del curs en format PDF estaran disponibles dins de la carpeta de l'examen al PC per a poder consultar sintaxi lliurement.
+
+### 2. Estat de Situació General per al Portàtil
+- Tots els canvis a punt per a fer `git add`, `git commit` i `git push` des d'aquest equip, i continuar treballant al portàtil fent `git pull`.
+- **Full de ruta al portàtil:**
+  1. Repàs ràpid de 10 minuts de les preguntes test de DWEC a `DWEC/guia_dwec.md`.
+  2. Pràctica breu de PEC 2 (crear un `Dockerfile` propi amb Apache/Nginx Alpine i `docker build`) i PEC 3 (fitxer `compose.yml` multicontenedor).

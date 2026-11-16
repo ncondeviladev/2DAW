@@ -1,7 +1,7 @@
 # 📘 QUADRE DE COMANDAMENT — 2n DAW (Semipresencial)
 > **Alumne:** Noé Conde Vila  
 > **Centre:** IES Maria Enríquez (Gandia) — Curs 2026/2027  
-> **Última actualització:** 14 de novembre de 2026  
+> **Última actualització:** 16 de novembre de 2026  
 
 ---
 
@@ -37,12 +37,12 @@ Per a mantindre el diari àgil i no sobrecarregar memòria, la informació detal
 | **DaW** | `PEC1` (Apache, Nginx, SSH) | ✅ **Entregat** | 18/10/2026 | **Qualificat: 8,00 / 10,00** |
 | **DaW** | `PEC2` (Docker local) | ✅ **Entregat** | 25/10/2026 | Tramesa a Aules |
 | **DaW** | `PEC3` (Docker Compose + K8s) | ✅ **Qualificat (9,5/10)** | 08/11/2026 | Qualificat 9,50/10 per Juanra Collado (10/11) |
-| **DaW** | `Material Examen 1a Eval` | 📝 **Llest (34 pàgs)** | 13/11/2026 | PDF únic consolidat definitiu: `cheatsheetNoeConde.pdf` |
+| **DaW** | `Material Examen 1a Eval` | 📝 **Llest (32 pàgs Juanra)** | 16/11/2026 | Dossier PECs 1-3 lliurat imprès per Juanra + Chuleta Markdown ràpida `CHULETA_RAPIDA_DaW.md` |
 | **DWEC** | `UD1` a `UD3` (Activitats + Tests) | ✅ **Entregat** | Octubre | Totes superades (UD3 test: 10/10) |
 | **DWEC** | `UD4 Activitat` (`Libro.js` POO) | ✅ **Entregat** | 27/10/2026 | Tramesa a Aules realitzada |
 | **DWEC** | `UD4 Qüestionari` | ✅ **Fet** | 27/10/2026 | **10 / 10** a Aules |
 | **DWEC** | `Guia d'Examen DWEC` | 📘 **Llest (Estil Eloy)** | 14/11/2026 | `guia_dwec.md` (Test 15q + ejRA2 + ejRA3 + ejRA4 + plantilles) |
-| **DWEC** | `Pràctica Examen (Codi)` | 🔄 **En curs (4 de 6)** | 14/11/2026 | `guiado_RA2`, `guiado_RA3`, `guiado_RA4` i `examen_RA2` fets. Pendents: `examen_RA3` i `examen_RA4` |
+| **DWEC** | `Pràctica Examen (Codi)` | ✅ **Completat (6 de 6)** | 16/11/2026 | Tots resolts: `guiado_RA2..4` + `examen_RA2..4` (inventari i classe Tarea amb `#`) |
 | **DWES** | `U1_P1` a `U3_P2` (Exercicis + Tests) | ✅ **Entregat** | Varis | U3_P2 TechLeads superat (100%) |
 | **DWES** | `U4_P1 Exercicis` (Accés a BBDD) | ✅ **Entregat** | 21/11/2026 | Docker, MySQL 8.4, DAOs, PDO, PRG i 9 captures |
 | **DWES** | `Autoavaluació U4` | ✅ **Fet** | 27/10/2026 | Superat a Aules |
@@ -55,10 +55,10 @@ Per a mantindre el diari àgil i no sobrecarregar memòria, la informació detal
 ## 🚨 Fites Immediates i Horaris d'Exàmens Oficials (1a Avaluació)
 1. **Dimecres 18/11 (16:00 - 17:50) — DWEC (Client):**
    - 10 preguntes test a l'ordinador + 3 exercicis pràctics (`ejRA2.js`, `ejRA3.js`, `ejRA4.js`).
-   - Material preparat: `DWEC/guia_dwec.md` i chuleta autoritzada de 2 pàgs (`DWEC/cheatsheet_DWEC.pdf`).
+   - Material preparat: `DWEC/guia_dwec.md`, els 6 exercicis completats a `DWEC/practicaExamen/` i chuleta autoritzada de 2 pàgs (`DWEC/cheatsheet_DWEC.pdf` amb `Number.isInteger`).
 2. **Dijous 19/11 — DaW i DWES:**
-   - **DaW (12:00 a 13:50 — Opció A Recomanada):** Torn de matí seleccionat per alliberar el divendres. Portar imprès `DaW/cheatsheetNoeConde.pdf` (34 pàgines).
-   - **DWES (18:00 a 19:50 — Vesprada, Aula 213):** Projecte pràctic d'ampliació PHP en PC d'aula amb `examen.sh` (Ruta -> Controlador -> DAO).
+   - **DaW (12:00 a 13:50 — Opció A Recomanada):** Torn de matí seleccionat. Juanra facilita a l'aula el dossier imprès de 32 pàgs (PECs 1 a 3) + chuleta oficial de Docker d'Aules. Estudi amb `CHULETA_RAPIDA_DaW.md`.
+   - **DWES (18:00 a 19:50 — Vesprada, Aula 213):** Prova pràctica idèntica a `U4_P2` (Ruta -> Controlador -> DAO -> Vista). Eloy confirma que els apunts en PDF estaran disponibles dins la carpeta de l'examen al PC de l'aula.
 3. **Divendres 20/11 (12:00 a 15:15 / 15:50) — DIW (Disseny, Aula 204):**
    - Teòric (20 min sense apunts) + Pràctic PC (2h 10min, 2-3 pàgines Flexbox). Arribar a les 11:50 per provar compte d'accés.
    - Material imprès autoritzat: Chuleta oficial Manz + `DIW/CHULETA_A4_DEFINITIVA.pdf` (1 pàgina A4).
@@ -66,16 +66,18 @@ Per a mantindre el diari àgil i no sobrecarregar memòria, la informació detal
 
 ---
 
-## 📌 Resum Executiu de la Sessió d'Hui (14/11/2026)
-- **🎨 DIW:**
-  - `S10_PR1_Flexbox` entregat a Aules (web HTML5/CSS3 natiu amb banner cookies + PDF 12 pàgs amb 24 captures retallades).
-  - Notes i criteris de Quique Savall integrats: S02 (8,89), S03 (9,36), S04 (9,63). Claus: taules amb `caption`/`thead`/`tbody`, formularis amb tots els `label for`, semàntica estricta.
-  - Chuleta d'examen actualitzada i compilada a `DIW/CHULETA_A4_DEFINITIVA.pdf` (1 pàg A4, 3 columnes, B/N, incloent `transform` en bloc/inline-block i pseudoclasses vs pseudoelements).
-- **⚡ DWEC:**
-  - Creat el manual integral `DWEC/guia_dwec.md` (estil didàctic Eloy amb teoria, 15 preguntes test explicades, 3 exercicis guiats, 3 d'examen i plantilles).
-  - Maquetada i compilada la chuleta oficial permesa a `DWEC/cheatsheet_DWEC.pdf` (estrictament 2 pàgines A4 a 2 columnes amples de 97 mm).
-  - Banc de codi pràctic en marxa a `DWEC/practicaExamen/`: 4 exercicis resolts i testejats amb Node (`guiado_RA2.js`, `guiado_RA3.js`, `guiado_RA4.js` i `examen_RA2.js`).
-- **📋 Full de Ruta per a Dilluns al Matí:**
-  1. Completar `examen_RA3.js` (inventari: filter, map, reduce, sort) i `examen_RA4.js` (classe `Tarea` amb camps privats `#`).
-  2. Bateria de repàs de les 15 preguntes test raonades.
-  3. Impressió física de les chuletes en paper (`cheatsheet_DWEC.pdf`, `CHULETA_A4_DEFINITIVA.pdf` i `cheatsheetNoeConde.pdf`).
+## 📌 Resum Executiu de la Sessió del 16/11/2026 (Hui)
+- **⚡ DWEC (100% tancat):**
+  - Resolts i validats els dos reptes finals d'examen:
+    - `examen_RA3.js`: Gestió d'inventari amb `filter`, `map`, `reduce` acumulador i format numèric `toFixed(2)`, i ordenació alfabètica `sort()`.
+    - `examen_RA4.js`: Classe `Tarea` canònica ES6 amb camps privats `#id` i `#tiempoEstimadoMinutos`, setter amb validació `Number.isInteger` i per defecte a 30 minuts, mètode `tiempoEnHoras()` i `resumen()`.
+  - Chuleta d'examen actualitzada i recompilada a `DWEC/cheatsheet_DWEC.pdf` (2 pàgines A4 exactes, incorporant `Number.isInteger`).
+- **🚢 DaW (Desplegament):**
+  - Avaluat el correu de Juanra: les 2 pàgines inicials de comandos en brut van ser eliminades per normativa, però ell mateix proporcionarà el dossier imprès de 32 pàgines el dia de l'examen.
+  - Neteja a fons de fitxers obsolets a `DaW/` i creació del nou document Markdown canònic: [**`DaW/CHULETA_RAPIDA_DaW.md`**](file:///f:/OneDrive%20-%20Conselleria%20d'Educaci%C3%B3/2DAW/DaW/CHULETA_RAPIDA_DaW.md) (10 seccions, plantilles de servidors, Docker, Compose, Kubernetes i localitzador de pàgines del dossier).
+  - Entrenament pràctic real en contenidor Docker (`labpec1`): resolt el laboratori de coexistència de 4 llocs web en 2 ports (Nginx en port 80 amb `nginxS1.daw` i `nginxS2.daw`; Apache en port 8080 amb `apacheS1.daw` i `apacheS2.daw`, pàgines 404 i `/etc/hosts`).
+- **🐘 DWES (Servidor):**
+  - Correu d'Eloy confirmat: examen dijous 18:00 a l'Aula 213. Examen clavat a `U4_P2` (TechLeads amb notes) i accés als PDFs oficials de teoria i codi durant la prova.
+- **📋 Objectiu Proper (Portàtil):**
+  - Repàs ràpid de preguntes test de DWEC.
+  - Practicar PEC 2 (`Dockerfile`) i PEC 3 (`compose.yml`) de DaW.

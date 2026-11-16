@@ -181,7 +181,8 @@ Math.min(...<span class="c-var">nums</span>);          <span class="c-comm-inlin
 Math.abs(-<span class="c-num">15</span>);              <span class="c-comm-inline">// 15 (valor absoluto) | Math.pow(2, 3) -> 8</span>
 <span class="c-comm">// Fórmula oficial aleatorio entero entre min y max (ambos inclusive):</span>
 <span class="c-key">const</span> <span class="c-fn">aleatorio</span> = (<span class="c-var">min</span>, <span class="c-var">max</span>) =&gt; Math.floor(Math.random() * (<span class="c-var">max</span> - <span class="c-var">min</span> + <span class="c-num">1</span>)) + <span class="c-var">min</span>;
-<span class="c-var">num</span>.toFixed(<span class="c-num">2</span>);             <span class="c-comm-inline">// Devuelve String: "19.46" (usar parseFloat para número)</span></pre>
+<span class="c-var">num</span>.toFixed(<span class="c-num">2</span>);             <span class="c-comm-inline">// Devuelve String: "19.46" (usar parseFloat para número)</span>
+Number.isInteger(<span class="c-var">num</span>);      <span class="c-comm-inline">// true si es entero (5), false si decimal (5.5) o NaN</span></pre>
 
                 <div class="card-sub">Manejo de Fechas (Date)</div>
                 <pre><span class="c-key">const</span> <span class="c-var">ahora</span> = <span class="c-key">new</span> Date();   <span class="c-comm-inline">// Fecha y hora actual</span>

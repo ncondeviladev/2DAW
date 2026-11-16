@@ -4,21 +4,21 @@
  * Enunciado:
  * Desarrolla una función llamada analizarInventario(articulos) que reciba un array
  * de objetos como el siguiente:
- * 
+ *
  * [
  *   { ref: "A1", categoria: "hardware", precio: 120, unidades: 5 },
  *   { ref: "B2", categoria: "software", precio: 60, unidades: 0 },
  *   { ref: "C3", categoria: "hardware", precio: 15, unidades: 20 },
  *   { ref: "D4", categoria: "periferico", precio: 35, unidades: 8 }
  * ]
- * 
+ *
  * La función debe devolver un objeto con:
  * 1. disponibles: Array de referencias (ref) que tienen al menos 1 unidad (unidades > 0),
  *    ordenadas alfabéticamente. -> ["A1", "C3", "D4"]
  * 2. valorTotalStock: Suma económica de todos los artículos (precio * unidades) con 2 decimales. -> 1180
  * 3. articulosHardwareCaros: Array de artículos de categoría "hardware" con precio > 50.
  * 4. todoConStock: Booleano que verifique si absolutamente TODOS los artículos tienen unidades > 0. -> false
- * 
+ *
  * Controla también que si la entrada es nula o vacía no rompa el programa.
  */
 
@@ -26,12 +26,32 @@ const inventarioPrueba = [
   { ref: "A1", categoria: "hardware", precio: 120, unidades: 5 },
   { ref: "B2", categoria: "software", precio: 60, unidades: 0 },
   { ref: "C3", categoria: "hardware", precio: 15, unidades: 20 },
-  { ref: "D4", categoria: "periferico", precio: 35, unidades: 8 }
+  { ref: "D4", categoria: "periferico", precio: 35, unidades: 8 },
 ];
 
 function analizarInventario(articulos) {
-    // Escribe aquí tu código:
-    
+  if (!articulos || articulos.length === 0) {
+    throw Error("Error, no hay array");
+  }
+
+  const disponibles = articulos
+    .filter((n) => n.unidades > 0)
+    .map((n) => n.ref)
+    .sort(); //?
+  const valorTotalStock = articulos
+    .reduce((acc, n) => acc + n.precio * n.unidades, 0)
+    .toFixed(2); //?
+  const articulosHardwareCaros = articulos
+    .filter((n) => n.categoria === "hardware")
+    .filter((n) => n.precio > 50); //?
+  const todoConStock = articulos.every((n) => n.unidades > 0); //?
+
+  return {
+    disponibles: disponibles,
+    valorTotalStock: valorTotalStock,
+    articulosHardwareCaros: articulosHardwareCaros,
+    todoConStock: todoConStock,
+  };
 }
 
 console.log(analizarInventario(inventarioPrueba));

@@ -19,11 +19,11 @@
 ---
 
 ### 🐘 DWES — Desenvolupament Web en Entorn Servidor (Prof. Eloy Gutiérrez)
-* **Data i Hora:** **Dijous, 19 de novembre de 2026, a les 18:00** (Torn de vesprada, Aula 213).
-* **Format Oficial:** Prova pràctica d'ampliació sobre projecte base (similar a `TechLeads` / `U4_P2`).
-* **Equipament:** Ordinador de l'aula obligatori amb VS Codium, PHP Intelephense, Containers, xDebug, Local History.
-* **Sense Internet:** Execució de `examen.sh` a l'inici. Tot el material (projecte base, PDFs de les Unitats 2, 3 i 4, instruccions en PDF i Markdown amb fragments de codi) s'entrega dins del ZIP de l'examen.
-* **Planificació:** Es prepararà la "guia dels 3 passos" (Ruta -> Controlador -> DAO).
+* **Data i Hora:** **Dijous, 19 de novembre de 2026, de 18:00 a 19:50** (Torn de vesprada, Aula 213).
+* **Format Oficial:** Prova pràctica d'ampliació sobre projecte base (confirmat per correu oficial: semblant a la pràctica `U4_P2`). Es demana saber arrancar el projecte amb Docker.
+* **Equipament:** Ordinador de l'aula obligatori amb VS Codium, PHP Intelephense, Containers, xDebug, Local History. Sense disc dur extern, sense eines d'IA ni extensions no autoritzades.
+* **Material disponible:** Tot el material (projecte base, PDFs oficials de les Unitats 2, 3 i 4 per a consultar teoria i sintaxi, i instruccions en PDF/Markdown) estarà disponible directament dins de la carpeta de l'examen. Portar DNI obligatori.
+* **Planificació:** Estudi del patró d'ampliació (Ruta -> Controlador -> DAO -> Vista).
 
 ---
 
@@ -43,8 +43,9 @@
   - *Opció B alternativa:* Divendres, 20 de novembre de 2026, de 18:00 a 19:50 (Desaconsellada per sobrecàrrega després del pràctic de DIW).
 * **Estratègia de calendari:** Fer DaW dijous al matí permet dinar amb calma, repassar la "guia dels 3 passos" de DWES per a la vesprada (18:00), i deixar el divendres 20/11 amb el cap fresc per a l'examen intensiu de DIW.
 * **Format Oficial:** Desenvolupament pràctic en ordinador (vhosts Apache/Nginx, Dockerfile, Compose o clúster Kubernetes).
-* **Material autoritzat:** Dossier imprès de pràctiques i apunts (fins a 35 pàgines).
-* **Recurs preparat i definitiu:** 📄 [cheatsheetNoeConde.pdf](file:///f:/OneDrive%20-%20Conselleria%20d'Educaci%C3%B3/2DAW/DaW/cheatsheetNoeConde.pdf) (34 pàgines: 2 pàgines de sintaxi unificada de comandos + PEC 1 + PEC 2 + PEC 3 completes).
+* **Material autoritzat a l'aula:**
+  - El professor Juanra facilitarà imprès a la taula el **dossier de 32 pàgines** (PECs 1 a 3 completes, sense les 2 pàgines inicials de comandaments en brut) + la chuleta oficial de Docker d'Aules.
+* **Recurs d'estudi preparat:** ⚡ [**`DaW/CHULETA_RAPIDA_DaW.md`**](file:///f:/OneDrive%20-%20Conselleria%20d'Educaci%C3%B3/2DAW/DaW/CHULETA_RAPIDA_DaW.md) (10 seccions en Markdown per a consulta i cerca ràpida amb plantilles canòniques i taula localitzadora de pàgines del dossier).
 
 ---
 

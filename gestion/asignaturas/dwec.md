@@ -19,7 +19,7 @@
 | `UD4 Qüestionari` | Test d'objectes en JavaScript | ✅ **Fet** | **10 / 10** |
 | `Guia d'Examen DWEC` | Manual d'estudi estil Eloy (Teoria, Test 15q i 3 Exercicis) | ✅ **Llest (14/11)** | `DWEC/guia_dwec.md` |
 | `Chuleta Oficial d'Examen`| Document de 2 pàgines A4 autoritzat en paper | ✅ **Llest (14/11)** | `DWEC/cheatsheet_DWEC.pdf` |
-| `Pràctica d'Examen (Codi)`| Resolució dels 6 exercicis clau (3 guiats + 3 examen) | 🔄 **En curs (4 de 6)** | `guiado_RA2..4` + `examen_RA2` fets |
+| `Pràctica d'Examen (Codi)`| Resolució dels 6 exercicis clau (3 guiats + 3 examen) | ✅ **Completat (6 de 6)** | `guiado_RA2..4` + `examen_RA2..4` fets (16/11) |
 
 ---
 
@@ -27,7 +27,7 @@
 
 - 📄 **[Chuleta Oficial DWEC d'Examen (2 Pàgines A4)](file:///f:/OneDrive%20-%20Conselleria%20d'Educaci%C3%B3/2DAW/DWEC/cheatsheet_DWEC.pdf):**  
   Document oficial imprès de referència autoritzat per José Ramón per a portar al PC. 2 pàgines A4 a dues columnes amples (97 mm) sense talls de línia:
-  - *Cara 1:* Sintaxi, comparadors (`===`), falsy, `String` complet (`trim`, `slice`, `split`, `replace`, `padStart`), `Math`, `Date`, funcions, `Rest`/`Spread`, closures, i `Array` complet (`map`, `filter`, `reduce`, `some`, `every`, `sort`).
+  - *Cara 1:* Sintaxi, comparadors (`===`), falsy, `String` complet (`trim`, `slice`, `split`, `replace`, `padStart`), `Math`, `Number.isInteger()`, `Date`, funcions, `Rest`/`Spread`, closures, i `Array` complet (`map`, `filter`, `reduce`, `some`, `every`, `sort`).
   - *Cara 2:* POO canònica ES6 amb camps privats `#`, getters/setters amb validació de tipus i rang, `extends`/`super()`, `JSON`, `RegExp` (DNI amb `.test()`), `JSDoc` i **les 3 plantilles canòniques d'examen (`ejRA2.js`, `ejRA3.js`, `ejRA4.js`)**.
   - Font HTML: [`DWEC/cheatsheet_DWEC.html`](file:///f:/OneDrive%20-%20Conselleria%20d'Educaci%C3%B3/2DAW/DWEC/cheatsheet_DWEC.html).
 - 📘 **[Guia Completa d'Examen DWEC (Estil Eloy)](file:///f:/OneDrive%20-%20Conselleria%20d'Educaci%C3%B3/2DAW/DWEC/guia_dwec.md):**  
@@ -42,8 +42,8 @@
   - ✅ `guiado_RA3.js`: Filtrats, ordenació numèrica, mitjana i validacions completat.
   - ✅ `guiado_RA4.js`: Classe `Alumno` amb camps privats `#`, mètodes de negoci i `.join(", ")` completat.
   - ✅ `examen_RA2.js`: Exercici d'examen real resolt (`analizarMatricula` amb `padStart` i `Date`).
-  - ⏳ `examen_RA3.js`: Pendent per a dilluns (catàleg d'inventari).
-  - ⏳ `examen_RA4.js`: Pendent per a dilluns (classe `Tarea` amb setter per defecte a 30).
+  - ✅ `examen_RA3.js`: Exercici d'inventari resolt (`analizarInventario` amb `filter`, `map`, `reduce` i `every`).
+  - ✅ `examen_RA4.js`: Classe `Tarea` resolta (camps privats `#id` i `#tiempoEstimadoMinutos`, setter amb `Number.isInteger` per defecte a 30, `tiempoEnHoras` i `resumen`).
 - **[Quadern de Repàs Integral DWEC (7 Blocs)](file:///f:/OneDrive%20-%20Conselleria%20d'Educaci%C3%B3/2DAW/DWEC/temario_resumido.md):**  
   Document de síntesi dividit en 7 blocs fonamentals amb 21 exercicis teòrics/pràctics.
 

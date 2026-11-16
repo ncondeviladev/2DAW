@@ -12,12 +12,17 @@
 | `PEC1 (U1)` | Arquitectura C-S, Apache, Nginx, SSH | ✅ **Entregat** | **8,00 / 10,00** |
 | `PEC2 (U2)` | Introducció a Docker i desplegaments en local | ✅ **Entregat** | 25/10/2026 23:59 |
 | `PEC3 (U3)` | Docker avançat: Compose + Kubernetes (3 rèpliques) | ✅ **Qualificat** | **9,50 / 10,00** |
-| `Material Examen 1a Eval` | PDF únic consolidat (Comandos PECs + PECs 1-3) | 📝 **Llest (34 pàgs)** | `cheatsheetNoeConde.pdf` |
+| `Material Examen 1a Eval` | 32 pàgs (PECs 1-3) + Chuleta Markdown | 📝 **Llest (16/11)** | Dossier imprès proporcionat per Juanra + `DaW/CHULETA_RAPIDA_DaW.md` |
 
 ---
 
 ## 💡 2. Punts de Millora i Repàs per a l'Examen Presencial
 
+- **Correu i Instruccions Oficials de Juanra Collado (16/11/2026):**
+  - **Dossier imprès:** Les dues primeres pàgines de comandaments en brut van ser eliminades per normativa (només es permet un merge literal de les PECs entregades).
+  - **Avantatge:** El professor portarà i lliurarà ell mateix el document imprès modificat (32 pàgines) a la taula el dia de l'examen.
+  - **Chuleta oficial:** Juanra confirma que a l'examen facilitarà el PDF de la *Docker cheatsheet* oficial d'Aules.
+  - **Nova Chuleta Canònica en Markdown:** [**`DaW/CHULETA_RAPIDA_DaW.md`**](file:///f:/OneDrive%20-%20Conselleria%20d'Educaci%C3%B3/2DAW/DaW/CHULETA_RAPIDA_DaW.md) per a consulta ràpida a l'editor (`Ctrl + F`) amb plantilles i localitzador de pàgines.
 - **Feedback de la PEC3 (10/11/2026 - Juan Ramón Collado):**
   - **Qualificació:** **9,50 / 10,00**.
   - **Comentari de retroacció:** *"1. La explicación es muy escasa. El enunciado indica que expliques punto por punto y lo haces de forma genérica."*
@@ -64,8 +69,15 @@
   - Identificació del format de llista per a `depends_on: [db]` i els dos punts obligatoris en `volumes: datos_examen:`.
   - Prova i validació del comandament de rescat `docker exec -it <app> docker-php-ext-install mysqli`.
   - Reorganització lògica de la Cheat Sheet: Fila superior (Linux + Docker CLI), Fila inferior (Apache + Nginx), Dockerfile unificat i recuperació íntegra de tots els flags i comandaments.
-- **Objectiu Propera Sessió:**
-  - Repàs ràpid de comandes de rescat i Dockerfile abans de dijous.
+- **Sessió del 16/11/2026 (Laboratori Real de Coexistència Apache + Nginx):**
+  - Desplegament de laboratori real en contenidor Docker (`labpec1`).
+  - Resolució del repte de coexistència multisiti:
+    - Nginx (Port 80): `nginxS1.daw` (`/var/www/nginxS1`) i `nginxS2.daw` (`/var/www/nginxS2`). Superat el conflicte de `default_server` i corregits els enllaços simbòlics absoluts `/etc/nginx/sites-available/...`.
+    - Apache (Port 8080): `apacheS1.daw` (`/var/www/apacheS1`) i `apacheS2.daw` (`/var/www/apacheS2`). Configurat `ports.conf` a 8080, directiva `ServerName` en ambdós VirtualHosts i deshabilitat `000-default.conf`.
+    - Resolució local en `/etc/hosts` i validació reeixida amb peticions `curl`.
+  - Neteja de carpetes i fitxers obsolets a `DaW/` i creació de `CHULETA_RAPIDA_DaW.md`.
+- **Objectiu Propera Sessió (Portàtil):**
+  - Practicar PEC 2 (`Dockerfile` propi amb Apache/Nginx Alpine) i PEC 3 (`compose.yml` amb PHP + MySQL).
 
 ---
 
@@ -74,5 +86,7 @@
   - **Opció A (Recomanada i Seleccionada):** **Dijous, 19 de novembre de 2026, de 12:00 a 13:50**. Permet fer DaW al matí, descansar o repassar DWES per a la vesprada (18:00), i deixar el divendres 20/11 100% net i enfocat a l'examen llarg de DIW (12:00 a 15:50).
   - **Opció B:** Divendres, 20 de novembre de 2026, de 18:00 a 19:50 (Desaconsellada per sobrecàrrega immediatament després de DIW).
 - **Format:** Examen pràctic en ordinador (Apache/Nginx vhosts, Dockerfile, Docker Compose o Kubernetes).
-- **Material Autoritzat:** Dossier imprès propi de fins a 35 pàgines.
-- **Recurs Preparat:** 📄 [cheatsheetNoeConde.pdf](file:///f:/OneDrive%20-%20Conselleria%20d'Educaci%C3%B3/2DAW/DaW/cheatsheetNoeConde.pdf) (34 pàgines completes: chuleta tècnica de 2 pàgines + memòries íntegres de PEC1, PEC2 i PEC3).
+- **Material Autoritzat:** Dossier imprès de fins a 35 pàgines (Juanra lliura el document modificat de 32 pàgines directament a l'aula) + chuleta oficial de Docker d'Aules.
+- **Recursos Preparats:**
+  - 📄 Dossier oficial imprés (32 pàgs).
+  - ⚡ [**`DaW/CHULETA_RAPIDA_DaW.md`**](file:///f:/OneDrive%20-%20Conselleria%20d'Educaci%C3%B3/2DAW/DaW/CHULETA_RAPIDA_DaW.md) (10 seccions en Markdown per a consulta i cerca ràpida).
