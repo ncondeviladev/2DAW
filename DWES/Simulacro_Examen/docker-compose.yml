@@ -1,7 +1,7 @@
 services:
   web:
     build: .
-    container_name: techleads_web
+    container_name: helpdesk_web
     ports:
       - "8080:80"
     volumes:
@@ -12,19 +12,20 @@ services:
       - db
 
   db:
-    image: mysql:8.4
-    container_name: techleads_db
+    image: mysql:8.0
+    container_name: helpdesk_db
     environment:
       MYSQL_ROOT_PASSWORD: root
-      MYSQL_DATABASE: techleads
-      MYSQL_USER: techleads
-      MYSQL_PASSWORD: techleads
+      MYSQL_DATABASE: helpdesk_db
+      MYSQL_USER: helpdesk
+      MYSQL_PASSWORD: password123
     volumes:
       - db_data:/var/lib/mysql
+      - ./databases/base-de-dades.sql:/docker-entrypoint-initdb.d/01_init.sql
 
   phpmyadmin:
-    image: phpmyadmin:5
-    container_name: techleads_phpmyadmin
+    image: phpmyadmin/phpmyadmin
+    container_name: helpdesk_phpmyadmin
     environment:
       PMA_HOST: db
     ports:

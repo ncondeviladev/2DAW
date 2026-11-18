@@ -54,3 +54,43 @@
 ## 💡 4. Feedback del Professor per a Repàs d'Examen
 1. **Cookies i sessions:** Revisar funcionament quan es tanca el navegador amb la casella "Recorda'm" marcada (comprovació en arrencada de sessió).
 2. **Sticky forms:** Comprovar estat dels checkboxes en serveis seleccionats si falla la validació en formularis públics.
+
+---
+
+## 🏆 5. Entrenament Pràctic d'Examen (Simulacres 1a Avaluació)
+
+Davant la confirmació d'Eloy que l'examen és una rèplica pràctica de l'ampliació d'entitat 1:N sobre projecte base (patró `U4_P2`), s'han completat 3 simulacres complets:
+
+1. **Simulacre 1 (`DWES/Simulacro_Examen/` — HelpDeskPro):** Tiquets i intervencions tècniques.
+2. **Simulacre 2 (`DWES/Simulacro_Examen_v2/` — VetClinic Huellas):**
+   - Entitats: Pacients $\rightarrow$ Visites (referència) $\rightarrow$ Vacunes (tasca d'examen).
+   - Servidors Docker en ports 8082 (web) i 8083 (phpMyAdmin).
+   - Qualificació inicial: **3,5 / 10** (identificació de bloquejos crítics).
+   - Depuració en viu i resolució pas a pas de cada error de sintaxi i PDO fins a deixar-lo al 100% funcional.
+3. **Simulacre 3 (`DWES/Simulacro_Examen_v3/` — FitLife Studio):**
+   - Entitats: Clients $\rightarrow$ Classes (referència) $\rightarrow$ Bons (tasca d'examen).
+   - Servidors Docker en ports 8084 (web) i 8085 (phpMyAdmin).
+   - Qualificació obtinguda: **7,8 / 10 (Notable Alt)**. Resolució autònoma d'alt nivell.
+
+### 📋 Checklist Canònic per a l'Examen d'Eloy (Regles d'Or):
+1. **SQL (`base-de-dades.sql`):**
+   - Comprovar que la columna `AUTO_INCREMENT` tinga `PRIMARY KEY (id)`.
+   - Vigilar comes al final de cada definició de columna abans de `FOREIGN KEY`.
+   - Provar la creació a phpMyAdmin abans de tocar codi PHP.
+2. **Model (`src/Model/Entitat.php`):**
+   - Constructor promotion amb tipat estricte i nullables (`?int $id = null`).
+   - Retorns dels getters sempre coincidents amb el tipus (`getId(): ?int`).
+   - Mètode de negoci booleà: usar operadors lògics coherents (`||` per a null o data futura).
+3. **DAO (`src/DAO/EntitatDAO.php`):**
+   - `insert()`: Inserir a la taula correcta de la BD, sense incloure columnes que pertanyen a un `JOIN` (com `nom_usuari` o `nom_instructor`).
+   - `findByPare()`: `SELECT e.*, u.usuari AS nom_alias FROM entitat e JOIN usuaris u ON e.usuari_id = u.id WHERE e.pare_id = :pare_id ORDER BY e.data_alta DESC`.
+   - `setFetchMode()`: Passar SEMPRE la classe destí: `$stmt->setFetchMode(self::MODE, Entitat::class);`.
+   - `comptarPerPare()`: Recordar cridar a `$stmt->execute()` abans del `fetchAll(PDO::FETCH_KEY_PAIR)`.
+4. **Controladors (`afegir_entitat.php` i `eliminar_entitat.php`):**
+   - Instanciació de models: **Usar sempre *named arguments*** (`new Entitat(client_id: $client_id, usuari_id: idUsuariActual(), ...)`). Evita errors fatals per alteració de l'ordre dels paràmetres.
+   - Guard de seguretat en eliminació:
+     `if ($entitat->getUsuariId() !== idUsuariActual() && !esAdmin()) { http_response_code(403); exit; }`
+   - En redireccions `header('Location: ...')`, recuperar l'identificador pare del propi objecte (`$entitat->getPareId()`).
+5. **Configuració i Vistes (`bootstrap.php`, `pare.php`, `pares.php`):**
+   - Registrar la nova instància DAO a `config/bootstrap.php` (`$entitatDAO = new EntitatDAO($connexio);`).
+   - A la vista de detall, no deixar variables buides actives després de la línia de recuperació del DAO.

@@ -1,7 +1,7 @@
 # 📘 QUADRE DE COMANDAMENT — 2n DAW (Semipresencial)
 > **Alumne:** Noé Conde Vila  
 > **Centre:** IES Maria Enríquez (Gandia) — Curs 2026/2027  
-> **Última actualització:** 16 de novembre de 2026  
+> **Última actualització:** 18 de novembre de 2026 (Matí)  
 
 ---
 
@@ -63,6 +63,22 @@ Per a mantindre el diari àgil i no sobrecarregar memòria, la informació detal
    - Teòric (20 min sense apunts) + Pràctic PC (2h 10min, 2-3 pàgines Flexbox). Arribar a les 11:50 per provar compte d'accés.
    - Material imprès autoritzat: Chuleta oficial Manz + `DIW/CHULETA_A4_DEFINITIVA.pdf` (1 pàgina A4).
 4. **Dilluns 23/11 — Tut. PIM-DIG:** Aula 202 (si aplica).
+
+---
+
+## 📌 Resum Executiu de les Sessions del 17/11 i 18/11/2026 (Intensiu Exàmens)
+- **⚡ DWEC (Client — Examen Hui 18/11 a les 16:00):**
+  - Preparació 100% tancada. Portàtil a punt, test de 10 preguntes i 6 exercicis pràctics d'examen completats (`DWEC/practicaExamen/`).
+  - Document autoritzat imprès: `DWEC/cheatsheet_DWEC.pdf` (2 pàgines A4 exactes).
+- **🐘 DWES (Servidor — Examen Demà 19/11 a les 18:00, Aula 213):**
+  - **Simulacre 1 (HelpDeskPro - `DWES/Simulacro_Examen/`):** Tiquets i intervencions (proves inicials d'entitats 1:N).
+  - **Simulacre 2 (VetClinic Huellas - `DWES/Simulacro_Examen_v2/`):** Pacients, visites i vacunes. Correcció inicial dura (3,5/10) amb depuració en viu dels errors bloquejants (comes SQL, fetch mode sense classe, Date JS vs PHP, ordre de paràmetres, lògica booleana De Morgan en permisos).
+  - **Simulacre 3 (FitLife Studio - `DWES/Simulacro_Examen_v3/`):** Clients, classes i bons. Realitzat autònomament per Noé amb salt qualitatiu espectacular: **7,8 / 10 (Notable Alt)**.
+  - *Dominis consolidats per a l'examen:* Creació de taula SQL amb PK/FKs, Model amb constructor promotion, DAO amb JOIN `b.*` + `u.usuari AS nom_alias`, `FETCH_CLASS` amb classe, mètode `estaActiu()`, registre a `bootstrap.php`, i controladors PRG amb *named arguments* (`camp: $valor`).
+- **🚢 DaW (Desplegament — Examen Demà 19/11 a les 12:00, Torn de Matí):**
+  - Recomanació d'estudi amb [**`DaW/CHULETA_RAPIDA_DaW.md`**](file:///f:/OneDrive%20-%20Conselleria%20d'Educaci%C3%B3/2DAW/DaW/CHULETA_RAPIDA_DaW.md). Dossier imprès de 32 pàgines facilitat a l'aula per Juanra. Repàs programat per a demà de matí abans de l'examen.
+- **🎨 DIW (Disseny — Examen Divendres 20/11 a les 12:00, Aula 204):**
+  - Teòric (20 min sense apunts) + Pràctic PC (2h 10min, 2-3 pàgines Flexbox). `CHULETA_A4_DEFINITIVA.pdf` (1 pàg A4).
 
 ---
 

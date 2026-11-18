@@ -1,0 +1,45 @@
+services:
+  fitlife_web:
+    build: .
+    container_name: fitlife_web
+    ports:
+      - "8084:80"
+    volumes:
+      - ./:/var/www/html
+    depends_on:
+      - fitlife_db
+    networks:
+      - fitlife_net
+
+  fitlife_db:
+    image: mysql:8.0
+    container_name: fitlife_db
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: fitlife_db
+      MYSQL_USER: fitlife
+      MYSQL_PASSWORD: password123
+    volumes:
+      - fitlife_db_data:/var/lib/mysql
+      - ./databases/base-de-dades.sql:/docker-entrypoint-initdb.d/01_init.sql
+    networks:
+      - fitlife_net
+
+  fitlife_phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    container_name: fitlife_phpmyadmin
+    ports:
+      - "8085:80"
+    environment:
+      PMA_HOST: fitlife_db
+    depends_on:
+      - fitlife_db
+    networks:
+      - fitlife_net
+
+volumes:
+  fitlife_db_data:
+
+networks:
+  fitlife_net:
+

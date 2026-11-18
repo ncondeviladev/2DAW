@@ -1,0 +1,26 @@
+services:
+  db:
+    image: mysql:8.0
+    container_name: datos_mysql
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: secreto
+      MYSQL_DATABASE: tienda_db
+    volumes:
+      - db_data:/var/lib/mysql
+  admin: 
+    image: phpmyadmin/phpmyadmin
+    container_name: admin
+    ports:
+      - 8085:80
+    environment:
+      PMA_HOST: db
+    depends_on: 
+      - db 
+    restart: always
+
+volumes:
+  db_data:
+
+
+

@@ -1,33 +1,38 @@
-# Simulacre d'Examen Pràctic: Mòdul de Tasques de Seguiment Comercial (DWES)
+# Simulacre d'Examen Pràctic: Sistema HelpDeskPro - Mòdul d'Intervencions Tècniques (DWES)
 
 > **Mòdul:** Desenvolupament Web en Entorn Servidor (DWES) · 2n CFGS DAW  
 > **Professor:** Eloy Gutiérrez Paredes  
 > **Temps estimat:** 1 hora i 30 minuts  
-> **Projecte base:** TechLeads (`Simulacro_Examen`)  
-> **Material permès:** Apunts de les Unitats 2, 3 i 4 (PDFs), projecte base proporcionat, sense internet ni IA.
+> **Projecte base:** HelpDeskPro (`DWES/Simulacro_Examen/`)  
+> **Material permès:** Apunts oficials de les Unitats 2, 3 i 4 (PDFs), projecte base proporcionat, sense internet ni assistents IA.
 
 ---
 
 ## 1. Context del problema
 
-L'equip de direcció de TechLeads ha detectat que les notes de text lliure no són suficients per a garantir el seguiment dels clients potencials. Els comercials necessiten poder planificar accions futures amb una data límit (per exemple: *«Enviar pressupost detallat»*, *«Telefonar per resoldre dubtes tècnics»*, *«Agendar reunió presencial»*).
+L'empresa tecnològica disposa d'un sistema intern anomenat **HelpDeskPro** per a gestionar els tiquets d'incidències reportats pels clients.
 
-El teu encàrrec en esta prova d'examen és **implementar el mòdul de tasques pendents per a cada lead**, permetent afegir noves tasques, consultar-les al panell de detall, marcar-les com a completades (acció `UPDATE`) i conèixer quantes tasques pendents té cada lead des del llistat general.
+Actualment, el sistema permet als tècnics autenticar-se, veure el llistat general de tiquets i consultar el detall de cadascun. Tanmateix, la direcció tècnica necessita portar un **control estricte del temps i de les actuacions que cada tècnic realitza sobre cada tiquet**.
+
+El teu objectiu en esta prova és **implementar el mòdul complet d'intervencions tècniques (relació 1:N)**, connectant totes les capes de l'aplicació: Base de Dades $\rightarrow$ Model de Domini $\rightarrow$ DAO $\rightarrow$ Controladors (PRG) $\rightarrow$ Vistes.
 
 ---
 
 ## 2. Objectius tècnics a avaluar
 
-En esta prova s'avaluarà:
-1. **Modelatge i persistència:** Creació de la taula `tasques` a MySQL amb claus foranes i integritat referencial (`ON DELETE CASCADE`).
-2. **Arquitectura d'aplicació (POO):** Creació de la classe entitat `Tasca` a `src/Model/` i la classe d'accés a dades `TascaDAO` a `src/DAO/` seguint les convencions del projecte.
-3. **Sentències preparades PDO:** Ús estricte de consultes preparades per a operacions `INSERT`, `SELECT` (amb `JOIN`) i `UPDATE`.
-4. **Control de negoci i permisos:** 
-   - Validació de dades d'entrada (descripció obligatòria, data límit vàlida).
-   - Canvi d'estat: un botó ràpid per a marcar una tasca com a completada (`completada = 1`).
-   - Restricció de permisos: només l'autor de la tasca o un usuari amb rol `administrador` pot canviar l'estat d'una tasca.
-5. **Prevenció de consultes N+1:** Recompte eficient de tasques pendents al llistat de leads (`leads.php`) mitjançant `GROUP BY` i `PDO::FETCH_KEY_PAIR`.
-6. **Seguretat XSS:** Escapament de tota dada provinent de l'usuari a les vistes mitjançant la funció `e()`.
+1. **Persistència i Integritat Referencial (SQL):**  
+   Creació de la taula `intervencions` amb claus foranes cap a `tiquets` (`ON DELETE CASCADE`) i cap a `usuaris`.
+2. **Modelatge Orientat a Objectes (POO - PHP 8):**  
+   Creació de l'entitat `Intervencio` a `src/Model/` amb promoció de propietats al constructor, tipat estricte i mètodes de negoci.
+3. **Accés a dades amb PDO (DAO):**  
+   Implementació de la interfície `IDbAccess` a `src/DAO/IntervencioDAO.php` amb sentències preparades obligatòries, consultes amb `JOIN` i mapatge d'objectes mitjançant `PDO::FETCH_CLASS`.
+4. **Prevenció de consultes N+1:**  
+   Ús eficient d'agregacions SQL (`GROUP BY` i `SUM`) per a calcular el temps total dedicat a cada tiquet sense fer una consulta per fila.
+5. **Seguretat i Control d'Accés:**  
+   - Validació de camps en el servidor (temps positiu, text obligatori).
+   - Control d'autorització: només l'autor de la intervenció o un usuari amb rol `administrador` pot eliminar una intervenció existent.
+   - Protecció contra XSS mitjançant escapament amb `e()`.
+   - Patró PRG (Post-Redirect-Get) amb missatges flash de sessió.
 
 ---
 
@@ -35,104 +40,92 @@ En esta prova s'avaluarà:
 
 ### 3.1. Base de dades (`databases/base-de-dades.sql`)
 
-Afegeix la definició de la taula `tasques` al final del script SQL:
+Afegeix al final del fitxer la creació de la taula `intervencions`:
 
 | Camp | Tipus / Restricció | Descripció |
 | :--- | :--- | :--- |
-| `id` | `INT UNSIGNED AUTO_INCREMENT PRIMARY KEY` | Identificador únic de la tasca |
-| `lead_id` | `INT UNSIGNED NOT NULL` | Clau forana cap a `leads(id)` amb `ON DELETE CASCADE` |
+| `id` | `INT UNSIGNED AUTO_INCREMENT PRIMARY KEY` | Identificador únic de la intervenció |
+| `tiquet_id` | `INT UNSIGNED NOT NULL` | Clau forana cap a `tiquets(id)` amb `ON DELETE CASCADE` |
 | `usuari_id` | `INT UNSIGNED NOT NULL` | Clau forana cap a `usuaris(id)` |
-| `descripcio` | `VARCHAR(255) NOT NULL` | Text de la tasca a realitzar |
-| `data_limit` | `DATE NOT NULL` | Data límit per a completar la tasca |
-| `completada` | `TINYINT(1) NOT NULL DEFAULT 0` | Estat: `0` = pendent, `1` = completada |
-| `data_creacio`| `TIMESTAMP DEFAULT CURRENT_TIMESTAMP` | Data i hora de registre al sistema |
+| `minuts` | `INT UNSIGNED NOT NULL` | Temps en minuts dedicat pel tècnic a l'actuació |
+| `comentari` | `TEXT NOT NULL` | Descripció detallada de les proves o accions dutes a terme |
+| `data_intervencio` | `TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP` | Data i hora de registre de la intervenció |
 
-*Afegeix també al script 3 tasques d'exemple relacionades amb els leads 1 i 2.*
-
----
-
-### 3.2. Model de domini (`src/Model/Tasca.php`)
-
-Crea la classe `Tasca` dins de l'espai de noms `App\Model`:
-- Defineix les propietats utilitzant la **promoció de propietats al constructor** de PHP 8.
-- Inclou els camps: `lead_id`, `usuari_id`, `descripcio`, `data_limit`, `completada` (bool/int, per defecte 0), `id` (opcional, per defecte null), `data_creacio` (opcional) i `nom_usuari` (opcional, per guardar el nom de l'autor després del `JOIN`).
-- Implementa els *getters* necessaris per a tots els atributs.
-- Implementa el mètode helper:
-  - `estaVençuda(): bool` $\rightarrow$ Retorna `true` si la tasca NO està completada i la seua `data_limit` és anterior a la data actual (`date('Y-m-d')`).
+*Afegeix també 3 registres d'exemple associats als tiquets 1 i 2.*
 
 ---
 
-### 3.3. Accés a dades (`src/DAO/TascaDAO.php`)
+### 3.2. Model de domini (`src/Model/Intervencio.php`)
 
-Crea la classe `TascaDAO` a `src/DAO/` implementant `IDbAccess`. Ha de disposar dels mètodes:
-
-1. **`insert(object $entitat): int`**
-   - Rep un objecte `Tasca`, executa un `INSERT` preparat i retorna l'ID generat (`$pdo->lastInsertId()`).
-2. **`findByLead(int $leadId): array`**
-   - Executa una consulta amb `JOIN` cap a la taula `usuaris` per obtindre `u.usuari AS nom_usuari`.
-   - Ordena les tasques: primer les no completades (`completada ASC`), i després per data límit més propera (`data_limit ASC`).
-   - Mapeja els resultats a instàncies de la classe `Tasca` utilitzant `PDO::FETCH_CLASS | PDO::FETCH_PROPS_LATE`.
-3. **`findById(int $id): ?Tasca`**
-   - Retorna la tasca amb l'identificador indicat, o `null` si no existix.
-4. **`marcarCompletada(int $id): bool`**
-   - Executa un `UPDATE tasques SET completada = 1 WHERE id = :id`.
-5. **`comptarPendentsPerLead(): array`**
-   - Executa una única consulta amb `GROUP BY lead_id` que compta quantes tasques **pendents** (`completada = 0`) té cada lead.
-   - Retorna un array associatiu `[lead_id => total_pendents]` fent ús de `PDO::FETCH_KEY_PAIR`.
+Crea la classe `Intervencio` dins del namespace `App\Model`:
+- Utilitza la **promoció de propietats al constructor** de PHP 8.
+- Atributs: `tiquet_id`, `usuari_id`, `minuts`, `comentari`, `id` (opcional, null per defecte), `data_intervencio` (opcional, null per defecte) i `nom_usuari` (opcional, per a emmagatzemar el nom del tècnic després del `JOIN`).
+- Implementa *getters* per a tots els atributs.
+- Implementa el mètode de negoci:
+  - `esSignificativa(): bool` $\rightarrow$ Retorna `true` si els minuts dedicats són iguals o superiors a 60 (`$this->minuts >= 60`).
 
 ---
 
-### 3.4. Configuració (`config/bootstrap.php`)
+### 3.3. Accés a dades (`src/DAO/IntervencioDAO.php`)
 
-- Importa la classe `App\DAO\TascaDAO`.
-- Instancia el DAO i assigna'l a la variable global `$tascaDAO`:
-  ```php
-  $tascaDAO = new TascaDAO($connexio);
-  ```
+Crea la classe `IntervencioDAO` implementant `IDbAccess`:
+1. **`insert(object $entitat): int`**  
+   Executa un `INSERT` preparat i retorna l'ID generat (`$pdo->lastInsertId()`).
+2. **`findByTiquet(int $tiquetId): array`**  
+   Executa una consulta amb `JOIN` cap a la taula `usuaris` per a obtindre `u.usuari AS nom_usuari`.  
+   Ordena les intervencions per data descendent (`data_intervencio DESC`).  
+   Retorna un array d'objectes `Intervencio` utilitzant `PDO::FETCH_CLASS | PDO::FETCH_PROPS_LATE`.
+3. **`findById(int $id): ?Intervencio`**  
+   Retorna la intervenció per ID o `null`.
+4. **`delete(int $id): void`**  
+   Elimina la intervenció amb l'identificador indicat.
+5. **`calcularTotalMinutsPerTiquet(): array`**  
+   Executa una única consulta amb `GROUP BY tiquet_id` que calcule `SUM(minuts) AS total_minuts`.  
+   Retorna un array associatiu clau-valor amb format `[tiquet_id => total_minuts]` (utilitzant `PDO::FETCH_KEY_PAIR`).
 
----
-
-### 3.5. Controladors (`public/dashboard/`)
-
-1. **`afegir_tasca.php` (Nou controlador d'acció):**
-   - Comprova autenticació (`requereixLogin()`) i que la petició siga `POST`.
-   - Valida que `descripcio` no estiga buida (màx. 255 caràcters).
-   - Valida que `data_limit` no estiga buida i tinga un format de data vàlid.
-   - Si hi ha errors, desa el missatge a `$_SESSION['flash_error']` i redirigix a `lead.php?id=$leadId`.
-   - Si és vàlid, crea la instància de `Tasca` associada a l'usuari en sessió (`$_SESSION['usuari_id']`) i desa-la amb `$tascaDAO->insert($tasca)`.
-   - Redirigix a `lead.php?id=$leadId` amb missatge a `$_SESSION['flash_exit']`.
-
-2. **`completar_tasca.php` (Nou controlador d'acció):**
-   - Comprova autenticació (`requereixLogin()`) i mètode `POST`.
-   - Rep `tasca_id` i `lead_id`.
-   - Recupera la tasca amb `$tascaDAO->findById($tascaId)`.
-   - **Control de permisos:** Comprova que l'usuari actual siga l'autor de la tasca (`$tasca->getUsuariId() === $_SESSION['usuari_id']`) O que tinga rol d'administrador (`$_SESSION['rol'] === 'administrador'`). Si no té permís, respon amb codi 403 i error.
-   - Si té permisos, crida a `$tascaDAO->marcarCompletada($tascaId)` i redirigix.
+*Recorda instanciar `$intervencioDAO` a `config/bootstrap.php`.*
 
 ---
 
-### 3.6. Vistes (`public/dashboard/`)
+### 3.4. Controladors de Negoci (Rutes POST amb PRG)
 
-1. **`lead.php` (Detall del Lead):**
-   - Carrega les tasques del lead amb `$tascaDAO->findByLead($leadId)`.
-   - Mostra una nova secció **«Tasques de seguiment»** amb:
-     - El llistat de tasques: descripció, autor, data límit i estat (Pendent o Completada).
-     - Si la tasca està vençuda (`$tasca->estaVençuda()`), ressalta la data en color roig o etiqueta d'avís.
-     - Un botó/formulari per a marcar com a completada aquelles tasques que encara estiguen pendents (només visible si l'usuari té permisos).
-     - Formulari per afegir una nova tasca (un camp de text per a la descripció i un `<input type="date">` per a la data límit).
+1. **`public/dashboard/afegir_intervencio.php`:**
+   - Comprova autenticació (`requereixLogin()`).
+   - Valida que `tiquet_id` és un enter vàlid, `minuts` és numèric i $> 0$, i `comentari` no està buit.
+   - Crea l'objecte `Intervencio` associat a l'usuari actual (`idUsuariActual()`).
+   - Insereix a la base de dades amb `$intervencioDAO->insert()`.
+   - Desa un missatge flash d'èxit i redirigeix a `tiquet.php?id=X`.
 
-2. **`leads.php` (Llistat general):**
-   - Mostra una columna o xicoteta etiqueta informativa amb les **Tasques pendents** de cada lead (utilitzant el resultat de `$tascaDAO->comptarPendentsPerLead()`).
+2. **`public/dashboard/eliminar_intervencio.php`:**
+   - Comprova autenticació.
+   - Recupera la intervenció amb `findById($id)`.
+   - **Autorització:** Comprova que l'usuari actual és l'autor de la intervenció (`usuari_id === idUsuariActual()`) O té rol `administrador` (`esAdmin()`). Si no compleix cap de les dues condicions, respon amb HTTP 403 Forbidden.
+   - Si té permís, executa `$intervencioDAO->delete($id)` i redirigeix amb missatge flash a `tiquet.php?id=X`.
 
 ---
 
-## 4. Bareme de puntuació de l'examen (Total: 10 punts)
+### 3.5. Integració en Vistes
 
-| Secció | Criteri d'avaluació | Punts |
-| :--- | :--- | :---: |
-| **SQL** | Taula correcta, tipus, claus foranes i `ON DELETE CASCADE` | 1,5 pts |
-| **Model** | Classe `Tasca`, constructor PHP 8, getters i helper `estaVençuda()` | 1,5 pts |
-| **DAO** | Consultes PDO preparades, `JOIN` amb usuaris, `UPDATE` i `FETCH_KEY_PAIR` | 3,0 pts |
-| **Controladors** | Validació d'entrada, gestió de sessions, missatges flash i comprovació de rols | 2,5 pts |
-| **Vistes** | Renderització neta, visualització condicional i prevenció XSS amb `e()` | 1,5 pts |
+1. **Detall del tiquet (`public/dashboard/tiquet.php`):**
+   - Recupera les intervencions del tiquet actiu amb `$intervencioDAO->findByTiquet($id)`.
+   - L'historial ja està maquetat al fitxer; assegura't que es mostren les dades reals, el badge de treball significatiu (`esSignificativa()`) i el botó d'eliminar condicionat als permisos.
+2. **Llistat general (`public/dashboard/tiquets.php`):**
+   - Recupera els minuts acumulats amb `$intervencioDAO->calcularTotalMinutsPerTiquet()`.
+   - Mostra el temps total a la columna *Temps Dedicat* per a cada tiquet.
 
+---
+
+## 4. Comprovació i Execució del Stack
+
+El projecte s'executa amb Docker Compose des de la carpeta `DWES/Simulacro_Examen/`:
+
+```bash
+docker compose up -d
+```
+
+- **Aplicació web:** `http://localhost:8080/`
+- **phpMyAdmin:** `http://localhost:8081/` (servidor `db`, usuari `helpdesk`, contrasenya `password123` o `root`/`root`).
+- **Usuaris de prova:**
+  - `admin` / `admin123` (rol administrador)
+  - `pau` / `tecnic123` (rol tècnic)
+  - `marta` / `tecnic123` (rol tècnic)

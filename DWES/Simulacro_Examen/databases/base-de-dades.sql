@@ -1,70 +1,59 @@
-CREATE TABLE leads (
-    id INT UNSIGNED NOT NULL AUTO_INCREMENT,
-    nom VARCHAR(100) NOT NULL,
-    email VARCHAR(150) NOT NULL,
-    telefon VARCHAR(20) NULL,
-    empresa VARCHAR(100) NULL,
-    serveis JSON NOT NULL,
-    pressupost DECIMAL(10,2) NOT NULL,
-    missatge TEXT NULL,
-    document VARCHAR(255) NULL,
-    estat ENUM('nou','contactat','tancat') NOT NULL DEFAULT 'nou',
-    data_creacio TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
-    PRIMARY KEY (id)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+CREATE DATABASE IF NOT EXISTS helpdesk_db CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+USE helpdesk_db;
 
+DROP TABLE IF EXISTS intervencions;
+DROP TABLE IF EXISTS tiquets;
+DROP TABLE IF EXISTS usuaris;
+
+-- Taula d'usuaris del sistema
 CREATE TABLE usuaris (
     id INT UNSIGNED NOT NULL AUTO_INCREMENT,
     usuari VARCHAR(50) NOT NULL,
     contrasenya VARCHAR(255) NOT NULL,
-    rol ENUM('comercial','administrador') NOT NULL DEFAULT 'comercial',
+    rol ENUM('tecnic','administrador') NOT NULL DEFAULT 'tecnic',
     PRIMARY KEY (id),
     UNIQUE KEY uq_usuari (usuari)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
-CREATE TABLE notes (
+-- Taula principal de tiquets d'incidència
+CREATE TABLE tiquets (
     id INT UNSIGNED NOT NULL AUTO_INCREMENT,
-    lead_id INT UNSIGNED NOT NULL,
-    usuari_id INT UNSIGNED NOT NULL,
-    text VARCHAR(500) NOT NULL,
+    codi VARCHAR(20) NOT NULL UNIQUE,
+    titol VARCHAR(150) NOT NULL,
+    descripcio TEXT NOT NULL,
+    client_nom VARCHAR(100) NOT NULL,
+    client_email VARCHAR(150) NOT NULL,
+    prioritat ENUM('baixa','mitjana','alta','critica') NOT NULL DEFAULT 'mitjana',
+    estat ENUM('obert','en_proces','resolt') NOT NULL DEFAULT 'obert',
     data_creacio TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
-    PRIMARY KEY (id),
-    FOREIGN KEY (lead_id) REFERENCES leads(id) ON DELETE CASCADE,
-    FOREIGN KEY (usuari_id) REFERENCES usuaris(id)
+    PRIMARY KEY (id)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
-CREATE TABLE tasques (
-    id INT UNSIGNED NOT NULL AUTO_INCREMENT,
-    lead_id INT UNSIGNED NOT NULL,
-    usuari_id INT UNSIGNED NOT NULL,
-    descripcio VARCHAR(255) NOT NULL,
-    data_limit DATE NOT NULL,
-    completada TINYINT(1) NOT NULL DEFAULT 0,
-    data_creacio TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
-    PRIMARY KEY (id),
-    FOREIGN KEY (lead_id) REFERENCES leads(id) ON DELETE CASCADE,
-    FOREIGN KEY (usuari_id) REFERENCES usuaris(id)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
-
-
-
+-- Dades inicials d'usuaris
 INSERT INTO usuaris (usuari, contrasenya, rol) VALUES
-('ana',  '$2y$10$jtyC89SwKBSRwUpjO.3Ot.Rql4v6QY05kZR7SFrkVLUyWHLNVnZK6', 'comercial'),
-('marc', '$2y$10$74Dle4/UJiucMgWk8l4bMuOEhYAzKPGxIrGcDAkOmqivk5ocTez6C', 'administrador');
+('admin', '$2y$10$eA8b3F6/yM0G7e.yW.R21e7d2qQfH/jK.v0xM7M1l.d6s2Y3gQ3g2', 'administrador'),
+('pau', '$2y$10$vM6r5b7l1y0p3q8s9t0u1.3w5x7y9z0a1b2c3d4e5f6g7h8i9j0k1', 'tecnic'),
+('marta', '$2y$10$vM6r5b7l1y0p3q8s9t0u1.3w5x7y9z0a1b2c3d4e5f6g7h8i9j0k1', 'tecnic');
 
-INSERT INTO leads (nom, email, telefon, empresa, serveis, pressupost, missatge, estat) VALUES
-('Aina Soler',    'aina@textils.exemple',  '600123456', 'Tèxtils S.L.',   '["Web","SEO"]',    4500.00,  'Volem renovar la web corporativa.', 'nou'),
-('Marc Climent',  'marc@econova.exemple',  NULL,        'Econova',        '["App mòbil"]',    800.00,   NULL,                                'contactat'),
-('Laura Sanchis', 'laura@innovacio.exemple', '611987654', 'Innovació Tech', '["Cloud","Web"]', 12000.00, 'Necessitem migrar a la núvol.',     'tancat');
+-- Dades inicials de tiquets
+INSERT INTO tiquets (codi, titol, descripcio, client_nom, client_email, prioritat, estat) VALUES
+('TIQ-2026-001', 'Error 500 al carret de la compra', 'Els usuaris no poden finalitzar la comanda quan paguen amb targeta.', 'Botiga Online SL', 'soporte@botigaonline.com', 'critica', 'en_proces'),
+('TIQ-2026-002', 'Configuració correu corporatiu en Outlook', 'La nova empleada de recepció necessita el compte configurat al seu portàtil.', 'Assessoria Marítima', 'info@assessoriamaritima.es', 'baixa', 'obert'),
+('TIQ-2026-003', 'Rendiment lent a la base de dades interna', 'Les consultes de facturació tarden més de 30 segons en respondre des d\'ahir.', 'Logística Gandia', 'it@logisticagandia.com', 'alta', 'obert');
 
-INSERT INTO notes (lead_id, usuari_id, text) VALUES
-(1, 1, 'Trucada inicial amb Aina. Estan molt interessats en el redisseny web.'),
-(1, 2, 'Revisat pressupost amb l''administrador Marc. Oferim un 10% de descompte.'),
-(2, 1, 'Enviat correu amb la informació de l''aplicació mòbil.');
+CREATE TABLE intervencions (
+    id INT UNSIGNED NOT NULL AUTO_INCREMENT,
+    tiquet_id INT UNSIGNED NOT NULL,
+    usuari_id INT UNSIGNED NOT NULL,
+    minuts INT UNSIGNED NOT NULL,
+    comentari TEXT NOT NULL,
+    data_intervencio TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    PRIMARY KEY (id),
+    FOREIGN KEY (usuari_id) REFERENCES usuaris(id),
+    FOREIGN KEY (tiquet_id) REFERENCES tiquets(id) ON DELETE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
-INSERT INTO tasques (lead_id, usuari_id, descripcio, data_limit, completada)
-VALUES 
-(1, 1, 'Hacer la web', '2026-01-01', 0),
-(2, 1, 'Hacer la app', '2026-02-01', 0),
-(3, 1, 'Hacer la nube', '2026-03-01', 1);
+INSERT INTO intervencions (tiquet_id, usuari_id, minuts, comentari) VALUES 
+(1, 1, 45, 'Investigació inicial logs d\'Apache i base de dades'),
+(1, 2, 75, 'Correcció bug en passarel·la de pagament Redsys'),
+(2, 2, 20, 'Configuració compte IMAP i verificació enviament');

@@ -1,8 +1,8 @@
 <?php
 
-use App\DAO\LeadDAO;
+use App\DAO\TiquetDAO;
 use App\DAO\UsuariDAO;
-use App\DAO\NotaDAO;
+use App\DAO\IntervencioDAO;
 use App\Database\DBConnection;
 
 require_once __DIR__ . '/../vendor/autoload.php';
@@ -19,9 +19,10 @@ $connexio = new DBConnection(
     charset: $config['charset']
 );
 
-$leadDAO = new LeadDAO($connexio);
+$tiquetDAO = new TiquetDAO($connexio);
 $usuariDAO = new UsuariDAO($connexio);
-$notaDAO = new NotaDAO($connexio);
-$tascaDAO = new TascaDAO($connexio);
+$intervencioDAO = new IntervencioDAO($connexio);
 
-const CARPETA_PUJADES = __DIR__ . '/../public/pujades';
+// En l'examen, una vegada creat IntervencioDAO, s'instanciarà ací:
+// use App\DAO\IntervencioDAO;
+// $intervencioDAO = new IntervencioDAO($connexio);

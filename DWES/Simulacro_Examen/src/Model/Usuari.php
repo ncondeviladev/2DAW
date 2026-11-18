@@ -4,13 +4,13 @@ namespace App\Model;
 
 class Usuari
 {
-    public const ROL_COMERCIAL = 'comercial';
+    public const ROL_TECNIC = 'tecnic';
     public const ROL_ADMINISTRADOR = 'administrador';
 
     public function __construct(
         private string $usuari = '',
         private string $contrasenya = '',
-        private string $rol = self::ROL_COMERCIAL,
+        private string $rol = self::ROL_TECNIC,
         private ?int $id = null
     ) {}
 
@@ -34,6 +34,10 @@ class Usuari
         return $this->contrasenya;
     }
 
+    public function esAdmin(): bool
+    {
+        return $this->rol === self::ROL_ADMINISTRADOR;
+    }
 
     public function verificarContrasenya(string $contrasenya): bool
     {
