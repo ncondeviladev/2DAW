@@ -59,3 +59,5 @@ npm-debug.log*
 # Repositorios / Ejercicios pasados ignorados
 DaW/U2/PEC2_NoeConde/octopus-underwater-app/
 DaW/U2/ejercicios_practica/05_practica4_taller_docker/getting-started-app/
+
+.aider*

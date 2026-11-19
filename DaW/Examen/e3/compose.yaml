@@ -1,0 +1,40 @@
+services:
+  db_wp:
+    image: mariadb:10.6
+    container_name: db_wp
+    restart: always
+    environment:
+      MARIADB_ROOT_PASSWORD: root123
+      MARIADB_DATABASE: wpdb
+      MARIADB_USER: wpuser
+      MARIADB_PASSWORD: wppass
+    volumes:
+      - vol_db:/var/lib/mysql
+
+  wordpress:
+    image: wordpress:6.5-php8.2-apache
+    container_name: wordpress
+    restart: always
+    ports:
+      - "8085:80"
+    environment:
+      WORDPRESS_DB_HOST: db_wp:3306
+      WORDPRESS_DB_USER: wpuser
+      WORDPRESS_DB_PASSWORD: wppass
+      WORDPRESS_DB_NAME: wpdb
+    volumes:
+      - ./wp-content:/var/www/html/wp-content
+    depends_on:
+      - db_wp
+
+  adminer:
+    image: adminer:latest
+    container_name: adminer
+    restart: always
+    ports:
+      - "8081:8080"
+    depends_on:
+      - db_wp
+
+volumes:
+  vol_db:
