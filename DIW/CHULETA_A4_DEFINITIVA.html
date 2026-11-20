@@ -422,7 +422,7 @@ pre {
 <span class="tag">&lt;svg</span> <span class="attr">width</span>=<span class="val">"24"</span> <span class="attr">height</span>=<span class="val">"24"</span><span class="tag">&gt;&lt;circle</span> <span class="attr">cx</span>=<span class="val">"12"</span> <span class="attr">cy</span>=<span class="val">"12"</span> <span class="attr">r</span>=<span class="val">"10"</span><span class="tag">/&gt;&lt;/svg&gt;</span>
 <span class="tag">&lt;audio</span> <span class="attr">controls</span> <span class="attr">loop</span> <span class="attr">src</span>=<span class="val">"audio/clip.mp3"</span><span class="tag">&gt;&lt;/audio&gt;</span>
 <span class="c">/* Video y Iframe sandbox: */</span>
-<span class="tag">&lt;video</span> <span class="attr">controls</span> <span class="attr">poster</span>=<span class="val">"img/portada.jpg"</span> <span class="attr">preload</span>=<span class="val">"metadata"</span> <span class="attr">muted</span> <span class="attr">loop</span><span class="tag">&gt;</span>
+<span class="tag">&lt;video</span> <span class="attr">controls</span> <span class="attr">autoplay</span> <span class="attr">muted</span> <span class="attr">loop</span> <span class="attr">poster</span>=<span class="val">"img/port.jpg"</span> <span class="attr">preload</span>=<span class="val">"metadata"</span><span class="tag">&gt;</span>
   <span class="tag">&lt;source</span> <span class="attr">src</span>=<span class="val">"video.mp4"</span> <span class="attr">type</span>=<span class="val">"video/mp4"</span><span class="tag">&gt;</span>
 <span class="tag">&lt;/video&gt;</span>
 <span class="tag">&lt;iframe</span> <span class="attr">src</span>=<span class="val">"maps.html"</span> <span class="attr">name</span>=<span class="val">"marco1"</span> <span class="attr">sandbox</span>=<span class="val">"allow-scripts allow-same-origin"</span><span class="tag">&gt;&lt;/iframe&gt;</span></pre>
@@ -541,16 +541,16 @@ pre {
 <span class="subt">COMBINADORES:</span>
 <span class="kw">div p</span> (descendiente) | <span class="kw">div &gt; p</span> (hijo directo) | <span class="kw">h2 + p</span> (hermano adyacente) | <span class="kw">h2 ~ p</span> (general)
 
-<span class="subt">SELECTORES ATRIBUTO:</span> <span class="kw">[type="text"]</span> (exacto) | <span class="kw">[^="txt"]</span> (empieza) | <span class="kw">[$="id"]</span> (termina) | <span class="kw">[*="val"]</span> (contiene)
+<span class="subt">SELECTORES ATRIBUTO:</span> [attr="val"] (exacto) | [attr^="ini"] (empieza) | [attr$="fin"] (termina) | [attr*="sub"] (contiene) | :not(.clase)
 
 <span class="subt">:PSEUDOCLASES (ESTADO) vs ::PSEUDOELEMENTOS (PARTE VIRTUAL):</span>
-<span class="kw">:hover</span> (ratón) | <span class="kw">:active</span> (clic) | <span class="kw">:focus</span> (cursor) | <span class="kw">:checked</span> | <span class="kw">:nth-child(n)</span>
-<span class="kw">::before</span> / <span class="kw">::after</span> (inserta content) | <span class="kw">::placeholder</span> | <span class="kw">::first-letter</span>
+<span class="kw">:hover</span> (ratón) | <span class="kw">:active</span> (clic) | <span class="kw">:focus</span> (cursor) | <span class="kw">:checked</span> | <span class="kw">:nth-child(even|odd|n)</span>
+<span class="kw">::before</span> / <span class="kw">::after</span> (content:"") | <span class="kw">::placeholder</span> | <span class="kw">::first-letter</span>
 
-<span class="subt">CONCEPTOS UI:</span>
-<span class="kw">IPO</span>: Interacción Persona-Ordenador | <span class="kw">Usabilidad</span>: Facilidad, rapidez
-<span class="kw">POUR</span>: <span class="kw">P</span>erceptible | <span class="kw">O</span>perable | <span class="kw">U</span>nderstandable | <span class="kw">R</span>obust (Niveles A, AA, AAA)
-<span class="kw">rem vs em</span>: rem es relativo a la raíz (16px fijos); em es relativo al padre.</pre>
+<span class="subt">CONCEPTOS UI Y FUNCIONES:</span>
+<span class="kw">IPO</span>: Interacc. Persona-Ordenador | <span class="kw">Usabilidad</span>: Facilidad, rapidez | <span class="kw">Tooltip</span>: Flotante | <span class="kw">Breadcrumbs</span>: Miga pan
+<span class="kw">calc(100% - 40px)</span> (espacios en + -) | <span class="kw">color-mix(in srgb, red 40%, blue 60%)</span> | <span class="kw">transform</span>: translate(x,y) rotate(deg) scale(n)
+<span class="kw">rem vs em</span>: rem es relativo a raíz :root (16px fijos); em es relativo al padre (cascada).</pre>
         </div>
       </div>
 
