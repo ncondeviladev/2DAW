@@ -1,0 +1,31 @@
+@charset "utf-8";
+
+/* ==========================================================================
+   RESET BÀSIC I VARIABLES CSS (Obligatori Savall)
+   ========================================================================== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --color-primari: #059669;    /* Verd maragda */
+  --color-secundari: #0f172a;  /* Blau fosc pissarra */
+  --color-fons: #f8fafc;       /* Gris molt clar */
+  --color-text: #1e293b;       /* Gris fosc lectura */
+  --color-vora: #e2e8f0;       /* Línies de divisió */
+  --font-ppal: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+body {
+  font-family: var(--font-ppal);
+  color: var(--color-text);
+  background-color: var(--color-fons);
+  line-height: 1.5;
+}
+
+/* ==========================================================================
+   Escriu ací davall els teus estils per al menú sticky, targetes flexbox,
+   taula de tarifes i formulari de contacte...
+   ========================================================================== */
